@@ -1,0 +1,49 @@
+% Hand-maintained schematic of the frozen audit instrument (codebook v1.0.0).
+% Not generated: this is a diagram of the instrument's structure, not a data plot.
+% If the codebook version changes, update the label set / criterion counts here.
+\begin{tikzpicture}[
+  font=\scriptsize,
+  box/.style={draw=black!55, rounded corners=1.5pt, inner sep=3pt, align=center},
+  lab/.style={box, fill=#1!18, draw=#1!70, minimum height=3.6mm, font=\tiny},
+  grp/.style={box, fill=black!3, minimum width=0.44\columnwidth, align=left, font=\tiny},
+]
+
+% --- label set ---
+\node[anchor=north west, font=\scriptsize\bfseries] (lh) at (0,0) {Six-value label set};
+\node[lab=auditGreen, anchor=north west] (l1) at (0,-0.42) {documented-and-verifiable};
+\node[lab=auditAmber, anchor=north west] (l2) at (l1.south west) {partially-documented};
+\node[lab=auditOrange, anchor=north west] (l3) at (l2.south west) {claimed-but-not-verifiable};
+\node[lab=auditRed, anchor=north west] (l4) at (l3.south west) {not-documented};
+\node[lab=auditPurple, anchor=north west] (l5) at (l4.south west) {access-blocked};
+\node[lab=auditGrey, anchor=north west] (l6) at (l5.south west) {not-applicable};
+
+\node[anchor=north west, font=\tiny\itshape, text width=0.46\columnwidth] (note)
+  at (l6.south west) {\vspace{1mm}Distinctions the study depends on: absent
+  $\neq$ claimed-but-unreachable $\neq$ gated.};
+
+% --- criteria ---
+\node[anchor=north west, font=\scriptsize\bfseries] (ch)
+  at (0.52\columnwidth,0) {25 criteria, 6 coded};
+\node[grp, anchor=north west] (c1) at (0.52\columnwidth,-0.42)
+  {\textbf{Consequential (5)} $\rightarrow$ drive R2\\
+   \textcolor{auditRed}{$\bullet$} metric definition\\
+   \textcolor{auditRed}{$\bullet$} grading \& tie-breaking\\
+   \textcolor{auditRed}{$\bullet$} predictions$\rightarrow$score map\\
+   \textcolor{auditRed}{$\bullet$} input/output schema\\
+   \textcolor{auditRed}{$\bullet$} evaluator available};
+\node[grp, anchor=north west] (c2) at ([yshift=-1.5mm]c1.south west)
+  {\textbf{Execution input (1)}\\
+   \textcolor{auditBlue}{$\bullet$} sample predictions};
+\node[grp, anchor=north west] (c3) at ([yshift=-1.5mm]c2.south west)
+  {\textbf{Context (19)}\\ provenance, licensing, environment,\\ leaderboard, task
+   documentation};
+
+% --- R2 rule ---
+\node[box, fill=auditGreen!12, draw=auditGreen!70, anchor=north west,
+      text width=0.42\columnwidth, font=\tiny, align=left] (rule)
+  at ([yshift=-2.5mm]c3.south west)
+  {\textbf{R2 (permissive)}: all five consequential\\ criteria labelled
+   verifiable, partial, or N/A.};
+\draw[->, draw=black!55] (c1.west) to[out=180, in=0] (rule.north west);
+
+\end{tikzpicture}

@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:43:14.877066+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B021",
+    "packet_sha256": "3d7daa01f71c96330f3407f28f908d7061f3759b4c5a055d41d1cc164057f355",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 19664,
+    "output_tokens": 935,
+    "cost_usd": 0.037911,
+    "elapsed_seconds": 7.159,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B021",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 21,
+            "line_end": 42
+          }
+        ],
+        "evidence_note": "Inputs/outputs are read from 'spider2_eval.jsonl' and 'results_metadata.jsonl'. We see structure like entry['instance_id'], entry['answer_type'], entry['answer_or_path'], entry['evaluation'] (holding parameters and func names like string_match, number_match, table_match, duckdb_match). Detailed field-level structural schemas or types are omitted.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 118,
+            "line_end": 124
+          }
+        ],
+        "evidence_note": "The evaluation calculates a simple success accuracy metric (score / len(output_list)) where score is 1 if an instance successfully passes the designated match function, else 0.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 11,
+            "line_end": 315
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 125
+          }
+        ],
+        "evidence_note": "The full evaluator execution code is available across eval_utils.py and evaluate.py. It contains matching and parsing behaviors for string matching, number matching, table matching, and DuckDB databases.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 60,
+            "line_end": 72
+          }
+        ],
+        "evidence_note": "Grading rules utilize exact/fuzzy match utilities (string, number, pandas table, duckdb) and take the maximum score if multiple evaluation parameters/variants are provided (score = max(temp_scores)). No tie-breaking is required.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 118,
+            "line_end": 123
+          }
+        ],
+        "evidence_note": "Each instance is matched to produce a score of 1 or 0. The aggregate accuracy score is calculated as the sum of correct predictions divided by the total number of evaluation instances.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 96,
+            "line_end": 104
+          }
+        ],
+        "evidence_note": "Although the README mentions the release of partial examples, gold SQL, and a dataset update log, actual model predictions or execution trajectories are not provided in the inspected packet.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+CMD: python eval_closed_form.py --responses_file_path synthetic_responses.jsonl
+COMMIT: 3d6c4a70198e0a41fadf539f5b43c88b8c1a2d9c
+--- output ---
+Traceback (most recent call last):
+  File "$WORKSPACE/repotrees/InfiAgent_DABench_/examples/DA-Agent/eval_closed_form.py", line 6, in <module>
+    from utils.utils import read_jsonl
+ModuleNotFoundError: No module named 'utils'
+EXIT=1
+RUNTIME_S=0.027

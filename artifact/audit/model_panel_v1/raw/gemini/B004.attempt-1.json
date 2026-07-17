@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:14:27.429344+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B004",
+    "packet_sha256": "176c11aebb9c46c89d3bd5774bacb7b5486e2855966692015a34b9f121984427",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 14696,
+    "output_tokens": 860,
+    "cost_usd": 0.029784,
+    "elapsed_seconds": 6.882
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B004\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 293,\n          \"line_end\": 307\n        }\n      ],\n      \"evidence_note\": \"Expected input fields like 'task_id', 'solution', 'complete_prompt', 'completion', and 'code_prompt' are loaded from samples and problems, but a detailed schema definition for the benchmark datasets is not fully shown.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 216,\n          \"line_end\": 223\n        },\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 30\n          ,\"line_end\": 34\n        }\n      ],\n      \"evidence_note\": \"The evaluation metric uses pass@k, with imports of 'estimate_pass_at_k' and processing logic to parse target 'k' parameters.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 117,\n          \"line_end\": 140\n        }\n      ],\n      \"evidence_note\": \"The evaluate.py module fully implements the execution orchestration over gradio, e2b, or local environments.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 87,\n          \"line_end\": 114\n        }\n      ],\n      \"evidence_note\": \"grading relies on verifying code correctness via untrusted_check against expected outputs, but the specific assertion logic is abstracted.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 257,\n          \"line_end\": 259\n        }\n      ],\n      \"evidence_note\": \"Calculates ground-truth pass rate and maps results, but the mapping from predictions to final pass@k scores relies on external modules like estimate_pass_at_k.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"claimed-but-not-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 187,\n          \"line_end\": 191\n        }\n      ],\n      \"evidence_note\": \"The README claims that pre-generated LLM code samples are shared in release tag v0.2.4 (sanitized_samples_calibrated.zip), but the actual files are not included in the packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPSFcFj3rMvNSBXYoMdrGcB9EZXOqfh10nBO0jTOsfuiAjwYi8cM/ClP6K9EuU"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 14696,
+      "candidatesTokenCount": 860,
+      "totalTokenCount": 15556,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 14696
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "TfVYap-bB_XU2roPluO7kAM"
+  }
+}

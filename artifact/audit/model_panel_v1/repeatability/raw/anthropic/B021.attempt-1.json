@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-17T04:48:40.210788+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "packet_id": "B021",
+    "packet_sha256": "3d7daa01f71c96330f3407f28f908d7061f3759b4c5a055d41d1cc164057f355",
+    "protocol_sha256": "d72e0019a7979fec0018c784cf0453c20319b3e00339dab1206cbfedec4c14df",
+    "attempt": 1,
+    "input_tokens": 22049,
+    "output_tokens": 746,
+    "cost_usd": 0.051558,
+    "elapsed_seconds": 9.282
+  },
+  "response": {
+    "model": "claude-sonnet-5",
+    "id": "msg_011Cd72Qe1vwU2gHx1Kfw5Q5",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"packet_id\":\"B021\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":22,\"line_end\":40}],\"evidence_note\":\"gold jsonl and results jsonl structure inferred from code (instance_id, evaluation, answer_type, answer_or_path) but no formal schema doc provided.\",\"confidence\":\"medium\"},{\"criterion\":\"Metric definition\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":11,\"line_end\":150}],\"evidence_note\":\"Multiple match functions (string_match, number_match, table_match, duckdb_match, tables_match) with docstrings and implementation define metrics explicitly.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":1,\"line_end\":140}],\"evidence_note\":\"evaluate.py provides full runnable evaluation pipeline calling eval_utils functions.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":57,\"line_end\":107}],\"evidence_note\":\"Scoring logic (max of temp_scores, per answer_type branching) is shown in code but no explicit written rule doc; multi-eval tie-breaking (max) is implicit only.\",\"confidence\":\"medium\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":110,\"line_end\":123}],\"evidence_note\":\"Aggregate score computed as fraction of items with score==1 over total, explicitly printed in code.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":96,\"line_end\":150}],\"evidence_note\":\"README references gold SQL and data files but no sample prediction/trajectory files are shown or linked in packet.\",\"confidence\":\"medium\"}]}"
+      }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 22049,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 746,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global"
+    }
+  }
+}

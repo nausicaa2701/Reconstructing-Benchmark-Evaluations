@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:13.101163+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B012",
+    "packet_sha256": "a613212ba0be787f74b497d10aa0159694d74ef8135d25a442cfac5533141359",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 11121,
+    "output_tokens": 874,
+    "cost_usd": 0.0245475,
+    "elapsed_seconds": 6.507
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B012\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 31,\n          \"line_end\": 49\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 157,\n          \"line_end\": 190\n        }\n      ],\n      \"evidence_note\": \"The input structures (questions and concepts from JSONL) and labels/responses schemas are verified in the data loading and response parsing code of the evaluation and prediction scripts.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 110,\n          \"line_end\": 132\n        }\n      ],\n      \"evidence_note\": \"Accuracy metrics are defined and computed, including Accuracy by Question, Accuracy by Sub-Question, and Accuracy Proportional by Sub-Question.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 9,\n          \"line_end\": 50\n        }\n      ],\n      \"evidence_note\": \"The python evaluation script 'eval_closed_form.py' extracts predictions and compares them against ground truth values using a specific matching tolerance.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 18,\n          \"line_end\": 26\n        }\n      ],\n      \"evidence_note\": \"An exact match is required for text, and a tolerance of absolute difference under 1e-6 is defined for numeric comparisons in 'is_equal'. No tie-breaking applies.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 111,\n          \"line_end\": 132\n        },\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 155,\n          \"line_end\": 166\n        }\n      ],\n      \"evidence_note\": \"Evaluations are aggregated across all questions/sub-questions and printed/exported as percentage-based accuracy scores.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 33,\n          \"line_end\": 37\n        }\n      ],\n      \"evidence_note\": \"No sample outputs, predictions, or trajectory files are included in the inspected packet, though external HuggingFace/GitHub releases are mentioned in the README.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPebndXTvPcOkmUoxtClofYNeB+Vfu8CEage32bVzTM0HAVesQbwFqxjLC9flE"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 11121,
+      "candidatesTokenCount": 874,
+      "totalTokenCount": 11995,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 11121
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "z_tYaqagAcqy2roP7MfP4Qs"
+  }
+}

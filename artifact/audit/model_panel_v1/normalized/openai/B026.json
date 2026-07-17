@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:41:32.945360+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B026",
+    "packet_sha256": "b975af24cd07e04fda2d28429ff4f590668aacf172316154596a88ee0310f7a2",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 7926,
+    "output_tokens": 790,
+    "cost_usd": 0.0178075,
+    "elapsed_seconds": 9.068,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B026",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 41,
+            "line_end": 46
+          },
+          {
+            "source_id": "E001",
+            "line_start": 81,
+            "line_end": 86
+          },
+          {
+            "source_id": "E001",
+            "line_start": 81,
+            "line_end": 86
+          },
+          {
+            "source_id": "E002",
+            "line_start": 351,
+            "line_end": 369
+          },
+          {
+            "source_id": "E001",
+            "line_start": 81,
+            "line_end": 86
+          },
+          {
+            "source_id": "E001",
+            "line_start": 185,
+            "line_end": 188
+          }
+        ],
+        "evidence_note": "README describes TSV fields for questions/answers and .tagged files. Evaluator section specifies prediction file: each line ex_id <tab> item1 <tab> \u2026. evaluator.py parses tagged data (id, targetValue, targetCanon) and predictions accordingly.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 5,
+            "line_end": 45
+          },
+          {
+            "source_id": "E002",
+            "line_start": 300,
+            "line_end": 316
+          },
+          {
+            "source_id": "E002",
+            "line_start": 55,
+            "line_end": 82
+          }
+        ],
+        "evidence_note": "evaluator.py docstring defines value types, conversion rules, and when a predicted denotation is correct. check_denotation implementation enforces equal set size and item-wise matching using normalized strings, numbers, or dates.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 173,
+            "line_end": 193
+          },
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 45
+          },
+          {
+            "source_id": "E002",
+            "line_start": 300,
+            "line_end": 369
+          }
+        ],
+        "evidence_note": "README states evaluator.py is the official evaluator and shows CLI usage. The full implementation is present, including normalization, value parsing, denotation checking, TSV unescaping, and main() that reads tagged data and predictions and computes correctness.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 12,
+            "line_end": 27
+          },
+          {
+            "source_id": "E002",
+            "line_start": 32,
+            "line_end": 45
+          },
+          {
+            "source_id": "E002",
+            "line_start": 300,
+            "line_end": 316
+          }
+        ],
+        "evidence_note": "Rules for matching and correctness of a denotation are explicit. However, how per-example booleans are aggregated into a final numeric score (e.g., averaging, reporting accuracy) is not shown in the provided snippet of main(), leaving a small gap.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 300,
+            "line_end": 316
+          },
+          {
+            "source_id": "E001",
+            "line_start": 173,
+            "line_end": 193
+          }
+        ],
+        "evidence_note": "Evaluator defines when each prediction is correct but the shown code does not include the loop over prediction_path lines or how many correct predictions are turned into an overall score (e.g., sum, mean, printed format). Mapping from per-id correctness to final metric is incomplete.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 173,
+            "line_end": 188
+          },
+          {
+            "source_id": "E002",
+            "line_start": 351,
+            "line_end": 354
+          }
+        ],
+        "evidence_note": "README and evaluator.py describe the prediction format textually but no concrete example prediction files, lines, or trajectories are included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

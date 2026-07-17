@@ -1,0 +1,15 @@
+Creative Commons Attribution 4.0 International (CC-BY-4.0)
+
+Copyright (c) 2026 The Authors.
+
+This license applies to the ORIGINAL contributions in this artifact: the evidence
+dataset, coder labels, adjudication records, analysis code, reproduction interface,
+generated tables, and figures.
+
+It does NOT apply to any third-party benchmark data, code, or documentation. No
+third-party benchmark artifacts are redistributed in this repository. Each audited
+release is referenced by owner, repository, and frozen commit in
+artifact/corpus/corpus_frozen.csv and remains under its own upstream license.
+
+You are free to share and adapt the original material for any purpose, provided you
+give appropriate credit. Full license text: https://creativecommons.org/licenses/by/4.0/legalcode

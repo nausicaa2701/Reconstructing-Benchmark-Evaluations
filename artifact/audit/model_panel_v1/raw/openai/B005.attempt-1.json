@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:30:22.591408+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B005",
+    "packet_sha256": "f517a9edaa45cd9fa950570ab29d6cc6b82de9548a29268a65e2a3abcfd1ee71",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 8287,
+    "output_tokens": 1393,
+    "cost_usd": 0.02428875,
+    "elapsed_seconds": 16.104
+  },
+  "response": {
+    "id": "resp_034ecd03911a0418016a58eaefa10481a297bd5b82d9fdc74f",
+    "object": "response",
+    "created_at": 1784212207,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212222,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_034ecd03911a0418016a58eaf0989481a2accd7eeda4e0b261",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOr-UweE_cAf-ylm7Y3AwKYpYiSA-OB8ESsMudoKMfyovEoH71ApcKT2YDYssOET1bTuClDRKwg7GBSxUXZBWBOofrCnm6EktBmapxdIePrXbwP2KfcaHTddL3gFNnPU6kv4qsxLeokP4jH7Vh2appmOtJ-aqZOnJIcebZp11fkJF6RB68qDhDo0-Ne4GqKY1Ms7DOJZ-bwD7N26VR-5VSD0stVtVInLhmT_rNr0H1PxvbOP_doP19RGXWHNyZD9QK0O-CPUSiLnFeoCBR2ahKAk-RT9qX-UVNljqn32HJmRZFn0pEw2haGZnG-1XWdK0axKvjNhHmNdIaKAJlAXJ4wQembE4WYVtLaA50UnqBCMXwbivMbnxD63ZZB6VL5doWYSN9hoyucBr1yQYo6Ax2NSobd1MiWe3XuD03EzjmvVJyL2e3Tz_jTPpeIIRtgyzJYrlAygvgvcjI_VX5-E5pynv7LQW0EQSzK52gnOvg5hmv6Q9sjmT-C-uXArDpXD2pmIITzPOicZqabQMy3BSXDOy_eAOUa9QwhQDDVvyLasVuw0K-pNuA89U_wuwleDJ2X57xdzlqRQdTkG2r4WHRrNbeKj96ccWC7npqXAinJlV1aiOZIfa-gMlaFMZHpsB8QXP8Cf9JLvnCkiK5fD94UAUp7eK0kp6kRJx_frqTD0L2KOk9K4V2vv0SHVKv6EbObgeQqkmagN0P-rFaCqvJjeSp3_lC311l91MY4b7xAMjVvyhI3bCsyXPrjWLrxZE9_gJdV1esMJW3-XOYtF_1Do2rf1UpImfYch2GYQOZjDrCHUiVHkpVTtwcG7_e8neTx3Bjo5C4E_fjSkeKCBIq4yZGJZ38TSmTFpQFywIa73PLZwiJfsue0KMDxdb4qvkDt_MqX3D8iGq69Qa35L5QpcHuMwKaIUYmDZD2J_3SwHbiLa2EIExTxNGrQKFYo1A8_QYjAZldhhRMSybRhE9BwuekPkkV90yf5NIfgiELGBQWguuzwCJH_qUukpTVzvx41zDSp3nSZyQOZZ2V9yF-jYyGPfv6IbjQ7C69VhPgB_2lBc-7DbWhtaD40fksDmSnQgAVk2xGBFeeNLFR_X2BMA7IenUHoJtHm5euX6Hxy_pi_6oPWvMaFEY609fW_XwGqzObXkUcz4R3rAqKerAQURokAKNpEJRFIeVQ2Nl5kbXlHOiXf71YrkzKHVd0qw7bj2RS9YfevInpVzntpab50pXWOVZzqvI0NIUuiTGwvEyWNM7m2wPi7h0cTzqbLgpj296xz3zquV0M1SeYo5v1KroKGq5yDgSnI_87mnEx8d8_Yp66_IjDAu8uCo4BzAEJEnkhY6vSoLZ5nxwY9fh6gehw1jEVyE-Bi-_2Un9BkisAa9xH_KBr17ubJABQEn3mgWeC0RV0-ve9yaVVWF7Ubfpjh6sQYxOo-JhqW58cBNn4BDFxTgePTu7xO9qW4KzivQ_PQzxLCXGJxx9qvSmwj1h-heM2cjSNavPZd-GYkoG3iQfSgZRm1ZZxaxZEfupVEkrlY74uGrBN1fR1RvowODnE4tuBD736ezkQulaqg7Yt3iWNYNGD8bpJDoduitPnM48R_r23OdeJ3jRYzbvmya260Zyexa4iorcqLArE8NUKdVmyPjU06CJ9nBgEvi-qqhlwxPbUkvRdNUL0zrWUdy1TIJxHvZoYEP8xIh4XrGON0DaE0XG_TzuUmIhdGK92WomdCoZ8eDf5KpBiS7jD9KzWnYQOmfVukj9pMN0uN4dQuac54EqEjVyEOPEfApvuGzb0ZZpTEAp7rb0y-CqqcIJUp38hD80U3oaZ0TY63sTG1uZraXTfrl_CqbSISAh03ZZ-uTyQ6hukrJaSM9hp3tEgl8FdaS84UJbE7boZHXgJ1SQRtKYFeQT0EMrcmK_gIS2yeFaoJT0NzE8fzXnZhRjgI5ywsHOcB4QNts5foJbzwgwRFRnZ33ZTuL8DaQqEwOhw2qzP6EaSfJRy87CYwEvGIs0C_PuePpn8Y5qktqPsoi2rIAkD79TDRg7KH4Ogzek8P-K8Q6Fkr4lc6yG_V2U5RtrmFnwj1l74CDAxpO9UTWBu5irtIVKIMGlbjeHPGdgTHuBF5lojiGe3A1v3cq_QKkgv0LZy__p_LUO7ZpKKPPcPs1L0GqoJGbe48S6TB1iUYDKHLWDX9EQNr9YVEOTDJ_50ZDVK9xxE6hpvH_8koWhhd2J1aVYqb2_ZF52IY3riYsl6DQV5K6-fW3LImxmDCotpxMIWdAO1vrh9cWm1SHRZ8Wd6dOZ4e9NuojIIXAQvGtY9_ko4k7cOioYqUr765tx4HEnnK5_z6rqO4JUlbnq_SEgex2JX8dj7Sd3bd7LHqMxBuPS0fpLq3VnxdFkrtOUi_GN1Gq03mt1UU0km3lPv-5rhAJ1ZCYKY7q-RfirNcjapjXvKUWhMPPRqMQSKnmC_OXKtEqbW-kMPpT-_PNX39uaZAyLXq90r6sjkHQmcqVzI9oZWwIvC_UTzDGif7wUo0J4xnTv11xf2zK8ccT27kGzWfApxbAhfIkQBZk3zIdOmxO2QhSGXR4w4NIOnwanOxlr-xgmY26WZKYWGzs9yVZpFjXLcjkx8l1E2vkyBhBFE9cFw5XG5--hP3xqftp7oV4p6AJgTeH6gQymaqj7shBwwHTOqqoKOUcusyFR4l3XZ-Lrgg1pEhIhGuMYD2eIBM1rI-rqh9iaNJcvO1rpgjTO9125Mithi_k8d5QhrkC2xsN_m85wCaoKNx38E8tUPhcCdYmagcvdDT4EtykUWt4BdculpQrHLzVa3islLlenH_QAYuN2oYiJ4DEJ2wsEY2PlcLD5oF0Sw_cnN1t5FH38468F_akJfxbgVJgz7DrhgdGZHRtKjoRMY_vyyWXLt2TeYhT5AMIC-vxwFmMeT_kDZ1B57bAksbPX53vC6yeLkeJ6bPTyrujKw4zg5i95z4y7jPb2iJ47CGlU1N7EYcb9z0_9ZAHI_qdxptV3DxlmIctq1qD5an2NVx1OYweQvMMCLVYj1OQiaObPeHJe3Khd5Wr6fWqiGMxzNBTsnm8rG8JFSibG6aLF5DB-QI50uzKg27FL8GIZInN6IsG-KxJHR1pKteJQYVa2awOKGN3-ACPPYgXfrHqozEr0GdLHC0bhvUmxH__fIpGmdqB3eB4V3vlM0oOvrzD0TccUbB4c_6OKnUBkFrCyEloCPpe47aiNz-bpiTJZVTZfrVSmSC3Bt4QTFzIq1C67arTXJvBwqTlDEuzkgZE6jfJKawKm-kK1HTvuMbTwto9hSjy2_jSSR4HD8WGG5eueo60f5cU0LhwQ5gQWAZZGqt-I6yHSJj_0jyBZSH69-Z4MXTeGFfxcvlsruKLuSvS1_cqIwhe5mO0FJ4bQ6sqXFGZpo1JwQiQ08CGp2Xsqm53ExU7iHA_qu3TxH0LRUa8qP002uHRqtrD-Ah48OCU_1SFkPi-emce3C91gW5nbYc8ggFx5o5LwCvImaAPArARH_SzvW84Ws523gXRFdjKl2Ga2LedBYRIjcEXdX-KhOmD4fMbDeOJkEFRkSUEBEZJHRDXP_iNqDJyRZJUUeJklgE8i10Z9yEuT8CzU4JhjvEXh6pMK6UP0v5frsaYLhgRZ5xvfM8OWmsuzCMKyVVEOuT59frhZ-qluN8Ow4BmfZTDVzDBQAX9BSRdnOKJN0QPgFzg2zeEN54y_yj_025r7wsQ04wDs3x_5LY8W7z6qqyErKvFsWwOg4FhCsu06v-lENzDFZYl87D_40mAdy5J4KaoVEC6tcUpbjbS-dBnaEihEpib1IZmXmEVxbaE7TDpiky6G5a4FSe2GEXFQyfKQl-NsU0pj0s3sDggvWa2sHdCKr5XZmrHI8g-rI1rvGE1Et1c3U0UehAvjiP5awMEUD8gKTwm6gdNku8hsq5yNG8BRD2XmAdv4p5gSzFHN6mekbsGgFY1oIs0VF9NreAk3XCbynRzOw8j1QfkZKUKv4oUNE4=",
+        "summary": []
+      },
+      {
+        "id": "msg_034ecd03911a0418016a58eaf696a481a297455b43f0d1b184",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B005\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":121,\"line_end\":133},{\"source_id\":\"E001\",\"line_start\":148,\"line_end\":164},{\"source_id\":\"E001\",\"line_start\":166,\"line_end\":174},{\"source_id\":\"E002\",\"line_start\":80,\"line_end\":88},{\"source_id\":\"E002\",\"line_start\":280,\"line_end\":287}],\"evidence_note\":\"Repository explains that trajectories are JSONs with final answers and notebooks, and that grading consumes question/target/predicted strings with an answer_mode, but no full formal schema for trajectory JSON, CSV columns, or JSON result structure is provided.\",\"confidence\":\"high\"},{\"criterion\":\"Metric definition\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":14,\"line_end\":27},{\"source_id\":\"E002\",\"line_start\":40,\"line_end\":53},{\"source_id\":\"E002\",\"line_start\":76,\"line_end\":88},{\"source_id\":\"E002\",\"line_start\":155,\"line_end\":170},{\"source_id\":\"E001\",\"line_start\":159,\"line_end\":163},{\"source_id\":\"E001\",\"line_start\":240,\"line_end\":247}],\"evidence_note\":\"Code defines per-question grades as binary (correct=1, incorrect/refused=0) with flags, and README mentions majority vote accuracy, but it does not spell out the exact dataset-level metric formulas or how accuracy is computed from these grades.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":55,\"line_end\":108},{\"source_id\":\"E002\",\"line_start\":110,\"line_end\":131},{\"source_id\":\"E002\",\"line_start\":173,\"line_end\":207},{\"source_id\":\"E002\",\"line_start\":209,\"line_end\":277},{\"source_id\":\"E001\",\"line_start\":166,\"line_end\":174},{\"source_id\":\"E001\",\"line_start\":186,\"line_end\":192}],\"evidence_note\":\"The grading logic for MCQ and open-ended questions is implemented in graders.py with clear functions and types, and README shows scripts that call these graders for zero-shot grading.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":76,\"line_end\":88},{\"source_id\":\"E002\",\"line_start\":155,\"line_end\":170},{\"source_id\":\"E002\",\"line_start\":183,\"line_end\":205},{\"source_id\":\"E001\",\"line_start\":159,\"line_end\":163},{\"source_id\":\"E001\",\"line_start\":215,\"line_end\":221}],\"evidence_note\":\"Per-question grading rules (string normalization, refusal handling, numeric ranges, LLM-verifier) are explicit in code. Majority-vote analysis and any tie-breaking or aggregation logic are only mentioned at a high level in the README without implementation details.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":159,\"line_end\":163},{\"source_id\":\"E001\",\"line_start\":215,\"line_end\":221},{\"source_id\":\"E002\",\"line_start\":40,\"line_end\":53},{\"source_id\":\"E002\",\"line_start\":280,\"line_end\":287}],\"evidence_note\":\"The repository shows how to obtain per-question grades but does not document or implement in the shown files how these are combined into benchmark-level scores (e.g., exact averaging, handling of refusals, or weighting).\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":223,\"line_end\":236},{\"source_id\":\"E001\",\"line_start\":125,\"line_end\":133},{\"source_id\":\"E001\",\"line_start\":140,\"line_end\":146}],\"evidence_note\":\"README provides direct URLs to download raw trajectory data and an evaluation dataframe CSV, and explains that generated trajectories are stored as JSON files in a specified directory, supplying concrete example artifacts.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 8287,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1393,
+      "output_tokens_details": {
+        "reasoning_tokens": 474
+      },
+      "total_tokens": 9680
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

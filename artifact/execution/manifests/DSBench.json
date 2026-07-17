@@ -1,0 +1,17 @@
+{
+  "benchmark": "DSBench",
+  "category": "ml-eng",
+  "frozen_commit": "ba786096137a5108af11c016ad3f09cdb97beefd",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "schema-valid synthetic answer.csv + predict.csv (Rings target, 20 rows)",
+  "first_pass": {
+    "label": "pass-as-documented",
+    "runtime_s": 1.58,
+    "detail": "Per-task RMSLE scorer data_modeling/evaluation/playground-series-s4e4_eval.py ran on synthetic answer/predict CSVs (sklearn mean_squared_log_error)",
+    "log": "artifact/execution/logs/DSBench/"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": true,
+  "notes": "RMSLE 0.685; scorer is pure sklearn; official answer CSVs are external download but scorer path is self-contained"
+}

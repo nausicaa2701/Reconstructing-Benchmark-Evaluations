@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:43:33.819140+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B024",
+    "packet_sha256": "94f83d0bc2f68b32a125e5688c9c1ce7ee7b4bd0787479935a7d62b2430b8a07",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 18338,
+    "output_tokens": 915,
+    "cost_usd": 0.035742,
+    "elapsed_seconds": 6.367
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B024\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 104,\n          \"line_end\": 119\n        },\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 128,\n          \"line_end\": 143\n        },\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 158,\n          \"line_end\": 174\n        },\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 35,\n          \"line_end\": 38\n        }\n      ],\n      \"evidence_note\": \"The README documents the input schema for raw, entity-linked, and LPA preprocessed JSON files, and details the expected CodaLab submission schema containing {test_id: label}.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 288,\n          \"line_end\": 300\n        }\n      ],\n      \"evidence_note\": \"The code defines metrics including simple accuracy (preds == labels).mean(), F1-score, and their average.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 288,\n          \"line_end\": 290\n        }\n      ],\n      \"evidence_note\": \"The python function simple_accuracy computes accuracy on the numpy predictions and labels directly.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-applicable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 35,\n          \"line_end\": 38\n        }\n      ],\n      \"evidence_note\": \"This is a standard binary classification/fact verification task (labels 1 and 0); grading rules/tie-breaking do not apply.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 288,\n          \"line_end\": 290\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 312,\n          \"line_end\": 317\n        }\n      ],\n      \"evidence_note\": \"Accuracy is computed directly from array predictions to a mean aggregate score.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 229,\n          \"line_end\": 230\n        }\n      ],\n      \"evidence_note\": \"No sample model prediction files or trajectory outputs are contained in the provided packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPcaKlbTWYS27Qvmy0/3FV7iw50K4GDHPqJMGs3OuHOwwAMDr1QY3NNIcRHg82"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 18338,
+      "candidatesTokenCount": 915,
+      "totalTokenCount": 19253,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 18338
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "IPxYapLMCdSovr0P0K3tsAE"
+  }
+}

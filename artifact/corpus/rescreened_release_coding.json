@@ -1,0 +1,82 @@
+{
+  "audit_date": "2026-07-16",
+  "protocol_note": "Post-freeze completion of the official-artifact rescreening recorded in protocol_amendment_2026-07-14.md.",
+  "releases": [
+    {
+      "benchmark": "MMTU",
+      "category": "tabular",
+      "arxiv_id": "2506.05587",
+      "repo": "MMTU-Benchmark/MMTU",
+      "repo_url": "https://github.com/MMTU-Benchmark/MMTU",
+      "frozen_commit": "82429014a3153c10bc9a94260cf0a7f52b449611",
+      "paper_url": "https://arxiv.org/abs/2506.05587",
+      "artifact_flags": {"evaluator": 1, "dataset": 1, "sample_predictions": 0, "environment": 1, "container": 1, "license": 0},
+      "criteria": {
+        "Input/expected-output schema": {"label": "documented-and-verifiable", "pointer": "README.md: Evaluate Your Model; evaluate.py: evaluate", "note": "Result JSONL, metadata, response/completion fields, and task-specific JSON answer keys are implemented."},
+        "Metric definition": {"label": "documented-and-verifiable", "pointer": "paper Table 1; evaluate.py: summary_metric", "note": "Per-task accuracy/F1 metrics and the summary metric dispatch are explicit."},
+        "Grading rules & tie-breaking": {"label": "documented-and-verifiable", "pointer": "evaluators/*.py, especially tableqa_evaluator.py", "note": "Task-specific parsing, normalization, matching, and error behavior are executable."},
+        "Predictions->aggregate-score mapping": {"label": "documented-and-verifiable", "pointer": "evaluate.py: evaluate; base_evaluator.py: evaluate/evaluate_by_group", "note": "Per-item results are grouped by dataset/tag/note and averaged into task and overall summaries."},
+        "Evaluator implementation available": {"label": "documented-and-verifiable", "pointer": "evaluate.py; evaluators/", "note": "Official repository contains the evaluator entry point and 25 task evaluators."},
+        "Sample predictions / trajectories": {"label": "not-documented", "pointer": "repository tree and README inspected", "note": "No committed sample result JSONL was found; the dataset is separately linked."}
+      },
+      "e3": {"attempted": true, "first_pass_label": "pass-as-documented", "first_pass": true, "after_repair": false, "prediction_source": "schema-valid synthetic two-record Table-QA JSONL equivalent", "detail": "Official TQAEvaluator parsed two records and produced accuracy 0.5 with n_jobs=1.", "repair_detail": "", "notes": "Scorer-only test; no model inference and no dataset download."}
+    },
+    {
+      "benchmark": "Tapilot-Crossing",
+      "category": "e2e-agent",
+      "arxiv_id": "2403.05307",
+      "repo": "tapilot-crossing/tapilot_code",
+      "repo_url": "https://github.com/tapilot-crossing/tapilot_code",
+      "frozen_commit": "e5827bd6c9cbd25e121b092362920730ef35733f",
+      "paper_url": "https://arxiv.org/abs/2403.05307",
+      "artifact_flags": {"evaluator": 1, "dataset": 1, "sample_predictions": 1, "environment": 1, "container": 0, "license": 1},
+      "criteria": {
+        "Input/expected-output schema": {"label": "documented-and-verifiable", "pointer": "README.md: Dataset Structure and Performance Evaluation", "note": "Interaction-turn layout, result types, response maps, pred/ref result directories, and eval_stats output are specified."},
+        "Metric definition": {"label": "documented-and-verifiable", "pointer": "paper Section 4.2 and Appendix H; eval/*.py", "note": "Accuracy and private-library recall-adjusted accuracy are defined and implemented."},
+        "Grading rules & tie-breaking": {"label": "documented-and-verifiable", "pointer": "eval/eval_code_gen.py: format_exec_out/calc_numerical_score", "note": "Boolean and numeric thresholds, multi-intent handling, invalid outputs, and private recall are explicit."},
+        "Predictions->aggregate-score mapping": {"label": "documented-and-verifiable", "pointer": "eval/eval_code_gen.py: eval_main/print_stats; eval/eval_one_click.py", "note": "Turn results are written to eval_stats and aggregated into setting and overall rates."},
+        "Evaluator implementation available": {"label": "documented-and-verifiable", "pointer": "eval/eval_code_gen.py; eval/eval_multi_choice.py; eval/eval_one_click.py", "note": "Official scorer and aggregation scripts are committed."},
+        "Sample predictions / trajectories": {"label": "documented-and-verifiable", "pointer": "output/normal/*.json; output/private/*.json", "note": "Official response examples are committed and described in output/README.md."}
+      },
+      "e3": {"attempted": true, "first_pass_label": "pass-as-documented", "first_pass": true, "after_repair": false, "prediction_source": "schema-valid synthetic prediction result and one-turn response map", "detail": "Official eval_main executed a synthetic turn-level eval.py result of 0.75 and emitted accuracy and score rate 1.0.", "repair_detail": "", "notes": "The synthetic fixture exercises the scorer path without model inference or the external full dataset."}
+    },
+    {
+      "benchmark": "ScienceBenchmark",
+      "category": "text2sql",
+      "arxiv_id": "2306.04743",
+      "repo": "ckosten/sciencebenchmark_dataset",
+      "repo_url": "https://github.com/ckosten/sciencebenchmark_dataset",
+      "frozen_commit": "82fca50f7dbe92079e2441b43c1a63459188ec7a",
+      "paper_url": "https://arxiv.org/abs/2306.04743",
+      "artifact_flags": {"evaluator": 0, "dataset": 1, "sample_predictions": 0, "environment": 0, "container": 0, "license": 0},
+      "criteria": {
+        "Input/expected-output schema": {"label": "documented-and-verifiable", "pointer": "README.md; */dev.json; */tables.json", "note": "Question/SQL pairs and Spider-style database schemas are released for three domains."},
+        "Metric definition": {"label": "documented-and-verifiable", "pointer": "paper Section 5.2", "note": "Execution accuracy is defined as equality of predicted and reference SQL result sets."},
+        "Grading rules & tie-breaking": {"label": "not-documented", "pointer": "paper Section 5.2, README.md, full repository tree", "note": "No executable or complete treatment of ordering, nulls, errors, timeouts, and result-set equivalence was found."},
+        "Predictions->aggregate-score mapping": {"label": "not-documented", "pointer": "paper Section 5.2, README.md, full repository tree", "note": "The high-level execution-accuracy ratio is stated, but no released prediction ingestion or aggregation procedure was found."},
+        "Evaluator implementation available": {"label": "not-documented", "pointer": "full repository tree at frozen commit", "note": "The official repository contains dataset JSON only and no evaluation implementation."},
+        "Sample predictions / trajectories": {"label": "not-documented", "pointer": "full repository tree at frozen commit", "note": "No sample system predictions were found."}
+      },
+      "e3": {"attempted": false, "first_pass_label": "missing-evaluator", "first_pass": false, "after_repair": false, "prediction_source": "n/a", "detail": "All 12 released JSON data/schema files parse, but the official repository contains no evaluator entry point.", "repair_detail": "", "notes": "Reusing Spider or writing a result-set comparator would be a consequential unsupported substitution."}
+    },
+    {
+      "benchmark": "DataBench",
+      "category": "tabular",
+      "arxiv_id": "",
+      "repo": "jorses/databench_eval",
+      "repo_url": "https://github.com/jorses/databench_eval",
+      "frozen_commit": "65f92cfad4f986f5496170f6bbcee48323f56c2f",
+      "paper_url": "https://aclanthology.org/2024.lrec-main.1179/",
+      "artifact_flags": {"evaluator": 1, "dataset": 1, "sample_predictions": 1, "environment": 1, "container": 0, "license": 1},
+      "criteria": {
+        "Input/expected-output schema": {"label": "documented-and-verifiable", "pointer": "README.md: Runner/Evaluator; tests/test.py", "note": "QA answer/type fields and one-response-per-question prediction format are explicit."},
+        "Metric definition": {"label": "documented-and-verifiable", "pointer": "README.md: Evaluator; src/databench_eval/eval.py", "note": "Accuracy and lite accuracy are executable over semantic answer types."},
+        "Grading rules & tie-breaking": {"label": "documented-and-verifiable", "pointer": "src/databench_eval/eval.py: default_compare; tests/test_eval.py", "note": "Boolean, category/date, number truncation, unordered list, and null handling are tested."},
+        "Predictions->aggregate-score mapping": {"label": "documented-and-verifiable", "pointer": "src/databench_eval/eval.py: Evaluator.eval", "note": "Responses are compared one-to-one and correct outcomes divided by the QA length."},
+        "Evaluator implementation available": {"label": "documented-and-verifiable", "pointer": "src/databench_eval/eval.py; PyPI databench-eval 4.0.1", "note": "Official source package and published evaluator package are public."},
+        "Sample predictions / trajectories": {"label": "documented-and-verifiable", "pointer": "examples/answers.zip; examples/*.py", "note": "Official answer files and baseline usage examples are committed."}
+      },
+      "e3": {"attempted": true, "first_pass_label": "pass-as-documented", "first_pass": true, "after_repair": false, "prediction_source": "schema-valid synthetic two-item QA and mixed responses", "detail": "Official Evaluator returned accuracy 0.5 for one correct and one incorrect category response.", "repair_detail": "", "notes": "The smoke harness stubs the optional datasets import because a local QA object is supplied; evaluator source is unmodified."}
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "benchmark": "TableBench",
+  "category": "tabular",
+  "frozen_commit": "6c61a20340409dea8f96edb8675e66bb4abd7b28",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "official shipped example (o3-mini DP example jsonl)",
+  "first_pass": {
+    "label": "credential-or-service-blocked",
+    "runtime_s": 4.35,
+    "detail": "eval_tablebench_script.py imported+ran 4.35s but evaluate.load('rouge') fetches ROUGE module from HF Hub; huggingface.co allowlist-blocked (403)",
+    "log": "artifact/execution/logs/TableBench/"
+  },
+  "repair_pass": {
+    "label": "pass-after-minimal-repair",
+    "runtime_s": 17.54,
+    "detail": "Granted network access to huggingface.co (service config; no code edit); evaluator ran on shipped official example predictions",
+    "patch": "artifact/execution/patches/ (see detail)"
+  },
+  "E3_smoke_testable": true,
+  "notes": "FactChecking 83.33 / NumericalReasoning 87.5 / DataAnalysis 26.05 / Visualization 33.33 / Overall 58.3"
+}

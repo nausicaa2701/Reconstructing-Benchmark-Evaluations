@@ -1,0 +1,157 @@
+benchmark,criterion,coder_A,coder_B,agree,A_pointer,B_pointer
+BLADE,Input/expected-output schema,partially-documented,partially-documented,1,"blade_bench/eval/datamodel/run.py, blade_bench/data (DatasetInfo)","README sections 3-4, datamodel files"
+BLADE,Metric definition,partially-documented,partially-documented,1,blade_bench/eval/datamodel/run.py SingleRunMetrics/MetricsAcrossRuns,eval/datamodel/run.py SingleRunMetrics and MetricsAcrossRuns
+BLADE,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,"blade_bench/eval/convert.py, run_get_eval.py","eval/convert.py Convert class, run_get_eval.py"
+BLADE,Grading rules & tie-breaking,not-documented,not-documented,1,none,No location found
+BLADE,Predictions->aggregate-score mapping,partially-documented,partially-documented,1,run.py MetricsAcrossRuns computed_fields,eval/datamodel/run.py MetricsAcrossRuns computed fields
+BLADE,Sample predictions / trajectories,claimed-but-not-verifiable,documented-and-verifiable,0,README example/multirun_analyses.json,example/multirun_analyses.json
+DataSciBench,Input/expected-output schema,not-documented,not-documented,1,none,README and eval.py
+DataSciBench,Metric definition,not-documented,documented-and-verifiable,0,none,"eval.py lines 88-110, 112-114"
+DataSciBench,Evaluator implementation available,not-documented,documented-and-verifiable,0,none,eval.py Vote class
+DataSciBench,Grading rules & tie-breaking,not-documented,not-documented,1,none,eval.py
+DataSciBench,Predictions->aggregate-score mapping,not-documented,partially-documented,0,none,eval.py get_result_df method line 125
+DataSciBench,Sample predictions / trajectories,not-documented,documented-and-verifiable,0,none,"eval.py lines 60-67, 75-86"
+DiscoveryBench,Input/expected-output schema,partially-documented,partially-documented,1,discovery_eval.py options; README metadata_path/type,discovery_eval.py CLI options
+DiscoveryBench,Metric definition,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README 'faceted evaluation'; run_eval_gold_vs_gen_NL_hypo_workflow,README mentions 'faceted evaluation'
+DiscoveryBench,Evaluator implementation available,partially-documented,partially-documented,1,discovery_eval.py imports eval.new_eval,discovery_eval.py imports eval.new_eval
+DiscoveryBench,Grading rules & tie-breaking,not-documented,not-documented,1,none,N/A
+DiscoveryBench,Predictions->aggregate-score mapping,not-documented,not-documented,1,discovery_eval.py eval_output_path,N/A
+DiscoveryBench,Sample predictions / trajectories,not-documented,not-documented,1,none,N/A
+QRData,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,1,README.md Benchmark section,README + benchmark/eval.py
+QRData,Metric definition,documented-and-verifiable,documented-and-verifiable,1,benchmark/eval.py calc_acc,benchmark/eval.py calc_acc function
+QRData,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,benchmark/eval.py,benchmark/eval.py
+QRData,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,0,benchmark/eval.py calc_acc/extract_first_number,benchmark/eval.py lines 22-41
+QRData,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,1,benchmark/eval.py calc_acc return,benchmark/eval.py line 43
+QRData,Sample predictions / trajectories,not-documented,not-documented,1,n/a,N/A
+DSBench,Input/expected-output schema,partially-documented,partially-documented,1,data_modeling/evaluation/*_eval.py (answer_file/predict_file CSV columns),"README overview, evaluator scripts"
+DSBench,Metric definition,documented-and-verifiable,documented-and-verifiable,1,"cat-in-the-dat_eval.py, bike-sharing-demand_eval.py",data_modeling/evaluation/*_eval.py
+DSBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,data_modeling/evaluation/*_eval.py,data_modeling/evaluation/*_eval.py
+DSBench,Grading rules & tie-breaking,not-documented,not-documented,1,none shown,N/A
+DSBench,Predictions->aggregate-score mapping,partially-documented,not-documented,0,*_eval.py writes result.txt per task,N/A
+DSBench,Sample predictions / trajectories,not-documented,not-documented,1,none shown,N/A
+MLGym,Input/expected-output schema,partially-documented,partially-documented,1,"data/3SATTime/evaluate.py, data/bertMNLI/evaluate.py",evaluate.py files
+MLGym,Metric definition,documented-and-verifiable,documented-and-verifiable,1,"data/blotto, bertMNLI, 3SATTime evaluate.py",evaluate.py files
+MLGym,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,"data/blotto/evaluate.py, data/bertMNLI/evaluate.py, data/3SATTime/evaluate.py",data/*/evaluate.py
+MLGym,Grading rules & tie-breaking,partially-documented,not-documented,0,data/blotto/evaluate.py calculate_payoffs; 3SATTime penalty branch,N/A
+MLGym,Predictions->aggregate-score mapping,not-documented,not-documented,1,none shown,N/A
+MLGym,Sample predictions / trajectories,claimed-but-not-verifiable,not-documented,0,README Trajectory Visualizer section,N/A
+TabFact,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,1,"README.md (Dataset Statistics, collected_data/tokenized_data format examples)","README.md, tokenized_data/*.json files"
+TabFact,Metric definition,partially-documented,not-documented,0,README.md ('evaluate the fact verification accuracy'),N/A
+TabFact,Evaluator implementation available,partially-documented,not-documented,0,"code/run_BERT.py, code/model.py (referenced, not fully shown)",N/A
+TabFact,Grading rules & tie-breaking,not-documented,not-applicable,0,n/a,N/A
+TabFact,Predictions->aggregate-score mapping,partially-documented,not-documented,0,README.md (CodaLab submission format {test_id: label}),N/A
+TabFact,Sample predictions / trajectories,not-documented,not-documented,1,n/a,N/A
+WikiTableQuestions,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,1,README: Questions and Answers / TSV Format,README Field descriptions section
+WikiTableQuestions,Metric definition,documented-and-verifiable,documented-and-verifiable,1,evaluator.py module docstring,evaluator.py docstring lines 1-44
+WikiTableQuestions,Evaluator implementation available,documented-and-verifiable,partially-documented,0,"evaluator.py (full source shown, truncated at DateValue init)",evaluator.py truncated at DateValue.__init__
+WikiTableQuestions,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,0,evaluator.py docstring: matching rules 1-3,evaluator.py docstring match conditions
+WikiTableQuestions,Predictions->aggregate-score mapping,not-documented,not-documented,1,README Evaluator section; evaluator.py shown portion,N/A
+WikiTableQuestions,Sample predictions / trajectories,not-documented,not-documented,1,N/A,N/A
+BIRD,Input/expected-output schema,not-documented,not-documented,1,none shown,README
+BIRD,Metric definition,not-documented,not-documented,1,none shown,README
+BIRD,Evaluator implementation available,not-documented,not-documented,1,none shown,EPO/Alfshop/eval_agent/agents/
+BIRD,Grading rules & tie-breaking,not-documented,not-documented,1,none shown,README
+BIRD,Predictions->aggregate-score mapping,not-documented,not-documented,1,none shown,README
+BIRD,Sample predictions / trajectories,not-documented,not-documented,1,none shown,README
+BIRD-CRITIC / SQL-eval,Input/expected-output schema,partially-documented,documented-and-verifiable,0,"README (question/query CSV files, e.g. data/questions_gen_postgres.csv)","README Getting Started section, data/questions_gen_postgres.csv references"
+BIRD-CRITIC / SQL-eval,Metric definition,partially-documented,partially-documented,1,README Introduction step 3; eval/eval.py normalize_table,"README step 3, eval/eval.py normalize_table function"
+BIRD-CRITIC / SQL-eval,Evaluator implementation available,documented-and-verifiable,partially-documented,0,"eval/eval.py (deduplicate_columns, normalize_table)",eval/eval.py
+BIRD-CRITIC / SQL-eval,Grading rules & tie-breaking,partially-documented,not-documented,0,eval/eval.py normalize_table (order_by handling),N/A
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README Introduction step 4 ('aggregate the results for reporting'),README step 4
+BIRD-CRITIC / SQL-eval,Sample predictions / trajectories,not-documented,not-documented,1,none found in shown README/files,N/A
+Dr.Spider,Input/expected-output schema,partially-documented,partially-documented,1,README 'To Use'; data_preprocess.py; copy_pre_perturbation_predictions.py,README and data structure description
+Dr.Spider,Metric definition,partially-documented,claimed-but-not-verifiable,0,README 'Leaderboard' section (EX accuracy),README evaluation section and leaderboard
+Dr.Spider,Evaluator implementation available,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README 'To Evaluate a Model' link to test-suite-sql-eval,README evaluation instructions
+Dr.Spider,Grading rules & tie-breaking,not-documented,not-documented,1,none found,N/A
+Dr.Spider,Predictions->aggregate-score mapping,partially-documented,partially-documented,1,README 'Leaderboard' table description (macro average),README leaderboard section
+Dr.Spider,Sample predictions / trajectories,not-documented,not-documented,1,none found,N/A
+Spider,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,1,README.md 'Data Content and Format' section,README.md Data Content and Format section
+Spider,Metric definition,partially-documented,partially-documented,1,README.md 'Evaluation' section,README.md Evaluation section
+Spider,Evaluator implementation available,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README mentions evaluation.py/process_sql.py; only baseline eval.py shown,README.md Evaluation section (11/15/20 update)
+Spider,Grading rules & tie-breaking,partially-documented,not-documented,0,README.md 'Evaluation' section (cuts off mid-explanation),N/A
+Spider,Predictions->aggregate-score mapping,not-documented,not-documented,1,none,N/A
+Spider,Sample predictions / trajectories,not-documented,not-documented,1,none,N/A
+BigCodeBench,Input/expected-output schema,partially-documented,documented-and-verifiable,0,"bigcodebench/evaluate.py (problem dict keys: task_id, complete_prompt, canonical_solution, test, entry_point)","bigcodebench/evaluate.py check_correctness function, get_bigcodebench dataset"
+BigCodeBench,Metric definition,partially-documented,documented-and-verifiable,0,"bigcodebench/evaluate.py imports estimate_pass_at_k, pass_k='1,5,10'","bigcodebench/evaluate.py estimate_pass_at_k, PASS constant"
+BigCodeBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,"bigcodebench/evaluate.py, check_correctness/untrusted_check/trusted_check","bigcodebench/evaluate.py check_correctness, untrusted_check, trusted_check"
+BigCodeBench,Grading rules & tie-breaking,partially-documented,partially-documented,1,"bigcodebench/evaluate.py check_correctness (time/memory limits, calibrated flag)",bigcodebench/evaluate.py untrusted_check returns status tuple
+BigCodeBench,Predictions->aggregate-score mapping,partially-documented,documented-and-verifiable,0,bigcodebench/evaluate.py evaluate() writes *_pass_at_k.json via estimate_pass_at_k,"bigcodebench/evaluate.py estimate_pass_at_k function, result aggregation"
+BigCodeBench,Sample predictions / trajectories,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README 'Pre-generated samples' / LLM-generated code section link,"README LLM-generated samples section, bcb_results folder mention"
+DA-Code,Input/expected-output schema,partially-documented,partially-documented,1,README Quickstart + evaluation.py get_result_file/_get_eval_config_info,da_code/configs/examples.jsonl and evaluation.py
+DA-Code,Metric definition,partially-documented,partially-documented,1,da_agent/evaluators/metrics/dbt.py check_yaml_file,metrics/dbt.py check_yaml_file function
+DA-Code,Evaluator implementation available,partially-documented,documented-and-verifiable,0,da_agent/evaluators/evaluation.py,da_agent/evaluators/evaluation.py
+DA-Code,Grading rules & tie-breaking,partially-documented,partially-documented,1,evaluation.py conj/hardness handling,evaluation.py metric_conj field
+DA-Code,Predictions->aggregate-score mapping,claimed-but-not-verifiable,partially-documented,0,README evaluate.py --result_file arg,evaluation.py _get_eval_config_info
+DA-Code,Sample predictions / trajectories,claimed-but-not-verifiable,claimed-but-not-verifiable,1,evaluation.py result.json path reference,README full dataset section
+DS-1000,Input/expected-output schema,partially-documented,documented-and-verifiable,0,README Format section,"README.md Format section, test_ds1000.py"
+DS-1000,Metric definition,partially-documented,documented-and-verifiable,0,README Usage/Expected output,"README.md expected output, test_ds1000.py"
+DS-1000,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,execution.py check_correctness,"test_ds1000.py, execution.py, code_context field"
+DS-1000,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,0,README Format section,README.md Format section
+DS-1000,Predictions->aggregate-score mapping,partially-documented,documented-and-verifiable,0,README Expected output table,README.md expected output section
+DS-1000,Sample predictions / trajectories,claimed-but-not-verifiable,documented-and-verifiable,0,"README data/codex002-answers.jsonl, results folder","data/codex002-answers.jsonl, results folder"
+PandasEval/NumpyEval (CERT),Input/expected-output schema,partially-documented,partially-documented,1,apicoder/CodeGenAPI/APICoder/get_lib_comment_for_eval.py,"README.md evaluation section, eval_private.py"
+PandasEval/NumpyEval (CERT),Metric definition,not-documented,claimed-but-not-verifiable,0,README.md (Evaluation section),README.md evaluation results table
+PandasEval/NumpyEval (CERT),Evaluator implementation available,not-documented,claimed-but-not-verifiable,0,"apicoder/CodeGenAPI/eval_baseline.py, eval_private.py",README.md step 4
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,not-documented,not-documented,1,n/a,N/A
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,not-documented,claimed-but-not-verifiable,0,README.md (results table),README.md step 4
+PandasEval/NumpyEval (CERT),Sample predictions / trajectories,partially-documented,not-documented,0,"apicoder/CodeGenAPI/eval_baseline.py (write_jsonl(saved_path, samples))",N/A
+BixBench,Input/expected-output schema,partially-documented,documented-and-verifiable,0,README.md dataset description,"README Quick Start section, graders.py GradeResult model"
+BixBench,Metric definition,documented-and-verifiable,partially-documented,0,bixbench/graders.py GradeType/GradeResult,"README mentions majority vote, graders.py shows 0/1 grading"
+BixBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,bixbench/graders.py,"graders.py GradingFunction, MCQGrader classes"
+BixBench,Grading rules & tie-breaking,partially-documented,partially-documented,1,graders.py + README majority vote mention,graders.py _grade_str_verifier method
+BixBench,Predictions->aggregate-score mapping,partially-documented,claimed-but-not-verifiable,0,README.md postprocessing.py section,README mentions majority vote analysis k=5
+BixBench,Sample predictions / trajectories,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README.md trajectories/raw data section,README states trajectories saved as JSON in data/trajectories/
+InfiAgent-DABench,Input/expected-output schema,partially-documented,documented-and-verifiable,0,eval_closed_form.py (label/response field usage); pipeline/activities/eval.py (question fields),"examples/DA-Agent/eval_closed_form.py lines 18-24, 28-54"
+InfiAgent-DABench,Metric definition,documented-and-verifiable,documented-and-verifiable,1,"examples/DA-Agent/eval_closed_form.py: is_equal, evaluate_accuracy_* functions",examples/DA-Agent/eval_closed_form.py lines 97-113
+InfiAgent-DABench,Evaluator implementation available,documented-and-verifiable,partially-documented,0,examples/DA-Agent/eval_closed_form.py,examples/DA-Agent/eval_closed_form.py line 119
+InfiAgent-DABench,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,0,"eval_closed_form.py: is_equal, correctness dict, all()-based question pass",examples/DA-Agent/eval_closed_form.py lines 28-34
+InfiAgent-DABench,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,1,eval_closed_form.py: evaluate_accuracy_by_question/sub_question/proportional,examples/DA-Agent/eval_closed_form.py lines 97-113
+InfiAgent-DABench,Sample predictions / trajectories,not-documented,not-documented,1,none shown,None
+ScienceAgentBench,Input/expected-output schema,partially-documented,documented-and-verifiable,0,compute_scores.py (example dict fields); README Benchmark Access,README and compute_scores.py
+ScienceAgentBench,Metric definition,partially-documented,documented-and-verifiable,0,compute_scores.py; calculate_metrics.py,calculate_metrics.py and compute_scores.py
+ScienceAgentBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,compute_scores.py; evaluation/harness/grading.py; run_evaluation harness,compute_scores.py
+ScienceAgentBench,Grading rules & tie-breaking,documented-and-verifiable,documented-and-verifiable,1,calculate_metrics.py evaluate_best_run(),calculate_metrics.py evaluate_best_run function
+ScienceAgentBench,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,1,calculate_metrics.py main(),calculate_metrics.py
+ScienceAgentBench,Sample predictions / trajectories,claimed-but-not-verifiable,not-documented,0,README Code Generation with Agents section (log_fname JSONL),N/A
+Spider2-V,Input/expected-output schema,partially-documented,partially-documented,1,README Quick Start example + evaluation_examples/README.md#task-format (link only),README.md Quick Start section and evaluation_examples/README.md reference
+Spider2-V,Metric definition,partially-documented,claimed-but-not-verifiable,0,README Quick Start (env.evaluate() -> score) and Experiments table,README.md Quick Start and Experiments sections
+Spider2-V,Evaluator implementation available,documented-and-verifiable,partially-documented,0,"desktop_env/evaluators/__init__.py, getters/dbt.py, getters/file.py",desktop_env/evaluators/ directory structure and getter files
+Spider2-V,Grading rules & tie-breaking,not-documented,not-documented,1,none shown,N/A
+Spider2-V,Predictions->aggregate-score mapping,partially-documented,not-documented,0,README Experiments table (Abstract/Verbose/Account/Overall),N/A
+Spider2-V,Sample predictions / trajectories,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README Agent Baselines section,README.md agent baseline section
+MLAgentBench,Input/expected-output schema,partially-documented,partially-documented,1,"README 'Tasks' section; MLAgentBench/benchmarks/CLRS/env/evaluation.py (Result = Dict[str, probing.DataPoint])","README tasks description, evaluation.py function signatures"
+MLAgentBench,Metric definition,partially-documented,documented-and-verifiable,0,README 'Results' section; CLRS evaluation.py evaluate() score computation,"evaluation.py _evaluate, evaluate functions"
+MLAgentBench,Evaluator implementation available,partially-documented,documented-and-verifiable,0,README 'Evaluation' section (MLAgentBench.eval CLI); CLRS evaluation.py,MLAgentBench/benchmarks/CLRS/env/evaluation.py
+MLAgentBench,Grading rules & tie-breaking,partially-documented,not-documented,0,README 'Results' section (>10% improvement over baseline threshold),N/A
+MLAgentBench,Predictions->aggregate-score mapping,partially-documented,documented-and-verifiable,0,README 'Evaluation'/'Workflow' sections; CLRS evaluation.py evaluate(),evaluation.py evaluate() line 'evals['score'] = sum...'
+MLAgentBench,Sample predictions / trajectories,claimed-but-not-verifiable,claimed-but-not-verifiable,1,"README links: GPT-4 cifar10 logs (Google Drive), MLAgentBench_logs GitHub repo",README mentions logs at google drive link
+MLE-bench,Input/expected-output schema,partially-documented,documented-and-verifiable,0,mlebench/competitions/*/grade.py,grade.py files show submission/answers DataFrames with specific columns
+MLE-bench,Metric definition,documented-and-verifiable,documented-and-verifiable,1,"grade.py: kendall_tau, alaska_weighted_auc, roc_auc_score",grade.py implementations with inline formulas and references
+MLE-bench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,mlebench/competitions/*/grade.py,mlebench/competitions/*/grade.py files at frozen commit
+MLE-bench,Grading rules & tie-breaking,partially-documented,partially-documented,1,grade.py InvalidSubmissionError checks,README leaderboard section and aggregate_grading_reports.py reference
+MLE-bench,Predictions->aggregate-score mapping,partially-documented,partially-documented,1,"README: aggregate_grading_reports.py, any_medal_percentage",README: aggregate_grading_reports.py outputs any_medal_percentage
+MLE-bench,Sample predictions / trajectories,claimed-but-not-verifiable,not-documented,0,README leaderboard 'Grading Reports Available' column,No sample predictions or trajectories in shown evidence
+RE-Bench,Input/expected-output schema,partially-documented,documented-and-verifiable,0,score.py DEFAULT_MODEL_PATH/DEFAULT_SOLUTION_PATH args,"Task summaries in README, score.py files"
+RE-Bench,Metric definition,documented-and-verifiable,documented-and-verifiable,1,README task summaries + score.py math.log(loss-1.5) etc.,README task summaries and score.py implementations
+RE-Bench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,"ai_rd_fix_embedding/assets/score.py, ai_rd_triton_cumsum/assets/score.py, ai_rd_restricted_mlm/assets/score.py",ai_rd_*/assets/score.py files
+RE-Bench,Grading rules & tie-breaking,partially-documented,not-documented,0,score.py nan/timeout handling,N/A
+RE-Bench,Predictions->aggregate-score mapping,not-documented,partially-documented,0,README per-task scores only,Individual task scoring in score.py files
+RE-Bench,Sample predictions / trajectories,not-documented,not-documented,1,none shown,N/A
+SpreadsheetBench,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,1,README 'Dataset Introduction',README.md Dataset Introduction section
+SpreadsheetBench,Metric definition,partially-documented,documented-and-verifiable,0,README 'Experiments'; evaluation.py compare_cell_value/compare_workbooks,evaluation/evaluation.py compare_workbooks function
+SpreadsheetBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,1,"evaluation/evaluation.py, open_spreadsheet.py, parity_test.py",evaluation/evaluation.py
+SpreadsheetBench,Grading rules & tie-breaking,partially-documented,not-documented,0,"evaluation.py cell_level_compare, compare_workbooks",N/A
+SpreadsheetBench,Predictions->aggregate-score mapping,not-documented,partially-documented,0,evaluation.py (truncated before main/aggregation),evaluation/evaluation.py parse_option
+SpreadsheetBench,Sample predictions / trajectories,claimed-but-not-verifiable,not-documented,0,README 'Inference' section,N/A
+TableBench,Input/expected-output schema,partially-documented,partially-documented,1,README Step 2 JSON example; eval_tablebench_script.py result['qtype']/['qsubtype'],README Step 2 example JSON; eval_tablebench_script.py field references
+TableBench,Metric definition,partially-documented,documented-and-verifiable,0,README '📐 Evaluation Metrics' section,README 📐 Evaluation Metrics section; eval_tablebench_script.py docstring
+TableBench,Evaluator implementation available,partially-documented,partially-documented,1,eval_tablebench_script.py; metrics/base_metric.py,eval_tablebench_script.py (truncated); metrics/base_metric.py abstract base
+TableBench,Grading rules & tie-breaking,partially-documented,not-documented,0,eval_tablebench_script.py merged_type dispatch logic,N/A
+TableBench,Predictions->aggregate-score mapping,partially-documented,documented-and-verifiable,0,"eval_by_subtype/eval_by_type functions, eval_tablebench_script.py",eval_tablebench_script.py eval_by_subtype function (Visualization example)
+TableBench,Sample predictions / trajectories,claimed-but-not-verifiable,claimed-but-not-verifiable,1,README 'eval_examples/inference_results/...Example.jsonl',README Step 2 mentions eval_examples/inference_results/o3-mini-2025-01-31=TableBench_DP=Example.jsonl
+Spider 2.0,Input/expected-output schema,partially-documented,documented-and-verifiable,0,"README Data section; evaluate.py fields (instance_id, answer_type, answer_or_path, evaluation)","spider2-dbt/evaluation_suite/evaluate.py lines 27-51, eval_utils.py functions"
+Spider 2.0,Metric definition,documented-and-verifiable,documented-and-verifiable,1,"eval_utils.py: string_match, number_match, compare_pandas_table",eval_utils.py string_match/number_match/table_match/duckdb_match functions
+Spider 2.0,Evaluator implementation available,partially-documented,documented-and-verifiable,0,"evaluate.py, eval_utils.py (spider2-dbt/evaluation_suite)",spider2-dbt/evaluation_suite/evaluate.py and eval_utils.py
+Spider 2.0,Grading rules & tie-breaking,partially-documented,partially-documented,1,evaluate.py run_evaluation loop (score=max over eval_metadatas),"evaluate.py lines 67-69 (max(temp_scores)), line 113 final score calculation"
+Spider 2.0,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,1,evaluate.py bottom loop: score/len(output_list),evaluate.py lines 113-119
+Spider 2.0,Sample predictions / trajectories,not-documented,not-documented,1,none shown,No sample predictions file shown

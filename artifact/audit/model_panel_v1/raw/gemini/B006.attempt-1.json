@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:14:45.626417+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B006",
+    "packet_sha256": "230a9ed85f0d5e2d31d734588b664f82dc04a0599265f4947b5a8bf81a6ec239",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 8576,
+    "output_tokens": 1640,
+    "cost_usd": 0.027624,
+    "elapsed_seconds": 11.664
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B006\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 46,\n          \"line_end\": 55\n        }\n      ],\n      \"evidence_note\": \"The comments in E002 outline the keys expected in the evaluation config, but the complete JSON/JSONL schemas and configuration files themselves are not present in the packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 9,\n          \"line_end\": 9\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 19,\n          \"line_end\": 62\n        }\n      ],\n      \"evidence_note\": \"A specific metric (check_yaml_file) is defined in dbt.py, but other metrics imported from the metrics module are missing due to incomplete packet files.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 17,\n          \"line_end\": 250\n        }\n      ],\n      \"evidence_note\": \"The Evaluator class implementation is provided in E002 but its evaluate method truncates abruptly at line 250, leaving the evaluation loop incomplete.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 70,\n          \"line_end\": 72\n        },\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 241,\n          \"line_end\": 250\n        }\n      ],\n      \"evidence_note\": \"The packet notes conjunction types like 'avg' or 'and/or', but the logic is truncated at line 250 inside the evaluation try-catch block.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 241,\n          \"line_end\": 250\n        }\n      ],\n      \"evidence_note\": \"The aggregation and scoring loop starts around line 241 but is truncated at line 250 before any score accumulation or mapping is completed.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 54,\n          \"line_end\": 61\n        }\n      ],\n      \"evidence_note\": \"No sample predictions or trajectories are provided in the packet; the README references running outputs and evaluation but no examples are shown.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "ErEWCq4WARFNMg+2X7ScTnRDzsdAKUj28wPper/MGT53jLgQUqaFRGLeZeXQuZhnnXpTLAcedAdBwTRa9VsgZ/S+Ua8JDMT3RnoE3ixshcGut7EBktJE9LYClusFRplJd3oTdfRpMLZBgvN3Q1H6DvTrHch1nf0pPAUKMcivJA2xHxqkvXlE2I477FeVO7I65vUlPZb0X+SMSCV94rkh58PiHXloCGmQVoKD527vUp5P3EE/dmUEWKE2PjXAkmKIhgkbpCc4SgV3G0lDhlvKSRheDOEJ1zxs7Wwh7uGkZ2Zf818EAdyG77j53V86yzoYO8Xz5QOelEMwf19TIVId92IpQeTc/+yVp8gbOHKOp+ANvAC7y7qiJi5+Epe1RMWnb8BtnlIluO5wPNAsWlvjGXHbCDMfPV1Vji9tc3gzttE11CG9aFs2+lCo4yHPLOWySDlHiremkyDBfAs/ciydvKjAs7uYJsQaeYNNLCprEyn6R7Vdq2nm65aj599F6weqczneyJ468roPhhbAHt+6YgPdSiY+TknDFyNF6tPuKGQzqfHMPYMhPXWSHwk1gcUkJsl6+xIVlra9t6bVwqlbbpJ8RHGtwVB4wXJsENg/VyviFeBtqPCEICr2JVIy70MPOQpPYWEee1mSd5osQR9bb0u0CUP3BnjYndjCFxLGcN8P9X87dVwvHJOr8euVPiZQRAeOPYsvy+R1quIXQVG2V5fPyvDuvDQGIE9vgzML9XLXPanzxJvOsaacWwcrdx2foc8fZC+P2PK4w6/ICpfjblW+Bd3CBqhjUCZp0jSmcaKUmQRnrNRksOp1B5kBQ8Ka65ODl/1zzqxQ0UT3xj4ifws8P5bgv9361hZyDzweTAeaPw15Wx93MEikTUDP+6svYbHqQU2VZNBW1CYN3gi5rUc0Q8vv3QVdl6kZRM6PgpmeSy3O0RszkCFP3oX4SRMDFsrajtoomlU0A6TY5cMmiFhRTV5M7LfBiOs4XTfNUCoDJDzsAcEtG3cFF/lQcENcmGfdKeh0zRC5N5Z8nV4rI+movmlyMdpEFbjg55uba3x763mNptlpZlbCndqxQ8Y5z2Q5Pxb2BgNSR5mGpCDVmsi5Mjwi/bhz+GmaP9UGzI8zaW/vVlSI+0fYjYHNBeZgxFWIRKKCShKkMrylWykSkLYvIfysDQljcFMSGaXDf35d8B5YyPveYcsh4ZfRqyEaV49AAp+w05ltNoRNTCQhfOw0/WAKVms40jfzOrEwqprRV5mgZTodTFMOPYZmG7is5eODL+sk2CZ9K5l3o6oOBMPzgSkQwz+OJMVhwKgpZn5fv1DnmYorkmTOhHoiL1ZnUTiVkDbd6PionDRPy99B7UUpBJ9nDc23UT/6fu3yv/3+uxdLVlJVYd+pSQctoFonxSW06p2yKz6cJ3je4Asr4zPUhn1I8Q5qfFFF9UtNjKCWJj8unV0EoLrLI39JH1fBJcdSTEk4rwzBbxnEReWaNYTaVticGr/DS4sTAXtdIeuZj8zv8Nf2gB0KHIjWU2P2ZIwTLs6X7PQLwZGRbX+6B9W26CtLqu2jP6fjVCSc0SyIK8OJPGDcJGTI8+diRfQnmT9uqGRvzkPqHH3kmZK8cH5ll2EhpNhfuUUFu7yrq9hdRqZt8nj5pDEpvb+k1feZKWNLoyO9a+omGhCv7IrHILTuEeNLtF1HegKrUwryYYIlnKJA0V3r2dHBtLAbaw18s7jxWzqC4eh6SfCBm/m2lptO2HZvgDrwjnWgoLpmsUi9Dv1BMjf4aHdW30q1b9MGjTvLXJpLJywi8Ybhm1HhVPxEtMFOyS4mQWK2KGJMtBbTpeEV9rsKFyeSZkbpY5jRFc8qsWOzzXVnfe4M87aHLEoL1q6rKFDmtVBRvF4ewzw18Jfr0NVbN8GJ/lunMT+uvdzdRr5GxKtEP0U70qWONE0eFnUOhwF0HouwChEvpcX2OvcihbSKPb5EebOwRdS9qMuNMyyeCLwJ2WD1MdjzpaC+I/WIMYRYwNaZdNa/DHbran1GX8zZO7gSze9xYDXqk6MD48ckK2NQUPfY6fkZ3c24NVOiNWJjvUu7CCZ1E7FpF2rFdBNfXZAiNllBlCMv5UENGtlIgPndUJZr5q85qzv4G4OSSV0PxpFwSJyosmLxfnNSBrpfb6afJhzDbiRNFHzqCDmOD3QR4Wz6tAIjz38iU0ZEwDiktgThu+fiYK1h5WVm2IkDSET2WRjKMOLbJGSdB3MGvIjrdZlSEzk8e0eRb0lxTd8u4Sk+aszPUL/f1/QQ6ounDu9K5eDJVT1vZlK4EG0X+i9TsHtXv7Zkin/JLGYtJvZaYfDt4TJsJb6elVoT0s4vxjB48Cdl+IxL5op2S2LoGzHL83fUjYYFqV7LQ1TL5pk+ZVIDQaei7NQEJV68W4Suuda3GmBqyx0JIkk0bAQBDYuwclEiU2s4OVtMqO8KxixV2n0/1HHhLaZyEFv4KMEmyMFd7qTX87UuPhtduqgT7Kpy89bLZuFhaszcipZXdshiim8gH0TOyCqyrsVwqWlb12dePuntHl3mKV9awxD1c2tlC1v1gffVMFT1XcZuGZDOjVHrTXZdzfgX5b9Dtbrz9HdiUHkfRq9BD2Y4HAiFjHiCcQWeqmhJyFExB/fjW2VfCk4/SYuEGGkjjGJPwHixf0w9FFf48c2r9nS0khmQaM7QSYVW5gf2CkqZ1TrnTf2ZIydx3s4Mh8EHyESAVvENeZ1GztvXI6gsxupAkcduT2irw7yi9y2vHkhjSRmntfU9hUNZqbyCPUagByeyG558S5K7XGOlay9g3UvIH7Lg68IHeBOArnl5Ipg0txxUd8upmhKpepqpu32wID3KVWqOoRIhDa77bJC4iFkjDlp7JpsgPlS4Fle5qZXaIWU3GhA3TN40Xcxit7l0s7d80+1xdJuYpnfMzyZUGn3NwWchyMl8d+Anb4YkVr2LoYDKuDm0ZQ5MQ8+hHvqBoCA4kzln9ff0hLZ1RJxWw2K9Kf6o0lslkadRzvQ2ktJ80zlPs3+OgLIx05t2JlKOm6Gh08j9Rp4wVNErinRl7QtYcylOUp2SfSaCSKgwFQTp2X1qF5ZXnneq5PcYAig+TPCCHiG24rFbQmBu1swJycTjS3HXJqe3p0gLSO6MjVmrXwSvvmBagpqleLXorv5Gr/RS/1rwp7Gxco4/1jcK/LcN3ORdnzuq2bKosA887luka+oUDCwkkaDyMP+jm28WnXIRaSMi1TBP9MPSE93Bj+GYqhcHotVY+x+C2CS5anWdcO6dyXqj4GXXDU/WsCbWlkW3hrqy5rv3beZTuMrgXcKnoTQaxz5x7D+gSTK3WZTg8QfzP1BIsjXVkK+ez2G5QZgu3aEV2/TSeIN2L/EC/eRqi1ldJYH2sxzIFkBKAxvN2mLC6P2KB61fVUK1VfJ63QAbRuVlD2f9Gxi9IpaPZmH6n2/o60wzrOeWe0MCdE9e/2PvdMZR/IsHwue3RT7N3bCaNuLOU7lu7g0v44pTwc2m3Kdr6zbqykxHF4MPk7/vHupwxRgKesqaEpiYhSmbhqcBfQnMm05l+NAXHP1eW72XfaEt9pKDD3aIflmYaoZbG7IoA/rxLZF8RSlu8NUf8LBQdMCipWsmlf+crgUX+hpBe8KfmQcNVT8iRbMvKXsHbSCRPz3e/9ZI3jHTusFDU7Cr1yjGpSahimtyM13StKlnFetEKfhhTkwd1cMQI8rT1h1+oXOP28KP6kUtL7fmFL650M9jV2hrZrQqndSqj9tego8VLJHUXlXkj0j2npfm+wy85UVoUaIH1q8i0zntsv+P"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 8576,
+      "candidatesTokenCount": 872,
+      "totalTokenCount": 10216,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 8576
+        }
+      ],
+      "thoughtsTokenCount": 768,
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "WvVYaueHIc-12roPwKi3sAI"
+  }
+}

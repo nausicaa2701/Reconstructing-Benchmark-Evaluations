@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:24.778810+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B014",
+    "packet_sha256": "2b89b3351ba9f207e17dd94593359f0ae0a6b368d68e36e8717d336c4d7da21a",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 12374,
+    "output_tokens": 913,
+    "cost_usd": 0.026778,
+    "elapsed_seconds": 6.27
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B014\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 174,\n          \"line_end\": 181\n        },\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 38,\n          \"line_end\": 65\n        }\n      ],\n      \"evidence_note\": \"The README describes the grading input CSV format requirement and the JSONL structure. The competition-specific validation code checks specific columns, length equality, identifiers, and types.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 9,\n          \"line_end\": 36\n        },\n        {\n          \"source_id\": \"E004\",\n          \"line_start\": 43,\n          \"line_end\": 100\n        }\n      ],\n      \"evidence_note\": \"Detailed code implementations of custom metrics, including Kendall Tau and Alaska weighted AUC, are provided with mathematical comments and explanations.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 174,\n          \"line_end\": 190\n        },\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 68,\n          \"line_end\": 70\n        }\n      ],\n      \"evidence_note\": \"The command-line tools `mlebench grade` and `mlebench grade-sample` are documented, and the internal grading scripts/modules are fully implemented.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-applicable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 174,\n          \"line_end\": 181\n        }\n      ],\n      \"evidence_note\": \"Each competition evaluates predictions directly against ground truth to produce numeric scores; no model-versus-model grading rules or tie-breaking logic applies.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 53,\n          \"line_end\": 70\n        }\n      ],\n      \"evidence_note\": \"The README outlines how to run `aggregate_grading_reports.py` with specific split flags to generate mean and standard error of the mean (SEM) for the leaderboard.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 215,\n          \"line_end\": 217\n        }\n      ],\n      \"evidence_note\": \"The packet contains references to examples, but no concrete sample predictions, logs, or agent trajectories are provided in the inspected texts.\",\n      \"confidence\": \"medium\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPkNEw+VP/Gdtl+zYNK+CE4FW1qehdWNGgi1a0TEqQ0XP9MfT73puL8qOaGwPX"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 12374,
+      "candidatesTokenCount": 913,
+      "totalTokenCount": 13287,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 12374
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "2vtYaoaXOcSdosUP3tXW4QU"
+  }
+}

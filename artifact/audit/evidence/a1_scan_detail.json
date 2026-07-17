@@ -1,0 +1,1221 @@
+{
+  "BigCodeBench": {
+    "evaluator": [
+      ".github/ISSUE_TEMPLATE/model_eval_request.yml",
+      "Docker/Evaluate.Dockerfile",
+      "Requirements/requirements-eval.txt",
+      "bigcodebench/eval/__init__.py",
+      "bigcodebench/eval/_special_oracle.py",
+      "bigcodebench/eval/utils.py",
+      "bigcodebench/evaluate.py",
+      "bigcodebench/syncheck.py",
+      "decontamination/n_gram_check.py"
+    ],
+    "dataset": [
+      "analysis/lib2domain.json",
+      "analysis/task2domain.json",
+      "bigcodebench/data/__init__.py",
+      "bigcodebench/data/bigcodebench.py",
+      "bigcodebench/data/utils.py"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "Requirements/requirements-eval.txt",
+      "Requirements/requirements.txt",
+      "pyproject.toml",
+      "tests/requirements.txt"
+    ],
+    "container": [
+      "Docker/Evaluate.Dockerfile",
+      "Docker/Generate.Dockerfile",
+      "Docker/Gradio.Dockerfile",
+      "sandbox-templates/e2b.Dockerfile"
+    ],
+    "readme": [
+      "README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "DA-Code": {
+    "evaluator": [
+      "da_agent/evaluators/__init__.py",
+      "da_agent/evaluators/evaluation.py",
+      "da_agent/evaluators/getters/__init__.py",
+      "da_agent/evaluators/getters/bigquery.py",
+      "da_agent/evaluators/getters/dbt.py",
+      "da_agent/evaluators/getters/file.py",
+      "da_agent/evaluators/getters/general.py",
+      "da_agent/evaluators/getters/misc.py",
+      "da_agent/evaluators/getters/postgre.py",
+      "da_agent/evaluators/metrics/__init__.py",
+      "da_agent/evaluators/metrics/dbt.py",
+      "da_agent/evaluators/metrics/general.py"
+    ],
+    "dataset": [
+      "assets/dataset.png",
+      "da_code/configs/eval/eval_all.jsonl",
+      "da_code/configs/eval/eval_di.jsonl",
+      "da_code/configs/eval/eval_dm.jsonl",
+      "da_code/configs/eval/eval_dw.jsonl",
+      "da_code/configs/eval/eval_ml.jsonl",
+      "da_code/configs/eval/eval_sa.jsonl",
+      "da_code/configs/eval/eval_visual.jsonl",
+      "da_code/configs/task/all.jsonl",
+      "da_code/configs/task/di.jsonl",
+      "da_code/configs/task/dm.jsonl",
+      "da_code/configs/task/dw.jsonl"
+    ],
+    "sample_predictions": [
+      "da_code/gold/ml-competition-001/submission.csv",
+      "da_code/gold/ml-competition-003/submission.csv",
+      "da_code/gold/ml-competition-005/submission.csv",
+      "da_code/gold/ml-competition-006/submission.csv",
+      "da_code/gold/ml-competition-008/submission.csv",
+      "da_code/gold/ml-competition-009/submission.csv",
+      "da_code/gold/ml-competition-017/submission.csv",
+      "da_code/source/data-sa-001/sample_result.csv",
+      "da_code/source/data-sa-043/sample_result.csv",
+      "da_code/source/dm-csv-007/sample_result.csv",
+      "da_code/source/dm-csv-009/sample_result.csv",
+      "da_code/source/dm-csv-010/sample_result.csv"
+    ],
+    "env_file": [
+      "da_agent/controllers/setup.py"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "da_code/source/data-sa-001/README.md",
+      "da_code/source/data-sa-004/README.md",
+      "da_code/source/data-sa-026/README.md",
+      "da_code/source/data-sa-028/README.md",
+      "da_code/source/data-sa-029/README.md",
+      "da_code/source/data-sa-031/README.md",
+      "da_code/source/data-sa-039/README.md",
+      "da_code/source/data-sa-043/README.md",
+      "da_code/source/data-sa-061/README.md",
+      "da_code/source/di-text-001/README.md",
+      "da_code/source/di-text-002/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "DS-1000": {
+    "evaluator": [
+      "execution.py",
+      "run_dist_inference.py",
+      "run_inference.py",
+      "run_openai.py"
+    ],
+    "dataset": [
+      "data/codex002-answers.jsonl",
+      "data/ds1000.jsonl.gz",
+      "data/gpt-3.5-turbo-0125-answers.jsonl",
+      "data/gpt-3.5-turbo-0613-answers.jsonl",
+      "data/gpt-4-0613-answers.jsonl",
+      "data/gpt-4-turbo-2024-04-09-answers.jsonl",
+      "data/gpt-4o-2024-08-06-answers.jsonl"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "environment.yml"
+    ],
+    "container": [],
+    "readme": [
+      "README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "PandasEval/NumpyEval (CERT)": {
+    "evaluator": [
+      "apicoder/APIRetriever/scripts/extract_retrieval_api_corpus.py",
+      "apicoder/APIRetriever/scripts/run_prepare_test_private_code.py",
+      "apicoder/APIRetriever/scripts/run_prepare_train_private_code.py",
+      "apicoder/CodeGenAPI/APICoder/get_lib_comment_for_eval.py",
+      "apicoder/CodeGenAPI/eval_baseline.py",
+      "apicoder/CodeGenAPI/eval_private.py",
+      "apicoder/CodeGenAPI/run_evaluating_codes.sh",
+      "apicoder/CodeGenAPI/run_private.py",
+      "apicoder/CodeGenAPI/scripts/get_comments_from_evallibs.py",
+      "apicoder/CodeGenAPI/scripts/run_extract_details_from_apis.py",
+      "apicoder/private-eval/LICENSE",
+      "apicoder/private-eval/README.md"
+    ],
+    "dataset": [
+      "apicoder/APIRetriever/build/lib/dense/dataset/__init__.py",
+      "apicoder/APIRetriever/build/lib/dense/dataset/processor.py",
+      "apicoder/APIRetriever/data/inference/README.md",
+      "apicoder/APIRetriever/src/dense/dataset/__init__.py",
+      "apicoder/APIRetriever/src/dense/dataset/processor.py",
+      "apicoder/CodeGenAPI/nl2code/code_dataset.py",
+      "apicoder/CodeGenAPI/nl2code/code_dataset_codegen.py",
+      "apicoder/CodeGenAPI/nl2code/indexed_dataset.py",
+      "apicoder/data/API-Doc/README.md",
+      "apicoder/data/Cleaned-Private-Code-Files/README.md",
+      "apicoder/data/CodeGenAPI/README.md",
+      "apicoder/data/EncodedCorpus4CodeGenAPI/README.md"
+    ],
+    "sample_predictions": [
+      "apicoder/private-eval/data/TorchData_no.API_number_0.CodeGen.hm_False.machine.t0.1.p0.9.l100.n1.samples.jsonl",
+      "cert/pandas-numpy-eval/data/Example_Pandas_PYCODEGPT_samples.jsonl"
+    ],
+    "env_file": [
+      "apicoder/APIRetriever/requirements.txt",
+      "apicoder/APIRetriever/setup.py",
+      "apicoder/CodeGenAPI/requirements.txt",
+      "apicoder/CodeGenAPI/scripts/requirements.txt",
+      "apicoder/private-eval/requirements.txt",
+      "apicoder/private-eval/setup.py",
+      "cert/pandas-numpy-eval/requirements.txt",
+      "cert/pandas-numpy-eval/setup.py",
+      "cert/requirements.txt",
+      "cert/scripts/requirements.txt",
+      "requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "apicoder/APIRetriever/README.md",
+      "apicoder/APIRetriever/data/inference/README.md",
+      "apicoder/CodeGenAPI/README.md",
+      "apicoder/README.md",
+      "apicoder/data/API-Doc/README.md",
+      "apicoder/data/Cleaned-Private-Code-Files/README.md",
+      "apicoder/data/CodeGenAPI/README.md",
+      "apicoder/data/EncodedCorpus4CodeGenAPI/README.md",
+      "apicoder/private-eval/README.md",
+      "cert/README.md",
+      "cert/pandas-numpy-eval/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "BLADE": {
+    "evaluator": [
+      "blade_bench/baselines/run_mcq.py",
+      "blade_bench/eval/__init__.py",
+      "blade_bench/eval/convert.py",
+      "blade_bench/eval/datamodel/__init__.py",
+      "blade_bench/eval/datamodel/code.py",
+      "blade_bench/eval/datamodel/lm_analysis.py",
+      "blade_bench/eval/datamodel/match.py",
+      "blade_bench/eval/datamodel/multirun.py",
+      "blade_bench/eval/datamodel/result.py",
+      "blade_bench/eval/datamodel/run.py",
+      "blade_bench/eval/datamodel/run_mcq.py",
+      "blade_bench/eval/datamodel/submission.py"
+    ],
+    "dataset": [
+      "blade_bench/data/__init__.py",
+      "blade_bench/data/annotation.py",
+      "blade_bench/data/datamodel/__init__.py",
+      "blade_bench/data/datamodel/graph.py",
+      "blade_bench/data/datamodel/mcq.py",
+      "blade_bench/data/datamodel/specs.py",
+      "blade_bench/data/datamodel/transform_graph.py",
+      "blade_bench/data/datamodel/transform_state.py",
+      "blade_bench/data/datamodel/transforms.py",
+      "blade_bench/data/datamodel/verbs.py",
+      "blade_bench/data/dataset.py",
+      "blade_bench/data/load_annotation.py"
+    ],
+    "sample_predictions": [
+      "blade_bench/eval/datamodel/submission.py",
+      "blade_bench/eval/match/match_submission.py",
+      "example/submission_analyses.json",
+      "example/submission_schema.json"
+    ],
+    "env_file": [
+      "poetry.lock",
+      "pyproject.toml"
+    ],
+    "container": [],
+    "readme": [
+      "README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "BixBench": {
+    "evaluator": [
+      "bixbench-v1.5_results/zero_shot_baselines/claude-3-5-sonnet-latest-grader-mcq-refusal-False.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/claude-3-5-sonnet-latest-grader-mcq-refusal-True.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/claude-3-5-sonnet-latest-grader-openended.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/gpt-4o-grader-mcq-refusal-False.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/gpt-4o-grader-mcq-refusal-True.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/gpt-4o-grader-openended.csv",
+      "bixbench/graders.py",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_False_mcq_claude-3-5-sonnet-latest_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_False_mcq_gpt-4o_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_True_mcq_claude-3-5-sonnet-latest_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_True_mcq_gpt-4o_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_True_openended_claude-3-5-sonnet-latest_1.0.csv"
+    ],
+    "dataset": [
+      "bixbench-v1.5_results/zero_shot_baselines.json",
+      "bixbench-v1.5_results/zero_shot_baselines/claude-3-5-sonnet-latest-grader-mcq-refusal-False.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/claude-3-5-sonnet-latest-grader-mcq-refusal-True.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/claude-3-5-sonnet-latest-grader-openended.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/gpt-4o-grader-mcq-refusal-False.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/gpt-4o-grader-mcq-refusal-True.csv",
+      "bixbench-v1.5_results/zero_shot_baselines/gpt-4o-grader-openended.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_False_mcq_claude-3-5-sonnet-latest_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_False_mcq_gpt-4o_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_True_mcq_claude-3-5-sonnet-latest_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_True_mcq_gpt-4o_1.0.csv",
+      "bixbench_results/baseline_eval_data/bixbench_llm_baseline_refusal_True_openended_claude-3-5-sonnet-latest_1.0.csv"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "pyproject.toml"
+    ],
+    "container": [],
+    "readme": [
+      "README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "DataSciBench": {
+    "evaluator": [
+      "MetaGPT/examples/android_assistant/run_assistant.py",
+      "MetaGPT/examples/di/run_ml_benchmark.py",
+      "MetaGPT/examples/di/run_open_ended_tasks.py",
+      "MetaGPT/examples/stanford_town/run_st_game.py",
+      "MetaGPT/examples/werewolf_game/evals/eval.py",
+      "MetaGPT/examples/werewolf_game/evals/utils.py",
+      "MetaGPT/metagpt/actions/run_code.py",
+      "MetaGPT/metagpt/ext/stanford_town/actions/run_reflect_action.py",
+      "MetaGPT/metagpt/tools/libs/data_preprocess.py",
+      "MetaGPT/tests/metagpt/actions/test_run_code.py",
+      "MetaGPT/tests/metagpt/tools/libs/test_data_preprocess.py",
+      "evaluation_results/bcb_results.csv"
+    ],
+    "dataset": [
+      "MetaGPT/.devcontainer/devcontainer.json",
+      "MetaGPT/config/puppeteer-config.json",
+      "MetaGPT/docs/.well-known/ai-plugin.json",
+      "MetaGPT/examples/data/math_test/algebra/1.json",
+      "MetaGPT/examples/data/math_test/algebra/10.json",
+      "MetaGPT/examples/data/math_test/algebra/1001.json",
+      "MetaGPT/examples/data/math_test/algebra/1002.json",
+      "MetaGPT/examples/data/math_test/algebra/1004.json",
+      "MetaGPT/examples/data/math_test/algebra/1009.json",
+      "MetaGPT/examples/data/math_test/algebra/101.json",
+      "MetaGPT/examples/data/math_test/algebra/1014.json",
+      "MetaGPT/examples/data/math_test/algebra/1017.json"
+    ],
+    "sample_predictions": [
+      "MetaGPT/examples/stream_output_via_api.py",
+      "MetaGPT/metagpt/prompts/metagpt_sample.py"
+    ],
+    "env_file": [
+      "MetaGPT/examples/android_assistant/requirements.txt",
+      "MetaGPT/examples/stanford_town/requirements.txt",
+      "MetaGPT/examples/ui_with_chainlit/init_setup.py",
+      "MetaGPT/requirements.txt",
+      "MetaGPT/setup.py",
+      "requirements.txt",
+      "venv/lib/python3.10/site-packages/pkg_resources/tests/data/my-test-package-source/setup.py"
+    ],
+    "container": [
+      "MetaGPT/.devcontainer/docker-compose.yaml"
+    ],
+    "readme": [
+      "MetaGPT/.devcontainer/README.md",
+      "MetaGPT/README.md",
+      "MetaGPT/docs/README_CN.md",
+      "MetaGPT/docs/README_JA.md",
+      "MetaGPT/examples/di/README.md",
+      "MetaGPT/examples/ui_with_chainlit/README.md",
+      "MetaGPT/metagpt/environment/README.md",
+      "MetaGPT/metagpt/environment/minecraft/mineflayer/mineflayer-collectblock/README.md",
+      "MetaGPT/metagpt/ext/android_assistant/README.md",
+      "MetaGPT/metagpt/ext/android_assistant/README_CN.md",
+      "MetaGPT/metagpt/ext/stanford_town/README.md",
+      "MetaGPT/metagpt/ext/stanford_town/README_CN.md"
+    ],
+    "license": []
+  },
+  "DiscoveryBench": {
+    "evaluator": [
+      ".github/ISSUE_TEMPLATE/evaluation_issue.md",
+      "discovery_eval.py",
+      "discoverybench/real/test/archaeology/pollen_openness_score_Belau_Woserin_Feeser_et_al_2019.csv",
+      "discoverybench/synth/train/medieval-literature_0_0/data.csv",
+      "discoverybench/synth/train/medieval-literature_0_0/metadata_0.json",
+      "discoverybench/synth/train/medieval-literature_0_1/data.csv",
+      "discoverybench/synth/train/medieval-literature_0_1/metadata_0.json",
+      "discoverybench/synth/train/medieval-literature_0_1/metadata_1.json",
+      "discoverybench/synth/train/medieval-literature_0_1/metadata_2.json",
+      "discoverybench/synth/train/medieval-literature_0_2/data.csv",
+      "discoverybench/synth/train/medieval-literature_0_2/metadata_0.json",
+      "discoverybench/synth/train/medieval-literature_0_2/metadata_1.json"
+    ],
+    "dataset": [
+      "config/api_config.json",
+      "config/model_config.json",
+      "discoverybench/real/test/archaeology/capital.csv",
+      "discoverybench/real/test/archaeology/metadata_0.json",
+      "discoverybench/real/test/archaeology/metadata_1.json",
+      "discoverybench/real/test/archaeology/metadata_10.json",
+      "discoverybench/real/test/archaeology/metadata_11.json",
+      "discoverybench/real/test/archaeology/metadata_12.json",
+      "discoverybench/real/test/archaeology/metadata_13.json",
+      "discoverybench/real/test/archaeology/metadata_14.json",
+      "discoverybench/real/test/archaeology/metadata_15.json",
+      "discoverybench/real/test/archaeology/metadata_16.json"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "assets/README.md",
+      "discoverybench/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "InfiAgent-DABench": {
+    "evaluator": [
+      "examples/DA-Agent/README_eval.md",
+      "examples/DA-Agent/data/da-dev-tables/imp.score.ldlr.metabolome.csv",
+      "examples/DA-Agent/eval_closed_form.py",
+      "examples/DA-Agent/figures/case-study-eval-data.png",
+      "examples/DA-Agent/figures/workflow-eval.png",
+      "images/case-study-eval-data.png",
+      "pipeline/activities/eval.py",
+      "pipeline/activities/predict.py"
+    ],
+    "dataset": [
+      "examples/DA-Agent/data/da-dev-labels.jsonl",
+      "examples/DA-Agent/data/da-dev-questions.jsonl",
+      "examples/DA-Agent/data/da-dev-tables/0020200722.csv",
+      "examples/DA-Agent/data/da-dev-tables/2014_q4.csv",
+      "examples/DA-Agent/data/da-dev-tables/2015-09-21.csv",
+      "examples/DA-Agent/data/da-dev-tables/2015.csv",
+      "examples/DA-Agent/data/da-dev-tables/20170413_000000_group_statistics.csv",
+      "examples/DA-Agent/data/da-dev-tables/2019-08_edges.csv",
+      "examples/DA-Agent/data/da-dev-tables/3901.csv",
+      "examples/DA-Agent/data/da-dev-tables/Baltimore_City_Employee_Salaries_FY2013.csv",
+      "examples/DA-Agent/data/da-dev-tables/Credit.csv",
+      "examples/DA-Agent/data/da-dev-tables/Current_Logan.csv"
+    ],
+    "sample_predictions": [
+      "examples/DA-Agent/data/da-dev-tables/api_output_2018-09-11_11-08-28.csv",
+      "pipeline/tests/integration_tests/sample_file.txt"
+    ],
+    "env_file": [
+      "pipeline/setup.py"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "examples/DA-Agent/README.md",
+      "examples/DA-Agent/README_eval.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "QRData": {
+    "evaluator": [
+      "benchmark/eval.py"
+    ],
+    "dataset": [
+      "benchmark/QRData.json",
+      "benchmark/data.zip"
+    ],
+    "sample_predictions": [],
+    "env_file": [],
+    "container": [],
+    "readme": [
+      "README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "ScienceAgentBench": {
+    "evaluator": [
+      "calculate_metrics.py",
+      "compute_scores.py",
+      "evaluation/harness/__init__.py",
+      "evaluation/harness/constants.py",
+      "evaluation/harness/docker_build.py",
+      "evaluation/harness/docker_utils.py",
+      "evaluation/harness/dockerfiles.py",
+      "evaluation/harness/grading.py",
+      "evaluation/harness/log_parsers.py",
+      "evaluation/harness/prepare_images.py",
+      "evaluation/harness/remove_containers.py",
+      "evaluation/harness/run_evaluation.py"
+    ],
+    "dataset": [],
+    "sample_predictions": [],
+    "env_file": [
+      "requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "benchmark/README.md",
+      "docs/20250110_docker/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "Spider2-V": {
+    "evaluator": [
+      "desktop_env/evaluators/README.md",
+      "desktop_env/evaluators/__init__.py",
+      "desktop_env/evaluators/getters/__init__.py",
+      "desktop_env/evaluators/getters/airbyte.py",
+      "desktop_env/evaluators/getters/astro.py",
+      "desktop_env/evaluators/getters/bigquery.py",
+      "desktop_env/evaluators/getters/calc.py",
+      "desktop_env/evaluators/getters/chrome.py",
+      "desktop_env/evaluators/getters/dagster.py",
+      "desktop_env/evaluators/getters/dbt.py",
+      "desktop_env/evaluators/getters/file.py",
+      "desktop_env/evaluators/getters/general.py"
+    ],
+    "dataset": [
+      "desktop_env/assets/history_empty.sqlite",
+      "evaluation_examples/examples/airbyte/09bf6f69-4f65-4f76-a573-0385ec5ea699/09bf6f69-4f65-4f76-a573-0385ec5ea699.json",
+      "evaluation_examples/examples/airbyte/09bf6f69-4f65-4f76-a573-0385ec5ea699/connection.json",
+      "evaluation_examples/examples/airbyte/09cd634a-db75-4ee0-a186-b7f47f37063c/09cd634a-db75-4ee0-a186-b7f47f37063c.json",
+      "evaluation_examples/examples/airbyte/09cd634a-db75-4ee0-a186-b7f47f37063c/connection.json",
+      "evaluation_examples/examples/airbyte/0ee7291b-3d31-4f4b-8383-8c0ff98ce421/0ee7291b-3d31-4f4b-8383-8c0ff98ce421.json",
+      "evaluation_examples/examples/airbyte/0ee7291b-3d31-4f4b-8383-8c0ff98ce421/connection.json",
+      "evaluation_examples/examples/airbyte/0ee7291b-3d31-4f4b-8383-8c0ff98ce421/diff_gold.csv",
+      "evaluation_examples/examples/airbyte/0fa19e8e-efba-42a6-8649-67ff203dbe87/0fa19e8e-efba-42a6-8649-67ff203dbe87.json",
+      "evaluation_examples/examples/airbyte/0fa19e8e-efba-42a6-8649-67ff203dbe87/connection.json",
+      "evaluation_examples/examples/airbyte/0fa19e8e-efba-42a6-8649-67ff203dbe87/diff_gold.csv",
+      "evaluation_examples/examples/airbyte/15c1a1b7-ef15-4376-ae04-25f898583809/15c1a1b7-ef15-4376-ae04-25f898583809.json"
+    ],
+    "sample_predictions": [
+      "evaluation_examples/examples/jupyter/6e8e092e-a3cc-4812-8ab9-65cb9f161d4b/submission_gold.ipynb",
+      "evaluation_examples/examples/jupyter/8259543a-9c3f-4cb4-8b9c-2f44f876869c/submission_gold.ipynb"
+    ],
+    "env_file": [
+      "desktop_env/controllers/setup.py",
+      "desktop_env/server/requirements.txt",
+      "evaluation_examples/examples/dagster/1a57b227-d047-4dc9-8a33-2d4d02788667/pyproject.toml",
+      "evaluation_examples/examples/dagster/a627dc80-0cad-4799-8cd3-543af6c9bdda/pyproject.toml",
+      "evaluation_examples/examples/snowflake/334c5af8-bfa0-4a97-aade-e667c7533cbb/requirements.txt",
+      "evaluation_examples/examples/snowflake/4aa4cebb-d9d6-429f-b9da-547887ac5ce1/requirements.txt",
+      "evaluation_examples/examples/snowflake/bb3ffdcf-32b5-41b2-8428-62e4d8a70261/requirements.txt",
+      "evaluation_examples/examples/snowflake/f29c271c-a1ce-4aca-9e45-26bbf2000d69/requirements.txt",
+      "requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "desktop_env/evaluators/README.md",
+      "desktop_env/server/README.md",
+      "evaluation_examples/README.md",
+      "evaluation_examples/documents/README.md",
+      "evaluation_examples/examples/dagster/8a8b875d-1f10-40fa-b998-8fd8ebb3515b/README.md",
+      "evaluation_examples/examples/dagster/aa012184-9223-4dba-b1f3-f18ed7cbd33d/README.md",
+      "mm_agents/README.md",
+      "mm_agents/gui_som/data_preparation/README.md",
+      "mm_agents/llm_server/CogAgent/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "DSBench": {
+    "evaluator": [
+      "data_analysis/eval_Claude.ipynb",
+      "data_analysis/eval_GPT.ipynb",
+      "data_analysis/eval_Gemini.ipynb",
+      "data_analysis/eval_code_intepreter_gpt4o.ipynb",
+      "data_modeling/eval_code_interpreter.ipynb",
+      "data_modeling/evaluation/amazon-employee-access-challenge_eval.py",
+      "data_modeling/evaluation/bike-sharing-demand_eval.py",
+      "data_modeling/evaluation/cat-in-the-dat-ii_eval.py",
+      "data_modeling/evaluation/cat-in-the-dat_eval.py",
+      "data_modeling/evaluation/commonlitreadabilityprize_eval.py",
+      "data_modeling/evaluation/conways-reverse-game-of-life-2020_eval.py",
+      "data_modeling/evaluation/covid19-global-forecasting-week-1_eval.py"
+    ],
+    "dataset": [
+      "data_analysis/data.json",
+      "data_analysis/data_old.zip",
+      "data_modeling/data.json",
+      "data_modeling/output_model.zip",
+      "data_modeling/save_performance.zip"
+    ],
+    "sample_predictions": [],
+    "env_file": [],
+    "container": [],
+    "readme": [
+      "README.md",
+      "data_analysis/readme.md",
+      "data_modeling/readme.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "MLAgentBench": {
+    "evaluator": [
+      "MLAgentBench/agents/Auto-GPT/docs/challenges/information_retrieval/challenge_a.md",
+      "MLAgentBench/agents/Auto-GPT/docs/challenges/information_retrieval/challenge_b.md",
+      "MLAgentBench/agents/Auto-GPT/docs/challenges/information_retrieval/introduction.md",
+      "MLAgentBench/agents/Auto-GPT/hooks/post-checkout",
+      "MLAgentBench/agents/Auto-GPT/scripts/check_requirements.py",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/challenge_decorator/score_utils.py",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/current_score.json",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/information_retrieval/test_information_retrieval_challenge_a.py",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/information_retrieval/test_information_retrieval_challenge_b.py",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/utils/build_current_score.py",
+      "MLAgentBench/benchmarks/CLRS/env/evaluation.py",
+      "MLAgentBench/benchmarks/CLRS/env/evaluation_test.py"
+    ],
+    "dataset": [
+      "MLAgentBench/agents/Auto-GPT/.devcontainer/devcontainer.json",
+      "MLAgentBench/agents/Auto-GPT/autogpt/json_utils/llm_response_format_1.json",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/basic_abilities/goal_oriented_tasks.md",
+      "MLAgentBench/agents/Auto-GPT/tests/challenges/current_score.json",
+      "MLAgentBench/benchmarks/CLRS/env/dataset.py",
+      "MLAgentBench/benchmarks/CLRS/env/dataset_test.py",
+      "MLAgentBench/benchmarks/tasks.json"
+    ],
+    "sample_predictions": [
+      "MLAgentBench/benchmarks/CLRS/env/samplers.py",
+      "MLAgentBench/benchmarks/CLRS/env/samplers_test.py"
+    ],
+    "env_file": [
+      "MLAgentBench/agents/Auto-GPT/autogpt/setup.py",
+      "MLAgentBench/agents/Auto-GPT/pyproject.toml",
+      "MLAgentBench/agents/Auto-GPT/requirements.txt",
+      "MLAgentBench/agents/Auto-GPT/tests/integration/test_setup.py",
+      "MLAgentBench/benchmarks/CLRS/scripts/requirements.txt",
+      "MLAgentBench/benchmarks/fathomnet/env/requirements.txt",
+      "requirements.txt",
+      "setup.py"
+    ],
+    "container": [
+      "MLAgentBench/agents/Auto-GPT/.devcontainer/docker-compose.yml",
+      "MLAgentBench/agents/Auto-GPT/docker-compose.yml"
+    ],
+    "readme": [
+      "MLAgentBench/agents/Auto-GPT/README.md",
+      "README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "MLE-bench": {
+    "evaluator": [
+      "mlebench/competitions/3d-object-detection-for-autonomous-vehicles/checksums.yaml",
+      "mlebench/competitions/3d-object-detection-for-autonomous-vehicles/grade.py",
+      "mlebench/competitions/3d-object-detection-for-autonomous-vehicles/mAP_evaluation.py",
+      "mlebench/competitions/AI4Code/checksums.yaml",
+      "mlebench/competitions/AI4Code/grade.py",
+      "mlebench/competitions/aerial-cactus-identification/checksums.yaml",
+      "mlebench/competitions/aerial-cactus-identification/grade.py",
+      "mlebench/competitions/alaska2-image-steganalysis/checksums.yaml",
+      "mlebench/competitions/alaska2-image-steganalysis/grade.py",
+      "mlebench/competitions/aptos2019-blindness-detection/checksums.yaml",
+      "mlebench/competitions/aptos2019-blindness-detection/grade.py",
+      "mlebench/competitions/billion-word-imputation/checksums.yaml"
+    ],
+    "dataset": [
+      "environment/config/container_configs/default.json",
+      "experiments/competition_categories.csv",
+      "experiments/familiarity/comps_to_urls.json",
+      "extras/plagiarism_detector/package-lock.json",
+      "extras/plagiarism_detector/package.json",
+      "mlebench/competitions/3d-object-detection-for-autonomous-vehicles/leaderboard.csv",
+      "mlebench/competitions/AI4Code/leaderboard.csv",
+      "mlebench/competitions/aerial-cactus-identification/leaderboard.csv",
+      "mlebench/competitions/alaska2-image-steganalysis/leaderboard.csv",
+      "mlebench/competitions/aptos2019-blindness-detection/leaderboard.csv",
+      "mlebench/competitions/billion-word-imputation/leaderboard.csv",
+      "mlebench/competitions/bms-molecular-translation/leaderboard.csv"
+    ],
+    "sample_predictions": [
+      "environment/validate_submission.sh",
+      "experiments/make_submission.py"
+    ],
+    "env_file": [
+      "agents/aide/requirements.txt",
+      "agents/dummy/requirements.txt",
+      "agents/mlagentbench/requirements.txt",
+      "agents/opendevin/setup.py",
+      "environment/requirements.txt",
+      "experiments/familiarity/requirements.txt",
+      "pyproject.toml"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "agents/README.md",
+      "examples/README.md",
+      "experiments/familiarity/README.md",
+      "extras/README.md",
+      "mlebench/competitions/multi-modal-gesture-recognition/leaderboard_readme.md",
+      "runs/README.md",
+      "runs/operand_group1/README.md",
+      "runs/operand_group2/README.md",
+      "runs/operand_group3/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "MLGym": {
+    "evaluator": [
+      "data/3SATTime/evaluate.py",
+      "data/battleOfSexes/evaluate.py",
+      "data/bertMNLI/evaluate.py",
+      "data/blotto/evaluate.py",
+      "data/imageCaptioningCOCO/evaluate.py",
+      "data/imageClassificationCifar10/evaluate.py",
+      "data/imageClassificationFMnist/evaluate.py",
+      "data/languageModelingFineWeb/evaluate.py",
+      "data/prisonersDilemma/evaluate.py",
+      "data/regressionKaggleHousePrice/evaluate.py",
+      "data/rlBreakoutMinAtar/evaluate.py",
+      "data/rlMetaMazeMisc/evaluate.py"
+    ],
+    "dataset": [
+      "configs/datasets/3SAT.yaml",
+      "configs/datasets/README.md",
+      "configs/datasets/cifar10HF.yaml",
+      "configs/datasets/coco.yaml",
+      "configs/datasets/fashionMnistHF.yaml",
+      "configs/datasets/fineWeb.yaml",
+      "configs/datasets/kaggleHousePrice.yaml",
+      "configs/datasets/mnli.yaml",
+      "configs/datasets/titanic.yaml",
+      "configs/tasks/3SATTime.yaml",
+      "configs/tasks/README.md",
+      "configs/tasks/battleOfSexes.yaml"
+    ],
+    "sample_predictions": [
+      "data/imageCaptioningCOCO/sample_submission.csv",
+      "data/imageClassificationCifar10/sample_submission.csv",
+      "data/imageClassificationFMnist/sample_submission.csv",
+      "data/regressionKaggleHousePrice/sample_submission.csv",
+      "data/titanic/sample_submission.csv"
+    ],
+    "env_file": [
+      "data/imageCaptioningCOCO/requirements.txt",
+      "data/rlBreakoutMinAtar/requirements.txt",
+      "data/rlMetaMazeMisc/requirements.txt",
+      "data/rlMountainCarContinuous/requirements.txt",
+      "data/rlMountainCarContinuousReinforce/requirements.txt",
+      "dockerfiles/generic_conda_requirements.txt",
+      "dockerfiles/requirements.txt",
+      "pyproject.toml"
+    ],
+    "container": [
+      "dockerfiles/mlgym.dockerfile",
+      "dockerfiles/mlgym_rl.dockerfile"
+    ],
+    "readme": [
+      "README.md",
+      "assets/README.md",
+      "configs/agents/README.md",
+      "configs/datasets/README.md",
+      "configs/tasks/README.md",
+      "data/README.md",
+      "docs/README.md",
+      "results/README.md",
+      "scripts/README.md",
+      "tests/README.md",
+      "tools/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "RE-Bench": {
+    "evaluator": [
+      "ai_rd_fix_embedding/assets/score.py",
+      "ai_rd_nanogpt_chat_rl/assets/evaluation.py",
+      "ai_rd_nanogpt_chat_rl/assets/score.py",
+      "ai_rd_optimize_llm_foundry/assets/score.py",
+      "ai_rd_restricted_mlm/assets/score.py",
+      "ai_rd_rust_codecontests_inference/assets/score.py",
+      "ai_rd_triton_cumsum/assets/score.py"
+    ],
+    "dataset": [
+      "ai_rd_fix_embedding/build_steps.json",
+      "ai_rd_fix_embedding/official_solution.zip",
+      "ai_rd_nanogpt_chat_rl/assets/gpt2-alpaca.jsonl",
+      "ai_rd_nanogpt_chat_rl/assets/gpt2-xl.jsonl",
+      "ai_rd_nanogpt_chat_rl/build_steps.json",
+      "ai_rd_nanogpt_chat_rl/official_solution.zip",
+      "ai_rd_optimize_llm_foundry/assets/train_data.jsonl",
+      "ai_rd_optimize_llm_foundry/build_steps.json",
+      "ai_rd_optimize_llm_foundry/official_solution.zip",
+      "ai_rd_restricted_mlm/build_steps.json",
+      "ai_rd_restricted_mlm/official_solution.zip",
+      "ai_rd_rust_codecontests_inference/build_steps.json"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "ai_rd_fix_embedding/requirements.txt",
+      "ai_rd_nanogpt_chat_rl/assets/heldout_setup.py",
+      "ai_rd_nanogpt_chat_rl/requirements.txt",
+      "ai_rd_optimize_llm_foundry/requirements.txt",
+      "ai_rd_restricted_mlm/requirements.txt",
+      "ai_rd_rust_codecontests_inference/requirements.txt",
+      "ai_rd_small_scaling_law/requirements.txt",
+      "ai_rd_triton_cumsum/requirements.txt"
+    ],
+    "container": [
+      "setup/docker-compose.override.yml"
+    ],
+    "readme": [
+      "README.md",
+      "ai_rd_fix_embedding/README.md",
+      "ai_rd_nanogpt_chat_rl/README.md",
+      "ai_rd_optimize_llm_foundry/README.md",
+      "ai_rd_restricted_mlm/README.md",
+      "ai_rd_rust_codecontests_inference/README.md",
+      "ai_rd_small_scaling_law/README.md",
+      "ai_rd_triton_cumsum/README.md",
+      "readme_assets/expertise_vs_time_table_family.png",
+      "readme_assets/expertise_vs_time_table_task.png",
+      "readme_assets/separator.png",
+      "setup/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "SpreadsheetBench": {
+    "evaluator": [
+      "evaluation/evaluation.py",
+      "evaluation/open_spreadsheet.py",
+      "evaluation/parity_test.py",
+      "evaluation/scripts/evaluation.sh"
+    ],
+    "dataset": [
+      "code_exec_docker/config.json",
+      "data/sample_data_200.tar.gz",
+      "data/spreadsheetbench_912_v0.1.tar.gz",
+      "data/spreadsheetbench_verified_400.tar.gz"
+    ],
+    "sample_predictions": [
+      "data/sample_data_200.tar.gz"
+    ],
+    "env_file": [
+      "requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "code_exec_docker/README.md"
+    ],
+    "license": []
+  },
+  "TabFact": {
+    "evaluator": [
+      "challenge/blind_test_preprocess.json",
+      "code/checkpoints/encoder_prog_0.pt",
+      "code/checkpoints/encoder_stat_0.pt",
+      "code/preprocess_BERT.py",
+      "code/preprocess_blind.py",
+      "code/preprocess_data.py",
+      "code/preprocess_data_aggressive.py",
+      "code/run_BERT.py",
+      "preprocessed_data_program/preprocessed.json",
+      "preprocessed_data_program/vocab.json"
+    ],
+    "dataset": [
+      "bootstrap/bootstrap.json",
+      "challenge/blind_test.json",
+      "challenge/blind_test_preprocess.json",
+      "challenge/blind_test_tokenized.json",
+      "collected_data/r1_training_all.json",
+      "collected_data/r2_training_all.json",
+      "data/README.md",
+      "data/all_csv/1-10006830-1.html.csv",
+      "data/all_csv/1-10007452-3.html.csv",
+      "data/all_csv/1-10015132-1.html.csv",
+      "data/all_csv/1-10015132-14.html.csv",
+      "data/all_csv/1-10015132-2.html.csv"
+    ],
+    "sample_predictions": [],
+    "env_file": [],
+    "container": [],
+    "readme": [
+      "README.md",
+      "bootstrap/README.md",
+      "data/README.md",
+      "processed_datasets/tsv_data_horizontal/README.md",
+      "tokenized_data/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "TableBench": {
+    "evaluator": [
+      "eval_examples/evaluation_results/llm_eval_subtype_results.csv",
+      "eval_examples/evaluation_results/llm_eval_subtype_results.json",
+      "eval_examples/evaluation_results/llm_eval_type_results.csv",
+      "eval_examples/evaluation_results/llm_eval_type_results.json",
+      "eval_examples/evaluation_results/overall_sim_inference_results.json",
+      "eval_examples/inference_results/o3-mini-2025-01-31=TableBench_DP=Example.jsonl",
+      "eval_examples/parsed_results/o3-mini-2025-01-31=TableBench_DP=Example.jsonl",
+      "eval_tablebench_script.py",
+      "metrics/__init__.py",
+      "metrics/base_metric.py",
+      "metrics/chart_metric_utils.py",
+      "metrics/custom_em_metric.py"
+    ],
+    "dataset": [
+      "eval_examples/evaluation_results/llm_eval_subtype_results.csv",
+      "eval_examples/evaluation_results/llm_eval_subtype_results.json",
+      "eval_examples/evaluation_results/llm_eval_type_results.csv",
+      "eval_examples/evaluation_results/llm_eval_type_results.json",
+      "eval_examples/evaluation_results/overall_sim_inference_results.json",
+      "eval_examples/inference_results/o3-mini-2025-01-31=TableBench_DP=Example.jsonl",
+      "eval_examples/parsed_results/o3-mini-2025-01-31=TableBench_DP=Example.jsonl"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md"
+    ],
+    "license": []
+  },
+  "WikiTableQuestions": {
+    "evaluator": [
+      "evaluator.py",
+      "get-predictions.py"
+    ],
+    "dataset": [
+      "csv/200-csv/0.csv",
+      "csv/200-csv/1.csv",
+      "csv/200-csv/10.csv",
+      "csv/200-csv/11.csv",
+      "csv/200-csv/12.csv",
+      "csv/200-csv/14.csv",
+      "csv/200-csv/15.csv",
+      "csv/200-csv/17.csv",
+      "csv/200-csv/18.csv",
+      "csv/200-csv/20.csv",
+      "csv/200-csv/22.csv",
+      "csv/200-csv/24.csv"
+    ],
+    "sample_predictions": [],
+    "env_file": [],
+    "container": [],
+    "readme": [
+      "README.md",
+      "weblib/external/html5lib/tests/README"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "BIRD": {
+    "evaluator": [
+      "EPO/Alfshop/envs/webshop/src/webshop/run_envs/run_web_agent_site_env.py",
+      "EPO/Alfshop/envs/webshop/src/webshop/run_envs/run_web_agent_text_env.py",
+      "EPO/Alfshop/envs/webshop/src/webshop/transfer/predict_help.py",
+      "EPO/Alfshop/eval_agent/agents/__init__.py",
+      "EPO/Alfshop/eval_agent/agents/base.py",
+      "EPO/Alfshop/eval_agent/agents/fastchat_agent.py",
+      "EPO/Alfshop/eval_agent/agents/openai_lm_agent.py",
+      "EPO/Alfshop/eval_agent/configs/model/fastchat.json",
+      "EPO/Alfshop/eval_agent/configs/model/openai.json",
+      "EPO/Alfshop/eval_agent/configs/task/alfworld.json",
+      "EPO/Alfshop/eval_agent/configs/task/webshop.json",
+      "EPO/Alfshop/eval_agent/data/alfworld/base_config.yaml"
+    ],
+    "dataset": [
+      "EPO/Alfshop/eval_agent/configs/model/fastchat.json",
+      "EPO/Alfshop/eval_agent/configs/model/openai.json",
+      "EPO/Alfshop/eval_agent/configs/task/alfworld.json",
+      "EPO/Alfshop/eval_agent/configs/task/webshop.json",
+      "EPO/Alfshop/eval_agent/data/alfworld/base_config.yaml",
+      "EPO/Alfshop/eval_agent/data/alfworld/gamefile_id.txt",
+      "EPO/Alfshop/eval_agent/data/alfworld/logic/alfred.pddl",
+      "EPO/Alfshop/eval_agent/data/alfworld/logic/alfred.twl2",
+      "EPO/Alfshop/eval_agent/data/alfworld/prompts/alfworld_3prompts.json",
+      "EPO/Alfshop/eval_agent/data/alfworld/prompts/process_format.py",
+      "EPO/Alfshop/eval_agent/data/webshop/test_indices.json",
+      "EPO/Alfshop/eval_agent/data/webshop/test_indices_500.json"
+    ],
+    "sample_predictions": [
+      "EPO/Alfshop/fastchat/serve/monitor/dataset_release_scripts/arena_33k/sample.py",
+      "EPO/Alfshop/fastchat/serve/monitor/dataset_release_scripts/lmsys_chat_1m/sample.py",
+      "EPO/LLaMA-Factory/examples/train_lora/llama3_lora_predict.yaml",
+      "EPO/Sotopia/sotopia/samplers/__init__.py",
+      "EPO/Sotopia/sotopia/samplers/base_sampler.py",
+      "EPO/Sotopia/sotopia/samplers/constraint_based_sampler.py",
+      "EPO/Sotopia/sotopia/samplers/uniform_sampler.py",
+      "EPO/Sotopia/tests/sampler/test_sampler.py",
+      "EvoTrainer/roll/datasets/sampler.py",
+      "MMLatentAction/trl/extras/best_of_n_sampler.py",
+      "OpenOmni/scripts/convert_mmbench_for_submission.py",
+      "OpenOmni/scripts/convert_seed_for_submission.py"
+    ],
+    "env_file": [
+      "EPO/Alfshop/envs/webshop/setup.py",
+      "EPO/Alfshop/eval_agent/requirements.txt",
+      "EPO/Alfshop/requirements.txt",
+      "EPO/LLaMA-Factory/pyproject.toml",
+      "EPO/LLaMA-Factory/requirements.txt",
+      "EPO/LLaMA-Factory/setup.py",
+      "EPO/Sotopia/human_eval/requirements.txt",
+      "EPO/Sotopia/requirements.txt",
+      "EvoTrainer/mcore_adapter/pyproject.toml",
+      "EvoTrainer/mcore_adapter/requirements.txt",
+      "EvoTrainer/pyproject.toml",
+      "EvoTrainer/requirements_common.txt"
+    ],
+    "container": [
+      "EPO/LLaMA-Factory/docker/docker-cuda/docker-compose.yml",
+      "EPO/LLaMA-Factory/docker/docker-npu/docker-compose.yml",
+      "EPO/LLaMA-Factory/docker/docker-rocm/docker-compose.yml",
+      "SDPO/LLaMA-Factory/docker/docker-cuda/docker-compose.yml",
+      "SDPO/LLaMA-Factory/docker/docker-npu/docker-compose.yml",
+      "SDPO/LLaMA-Factory/docker/docker-rocm/docker-compose.yml"
+    ],
+    "readme": [
+      "Awesome-Self-Evolution-of-LLM/README.md",
+      "EPO/Alfshop/README.md",
+      "EPO/Alfshop/envs/webshop/src/webshop/transfer/README.md",
+      "EPO/Alfshop/fastchat/serve/gateway/README.md",
+      "EPO/LLaMA-Factory/README.md",
+      "EPO/LLaMA-Factory/examples/README.md",
+      "EPO/README.md",
+      "EPO/Sotopia/README.md",
+      "EPO/Sotopia/human_eval/README.md",
+      "EvoTrainer/README.md",
+      "EvoTrainer/README_zh.md",
+      "EvoTrainer/data/agent_templates/qwen_mcp_swe_rebench/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "BIRD-CRITIC / SQL-eval": {
+    "evaluator": [
+      "eval/eval.py",
+      "gcs_eval.py",
+      "gcs_eval_checkpoints.py",
+      "run_checkpoints.sh",
+      "run_checkpoints_adapters.sh",
+      "run_checkpoints_cot.sh",
+      "tests/test_eval.py"
+    ],
+    "dataset": [
+      "data/idk.csv",
+      "data/idk_bigquery.csv",
+      "data/instruct_advanced_bigquery.csv",
+      "data/instruct_advanced_mysql.csv",
+      "data/instruct_advanced_postgres.csv",
+      "data/instruct_advanced_sqlite.csv",
+      "data/instruct_advanced_tsql.csv",
+      "data/instruct_basic_bigquery.csv",
+      "data/instruct_basic_mysql.csv",
+      "data/instruct_basic_postgres.csv",
+      "data/instruct_basic_sqlite.csv",
+      "data/instruct_basic_tsql.csv"
+    ],
+    "sample_predictions": [],
+    "env_file": [
+      "requirements.txt",
+      "requirements_test.txt",
+      "results_fn_bigquery/requirements.txt",
+      "results_fn_postgres/requirements.txt"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "prompts/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "Dr.Spider": {
+    "evaluator": [
+      "copy_pre_perturbation_predictions.py",
+      "data_preprocess.py"
+    ],
+    "dataset": [
+      "data.tar.gz"
+    ],
+    "sample_predictions": [],
+    "env_file": [],
+    "container": [],
+    "readme": [
+      "README.md"
+    ],
+    "license": [
+      "LICENSE",
+      "LICENSE-ANNOTATIONS"
+    ]
+  },
+  "Spider": {
+    "evaluator": [
+      "baselines/nl2code/data_preprocess/clean_sql.py",
+      "baselines/nl2code/evaluation.py",
+      "baselines/nl2code/preprocess.sh",
+      "baselines/seq2seq_attention_copy/seq2seq/metrics/__init__.py",
+      "baselines/seq2seq_attention_copy/seq2seq/metrics/bleu.py",
+      "baselines/seq2seq_attention_copy/seq2seq/metrics/metric_specs.py",
+      "baselines/seq2seq_attention_copy/seq2seq/metrics/rouge.py",
+      "baselines/seq2seq_attention_copy/seq2seq/test/metrics_test.py",
+      "baselines/sqlnet/scripts/model/modules/cond_predict.py",
+      "baselines/sqlnet/scripts/model/modules/group_predict.py",
+      "baselines/sqlnet/scripts/model/modules/order_predict.py",
+      "baselines/sqlnet/scripts/model/modules/sel_predict.py"
+    ],
+    "dataset": [
+      "baselines/nl2code/dataset.py",
+      "baselines/nl2code/lang/ifttt/ifttt_dataset.py",
+      "baselines/nl2code/lang/py/py_dataset.py",
+      "baselines/nl2code/lang/sql/sql_dataset.py",
+      "baselines/nl2code/node_modules/sqlite-parser/package.json",
+      "baselines/nl2code/package.json",
+      "baselines/seq2seq_attention_copy/bin/data/cnn_daily_mail_summarization/process_data.sh",
+      "baselines/seq2seq_attention_copy/bin/data/cnn_daily_mail_summarization/process_story.py",
+      "baselines/seq2seq_attention_copy/bin/data/toy.sh",
+      "baselines/seq2seq_attention_copy/bin/data/wmt16_en_de.sh",
+      "baselines/seq2seq_attention_copy/data/pre_process/generate_vocab.py",
+      "baselines/seq2seq_attention_copy/data/pre_process/utils.py"
+    ],
+    "sample_predictions": [
+      "evaluation_examples/pred_example.txt"
+    ],
+    "env_file": [
+      "baselines/seq2seq_attention_copy/setup.py"
+    ],
+    "container": [],
+    "readme": [
+      "README.md",
+      "baselines/README.md",
+      "baselines/nl2code/README.md",
+      "baselines/nl2code/node_modules/sqlite-parser/README.md",
+      "baselines/seq2seq_attention_copy/README.md",
+      "baselines/sqlnet/README.md",
+      "baselines/typesql/README.md",
+      "evaluation_examples/README.md",
+      "preprocess/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  },
+  "Spider 2.0": {
+    "evaluator": [
+      "spider2-dbt/evaluation_suite/README.md",
+      "spider2-dbt/evaluation_suite/eval_utils.py",
+      "spider2-dbt/evaluation_suite/evaluate.py",
+      "spider2-dbt/evaluation_suite/evaluate_beta.py",
+      "spider2-dbt/evaluation_suite/gold/spider2_eval.jsonl",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/data/sql/data_nullcheck_table.csv",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/models/sql/test_nullcheck_table.sql",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/models/sql/test_star_uppercase.sql",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/models/sql/test_union_exclude_base_lowercase.sql",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/models/sql/test_union_exclude_base_uppercase.sql",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/models/sql/test_union_exclude_lowercase.sql",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/models/sql/test_union_exclude_uppercase.sql"
+    ],
+    "dataset": [
+      "methods/gold-tables/spider2-lite-gold-tables.jsonl",
+      "methods/gold-tables/spider2-snow-gold-tables.jsonl",
+      "methods/spider-agent-lite/bigquery_credential.json",
+      "methods/spider-agent-lite/snowflake_credential.json",
+      "methods/spider-agent-snow/snowflake_credential.json",
+      "methods/spider-agent-tc/credentials/snowflake_credential.json",
+      "methods/spider-agent-tc/results/claude-3-7-sonnet-20250219_temp0.7_rounds25_rollout1_exp4/sf_bq024.json",
+      "spider2-dbt/evaluation_suite/gold/spider2_eval.jsonl",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/data/.gitkeep",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/data/datetime/data_date_spine.csv",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/data/etc/data_people.csv",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/data/geo/data_haversine_km.csv"
+    ],
+    "sample_predictions": [
+      "methods/spider-agent-dbt/get_spider2_submission_data.py",
+      "methods/spider-agent-lite/get_spider2lite_submission_data.py",
+      "methods/spider-agent-snow/get_spider2snow_submission_data.py",
+      "methods/spider-agent-tc/convert_to_submission_format.py",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/ci/sample.profiles.yml",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/integration_tests/tests/jinja_helpers/assert_pretty_output_msg_is_string.sql",
+      "spider2-dbt/examples/airbnb001/dbt_packages/dbt_utils/integration_tests/ci/sample.profiles.yml",
+      "spider2-dbt/examples/airbnb001/dbt_packages/dbt_utils/integration_tests/data/cross_db/data_listagg_output.csv",
+      "spider2-dbt/examples/airbnb001/dbt_packages/dbt_utils/integration_tests/tests/jinja_helpers/assert_pretty_output_msg_is_string.sql",
+      "spider2-dbt/examples/airbnb002/dbt_packages/dbt_utils/integration_tests/ci/sample.profiles.yml",
+      "spider2-dbt/examples/airbnb002/dbt_packages/dbt_utils/integration_tests/data/cross_db/data_listagg_output.csv",
+      "spider2-dbt/examples/airbnb002/dbt_packages/dbt_utils/integration_tests/tests/jinja_helpers/assert_pretty_output_msg_is_string.sql"
+    ],
+    "env_file": [
+      "methods/spider-agent-dbt/requirements.txt",
+      "methods/spider-agent-dbt/spider_agent/controllers/setup.py",
+      "methods/spider-agent-lite/spider_agent/controllers/setup.py",
+      "methods/spider-agent-snow/requirements.txt",
+      "methods/spider-agent-snow/spider_agent/controllers/setup.py",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/dev-requirements.txt",
+      "spider2-dbt/examples/airbnb001/dbt_packages/dbt_utils/dev-requirements.txt",
+      "spider2-dbt/examples/airbnb002/dbt_packages/dbt_utils/dev-requirements.txt",
+      "spider2-dbt/examples/app_reporting001/dbt_packages/apple_store/integration_tests/requirements.txt",
+      "spider2-dbt/examples/app_reporting001/dbt_packages/apple_store_source/integration_tests/requirements.txt",
+      "spider2-dbt/examples/app_reporting001/dbt_packages/dbt_utils/dev-requirements.txt",
+      "spider2-dbt/examples/app_reporting001/dbt_packages/fivetran_utils/integration_tests/requirements.txt"
+    ],
+    "container": [
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/airbnb001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/airbnb002/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/app_reporting001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/app_reporting002/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/apple_store001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/asana001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/atp_tour001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/biketheft001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/chinook001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/danish_democracy_data001/dbt_packages/dbt_utils/docker-compose.yml",
+      "spider2-dbt/examples/f1001/dbt_packages/dbt_utils/docker-compose.yml"
+    ],
+    "readme": [
+      "README.md",
+      "methods/spider-agent-dbt/README.md",
+      "methods/spider-agent-dbt/logs/README.md",
+      "methods/spider-agent-dbt/output/README.md",
+      "methods/spider-agent-lite/README.md",
+      "methods/spider-agent-lite/output/README.md",
+      "methods/spider-agent-snow/README.md",
+      "methods/spider-agent-snow/output/README.md",
+      "methods/spider-agent-tc/README.md",
+      "spider2-dbt/README.md",
+      "spider2-dbt/evaluation_suite/README.md",
+      "spider2-dbt/examples/activity001/dbt_packages/dbt_utils/README.md"
+    ],
+    "license": [
+      "LICENSE"
+    ]
+  }
+}

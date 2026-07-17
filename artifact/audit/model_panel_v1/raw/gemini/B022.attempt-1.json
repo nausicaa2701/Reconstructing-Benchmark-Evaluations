@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:43:20.985387+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B022",
+    "packet_sha256": "f76313863c55f42e302afaf3077e46b856433f8cd24168c98efab090c5bc3e9c",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 11787,
+    "output_tokens": 817,
+    "cost_usd": 0.0250335,
+    "elapsed_seconds": 6.104
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B022\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 70,\n          \"line_end\": 81\n        }\n      ],\n      \"evidence_note\": \"A sample JSON configuration structure is shown and loaded into the environment, but the exact schema definitions or specifications for evaluation inputs/outputs are not completely detailed in the provided files.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 84,\n          \"line_end\": 85\n        }\n      ],\n      \"evidence_note\": \"The evaluation returns a numerical score (0 to 1 range implied), but the precise mathematical mapping or metrics details are not fully specified in the packet.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 1,\n          \"line_end\": 5\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 9,\n          \"line_end\": 32\n        }\n      ],\n      \"evidence_note\": \"Individual state getters (like dbt profiles, files) are implemented in the code, but the main evaluator functions dictionary in desktop_env/evaluators/__init__.py is commented out.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 1,\n          \"line_end\": 5\n        }\n      ],\n      \"evidence_note\": \"There are no documented rules or tie-breaking policies for grading outputs in the provided packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 94,\n          \"line_end\": 105\n        }\n      ],\n      \"evidence_note\": \"While aggregate table success rates are reported for baselines, the mapping function from multiple individual trial runs to a final aggregate score is not explicitly defined in the provided packet.\",\n      \"confidence\": \"medium\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 140,\n          \"line_end\": 143\n        }\n      ],\n      \"evidence_note\": \"The README mentions that results and trajectories are saved to './results', but actual sample predictions or trajectory files are not included in the packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPxlyFQlILrGm59cvMtwu7Ew04nxUSxIjJnm9IjzkV2X18ApEgp6t09Zs55u7e"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 11787,
+      "candidatesTokenCount": 817,
+      "totalTokenCount": 12604,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 11787
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "E_xYatzGGbid0-kPtpHboAM"
+  }
+}

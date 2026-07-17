@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:41:37.074797+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B008",
+    "packet_sha256": "69f31a3eabe785a74a75e7b2804de69c574449dfc0ce53f5074a342d952554d1",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 3686,
+    "output_tokens": 1373,
+    "cost_usd": 0.017886,
+    "elapsed_seconds": 5.801
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B008\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 13,\n          \"line_end\": 26\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 9,\n          \"line_end\": 22\n        }\n      ],\n      \"evidence_note\": \"The scripts define arguments for prediction and answer files as CSVs, and specify expected columns like 'count' or 'target'.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 7,\n          \"line_end\": 11\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 6,\n          \"line_end\": 6\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 22,\n          \"line_end\": 22\n        }\n      ],\n      \"evidence_note\": \"RMSLE is explicitly implemented in code, and ROC AUC is imported and computed using scikit-learn.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 1,\n          \"line_end\": 29\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 1,\n          \"line_end\": 26\n        }\n      ],\n      \"evidence_note\": \"Evaluation scripts for individual modeling tasks are fully implemented and available in the packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 1,\n          \"line_end\": 10\n        }\n      ],\n      \"evidence_note\": \"No grading rules, thresholds, or tie-breaking behaviors are documented in the provided packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 28,\n          \"line_end\": 29\n        }\n      ],\n      \"evidence_note\": \"Individual evaluators only write raw results to 'result.txt'; there is no code or documentation showing how scores are aggregated across tasks.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 1,\n          \"line_end\": 10\n        }\n      ],\n      \"evidence_note\": \"No sample predictions, agent trajectory files, or golden answers are included in the provided packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "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"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 3686,
+      "candidatesTokenCount": 881,
+      "totalTokenCount": 5059,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3686
+        }
+      ],
+      "thoughtsTokenCount": 492,
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "q_tYapmAKvCL2roPv7T70Aw"
+  }
+}

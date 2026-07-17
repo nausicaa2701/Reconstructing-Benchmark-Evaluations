@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:38:41.961850+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B020",
+    "packet_sha256": "d21844cf75a113aced5aa53b17ef9e86ca67dbec2abb9b96ad29d92f86fd5c7a",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 14380,
+    "output_tokens": 1402,
+    "cost_usd": 0.031995,
+    "elapsed_seconds": 21.696
+  },
+  "response": {
+    "id": "resp_00a2ee6b74d4d9be016a58ecdc9e4481988a3c6e7c998d4e69",
+    "object": "response",
+    "created_at": 1784212700,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212721,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_00a2ee6b74d4d9be016a58ecdd381c8198a966bbc885d567aa",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOzxoBtqug4YeQ66e5_jKc-joPhsLbK5eRSzieTnTtX3IkXilf2pnqiBgAzj1zWMCbbLByidnNvNQSMpz-_6Q6bd-i2DqeJss8ZXZWr73pwVjjjkiaFaszVAaAI8WvmBEt1ElIEQolVDdOR3Y5KWDUdNa4jKK5coEwBFxortZJTa73gKDsSdWfYw-o_GuL2mcPyzNHTL8X52k78bWFC48u60NU4u64cp7kx2DowF7VvdKl6oyOVBP-qWRPr3v1AaqW5MGgZEI1KLY5PJjHmAKnI5R5svkJOT10GAOT_S_j1dyvVn7Ub3ETE7Oe8iMbsyWbyGfMPt5eURB99yuxLeQduz9_K47Lgsyz22p1Sq_M0oTIIEbgtvtv_D5bXpW75lmDNzb9c37-EAhKBzn-jVI5WsB4MWeRiFiI_XQY9IflEbE_SNcwkuNnzrG9fG3swRcUfdA_IrVU7M77xawFimdZcfzlkpV261bFEh-Kk8r5y3FlELfqa15NL215VE1wnrX01-WsMCGCy1Yn_uiVWUmJus22NvKapWrfv04Z0vtgGZxN83kJq9DxZek6Dn8_M6fqUrMkZ1L2yx7sQBrsz5QXw4vO5P4o791PE-3b7VuCpthBxPW-d8BHoquLK4qxyeStqoPz5yt4Rze4pEJmcHDXX9QoqRhCjQQNVinQe4v-sU0U4QMlB4E5oYmzTI6sMkfSkYBAS2bSU61WKNXTskHDrK8C5irWQW-yzRgD9oUH_eLQoLUYtEH2n05SrTPuX3r80QM9nNw1_g03vFaqBo6SMHBSMjQJ4J7n-guV9X0Z7YC0DZyNN74kFAjBjPcENG7YCxXDZhMAicL5Tn9N6UoSE0DrZdM0szpiEvbRay948UFTbBnsrIrYQUZ02VVMY1l-odDOFtcJkMYDNhIRuAOiRGrLl6NjNhwvOZFnu40F1M8vsA0xAXa-QVA-XE3lMNP70W-wwH7bSm9l7dRiUWPYNjTYP1ZR4Ji0Fmk1xL2cn40IJhCSpkd2tlDtAEvnJwTbXNQvqocccCoDBdJA6KTsnJgAPx2GUIF_TV4Jc2f0hCglp65yg29JVQ8chSbtmRu2Hxh0VPN1zbNbIGMWhEx4MNCbTOq48lgf9kA87x4OoYX3Om__VyatzYmZfW4o3BCS1p3cQjPZLOQ7EXksYy9lZ3s7nOJgjmPYo37TYTPJt7L9DDLxkIDHDCH0ksLaknHjqOiURzUaYN-WxxObriDDfSVvG6CbAKgAo6_KBAnZal1SPnQb9xrsBbeTt2q2OZw7t9EppQ2rn8OwAA2oSa6fLmAWqPkSE0dFEkx0coKuF_BbEElzxQ7y_8nOoFoxjHwpELwbG51B9_IhDry0N6ZN0U53_rjvaKwDjOiLXYxi5J_C3rnNtipveEPLfo6dvI0-jBstyuHh4pGCi3xfyyqC1wvhQclDUp3idTmb-1AGTeWBqFRDmH31plxMuTOy5Er-hZy8LMkxDIaM609pCt1Bov0F6aZ9KH3tnvEvgl6REoL_11rs-0pw0uc9xIs0ZcVm59Q7FWto5-yK-vo8xTmeAtwnOV0VWsVB0TeA3w6ZtauZg12N6neCB6d3soX_S_SxDtCacisaAb2uJTHv7K7MYOnSOwmG9FPmTKxsmfZvXfadRp5Ez5VR8Z7mN1WUp32TepeQ9dG2xRQSieH8labjxgtfaikRj3BKsWBy2Sifs5qP77k6hDi3VV48jVI3TqGHkbgizw71_NVuxJv8sIrsRQbbP6rjKlTbqV3mURVDJmXp615mPY7GYONW3eTNvo9gO0ZAIdZmP0uxG6KB7Zi9NUmRZgyHKOVSB_UzSSDbuDGqbvqcCOYZRVIVocWh4s9pKjUn2-LLfxhCKLjxu36Yc0gU-E-T6m6xho950iQqnWStRVFSl54eDzwSZW7kmF9W_q4aWMLQIUw03vcrP7Km3sh1LqDNF83qYlBxy0fW-7iv4eKJe7O9lKkmhEboiKZsbCDQv9pfxQM9YgyYECG0r5jK-vLxZfju6MTVX23S3gIb9VX-GVuqj7rvSIOZkv0ks5-Uckk7iA_R8ykj5a-CkrTPsVwpHoDCAGD_tdrEWXaF6RvIUuNVgYGyWb1pEV5ab34Zv74L8kPZ-YtzflCtR0T3jaQClUnAt3ffswKc8w-jEda8N5CoU0Ps6iTUf8LGsqntCvDQKk4TOO4lzrN7yV6dc2NC0-kHN6AYoQdET9OZjksgJpyp3eGtHyOuBNvkX4Hpisb2fsFshLnuA9zUblOSb3O3Rm7BiWHYM3Pm0ugDBB2Vi_21re8x-aHVAMdbJ8AhhBysUpux3DaipwjhoIcYsZ6s2J_PQubx1n5yWfIHgmzDqeW5h3pMaptBX7hY01d4u-Q5wnNU6K5_3gC-TKXsAu-vTV5XR78x0GI2n7ZIDnweUZKSO65kzbLuwF-RpJ-a6z9GfAn0rOYJkveS2kR8nJSBcvRbNyw-hcVqXORTkIExeoqzH4exP1ksgjypZ4veLcsaIkrLi64PCSw-Iji8S2Ccqcrr4o2Kj4-6EDVwYrZTIuCd3629jE8MSGZdXIA0BG1bQyMWKnA_CCSs4gJblgqXg6JPkslq62IBAFBjDNv8ry6btDzayNQOcUPKSBH9OYH8eVxikkbitdQgBw9ndz2ksTDfjekHrRQ_3m26Yk8tT0_zk4ngB4-CpMHzFdHZ9-FrRagAUcfypzitpJj6ahbks-YvTzEWZ1TUYQQ3tUOwduS2LVMSkUQholgthP47_P-9RxQwZqB9Qa8LdcoR2SmGtmk4NdMlVpmvW4lIt6e3hRAOtaMX7AlKex-VWcwx_K4iUqNofbgFb1VT7PBF2GO2Bgb1Go1vTyft-nY1nE1iApnwRH86wXeztr8jpQgdcjLQqwvVJSSaPquvTUa9Mx-GAOAL6E0H1vfEgLvrxe5a3j9Aqx2doYoDR9Qx2vyQWh5BU8K0uSr6iBGFRgP_TT_1Ztp5cw_2WIpekkz00EECRt7BWHoLQRAO6RbmuW3z2Jr3zCCB2fwbbXTqRHCzOm6wazTAk2lnm7x9tukYXWqx8kzG5aQTdO4ALC1d6gavBD4OcLx_PmBfK-joqw0HeKT5RojB7Igg_ccUXJCLJAOHaB_2OrdJ5PO1QpsPm8k4JkphtpiR56M1OqubHXS-sJ-KnHPpVCQZSsWFBXbzpZdKHk9_ei80bq8uljsCaJ33Q9VsOC2GP1A8Xiv-MrtD-gzr0Vubw-EEtAJwCw23iQlInldJbOFK1dm2cOA8LnTk7MFWEv3p7Euv-pYel-nhWbvcaGFtsJmaWb4XGbXUYAJyGm9i4Kojy4Q89Keb38Xm4UF35j3P6COtcJ44ehCI2PtTuVh5l8d4TPCM4ICeg6HCtWcxW6iKQzprcFG3mzLmTea6kyIed_nKBe7ho4LQUUzql_GhUQ1gaPL3l93C72OcoNReEFGDo67q6J8sfsbfP4kW0kBc1tDtClS2pQyH3nvDfcLnfXrf1OQ3HyPSH20ri8FT0KtNoK3PLjfPfFzVHeJW5JuDuEoeu_12IYfzItulEokANlfT0bgk7cRS27vcLeKA88GXiZYCvTISQUIbldk5RaQOf6lYEeYtZOhMl2v5LZjo9CsQWznEmd7s1-J1kUWoyhh09tILGe9O4li6MfdiBRVXHbST7gmxijcWNYQevt0YOO0Yw1otTOkE1nzfFNT_sCXdF6IHOIGedunmPLqMfi5T_tKVstPCGNYjJeED4trNqzTIoCu60VeM8f5l7BPkihCKKMwDAcqUN90UmUgNM3GKzAwbtlE3aaSjkGdzNiDPFE3lNcNlgkfhLCSw0wMlJhcom0v5vhTBOV1la-cgp3f411fOoHw2E3yi2fynox_FXJj0tIcswA6siotT4EKnZr_ryC6CsS_ur-J--lF8OMFQ3ErA5XFCzHiWrUyNy4XLJQ15hglDTEtKYhBpFcro5wEWNtSfKC5ZieAJP3zbcTuZkSMCut1GlUzpgH-gbehvVH0fcLxQtayfidhXw8jtMVuvI86BWuDuPUoiPc2Cch1bJ8ClWsF5B_b29iVXJJ4dxrH55cMFfAhXCeIp_nzY52QZKcGJciqHSIiwYgqtVORYM-IgJ1NeRdQ_OW8-07k68rMKmt9JCkVSk3FwCbED9E4_JBSrAnXviBSfvft254jOpxN5sB_dO-NCeEGsy_AiiEt2WFr_XiAja_AqU1ndrvya-32LTyl3R6ajsgZp6t-Dxd2M1WJRONJthMtu06Agghen5_xPmytWO3h-VVlHPXdnlrqIsYcEfJeU7121BnDZpPwp-7GjF6M2gd18dwJ7iXBxGl_4pjqOqbqVjPmXUMs1bc2lFvCyGF9B16gI-aF_rXRQg6j72GJxHS-taBvm6-kJpNwN1SrfjWWTH80ZxXJw8YtpmC6R_bp0MGaSmh_Fhba7KWrqEosVfHM_6aMDB2JQAqahnesTJMv2qKhLAekuXRTNBzmV243mdeNv6CKregD6xtcfotA_mfukgZxWHUlNAkJ5VjLoM4BM5aWuxC3Ox5g3dUmZ43HlPTTFtG4WXub6g7FcEOZZehjXawp9udxX_oe92NZzz6ZpLaenreytyQ3sJHqWaWEpPLcWCaC6gmKS_hmKn_VA==",
+        "summary": []
+      },
+      {
+        "id": "msg_00a2ee6b74d4d9be016a58ece8209c819885ceda18d921c2b4",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B020\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":221,\"line_end\":228},{\"source_id\":\"E001\",\"line_start\":241,\"line_end\":249}],\"evidence_note\":\"README specifies evaluation.py CLI arguments, including that the gold file is `gold.sql` with each line `a gold SQL \\\\t db_id` and the prediction file has one predicted SQL per line, plus DB and table paths.\",\"confidence\":\"high\"},{\"criterion\":\"Metric definition\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":211,\"line_end\":218},{\"source_id\":\"E001\",\"line_start\":7,\"line_end\":11},{\"source_id\":\"E002\",\"line_start\":55,\"line_end\":59},{\"source_id\":\"E003\",\"line_start\":33,\"line_end\":44},{\"source_id\":\"E004\",\"line_start\":140,\"line_end\":153},{\"source_id\":\"E004\",\"line_start\":327,\"line_end\":365}],\"evidence_note\":\"README names Component Matching, Exact Matching, Execution Accuracy, and Test Suite Accuracy, but only briefly states clause/set comparison. BLEU/ROUGE and nl2code exact-match metrics are fully defined, yet the primary Spider SQL metrics lack full formal definitions here.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"claimed-but-not-verifiable\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":3,\"line_end\":3},{\"source_id\":\"E001\",\"line_start\":32,\"line_end\":35},{\"source_id\":\"E001\",\"line_start\":218,\"line_end\":221},{\"source_id\":\"E001\",\"line_start\":211,\"line_end\":214}],\"evidence_note\":\"README claims the repo contains all evaluation code and references evaluation.py and an external test-suite-sql-eval repo, but the Spider evaluation.py implementation and external repo contents are not included in this packet, so they cannot be inspected here.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":211,\"line_end\":229},{\"source_id\":\"E002\",\"line_start\":34,\"line_end\":52},{\"source_id\":\"E002\",\"line_start\":98,\"line_end\":116}],\"evidence_note\":\"Documents metric types and basic averaging but does not state how to handle ties between systems, multiple predictions per example, invalid SQL, or other edge cases and ranking rules for the benchmark.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":32,\"line_end\":59},{\"source_id\":\"E002\",\"line_start\":85,\"line_end\":93},{\"source_id\":\"E002\",\"line_start\":240,\"line_end\":246},{\"source_id\":\"E003\",\"line_start\":33,\"line_end\":47},{\"source_id\":\"E004\",\"line_start\":327,\"line_end\":365},{\"source_id\":\"E001\",\"line_start\":211,\"line_end\":218}],\"evidence_note\":\"For nl2code and seq2seq baselines, code shows per-example exact match/BLEU/ROUGE aggregation by averaging over dataset. For the main Spider SQL metrics, only high-level description is given; the exact aggregation (e.g., per-query vs per-clause) is not fully specified.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":221,\"line_end\":229},{\"source_id\":\"E002\",\"line_start\":68,\"line_end\":82},{\"source_id\":\"E002\",\"line_start\":175,\"line_end\":203}],\"evidence_note\":\"README describes file formats for predictions but does not include concrete example prediction files for Spider. Baseline evaluators write out analysis files, but no sample decoded outputs or trajectories are provided in the packet.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 14380,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1402,
+      "output_tokens_details": {
+        "reasoning_tokens": 540
+      },
+      "total_tokens": 15782
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

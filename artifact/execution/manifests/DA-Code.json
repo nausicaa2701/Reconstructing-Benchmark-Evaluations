@@ -1,0 +1,17 @@
+{
+  "benchmark": "DA-Code",
+  "category": "code-gen",
+  "frozen_commit": "b211daf51fdc9b52d5087c9df28ac50191bcabed",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "n/a",
+  "first_pass": {
+    "label": "missing-required-data",
+    "runtime_s": NaN,
+    "detail": "evaluate.py Evaluator requires --gold_dir (da_code/gold) + per-task env_config JSONL; gold answer files not present in blobless clone (external download)",
+    "log": "artifact/execution/logs/<see notes>"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": false,
+  "notes": "scorer structure present but required gold data not in clone"
+}

@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:31:42.993532+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "packet_id": "B008",
+    "packet_sha256": "69f31a3eabe785a74a75e7b2804de69c574449dfc0ce53f5074a342d952554d1",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 4715,
+    "output_tokens": 771,
+    "cost_usd": 0.01714,
+    "elapsed_seconds": 9.651,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B008",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 13,
+            "line_end": 24
+          }
+        ],
+        "evidence_note": "Scripts show CSV answer_file/predict_file with named value columns, but no formal schema doc for task inputs/outputs across the full benchmark.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 7,
+            "line_end": 11
+          },
+          {
+            "source_id": "E003",
+            "line_start": 6,
+            "line_end": 22
+          }
+        ],
+        "evidence_note": "RMSLE and ROC-AUC metrics explicitly implemented in evaluator scripts for specific tasks.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 29
+          },
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 25
+          },
+          {
+            "source_id": "E004",
+            "line_start": 1,
+            "line_end": 25
+          }
+        ],
+        "evidence_note": "Multiple per-task evaluation scripts present in repo computing scores from prediction/answer files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 36,
+            "line_end": 54
+          }
+        ],
+        "evidence_note": "No mention of grading thresholds, pass/fail criteria, or tie-breaking rules in README or evaluator scripts shown.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 46,
+            "line_end": 54
+          }
+        ],
+        "evidence_note": "Results figures referenced but no documented method for aggregating per-task scores into overall benchmark score.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 1,
+            "line_end": 72
+          }
+        ],
+        "evidence_note": "No sample predictions or agent trajectories are shown or linked in the inspected packet.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

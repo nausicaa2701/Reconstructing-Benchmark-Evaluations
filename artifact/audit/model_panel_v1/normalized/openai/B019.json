@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:38:09.953719+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B019",
+    "packet_sha256": "5294d5064ce830a558839c4f6324d85c340b5cba6390aa23765399ed61a61902",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 10439,
+    "output_tokens": 1174,
+    "cost_usd": 0.02478875,
+    "elapsed_seconds": 16.73,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B019",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 48,
+            "line_end": 59
+          },
+          {
+            "source_id": "E003",
+            "line_start": 66,
+            "line_end": 85
+          },
+          {
+            "source_id": "E002",
+            "line_start": 76,
+            "line_end": 86
+          }
+        ],
+        "evidence_note": "Benchmark directory layout, instance input/output files, and log JSONL formats (fields like success_rate, valid_program, codebert_score, cost) are explicitly implied by folder structure plus parser code reading input.json and producing result.json and log entries.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 62,
+            "line_end": 72
+          },
+          {
+            "source_id": "E001",
+            "line_start": 182,
+            "line_end": 197
+          },
+          {
+            "source_id": "E003",
+            "line_start": 28,
+            "line_end": 63
+          }
+        ],
+        "evidence_note": "Aggregate metrics are defined (success_rate, codebert_score, valid_program_rate, cost with explicit averaging). Instance-level components (e.g., precise definition of success_rate, valid_program flag semantics) are only partially inferable from compute_scores\u2019 tuple and not fully specified in this packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 140,
+            "line_end": 181
+          },
+          {
+            "source_id": "E003",
+            "line_start": 28,
+            "line_end": 63
+          },
+          {
+            "source_id": "E002",
+            "line_start": 76,
+            "line_end": 87
+          }
+        ],
+        "evidence_note": "Core scoring (CodeBERT-based similarity, program execution, eval script invocation) and metric aggregation are implemented here. However, the main evaluation drivers (e.g., run_evaluation harness, run_eval.py) and benchmark data/eval_programs are referenced but not included in this packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 6,
+            "line_end": 55
+          },
+          {
+            "source_id": "E001",
+            "line_start": 196,
+            "line_end": 197
+          }
+        ],
+        "evidence_note": "Selection among multiple runs for each task is fully specified: maximize success_rate, then valid_program, then codebert_score, then minimize cost. README notes best-of-three selection; code gives exact tie-breaking implementation.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 62,
+            "line_end": 72
+          },
+          {
+            "source_id": "E001",
+            "line_start": 182,
+            "line_end": 197
+          }
+        ],
+        "evidence_note": "Mapping from per-task evaluation logs and run logs to benchmark-level scores is implemented: choose best run per task using defined criteria, then average success_rate, codebert_score, valid_program, and cost over tasks. README describes this best-of-N process conceptually.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 106,
+            "line_end": 121
+          },
+          {
+            "source_id": "E001",
+            "line_start": 128,
+            "line_end": 137
+          }
+        ],
+        "evidence_note": "README describes how logs and predictions are generated and recovered but no concrete example prediction files, trajectories, or log snippets are included in this packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

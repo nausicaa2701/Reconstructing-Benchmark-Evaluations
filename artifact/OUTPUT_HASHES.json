@@ -1,0 +1,12 @@
+{
+  "artifact/tables/table1_endpoints.csv": "5ba0c15fcd85e24f64bda0101a0faf6498b2aca4067b0994966d640470285dd4",
+  "artifact/tables/table2_by_category.csv": "166c7dc947d46fd43b895e7eb0148e039e293f72e73ce24e19671b6da19478e3",
+  "artifact/tables/table3_per_benchmark.csv": "dcd9af851b30294f088ab93e5ba048951cd5006c67d9180557709e2bf14b8cd5",
+  "artifact/analysis/master_outcomes.csv": "718048fa64811d0fa595d6338f341c6dc3abe16b367271d7130b2a8eb132139e",
+  "artifact/analysis/phase6_stats.json": "18c9cf3514e90f316a886a3d11b749a49c054d70676714f4f9f228dd7036e9a7",
+  "artifact/analysis/expanded_sensitivity_outcomes.csv": "e4bfd432d03e5b8b3cbf170e2d9159f4a51740c357c7f662acc049e8774edade",
+  "artifact/analysis/expanded_sensitivity_stats.json": "d8a8d64f4fe2392f5e661c5d3ef543aa921268dbab1dfd3a1c0da34f23710041",
+  "artifact/audit/model_panel_v1/analysis/model_panel_stats.json": "d335381ecdd48734637a584225853c57387b33cad7a5aa623dd007f8d88ca7cf",
+  "artifact/audit/model_panel_v1/analysis/model_panel_repeatability.json": "a693d55ce10b579a861add36e3c64d89e078d6f518bb8bc627538ea445eea073",
+  "artifact/audit/model_panel_v1/RELEASE_PROTOCOL.json": "ebaaad631c35629d5b62f814fda08b19c84d4bffe35b03e83af4dd407c8f3cb3"
+}

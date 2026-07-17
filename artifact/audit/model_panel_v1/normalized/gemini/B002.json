@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:13:57.453974+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B002",
+    "packet_sha256": "ec36f1c0e60e073063443c1f3869805ca6af385d5078f4bd0d71d8c93d16a3b1",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 18040,
+    "output_tokens": 852,
+    "cost_usd": 0.034728,
+    "elapsed_seconds": 6.185,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B002",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 52
+          }
+        ],
+        "evidence_note": "The evaluation schema structures questions, gold queries, and predictions (often via CSV files), but the exact CSV schemas are not fully detailed in the packet.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 13
+          },
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 110
+          }
+        ],
+        "evidence_note": "Metrics are defined as 'exact' and 'subset' matching of query result dataframes. The normalization and ordering comparison rules are implemented in E002.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 177,
+            "line_end": 236
+          },
+          {
+            "source_id": "E002",
+            "line_start": 247,
+            "line_end": 320
+          }
+        ],
+        "evidence_note": "Database query execution functions are implemented in E002, including query_postgres_db and query_postgres_temp_db.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 110
+          }
+        ],
+        "evidence_note": "Grading rules are implemented via dataframe normalization, sorting alphabetically, conditionally sorting by rows, and comparing the resulting dataframes.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 11,
+            "line_end": 13
+          }
+        ],
+        "evidence_note": "The README mentions logging metrics and aggregating results, but the actual aggregation code mapping predictions to overall scores is not included in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 132,
+            "line_end": 136
+          }
+        ],
+        "evidence_note": "No sample predictions, completed run output files, or gold query datasets are included in the provided packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

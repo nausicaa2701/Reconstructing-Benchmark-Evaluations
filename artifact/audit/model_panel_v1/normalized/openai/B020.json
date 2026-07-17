@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:38:59.451395+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B020",
+    "packet_sha256": "d21844cf75a113aced5aa53b17ef9e86ca67dbec2abb9b96ad29d92f86fd5c7a",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 2,
+    "input_tokens": 14380,
+    "output_tokens": 1084,
+    "cost_usd": 0.028815,
+    "elapsed_seconds": 17.488,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B020",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 220,
+            "line_end": 229
+          },
+          {
+            "source_id": "E001",
+            "line_start": 41,
+            "line_end": 47
+          }
+        ],
+        "evidence_note": "README specifies evaluation.py CLI arguments and the required gold/pred file formats, including that gold.sql lines are `gold SQL \\t db_id`. Dataset JSON fields and tables.json structure are also documented, enabling reconstruction of inputs and expected outputs.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 211,
+            "line_end": 218
+          },
+          {
+            "source_id": "E003",
+            "line_start": 33,
+            "line_end": 44
+          },
+          {
+            "source_id": "E004",
+            "line_start": 140,
+            "line_end": 153
+          },
+          {
+            "source_id": "E004",
+            "line_start": 273,
+            "line_end": 365
+          }
+        ],
+        "evidence_note": "README names Component Matching, Exact Matching, Execution Accuracy and test-suite accuracy but only briefly sketches SQL clause set comparison. BLEU and ROUGE metric formulas are fully implemented for baselines. Exact formal definition for Spider\u2019s main metrics is not fully specified here.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 32,
+            "line_end": 35
+          },
+          {
+            "source_id": "E001",
+            "line_start": 211,
+            "line_end": 221
+          }
+        ],
+        "evidence_note": "README states this repo contains all code for evaluation and refers to evaluation.py and an evaluation directory, but the packet does not include those SQL evaluation files. Only baseline BLEU/ROUGE evaluators are visible, so the primary Spider evaluator cannot be confirmed.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 211,
+            "line_end": 229
+          },
+          {
+            "source_id": "E003",
+            "line_start": 33,
+            "line_end": 44
+          },
+          {
+            "source_id": "E004",
+            "line_start": 327,
+            "line_end": 365
+          }
+        ],
+        "evidence_note": "Materials describe metrics and show BLEU/ROUGE averaging but do not document any benchmark-level grading policy: no rules for rounding, handling invalid predictions, or tie-breaking across submissions are described.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 55,
+            "line_end": 59
+          },
+          {
+            "source_id": "E002",
+            "line_start": 243,
+            "line_end": 247
+          },
+          {
+            "source_id": "E004",
+            "line_start": 327,
+            "line_end": 365
+          },
+          {
+            "source_id": "E003",
+            "line_start": 71,
+            "line_end": 83
+          }
+        ],
+        "evidence_note": "Baseline evaluators clearly average sentence BLEU/ROUGE and accuracies over dataset.count, showing per-example-to-aggregate mapping. However, for Spider\u2019s main SQL metrics (component/exact/execution), the aggregation from per-query outcomes to final scores is only implied, not explicitly defined.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 211,
+            "line_end": 229
+          },
+          {
+            "source_id": "E002",
+            "line_start": 68,
+            "line_end": 83
+          }
+        ],
+        "evidence_note": "README provides the evaluation command and input format but no concrete example of prediction files or full evaluation run. Baseline evaluation code writes analysis files, yet no sample outputs or prediction examples are included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

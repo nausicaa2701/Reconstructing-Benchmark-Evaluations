@@ -1,0 +1,13 @@
+{
+  "doc_class_sigconf_review": true,
+  "author_present": true,
+  "no_placeholder_email": true,
+  "no_proposal_draft": true,
+  "ccs_and_keywords": true,
+  "all_refs_defined": true,
+  "all_cites_in_bib": true,
+  "no_expected_work": true,
+  "environments_balanced": true,
+  "all_figures_exist": true,
+  "qrdata_runtime_0.04": true
+}

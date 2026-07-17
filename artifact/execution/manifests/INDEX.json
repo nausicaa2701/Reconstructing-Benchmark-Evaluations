@@ -1,0 +1,163 @@
+[
+  {
+    "benchmark": "DA-Code",
+    "manifest": "artifact/execution/manifests/DA-Code.json",
+    "E3": false,
+    "first_pass_label": "missing-required-data"
+  },
+  {
+    "benchmark": "DS-1000",
+    "manifest": "artifact/execution/manifests/DS-1000.json",
+    "E3": true,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "PandasEval/NumpyEval (CERT)",
+    "manifest": "artifact/execution/manifests/PandasEval_NumpyEval_(CERT).json",
+    "E3": false,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "BLADE",
+    "manifest": "artifact/execution/manifests/BLADE.json",
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "BixBench",
+    "manifest": "artifact/execution/manifests/BixBench.json",
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "DiscoveryBench",
+    "manifest": "artifact/execution/manifests/DiscoveryBench.json",
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "InfiAgent-DABench",
+    "manifest": "artifact/execution/manifests/InfiAgent-DABench.json",
+    "E3": true,
+    "first_pass_label": "pass-as-documented"
+  },
+  {
+    "benchmark": "QRData",
+    "manifest": "artifact/execution/manifests/QRData.json",
+    "E3": true,
+    "first_pass_label": "pass-as-documented"
+  },
+  {
+    "benchmark": "ScienceAgentBench",
+    "manifest": "artifact/execution/manifests/ScienceAgentBench.json",
+    "E3": true,
+    "first_pass_label": "pass-as-documented"
+  },
+  {
+    "benchmark": "DSBench",
+    "manifest": "artifact/execution/manifests/DSBench.json",
+    "E3": true,
+    "first_pass_label": "pass-as-documented"
+  },
+  {
+    "benchmark": "MLAgentBench",
+    "manifest": "artifact/execution/manifests/MLAgentBench.json",
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "MLE-bench",
+    "manifest": "artifact/execution/manifests/MLE-bench.json",
+    "E3": false,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "MLGym",
+    "manifest": "artifact/execution/manifests/MLGym.json",
+    "E3": false,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "RE-Bench",
+    "manifest": "artifact/execution/manifests/RE-Bench.json",
+    "E3": false,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "SpreadsheetBench",
+    "manifest": "artifact/execution/manifests/SpreadsheetBench.json",
+    "E3": true,
+    "first_pass_label": "pass-as-documented"
+  },
+  {
+    "benchmark": "TabFact",
+    "manifest": "artifact/execution/manifests/TabFact.json",
+    "E3": false,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "TableBench",
+    "manifest": "artifact/execution/manifests/TableBench.json",
+    "E3": true,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "WikiTableQuestions",
+    "manifest": "artifact/execution/manifests/WikiTableQuestions.json",
+    "E3": false,
+    "first_pass_label": "dependency-or-environment-failure"
+  },
+  {
+    "benchmark": "BIRD-CRITIC / SQL-eval",
+    "manifest": "artifact/execution/manifests/BIRD-CRITIC___SQL-eval.json",
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "Spider",
+    "manifest": "artifact/execution/manifests/Spider.json",
+    "E3": false,
+    "first_pass_label": "missing-required-data"
+  },
+  {
+    "benchmark": "Spider 2.0",
+    "manifest": "artifact/execution/manifests/Spider_2.0.json",
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked"
+  },
+  {
+    "benchmark": "BigCodeBench",
+    "manifest": null,
+    "E3": false,
+    "first_pass_label": "credential-or-service-blocked",
+    "note": "not attempted (see e3_records_detail)"
+  },
+  {
+    "benchmark": "DataSciBench",
+    "manifest": null,
+    "E3": false,
+    "first_pass_label": "missing-required-data",
+    "note": "not attempted (see e3_records_detail)"
+  },
+  {
+    "benchmark": "Spider2-V",
+    "manifest": null,
+    "E3": false,
+    "first_pass_label": "not-applicable",
+    "note": "not attempted (see e3_records_detail)"
+  },
+  {
+    "benchmark": "BIRD",
+    "manifest": null,
+    "E3": false,
+    "first_pass_label": "missing-required-data",
+    "note": "not attempted (see e3_records_detail)"
+  },
+  {
+    "benchmark": "Dr.Spider",
+    "manifest": null,
+    "E3": false,
+    "first_pass_label": "missing-required-data",
+    "note": "not attempted (see e3_records_detail)"
+  }
+]

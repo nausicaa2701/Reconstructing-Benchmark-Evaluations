@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:43:07.713576+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B020",
+    "packet_sha256": "d21844cf75a113aced5aa53b17ef9e86ca67dbec2abb9b96ad29d92f86fd5c7a",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 19424,
+    "output_tokens": 777,
+    "cost_usd": 0.036129,
+    "elapsed_seconds": 6.474,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B020",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 41,
+            "line_end": 118
+          }
+        ],
+        "evidence_note": "The README comprehensively details the schema for the input JSON files (train.json/dev.json) and database metadata (tables.json), with precise descriptions of structural elements.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 213,
+            "line_end": 218
+          }
+        ],
+        "evidence_note": "The README introduces 'Component Matching', 'Exact Matching', and 'Execution Accuracy', but points to a separate repository (test-suite-sql-eval) and external papers for full specification.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 213,
+            "line_end": 221
+          }
+        ],
+        "evidence_note": "The main evaluator code (evaluation.py) is referenced in the README command-line example but is missing from the provided code files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 213,
+            "line_end": 221
+          }
+        ],
+        "evidence_note": "Tie-breaking rules and exact decomposition or comparison logic details are not provided in the inspected codebase context.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 213,
+            "line_end": 221
+          }
+        ],
+        "evidence_note": "The overall aggregation pipeline mapping predictions to finalized evaluation reports is not included in the provided code files.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-applicable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 211,
+            "line_end": 212
+          }
+        ],
+        "evidence_note": "This benchmark evaluates static database queries (Text-to-SQL) rather than interactive or sequential agentic trajectories.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

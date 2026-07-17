@@ -1,0 +1,13 @@
+COMMIT: 49b73a94775fb489063f60ca1865e3a650079a79
+NOTE: evaluation.py copied to a rundir so its hardcoded ../data and ../outputs resolve to the synthetic tree; no code edit
+CMD: python3 evaluation.py --dataset smoke --model synth --setting single (cwd=$WORKSPACE/repotrees/../e3runs/SpreadsheetBench/rundir, cap=60s, std_path_semantics=on)
+--- output ---
+Namespace(model='synth', setting='single', dataset='smoke')
+  0%|          | 0/2 [00:00<?, ?it/s]100%|██████████| 2/2 [00:00<00:00, 131.86it/s]
+Cell values in the specified range are identical.
+Cell values in the specified range are identical.
+Cell values in the specified range are identical.
+
+EXIT=0
+STATUS=COMPLETED
+RUNTIME_S=0.20

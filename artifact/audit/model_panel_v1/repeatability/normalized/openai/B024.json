@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-17T04:49:13.105671+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B024",
+    "packet_sha256": "94f83d0bc2f68b32a125e5688c9c1ce7ee7b4bd0787479935a7d62b2430b8a07",
+    "protocol_sha256": "d72e0019a7979fec0018c784cf0453c20319b3e00339dab1206cbfedec4c14df",
+    "attempt": 1,
+    "input_tokens": 13781,
+    "output_tokens": 1613,
+    "cost_usd": 0.03335625,
+    "elapsed_seconds": 32.89,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B024",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 34,
+            "line_end": 38
+          },
+          {
+            "source_id": "E001",
+            "line_start": 46,
+            "line_end": 48
+          },
+          {
+            "source_id": "E003",
+            "line_start": 111,
+            "line_end": 127
+          },
+          {
+            "source_id": "E003",
+            "line_start": 134,
+            "line_end": 145
+          },
+          {
+            "source_id": "E003",
+            "line_start": 148,
+            "line_end": 153
+          },
+          {
+            "source_id": "E003",
+            "line_start": 230,
+            "line_end": 233
+          }
+        ],
+        "evidence_note": "README specifies CodaLab submission schema as a JSON mapping {test_id: label} with label in {0,1}. run_BERT\u2019s QqpProcessor and InputExample/InputFeatures define TSV-based training/dev schema and label encoding, allowing reconstruction of model/evaluator I/O formats.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 69,
+            "line_end": 72
+          },
+          {
+            "source_id": "E003",
+            "line_start": 88,
+            "line_end": 99
+          },
+          {
+            "source_id": "E003",
+            "line_start": 92,
+            "line_end": 99
+          },
+          {
+            "source_id": "E003",
+            "line_start": 128,
+            "line_end": 136
+          },
+          {
+            "source_id": "E003",
+            "line_start": 312,
+            "line_end": 317
+          }
+        ],
+        "evidence_note": "Code defines simple_accuracy, F1, and acc_and_f1; compute_metrics('qqp') returns both accuracy and F1. README mentions \u201cfact verification accuracy\u201d but does not state whether accuracy alone or acc_and_f1 is the official score, leaving the primary metric ambiguous.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 88,
+            "line_end": 99
+          },
+          {
+            "source_id": "E003",
+            "line_start": 128,
+            "line_end": 136
+          },
+          {
+            "source_id": "E003",
+            "line_start": 148,
+            "line_end": 168
+          },
+          {
+            "source_id": "E003",
+            "line_start": 320,
+            "line_end": 320
+          }
+        ],
+        "evidence_note": "Core components for evaluation (features, metrics) are implemented in run_BERT, but the main() function including the evaluation loop and how metrics are computed, selected, and reported is truncated, so the full evaluator cannot be reconstructed from the packet alone.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 198,
+            "line_end": 214
+          },
+          {
+            "source_id": "E003",
+            "line_start": 88,
+            "line_end": 99
+          },
+          {
+            "source_id": "E003",
+            "line_start": 312,
+            "line_end": 317
+          }
+        ],
+        "evidence_note": "Neither README nor code describe any leaderboard grading rules, tie-breaking policies, rounding conventions, or how to handle identical scores; only raw metric formulas are given without such procedural details.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 88,
+            "line_end": 99
+          },
+          {
+            "source_id": "E003",
+            "line_start": 128,
+            "line_end": 136
+          },
+          {
+            "source_id": "E003",
+            "line_start": 312,
+            "line_end": 317
+          }
+        ],
+        "evidence_note": "Functions map predicted labels and gold labels to accuracy and F1, but the packet omits how model outputs are turned into class predictions and which of the returned metrics (acc vs F1 vs acc_and_f1) is used as the single benchmark score.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 34,
+            "line_end": 38
+          }
+        ],
+        "evidence_note": "README provides an explicit example of the expected submission format `{test_id: label}` with labels 0/1 for refuted/entailed, which serves as a minimal sample prediction specification, though no separate sample file is provided.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

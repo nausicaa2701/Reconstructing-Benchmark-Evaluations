@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:29:23.793633+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B003",
+    "packet_sha256": "661f974d7bae9edb5ae6fc681b4c0571e7059609ce3c37a6a5204007ffb8e4c9",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 12408,
+    "output_tokens": 1257,
+    "cost_usd": 0.02808,
+    "elapsed_seconds": 18.875,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B003",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 191,
+            "line_end": 197
+          },
+          {
+            "source_id": "E004",
+            "line_start": 106,
+            "line_end": 125
+          },
+          {
+            "source_id": "E004",
+            "line_start": 317,
+            "line_end": 348
+          }
+        ],
+        "evidence_note": "README specifies that submissions must follow example/submission_schema.json and outputs eval_results.json/eval_metrics.json; MetricsAcrossRuns structure for eval_metrics.json is shown. The actual JSON schema file and full EvalResults structure are not included.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E004",
+            "line_start": 28,
+            "line_end": 104
+          },
+          {
+            "source_id": "E004",
+            "line_start": 152,
+            "line_end": 178
+          },
+          {
+            "source_id": "E004",
+            "line_start": 243,
+            "line_end": 279
+          },
+          {
+            "source_id": "E004",
+            "line_start": 318,
+            "line_end": 348
+          }
+        ],
+        "evidence_note": "Several metrics (hit rates, counts, averages) have explicit computed-field formulas and are exposed via get_metrics; however, coverage_* metrics and DiversityMetric details are not visible, and how matched_* lists are generated is not shown.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 127,
+            "line_end": 157
+          },
+          {
+            "source_id": "E003",
+            "line_start": 50,
+            "line_end": 100
+          },
+          {
+            "source_id": "E003",
+            "line_start": 221,
+            "line_end": 300
+          },
+          {
+            "source_id": "E004",
+            "line_start": 106,
+            "line_end": 125
+          }
+        ],
+        "evidence_note": "Core components exist: run_get_eval.py (described), Convert class to process analyses, and MetricsAcrossRuns. But key pieces (metrics.all_metrics, matching logic, EvalResults, DatasetSubmission, LMAnalysis) are imported but not shown, so the full evaluator cannot be reconstructed from this packet alone.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 127,
+            "line_end": 157
+          },
+          {
+            "source_id": "E004",
+            "line_start": 318,
+            "line_end": 348
+          }
+        ],
+        "evidence_note": "README and run metrics code describe running evaluation and listing metrics, but there is no description of how an overall score is chosen, how multiple runs are aggregated beyond simple statistics, or any explicit tie-breaking or ranking rules.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 101,
+            "line_end": 131
+          },
+          {
+            "source_id": "E004",
+            "line_start": 243,
+            "line_end": 279
+          },
+          {
+            "source_id": "E004",
+            "line_start": 318,
+            "line_end": 348
+          }
+        ],
+        "evidence_note": "Convert.convert_entire_analysis shows how a single analysis is transformed; MetricsAcrossRuns aggregates matched_* lists into summary metrics via get_metrics. However, the upstream matching from predictions to matched_* lists and coverage_* calculations are not provided, so the full mapping from predictions to final scores is incomplete.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 123,
+            "line_end": 126
+          },
+          {
+            "source_id": "E001",
+            "line_start": 191,
+            "line_end": 197
+          }
+        ],
+        "evidence_note": "README references example/multirun_analyses.json and example/submission_analyses.json as examples of system outputs and valid submissions, but the actual contents of these JSON files are not included in the packet, so they cannot be inspected.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+absl-py==2.5.0
+aiohappyeyeballs==2.7.1
+aiohttp==3.14.1
+aiosignal==1.4.0
+anyio==4.14.2
+attrs==26.1.0
+certifi==2026.6.17
+charset-normalizer==3.4.9
+click==8.4.2
+datasets==2.19.0
+defusedxml==0.7.1
+dill==0.3.8
+et_xmlfile==2.0.0
+evaluate==0.4.6
+filelock==3.29.7
+frozenlist==1.8.0
+fsspec==2024.3.1
+func_timeout==4.3.5
+h11==0.16.0
+hf-xet==1.5.1
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.23.0
+idna==3.18
+joblib==1.5.3
+multidict==6.7.1
+multiprocess==0.70.16
+narwhals==2.24.0
+nltk==3.10.0
+numpy @ file:///Users/runner/miniforge3/conda-bld/bld/rattler-build_numpy_1779169211/work/dist/numpy-2.4.6-cp311-cp311-macosx_11_0_arm64.whl#sha256=742a1415c368edb41b8083c16668d7cc24ca0178d58851909fbff1185e795bdf
+openpyxl==3.1.5
+packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1777103621/work
+pandas @ file:///Users/runner/miniforge3/conda-bld/bld/rattler-build_pandas_1778602822/work
+patsy==1.0.2
+propcache==0.5.2
+pyarrow==25.0.0
+pyarrow-hotfix==0.7
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+PyYAML==6.0.3
+regex==2026.7.10
+requests==2.34.2
+rouge_score==0.1.2
+scikit-learn==1.9.0
+scipy @ file:///Users/runner/miniforge3/conda-bld/scipy-split_1779874068725/work/dist/scipy-1.17.1-cp311-cp311-macosx_11_0_arm64.whl#sha256=1d02cc9f9e332871544f61075c33d06641e00a33624ab805b8c955840bb995c3
+six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work
+sqlparse==0.5.5
+statsmodels==0.14.6
+threadpoolctl==3.6.0
+tqdm==4.68.4
+typing_extensions==4.16.0
+urllib3==2.7.0
+xxhash==3.8.1
+yarl==1.24.2

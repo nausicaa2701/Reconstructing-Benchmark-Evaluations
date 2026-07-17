@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:36:42.738176+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B016",
+    "packet_sha256": "518010092eeda3816c5c67712018325e4e2c7d03993e004951ac8441606586ae",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 9818,
+    "output_tokens": 1284,
+    "cost_usd": 0.0251125,
+    "elapsed_seconds": 17.834,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B016",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 117,
+            "line_end": 137
+          },
+          {
+            "source_id": "E004",
+            "line_start": 159,
+            "line_end": 186
+          },
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 64
+          }
+        ],
+        "evidence_note": "eval_baseline.py and eval_private.py show that HumanEval problems are read via read_problems() and predictions are written as JSONL with fields {task_id, completion}; README shows evaluate_functional_correctness consuming the resulting *.samples.jsonl file.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 72
+          },
+          {
+            "source_id": "E001",
+            "line_start": 70,
+            "line_end": 72
+          },
+          {
+            "source_id": "E001",
+            "line_start": 31,
+            "line_end": 36
+          }
+        ],
+        "evidence_note": "README specifies the command evaluate_functional_correctness <samples_path> and reports Pass@1/10/100, but it does not define how pass@k is computed; details are delegated to the external human-eval repository, not included here.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 31,
+            "line_end": 36
+          },
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 64
+          },
+          {
+            "source_id": "E003",
+            "line_start": 117,
+            "line_end": 137
+          },
+          {
+            "source_id": "E004",
+            "line_start": 159,
+            "line_end": 186
+          }
+        ],
+        "evidence_note": "Core evaluation is delegated to the external human-eval package (install and use evaluate_functional_correctness). Only sample-generation code is present; the actual evaluator implementation is not included in this packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 72
+          },
+          {
+            "source_id": "E004",
+            "line_start": 159,
+            "line_end": 186
+          }
+        ],
+        "evidence_note": "There is no description of how individual test outcomes are turned into scores, how multiple samples per task are handled, or any tie-breaking/rounding rules. Only metric names and an external evaluation command are mentioned.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 72
+          },
+          {
+            "source_id": "E003",
+            "line_start": 117,
+            "line_end": 137
+          },
+          {
+            "source_id": "E004",
+            "line_start": 159,
+            "line_end": 186
+          }
+        ],
+        "evidence_note": "Code shows how to generate per-task samples.jsonl files but not how these are converted into aggregate Pass@k scores; this logic resides in evaluate_functional_correctness in the external human-eval repo, which is not shown here.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 117,
+            "line_end": 137
+          },
+          {
+            "source_id": "E004",
+            "line_start": 159,
+            "line_end": 186
+          },
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 64
+          }
+        ],
+        "evidence_note": "Scripts describe how to generate *.samples.jsonl and the README shows the expected filename, but no actual prediction or trajectory files are included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

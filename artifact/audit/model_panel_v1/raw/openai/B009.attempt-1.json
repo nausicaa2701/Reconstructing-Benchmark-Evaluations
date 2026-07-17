@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:32:18.381624+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B009",
+    "packet_sha256": "75c4dfec5438c5818675a7953a3180bb423b8768c8714020ae0efca47cc50b69",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 9212,
+    "output_tokens": 1077,
+    "cost_usd": 0.022285,
+    "elapsed_seconds": 13.017
+  },
+  "response": {
+    "id": "resp_062bc01b18d38d30016a58eb65a70c819aaa1bf1a7ebdd1508",
+    "object": "response",
+    "created_at": 1784212325,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212337,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_062bc01b18d38d30016a58eb661a08819ab84f646954fc4f01",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOtxl1ksrcH95RPap0XRmIfzLXhZkX9ELorOzNsYPzR12Bcjqj0wc9m9amd3eDjhuzmp4mHPLU_OVgi61jSK-x_h8gnRmavOkZ9Tt7Ha1kKxn2RjFrqvP4SNHKv9Zcg0y8_vMZrzLErWrH6SBYmbK3FR_uawv080U0LZ1-h9j3T__dj2fGRtSY1jpsYEMkuHiem3drsYhwETRH5EYMaWibCT2NhQArToXCW2fVzvDHMKJ9JEuCH_D3_fVjrdq5LSbqvRe9F1HnExHf41nR6VbFgaTkmU_arU70xiJX0LClmK4iJgGozqLL-VdThf5Iu5iAAPwt-Ypl0cWhk7zX-tnqrPJZKx46Dyy4TnTm7WrE0d5dh3FQRLw8hJmmO_JLPv2NNowjepoJEpesYqW1O_Wjdu7dzkcN0wwiSbi6P-uhILkC5nXVQyMvoQ8Knq-NzIem8Gtvca3D6nAV9A3Wv4V_T22Ley1rUZB8NTypUQWlEMSdrL5lVcOCmecEXP57Lbi9oGJRs0ciPBu5uwMk3pOtE_4OnRplBCRiUwiPjZ5Xqnp0ICtjyU2w77JyMmh-YgXOn_Zul3H25KfcWkhHg1rGR2O6fvYbK7RvqOrKiThBbhWyw0WBd6wCUPr_h8STs_fK2X-bHwkW6QqxexKlPwVth_HZC7Z5WP4RHRWe0jzN7A873w6GKR9IYF_sTE48Q3JernCTb2pFulfwHGr68iiSHG37mM-KL4c_bsWgYw-jtgaHy_Pbmj3gFWVPZzweuEA20MAQGtUxb_xaB_jCf1nRi5p052YNy85q3NUugMDfl8NznbdURK9nqx5nWkGSZtP3DKZDJmEDBAtitr-IU_a7EgcHUsa8QyvrCBfOaxmldkiNkDrJktAZX9JEZ0TMNz4WyO2wQl6rKYeljZL85-BGeer5CFnj1WkxHuIS2XjqoUSUyYwvWVzamVXtg25_mvsdGEdqyuHmMCu9R7dpKmwukyrzIKuqBfL3ow8v2qlLJdnT9BXDFq_CTbrTLJtScWkEo5TkHZIlrNyfULG1eXePV51JZ6a8YNad4lMJXKndP1N5exmeYYw8LRwTW4qC0RsHV-TkHT2xO6NJ37ohONbg_WNUQYgmlJswVco4K6Jqy6QbQXRAWKabXPfzelCxP856gAp_7lS3pSOZkWOGjrIS6umAPh76TtPaJtbE4HFDwqfFtdMC_G78xqJ3njT2vX7-MONArdTCpT8chKRQY_jrM184WWLSyuqFXWtBsfbU6PwWX1ga9evi4vmFH-Q0Jml_Wq4QfnxGC1umCy4mKqdznd1W_GjdmmsBdlrmYCIiiVZ3FZnDdKpmjeSJw5zCFq_jd5nRjkTfU8WDEUr6zP6Q-EvL_0xv3ZZXBSWSZM0_t2dfnEK845HSV9DeizP6ePpZ9QXjO0wNgWhaXCMQEdFywkSvVlWtw44Q3V_lfszisF8PP-M2xGAeXMKDYDKMWykR0nUbgMgjfhjofG6DBZJfiddEGRcuhDbOy33w87OtKRrfK47LrDrWk9eb8PPc_PWx90pHwSY2UUfB5OYiSdXiU6UZF-SmolE0s1U_grbUIpzxKAjGS4xbT6euv7tMYwVeCpheyKkY_ZyWOoYuyCmUjVzcO6SrqfSOT40jU3u5gqx0vhIpYb89oSDujeprVmVNyTBazhfz7DxgN9N9pXXronvZx3ss_DNqCkAkvNQhnVunTSOK2XLt0UfdAMFI-VFz2KokDICp_trKcP8HdEARTejTEKT0ChMCFYXT55PsKKqsbyMuFuq_LzrZTHGUGMYUu0D2rI9rN4JSQkrKF5E4C7-vxz-DjckyseMPbpRNwxWUYC9pEFoU81v4NsFg8ktzv8BWXbp_K0bMWt8zgBpI_lCoSMsS5Jv4566sr3827fWqHdFsNflPmwpykNrFvzWybmMUFn0Dg95xEPTpWI6ShDJQAh3AqfoSs5iq10nFJdUWxd5KWWOhzywSJPYizhC3dqOf-_R1lXvzhWP62T0FesMeNSK3bOXYUMg3ZN7U72eNP18xhRYjiwuP2FHfxbh3bS0h1ifAXIOc6M1DeArnJkxAU-I7u2w_S-Mz33sE_GnV5MNaLt4U2V0UYEOJEvyUbMsOWamwwEkTG6w5DZxrGYBsvlBe8rjTs2PtVRbXFlRc81wXDNjyYnyW7GimEpu3cH8YS1dJUQZqQVCjzKoSMIKTAYEnDi0-a2KbRNapZQckZrgD6WJcpHfMHEWEug5fEfXWWdNLO-c2HAjRVhhLQLtXTQgBTucLqi6BrLt2oY4phnMSMlYPY1ZIkLH8wuENnji6uIf95nmKJSSl7xELQ9-mVki42jXjEtlK7ll42bXDIbTEn7SWHgyoOSwoMOzdBxluPWJvHboxTu7ElgcHCjuG_usnWiq5bCvwpxfHrTHNZjg6VCIMoYMKghWH6uc9hdIHSxmA5ueeujrGaf4YcD5Zw-yaBTRg5udjk7Zod2ISz5e-dwsl9ZNpmKdSOow6wu_W6kPvh2T7Lv3YafxR-w34Yz2kYq9S27MVjClKnzfhzUO8mbZQWVh0o30V1JkhXgd-QUw1oPAn8oycNZFSI4Ozf3E1q4HaFnnnFrbUYWAwEQ5z7BYxunYXyUSGJY3MnYfq2LDt7TGwg-jyc1lj_Xz1THAvRwdWkVK4ywXEjTSh7kewrR-cfaxdNWobHjmWok5s9dNEqsvXFTpjyDaDU5EzdZgATBRVqE5jA60NWAeNO30393ObPENf4-xO741c9ipjn3G05VI4mtb_zlngMcrLPVazitErFaqu03N1TKwTJ23kn2OOdTBFjOqq1w5Z0dP0J73ppsGd2OWfoo8Q-nig93a0z6uvbH4WlsvSttSoI=",
+        "summary": []
+      },
+      {
+        "id": "msg_062bc01b18d38d30016a58eb6a34e4819aacc65ff71d1b53f4",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B009\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":69,\"line_end\":88},{\"source_id\":\"E002\",\"line_start\":135,\"line_end\":143},{\"source_id\":\"E002\",\"line_start\":169,\"line_end\":176},{\"source_id\":\"E003\",\"line_start\":68,\"line_end\":76}],\"evidence_note\":\"Evaluator expects text log files in specific subfolders and formats defined by regex patterns, and outputs a CSV with defined columns, but the full schema and example input logs are not comprehensively documented.\",\"confidence\":\"high\"},{\"criterion\":\"Metric definition\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":73,\"line_end\":91},{\"source_id\":\"E002\",\"line_start\":112,\"line_end\":115},{\"source_id\":\"E002\",\"line_start\":135,\"line_end\":143},{\"source_id\":\"E002\",\"line_start\":169,\"line_end\":188},{\"source_id\":\"E003\",\"line_start\":120,\"line_end\":127}],\"evidence_note\":\"Docstrings and code define good_vote_rate (correct non-werewolf votes / non-werewolves), avg_rate (mean good_vote_rate per game), vote1_rate (first-round accuracy), and votewolf_difficulty; conversions to percentages are explicit.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":22,\"line_end\":31},{\"source_id\":\"E002\",\"line_start\":37,\"line_end\":43},{\"source_id\":\"E002\",\"line_start\":73,\"line_end\":90},{\"source_id\":\"E002\",\"line_start\":135,\"line_end\":190},{\"source_id\":\"E002\",\"line_start\":206,\"line_end\":213},{\"source_id\":\"E003\",\"line_start\":68,\"line_end\":76}],\"evidence_note\":\"The Vote class and Utils class implement full evaluation logic: log extraction, parsing, metric computation, dataframe assembly, and CSV writing. A main block shows how to invoke get_eval_csv with IN_PATH and output path.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":69,\"line_end\":91},{\"source_id\":\"E002\",\"line_start\":169,\"line_end\":190}],\"evidence_note\":\"Code computes continuous accuracy metrics but there is no description of any grading thresholds, ranking criteria, or tie-breaking rules for comparing systems.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":92,\"line_end\":115},{\"source_id\":\"E002\",\"line_start\":169,\"line_end\":185},{\"source_id\":\"E002\",\"line_start\":192,\"line_end\":201}],\"evidence_note\":\"Implementation shows mapping from individual vote lines to per-round good_vote_rate, then averaging per file for avg_rate and selecting vote_1 rows for vote1_rate. Groupby and mean operations are explicit and reproducible.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":50,\"line_end\":57},{\"source_id\":\"E003\",\"line_start\":108,\"line_end\":118}],\"evidence_note\":\"Docstrings give illustrative text snippets, but no concrete log files, full example trajectories, or sample evaluation runs are included in the packet.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 9212,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1077,
+      "output_tokens_details": {
+        "reasoning_tokens": 299
+      },
+      "total_tokens": 10289
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

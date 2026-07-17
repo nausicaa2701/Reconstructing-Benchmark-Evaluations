@@ -1,0 +1,17 @@
+{
+  "benchmark": "Spider 2.0",
+  "category": "text2sql",
+  "frozen_commit": "01a4c67c1e3f6ab9032716b050a927abbb245f65",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "n/a",
+  "first_pass": {
+    "label": "credential-or-service-blocked",
+    "runtime_s": NaN,
+    "detail": "evaluation_suite/evaluate.py imports get_bigquery_sql_result + duckdb_match; requires BigQuery service credentials + live DB",
+    "log": "artifact/execution/logs/<see notes>"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": false,
+  "notes": "external cloud DB service (BigQuery); not CPU-offline-testable"
+}

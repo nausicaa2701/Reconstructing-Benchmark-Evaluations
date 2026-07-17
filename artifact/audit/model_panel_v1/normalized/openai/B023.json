@@ -1,0 +1,199 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:40:20.980081+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B023",
+    "packet_sha256": "ec0ad907ac8d49f5d51ce104ff97a9e9b1bbb11957e24172c10fc2b3bc1cadf8",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 13560,
+    "output_tokens": 1359,
+    "cost_usd": 0.03054,
+    "elapsed_seconds": 15.596,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B023",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 45,
+            "line_end": 55
+          },
+          {
+            "source_id": "E002",
+            "line_start": 205,
+            "line_end": 215
+          },
+          {
+            "source_id": "E004",
+            "line_start": 200,
+            "line_end": 213
+          }
+        ],
+        "evidence_note": "README defines dataset.json fields (id, instruction, spreadsheet_path, instruction_type, answer_position) and spreadsheet naming. evaluation.py loads ../data/{dataset}/dataset.json and expects spreadsheets under spreadsheet/{id}/{No.}_{id}_answer.xlsx and _input.xlsx. parity_test uses same pattern.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 18,
+            "line_end": 47
+          },
+          {
+            "source_id": "E002",
+            "line_start": 213,
+            "line_end": 229
+          },
+          {
+            "source_id": "E004",
+            "line_start": 52,
+            "line_end": 61
+          },
+          {
+            "source_id": "E004",
+            "line_start": 200,
+            "line_end": 221
+          }
+        ],
+        "evidence_note": "Cell metric is equality after transform_value with rounding and datetime handling plus empty/None equivalence. Per-test-case result is True/False. Per-task: soft_restriction is fraction of passed test cases; hard_restriction is 1 if all three pass else 0. parity_test defines identical soft/hard.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 67,
+            "line_end": 71
+          },
+          {
+            "source_id": "E001",
+            "line_start": 131,
+            "line_end": 149
+          },
+          {
+            "source_id": "E002",
+            "line_start": 55,
+            "line_end": 88
+          },
+          {
+            "source_id": "E002",
+            "line_start": 155,
+            "line_end": 189
+          },
+          {
+            "source_id": "E002",
+            "line_start": 191,
+            "line_end": 233
+          },
+          {
+            "source_id": "E003",
+            "line_start": 31,
+            "line_end": 47
+          },
+          {
+            "source_id": "E003",
+            "line_start": 131,
+            "line_end": 162
+          }
+        ],
+        "evidence_note": "README describes evaluation entrypoint and scripts. evaluation.py fully implements comparison of workbooks, cell ranges, and aggregation into JSON. open_spreadsheet.py implements cross-platform formula recalculation to enable reliable evaluation.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 18,
+            "line_end": 47
+          },
+          {
+            "source_id": "E002",
+            "line_start": 123,
+            "line_end": 151
+          },
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 188
+          },
+          {
+            "source_id": "E002",
+            "line_start": 213,
+            "line_end": 229
+          },
+          {
+            "source_id": "E004",
+            "line_start": 116,
+            "line_end": 138
+          },
+          {
+            "source_id": "E004",
+            "line_start": 260,
+            "line_end": 269
+          }
+        ],
+        "evidence_note": "Rules: all cells in specified ranges must match; types must match after transform_value; empty string and None are treated equal. For multiple ranges, all must pass (all(result_list)). Exceptions during comparison count as failure. Per-task soft/hard computed; parity_test shows dataset-level summation without special tie-breaking.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 128,
+            "line_end": 130
+          },
+          {
+            "source_id": "E002",
+            "line_start": 213,
+            "line_end": 233
+          },
+          {
+            "source_id": "E004",
+            "line_start": 200,
+            "line_end": 221
+          },
+          {
+            "source_id": "E004",
+            "line_start": 265,
+            "line_end": 269
+          }
+        ],
+        "evidence_note": "README states model outputs saved under data/.../outputs. evaluation.py (commented proc_path) shows expected naming for output spreadsheets; currently it compares *_input.xlsx for demonstration. Per-task metrics are written to eval_*.json. parity_test shows aggregating soft/hard over all tasks via sums divided by task count.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 75,
+            "line_end": 83
+          },
+          {
+            "source_id": "E001",
+            "line_start": 101,
+            "line_end": 129
+          }
+        ],
+        "evidence_note": "README describes how to run inference and where outputs are stored but does not include any concrete example prediction files, code solutions, or trajectory transcripts within the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

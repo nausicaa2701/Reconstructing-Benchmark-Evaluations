@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T18:21:34.410537+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B001",
+    "packet_sha256": "2ae0354b5aa3522772a6df252836198fbe4bd793e4153572b4ef21755bf20b97",
+    "protocol_sha256": "5fcb639a89d8fe8abc40ba70058138375c487a7d543738ebd59ffa7eb7c40a8c",
+    "attempt": 1,
+    "input_tokens": 8010,
+    "output_tokens": 837,
+    "cost_usd": 0.0183825,
+    "elapsed_seconds": 25.506,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B001",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 3
+          },
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 21
+          },
+          {
+            "source_id": "E004",
+            "line_start": 40,
+            "line_end": 53
+          },
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 113
+          }
+        ],
+        "evidence_note": "Code defines an LMAgent interface and FastChatAgent call methods, but there is no description of the benchmark task inputs, expected outputs, or dataset/sample format for evaluation.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 21
+          },
+          {
+            "source_id": "E004",
+            "line_start": 40,
+            "line_end": 53
+          },
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 113
+          }
+        ],
+        "evidence_note": "Files only show how to call language models via an agent. No metrics, scoring formulas, or evaluation criteria are defined or mentioned.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 3
+          },
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 32
+          },
+          {
+            "source_id": "E004",
+            "line_start": 23,
+            "line_end": 39
+          },
+          {
+            "source_id": "E004",
+            "line_start": 100,
+            "line_end": 161
+          }
+        ],
+        "evidence_note": "The available code implements agent classes to query models, not any evaluator that compares predictions to ground truth or computes scores.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 32
+          },
+          {
+            "source_id": "E004",
+            "line_start": 40,
+            "line_end": 53
+          },
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 113
+          }
+        ],
+        "evidence_note": "No logic or documentation about how answers are judged correct, how partial credit is handled, or how ties between systems are broken.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 21
+          },
+          {
+            "source_id": "E004",
+            "line_start": 84,
+            "line_end": 92
+          },
+          {
+            "source_id": "E004",
+            "line_start": 146,
+            "line_end": 153
+          }
+        ],
+        "evidence_note": "The artifacts show only text generation calls and networking; there is no code aggregating per-item results into overall benchmark scores.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 1,
+            "line_end": 9
+          },
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 21
+          },
+          {
+            "source_id": "E004",
+            "line_start": 84,
+            "line_end": 92
+          }
+        ],
+        "evidence_note": "README is a survey reading list and does not include benchmark examples. Agent code does not provide example prediction logs or trajectories for the benchmark.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

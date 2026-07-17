@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:35:09.203045+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B013",
+    "packet_sha256": "54e25e7b38f83e3d8e97e0cffd85dc20944178aa30ba40b78f821f9169b4dfc9",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 6630,
+    "output_tokens": 1209,
+    "cost_usd": 0.0203775,
+    "elapsed_seconds": 14.943
+  },
+  "response": {
+    "id": "resp_0c0874a211491f2d016a58ec0efc10819a96dd66659bc3467d",
+    "object": "response",
+    "created_at": 1784212495,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212508,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_0c0874a211491f2d016a58ec0f63fc819aa86643237843b5e3",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOwcneTXWliAk5boC4YP4XXMaoWn-CQMjLamm7bWD5UBoKiHayjLpglvEArEkkV1BULL0p92oXGYiPQ_kq0TB_SJrzaeuYtg9Z9CCQZ6KjpaK_rQd0DIOa2BLHWCBON89VluFVLinkPzqsNmxIATWIJSpX-Y2im_fsvL7S3kB_5_yWxMdsvh5rLdmVgpVGbq-s9E8oKnbzHhRQX0CJhOmrbnz75JLeEMD2f7Hqd9ChJ6hThSCmrrW3CXq_3GVBNhG6GBOGFH2inbhzWPe8j1T6gUUJ3k23wQn6dWCfxBp1wJfvtgIC0KZcE8o4-a9jKfqEN2kXFqc8xwk48yCgkfHKbutpB_KGLrQLbtcnSx_ex2fmV-cw-wYYby2l9-gcBl-XU9rQiKl_aNq1N8HCjBbD4JusSPOMGIIKHJlpO6nKPQ6axbvujLkPkAzlYNOiAglug1zKSXTIz98rTKhUvsHSyK8KN30dtQECkItd7ygkBEKcFoQI-r_Abb2ri5wUJMRJV4mjB7MKOs3VjSZFO3Zqygcr8Z4jnAO-k4ZY_Fp6krQI89gaFIH8EUNlr_QeoVjANhClOa_4G1QkjptoAQ4ZkpfjXxIPkPk0EmnpZXrRO5MtrCjghWmLOHQ4IHDDOZi-0dsHtcaBR6DPsDN9rhHGdU57dzsh3uFLRij8iWS-626e87XESGciSb5t2VaR2GTxv-iYFU0oBYdIHguNoqCNeWkUbJBYNbCYHFAm9EOhQglMJvpgVWL8w-84nluRE6euCaWqFBk2ZMxFjZXcX2GiUG6goI0ufbDSEZAqDQOajJIL5RH7KSKdhPGclgyF_6Cqu5_QDuwSh_rLPj62AWRAOTGcIBniyjxQNo1mlH7c1he3_8VzWw96tTorfxB0ylWeEWkesqp8s02qn6lQj6p0wvWJ9T5SSdD4Cpx8aBzJyK329TSWBUswNR7XwcCo_RSr0HikczFX6zttnnBeo3pcZAg-5nuesN1WarhEJ_ZXePGM-GpMUQJVLKNkaUNNz7wmUJ3kUH5P1T3JL95iAZE8YOCnjm6fvC6Q7TkywQMdLVYNbOT9crdgPufTaZqicFsFfs6tc-kGOckqmXBvgtSZPwPiqlGYAS7mLxmyFHwa2caj__C3gETr44fVeXfbd2V_DxOlbePjA7UMRiH_AOwkWYHEkne8uea1DzbLkKGQp3K361k3We3DOCDphBhnSbksg99zCpOdr8aEFYYKdG4QrPi72Y65HcQeIHvnWc_tZuYTLq2Nd3quNioYkOe1kxW2qDu2jONWOupz7NYGtl4D5nBc3ZS8STaH5DY1UQ-1gZRSxvyGogoxc_LE5e7UV_Caoz3e0haWbSOCMyo1soQzUdrKwPPZzps29yqYO_SiUjMum62tLBb7nd4dGW8PfMadtRtL85dv7YIDrqe6RyDnTEj-wK_uSYtJbfL6Eh0arcM6tTM6ot5FPscZU_-wVcrG0mnKFy0xeCYeOVMzNT4bNxagF7WnO0r7YUWIhJUuZ_yEPjINt4GeUs6GdwcSRH3tztgv6oSxc8_BXOwJdmeMptSP74_Wmep8a0x1bZ7soyUy7tsrjInBKzv5oukQilbySoCPhAF3GxaS7IjEOb_3_tcdG5Nt1Qsba2KV18l33BYA04UOgSiMtWS3-wgZQP-zSGOmebqku5Kq1mdvjrvokxRrcx-wqJzwQyzK2qL40AHGeab9g1-A8a6AAcc9Az7ol06t8f9PsOZpCo-IYiyxdQDBK9g0S5D1LBp-TQOiXoqC6eovm_cGd70Ey7H9ZSoUKHiTjRUBLyk6BEDrlKQSak8ZLzlH0sAu82nzObvLHY_eNH-yOhVVb1G5A_v5EuSG3cpPWZcTxtkzKL39r2h45xC_ncqkMRgLE59z_BdE-Hb9224Tz_PEBaKagz3beo7iGiBMH6qzaWML_meqRkCVR3N4IE8MGxvpShmLxb_xu4gRel2QdvUT8PWhzg_eFR-8hHa7EJrLVUBUnAjxzOAACNy4uK1Z-XIZd8ihi6jtM2AelqL2xsq1wMT5yH8Nuv9plNdZnUTAv9HEUbHF9QRGF5jHu3wsGJUEFuckgW9RTUtf3VF77uhMnMq--OyX0i048lvaOxRHHCTx0xseZHTn2oc7UW7AY_TcBL5K6-XjLbCNoEe_QCEyRdo3LQ4XcMFt73uk06aHo7Q7Js4RIc07lEhTDvrufSoVlYZV88NBAHH75D4BS4Bohs9s3SylBkGkF-NwzSDVqLJ5RAeE71FfmFoaAvd5FFyX4QAl4FZiyclLS3k9j0yiZ0x-BYzbKzIF90p2aLra7qeiHck53h8BWzsF0tYMTveXMKJZvHGGjVjWbiM15bXqkK7WZBR1AvGRq1ZuXvFvEpNloCHDzlVRuk2_oOC3Isvwp-H682V1WFq5suCufjL-9pH9zAbWWnrM5izpMnaoUIBaNGcGqfGyEpBilvLW016xztJEOrEAgEbxqC5wl7-Mu_cbdeniWm0dQYQBliw4lA5CjV1ArtjFP0qMJQwhXPrMHmElAOfMhMOPilpXxm09RY7wNr_mGH597xyTdWyAJ1NVvfn7kkx2_oHhURUPXwb8GqE4my-9Z0veI1Nmi_Dj9xK0FayAy7mRLkC855suDmgQgDoTX-I5D5LUSbZHecwfZ3H4VeLZFMM0wFa-uCLgmsCGYL2C4nb8br-YMsULJIEv0ZHtM8xTKE8Q_RFu5m-QFDJ5dvdrWt_c9fTSZALZ9EYPfaLfKb3WxigayH7k09Hoga3jQOrqQBg1XodlTzTFPp8vCTw16BShTJ6SPpcU-TlmM12aDo_QO2fXytbWOHeSpeZhU_qkLwSKJfdyHNs6C0H6yHJHBUCCyV4LvYhUMsulqC-4vv5xJGn6m3boWHH3q-hJpoJ94vGxG77LAuICBV-sayESLZ4PZdbLQJlQ3ZeFVBKAf7Kg0TpUjiGNcrvNZvgY-wUmdi5N7MsQ2PFzyPeJU85QFFomEdRtv8wAxBznKOp5KCKDDkQ8z6lAXkn6P89Q0TRMSzWmFvPKr0Ttcvrs1SSehSXar9fm3l-CM5srfZ0URMRmnlgbNMv1zZTJ42SNdDC38_N5AnBDufuxkbu6WF6yamfsAjvx27y3stezYiQy_LcAFx_5sDbId-ROaaUBrKfdUKj3LAz6E9XbLH1sYtB0P_XKhtr0nCnvnR5XubbuBPfQpky_vobwp-KP-AMvhuwadz8qTaoNF3L-x4vy48-9Ka7TMFZrPFvQFNTeaAjLckIdL8DWUm1vCWFAKOZsDflyOa_Coz9QlX8htBTIHpD_ezKixwiAIBtn-6UsTNqsd6lzlwkZFooynAwvXg6KpkeHJGJ0r-sI0A4StDLveQvXBm4inQCK8vOOCFxOoxoRo31YZFcIubJTpPI-VYi_s4BGc5Edl3q3x4pmbewlNCWpuwGavrVXRuRUkiNdcajQbXmzx_Hm4d1Fot3J8ua9ISYA8s0MW-96pCjQcSq98ATAIkH-h6Q3CXOW8zq59hfHUK1XIMj4KXBR6CTyWtLJqYjeX_Wp-jEnW_RnEEo-bjbxKHkHtpkul7qL8Lz7OoMg2Z_knBfH7WUfpGss5Bk12btJTHRO-7xfAtME4sWGUiK9_wesrVFU4cSKCJ0dSdxjva_MVYICchor_r4QTzFWy8j7naccOjkJxmD0f8zfD6gq4uyyb-i-9bk7o9vQpRfxO8EP4lGc3cN-akG_4sWru5tMfp5lMuJgs1MCWKMjiEfokpsQSx3qqUJWlq0zi6fe4AZ6aSfKMDa9CT2D8PtN0V0DobXg==",
+        "summary": []
+      },
+      {
+        "id": "msg_0c0874a211491f2d016a58ec156a00819a8deca0b624b3f7ce",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B013\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":88,\"line_end\":96},{\"source_id\":\"E001\",\"line_start\":114,\"line_end\":117},{\"source_id\":\"E003\",\"line_start\":24,\"line_end\":33},{\"source_id\":\"E003\",\"line_start\":100,\"line_end\":108},{\"source_id\":\"E003\",\"line_start\":125,\"line_end\":133}],\"evidence_note\":\"README specifies eval script interface (log-folder, task, json output). CLRS evaluation defines internal types (DataPoint-based outputs/predictions). Full schema of the JSON outputs and other tasks\u2019 eval inputs is not provided.\",\"confidence\":\"medium\"},{\"criterion\":\"Metric definition\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":122,\"line_end\":131},{\"source_id\":\"E003\",\"line_start\":125,\"line_end\":139},{\"source_id\":\"E003\",\"line_start\":160,\"line_end\":190},{\"source_id\":\"E003\",\"line_start\":192,\"line_end\":201}],\"evidence_note\":\"CLRS evaluation.py fully defines per-type metrics and a mean \u2018score\u2019. README defines benchmark-level notions (10% improvement over baseline, average improvement) but not precise computation details or formulas across logs/tasks.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":88,\"line_end\":96},{\"source_id\":\"E001\",\"line_start\":114,\"line_end\":117},{\"source_id\":\"E003\",\"line_start\":25,\"line_end\":39},{\"source_id\":\"E003\",\"line_start\":100,\"line_end\":139}],\"evidence_note\":\"CLRS task includes a full evaluation implementation. README references a global MLAgentBench.eval entry point and per-task eval.py scripts, but those implementations are not included in the packet except for CLRS.\",\"confidence\":\"medium\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":122,\"line_end\":131},{\"source_id\":\"E003\",\"line_start\":133,\"line_end\":139}],\"evidence_note\":\"README defines success rate as runs achieving >10% improvement over baseline and mentions average improvement. CLRS evaluator defines score as mean of per-output metrics. No explicit rules for handling ties, multiple runs per agent, or missing submissions.\",\"confidence\":\"medium\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":125,\"line_end\":139},{\"source_id\":\"E001\",\"line_start\":122,\"line_end\":131}],\"evidence_note\":\"For CLRS, mapping from predictions to per-output metrics then to a scalar \u2018score\u2019 is implemented. README describes higher-level aggregation into success rate and average improvement, but code mapping individual run scores/logs to these benchmark-level aggregates is not shown.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"claimed-but-not-verifiable\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":71,\"line_end\":84},{\"source_id\":\"E001\",\"line_start\":85,\"line_end\":87},{\"source_id\":\"E001\",\"line_start\":129,\"line_end\":133}],\"evidence_note\":\"README describes log directory structure and links to example logs and all logs in external locations (Google Drive, separate GitHub repo). These artifacts are referenced but not contained or inspectable within the provided packet.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 6630,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1209,
+      "output_tokens_details": {
+        "reasoning_tokens": 430
+      },
+      "total_tokens": 7839
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

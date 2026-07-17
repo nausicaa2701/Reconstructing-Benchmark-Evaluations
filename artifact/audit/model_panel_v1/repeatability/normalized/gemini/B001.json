@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T18:21:50.914232+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B001",
+    "packet_sha256": "2ae0354b5aa3522772a6df252836198fbe4bd793e4153572b4ef21755bf20b97",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 10059,
+    "output_tokens": 844,
+    "cost_usd": 0.0226845,
+    "elapsed_seconds": 6.387,
+    "validation_status": "valid",
+    "canonicalized_refs": [
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/fastchat_agent.py",
+        "to": "E004"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      }
+    ]
+  },
+  "judgment": {
+    "packet_id": "B001",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "The inspected files define a base agent and its fastchat implementation but do not document the input/expected-output schema of the evaluation tasks or datasets.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 15
+          }
+        ],
+        "evidence_note": "There is no documentation or implementation of evaluation metrics in the provided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E004",
+            "line_start": 23,
+            "line_end": 161
+          },
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "Agent execution modules (base.py and fastchat_agent.py) are available for querying LLMs, but the driver/evaluation orchestrator that coordinates trials or validates performance is missing.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 5
+          }
+        ],
+        "evidence_note": "Grading rules, heuristics, or tie-breaking mechanisms are not defined or documented in the codebase.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 5
+          }
+        ],
+        "evidence_note": "No code or text description of mapping predictions to final aggregate scores is present.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 25,
+            "line_end": 32
+          }
+        ],
+        "evidence_note": "No actual sample predictions or execution trajectories are provided in the current repository packet, though base structure mentions split systems and examples.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

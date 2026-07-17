@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:37:03.604814+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B017",
+    "packet_sha256": "27be15a4114d74ebc7b611264a1664f5af1f8335c3333286bae315a887a7e711",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 1868,
+    "output_tokens": 946,
+    "cost_usd": 0.011795,
+    "elapsed_seconds": 12.246,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B017",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 6,
+            "line_end": 13
+          },
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 24
+          },
+          {
+            "source_id": "E002",
+            "line_start": 49,
+            "line_end": 50
+          }
+        ],
+        "evidence_note": "README specifies QRData.json fields. eval.py shows evaluator expects a JSON list of records with at least 'pred', 'answer', and 'meta_data[\"question_type\"]'. This schema is reconstructable from the code and documentation.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 4,
+            "line_end": 11
+          },
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 47
+          }
+        ],
+        "evidence_note": "calc_acc computes accuracy: numeric questions use first parsed number with 3% relative tolerance (exclusive bounds), handling percentages; multiple choice uses prefix match of gold against prediction. Overall score is correct_num divided by number of predictions.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 19,
+            "line_end": 19
+          },
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 50
+          }
+        ],
+        "evidence_note": "README points to benchmark/eval.py as the evaluation script; the full Python implementation, including number extraction and accuracy computation, is present in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 6,
+            "line_end": 20
+          },
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 47
+          }
+        ],
+        "evidence_note": "Beyond per-question correctness and accuracy computation, there is no documentation about how to handle ties between systems, multiple runs, or aggregation across subsets. The code does not encode any cross-system tie-breaking policy.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 21
+          },
+          {
+            "source_id": "E002",
+            "line_start": 47,
+            "line_end": 50
+          }
+        ],
+        "evidence_note": "Each record contributes 1 if correct, otherwise 0; correct_num is divided by len(pred) to yield overall accuracy. eval.py loads tmp.json, applies calc_acc, and prints the resulting scalar score.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 6,
+            "line_end": 20
+          },
+          {
+            "source_id": "E002",
+            "line_start": 49,
+            "line_end": 50
+          }
+        ],
+        "evidence_note": "The repository references benchmark JSON and tmp.json but does not provide any concrete example of a prediction file, model output, or evaluation trajectory in the shown files.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

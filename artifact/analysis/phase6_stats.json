@@ -1,0 +1,244 @@
+{
+  "audit_date": "2026-07-13",
+  "protocol_amendment": "artifact/docs/protocol_amendment_2026-07-14.md",
+  "screening_frame": {
+    "candidates": 35,
+    "repository_resolved": 30,
+    "primary_frozen": 26,
+    "post_freeze_extension": 4,
+    "prop": 0.8571,
+    "ci95": [
+      0.7062,
+      0.9374
+    ]
+  },
+  "interpretation": {
+    "R2": "descriptive three-provider model-judge majority; not validated ground truth",
+    "E3_first_pass": "least discretionary execution estimate",
+    "E3_any": "after-repair sensitivity estimate"
+  },
+  "N": 26,
+  "sampling_unit": "benchmark release (frozen commit)",
+  "RQ1_accessibility": {
+    "A0 Described": {
+      "outcome": "A0 Described",
+      "k": 26,
+      "n": 26,
+      "prop": 1.0,
+      "ci_lo": 0.8713,
+      "ci_hi": 1
+    },
+    "A1 Accessible": {
+      "outcome": "A1 Accessible",
+      "k": 26,
+      "n": 26,
+      "prop": 1.0,
+      "ci_lo": 0.8713,
+      "ci_hi": 1
+    },
+    "Artifact: evaluator": {
+      "outcome": "Artifact: evaluator",
+      "k": 26,
+      "n": 26,
+      "prop": 1.0,
+      "ci_lo": 0.8713,
+      "ci_hi": 1
+    },
+    "Artifact: dataset": {
+      "outcome": "Artifact: dataset",
+      "k": 25,
+      "n": 26,
+      "prop": 0.9615,
+      "ci_lo": 0.8111,
+      "ci_hi": 0.9932
+    },
+    "Artifact: sample_predictions": {
+      "outcome": "Artifact: sample_predictions",
+      "k": 13,
+      "n": 26,
+      "prop": 0.5,
+      "ci_lo": 0.3206,
+      "ci_hi": 0.6794
+    },
+    "Artifact: env_file": {
+      "outcome": "Artifact: env_file",
+      "k": 21,
+      "n": 26,
+      "prop": 0.8077,
+      "ci_lo": 0.6212,
+      "ci_hi": 0.9149
+    },
+    "Artifact: container": {
+      "outcome": "Artifact: container",
+      "k": 7,
+      "n": 26,
+      "prop": 0.2692,
+      "ci_lo": 0.137,
+      "ci_hi": 0.4608
+    },
+    "Artifact: license": {
+      "outcome": "Artifact: license",
+      "k": 23,
+      "n": 26,
+      "prop": 0.8846,
+      "ci_lo": 0.7102,
+      "ci_hi": 0.96
+    }
+  },
+  "RQ2_reconstructability": {
+    "E3_none": null,
+    "R2_permissive_frozen": {
+      "outcome": "R2 (permissive/frozen)",
+      "k": 13,
+      "n": 26,
+      "prop": 0.5,
+      "ci_lo": 0.3206,
+      "ci_hi": 0.6794
+    },
+    "R2_conservative": {
+      "outcome": "R2 (conservative)",
+      "k": 1,
+      "n": 26,
+      "prop": 0.0385,
+      "ci_lo": 0.0068,
+      "ci_hi": 0.1889
+    }
+  },
+  "RQ3_executability": {
+    "E3_any": {
+      "outcome": "E3 any",
+      "k": 7,
+      "n": 26,
+      "prop": 0.2692,
+      "ci_lo": 0.137,
+      "ci_hi": 0.4608
+    },
+    "E3_first_pass": {
+      "outcome": "E3 first-pass",
+      "k": 5,
+      "n": 26,
+      "prop": 0.1923,
+      "ci_lo": 0.0851,
+      "ci_hi": 0.3788
+    },
+    "E3_after_repair": 2,
+    "E3_bootstrap_ci95": [
+      0.1154,
+      0.4615
+    ],
+    "bootstrap_B": 10000,
+    "seed": 42
+  },
+  "RQ4_claim_evidence": {
+    "n_readme_runnable_framing": 14,
+    "ran_under_cpu_protocol": 2,
+    "framed_runnable_but_gated": 12,
+    "concordance_prop": 0.1429,
+    "concordance_ci95": [
+      0.0401,
+      0.3994
+    ],
+    "gated_reason_dist": {
+      "dependency-or-environment-failure": 6,
+      "credential-or-service-blocked": 4,
+      "missing-required-data": 1,
+      "not-applicable": 1
+    }
+  },
+  "RQ5_failure_patterns": {
+    "R2_blocking_criteria": {
+      "Input/expected-output schema": 1,
+      "Metric definition": 2,
+      "Evaluator implementation available": 4,
+      "Grading rules & tie-breaking": 11,
+      "Predictions->aggregate-score mapping": 7
+    },
+    "E3_blocker_taxonomy": {
+      "credential-or-service-blocked": 7,
+      "dependency-or-environment-failure": 6,
+      "missing-required-data": 5,
+      "not-applicable": 1
+    },
+    "E3_blocker_by_category": {
+      "code-gen": {
+        "credential-or-service-blocked": 1,
+        "missing-required-data": 1,
+        "dependency-or-environment-failure": 1
+      },
+      "e2e-agent": {
+        "credential-or-service-blocked": 3,
+        "missing-required-data": 1,
+        "not-applicable": 1
+      },
+      "ml-eng": {
+        "dependency-or-environment-failure": 3,
+        "credential-or-service-blocked": 1
+      },
+      "tabular": {
+        "dependency-or-environment-failure": 2
+      },
+      "text2sql": {
+        "missing-required-data": 3,
+        "credential-or-service-blocked": 2
+      }
+    }
+  },
+  "robustness": {
+    "R2_partial_doc_rule": {
+      "permissive": 13,
+      "strict": 1,
+      "unanimous_permissive": 7
+    },
+    "E3_excl_service_access": {
+      "k": 6,
+      "n": 18,
+      "prop": 0.3333,
+      "ci95": [
+        0.1628,
+        0.5625
+      ]
+    },
+    "fisher_text2sql_vs_rest_E3": {
+      "p": 0.2782,
+      "odds_ratio": 0.0,
+      "note": "exploratory, small n"
+    },
+    "fisher_R2_vs_E3": {
+      "p": 0.073,
+      "odds_ratio": 10.2857,
+      "table_R2_rows_by_E3_columns": [
+        [
+          12,
+          1
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "note": "exploratory, small n; R2 is model-panel descriptive coding"
+    }
+  },
+  "E3_by_category": {
+    "code-gen": {
+      "e3": 1,
+      "n": 4
+    },
+    "e2e-agent": {
+      "e3": 3,
+      "n": 8
+    },
+    "ml-eng": {
+      "e3": 1,
+      "n": 5
+    },
+    "tabular": {
+      "e3": 2,
+      "n": 4
+    },
+    "text2sql": {
+      "e3": 0,
+      "n": 5
+    }
+  }
+}

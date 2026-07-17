@@ -1,0 +1,17 @@
+{
+  "benchmark": "WikiTableQuestions",
+  "category": "tabular",
+  "frozen_commit": "7d455a5a707b96341ef72aff9428749d443d8aa9",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "n/a (failed at parse)",
+  "first_pass": {
+    "label": "dependency-or-environment-failure",
+    "runtime_s": 0.02,
+    "detail": "Official evaluator.py is Python 2 (ur\"...\" prefix, print>>); SyntaxError line 64 under Python 3",
+    "log": "artifact/execution/logs/WTQ/"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": false,
+  "notes": "Python-2-only evaluator; a 2to3 translation would be a non-minimal code rewrite"
+}

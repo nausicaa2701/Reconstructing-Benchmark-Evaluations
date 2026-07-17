@@ -1,0 +1,13 @@
+COMMIT: 72220ee8d20a0b8770835e48c22675c65074c364
+CMD: python3 calculate_metrics.py --run_logs $WORKSPACE/repotrees/../e3runs/ScienceAgentBench/run_log_0.jsonl --run_logs $WORKSPACE/repotrees/../e3runs/ScienceAgentBench/run_log_1.jsonl --eval_logs $WORKSPACE/repotrees/../e3runs/ScienceAgentBench/eval_log_0.jsonl --eval_logs $WORKSPACE/repotrees/../e3runs/ScienceAgentBench/eval_log_1.jsonl (cwd=$WORKSPACE/repotrees/ScienceAgentBench_, cap=60s, std_path_semantics=on)
+--- output ---
+================
+Success Rate: 0.8000              
+CodeBERTScore: 0.7298              
+Valid Program Rate: 1.0000              
+Cost: 0.3724              
+================
+
+EXIT=0
+STATUS=COMPLETED
+RUNTIME_S=0.04

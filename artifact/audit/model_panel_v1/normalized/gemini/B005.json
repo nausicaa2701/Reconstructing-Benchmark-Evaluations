@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:14:33.937905+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B005",
+    "packet_sha256": "f517a9edaa45cd9fa950570ab29d6cc6b82de9548a29268a65e2a3abcfd1ee71",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 10994,
+    "output_tokens": 802,
+    "cost_usd": 0.023709,
+    "elapsed_seconds": 6.506,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B005",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 289,
+            "line_end": 300
+          }
+        ],
+        "evidence_note": "The input structures for grading are partially defined in python parameters (target, predicted, question, unsure), but the formal JSON/HF dataset schema structure is not explicitly documented in the provided packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 37
+          }
+        ],
+        "evidence_note": "The metrics are defined under GradeType and GradeResult which output correct, incorrect, or refusal states, map correct to 1 and incorrect/refused to 0.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 55,
+            "line_end": 329
+          }
+        ],
+        "evidence_note": "A complete implementation of both MCQ and open-ended evaluators (using string verification, range verification, and LLM-based verification) is fully provided.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 75,
+            "line_end": 108
+          }
+        ],
+        "evidence_note": "Exact match, partial string match fallback, and LLM grading rules are explicitly coded in the string verifier implementation.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 156,
+            "line_end": 164
+          }
+        ],
+        "evidence_note": "README mentions majority vote analysis and postprocessing steps to create evaluation dataframes and compare performance, but the exact code mapping prediction arrays to final aggregates is missing from the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 225,
+            "line_end": 230
+          }
+        ],
+        "evidence_note": "The packet references external URLs to download raw trajectory data, but actual samples are not contained within the provided file packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}
