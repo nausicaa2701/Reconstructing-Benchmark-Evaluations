@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this artifact, please cite the paper below."
+message: "If you use this artifact, please cite it using the information below."
 title: "Reconstructing Benchmark Evaluations: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"
 abstract: >-
   An evidence dataset and analysis pipeline auditing the public evaluation

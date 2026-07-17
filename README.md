@@ -5,7 +5,7 @@
 **A public-artifact audit toolkit and evidence dataset for foundation-model benchmarks in data science**
 
 <p>
-  <img src="https://img.shields.io/badge/Status-Working%20Artifact-ff6b35?style=for-the-badge" alt="Status: Working Artifact" />
+  <img src="https://img.shields.io/badge/Status-v1.0.0-ff6b35?style=for-the-badge" alt="Status: v1.0.0" />
   <img src="https://img.shields.io/badge/Type-Audit%20Dataset%20%2B%20Pipeline-7c3aed?style=for-the-badge" alt="Audit Dataset and Pipeline" />
   <img src="https://img.shields.io/badge/Platform-Python-3776ab?style=for-the-badge&logo=python&logoColor=white" alt="Python Platform" />
   <img src="https://img.shields.io/badge/License-CC--BY--4.0-lightgrey?style=for-the-badge" alt="License: CC-BY-4.0" />
@@ -23,15 +23,24 @@
 
 ## Overview
 
-This repository is a **public-artifact audit** of foundation-model benchmarks for data-science tasks. It answers a practical engineering question: given only a benchmark’s public materials (docs, repos, datasets, evaluators), can an independent researcher **reconstruct the evaluation protocol** and **run the official evaluator** — without foundation-model inference?
+This repository is a **public-artifact audit** of foundation-model benchmarks for data-science tasks. It answers a practical engineering question: given only a benchmark's public materials (docs, repos, datasets, evaluators), can an independent researcher **reconstruct the evaluation protocol** and **run the official evaluator** — without foundation-model inference?
 
 The release includes a frozen corpus registry, line-addressable evidence packets, three-provider model judgments for reconstructability coding, CPU-only evaluator smoke-test logs, minimal-repair patches, and a single-command analysis pipeline that validates schemas, recomputes statistics, and verifies output hashes.
 
 It measures **public evaluation reconstructability** (accessibility, protocol reconstructability, and scorer executability at frozen commits). It is **not** a benchmark-quality ranking, a leaderboard reproduction, or a population prevalence estimate.
 
-## Paper
+## Audit Ladder
 
-This artifact accompanies the manuscript **“Reconstructing Benchmark Evaluations: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science”** (under review, KDD 2027 Datasets & Benchmarks Track) — [`paper/main.pdf`](./paper/main.pdf). The paper defines the audit ladder (A0/A1/R2/E3), the frozen protocol, all sensitivity analyses, and the limitations that govern how these numbers should be read.
+The audit defines four release-level outcomes:
+
+| Level | Name | Meaning |
+|---|---|---|
+| A0 | Described | A public technical description of the benchmark exists |
+| A1 | Accessible | Core referenced artifacts are publicly reachable |
+| R2 | Reconstructable | Consequential evaluation details can be instantiated without unsupported guesses |
+| E3 | Smoke-testable | Official evaluator produces a score/result from supplied or schema-valid synthetic predictions (CPU-only) |
+
+The protocol, sensitivity analyses, and limitations are documented in [`artifact/docs/research_contract.md`](./artifact/docs/research_contract.md).
 
 ## Repository Layout
 
@@ -52,7 +61,6 @@ reconstructing-benchmark-evaluations/
 │   ├── docs/                 # Protocol contract and amendments
 │   ├── reproduce.py          # Single-command reproduction interface
 │   └── OUTPUT_HASHES.json    # SHA-256 of released outputs
-├── paper/main.pdf            # Manuscript (under review, KDD 2027 D&B)
 ├── CITATION.cff
 ├── LICENSE                   # CC-BY-4.0 (original contributions)
 └── README.md
@@ -69,15 +77,6 @@ Inside [`artifact/`](./artifact/):
 - [`analysis/`](./artifact/analysis/) — `master_outcomes.csv`, phase stats, expanded sensitivity, extended analyses
 - [`llm_judges/`](./artifact/llm_judges/) — optional tooling to prepare packets and re-run the judge panel (API keys required)
 - [`reproduce.py`](./artifact/reproduce.py) — validate, recompute, regenerate tables/figures, verify hashes
-
-Audit ladder (release-level outcomes):
-
-| Level | Name | Meaning |
-|---|---|---|
-| A0 | Described | A public technical description of the benchmark exists |
-| A1 | Accessible | Core referenced artifacts are publicly reachable |
-| R2 | Reconstructable | Consequential evaluation details can be instantiated without unsupported guesses |
-| E3 | Smoke-testable | Official evaluator produces a score/result from supplied or schema-valid synthetic predictions (CPU-only) |
 
 ## Current Status
 
