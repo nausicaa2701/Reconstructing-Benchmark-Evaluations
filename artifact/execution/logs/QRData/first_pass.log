@@ -1,8 +1,0 @@
-COMMIT: de450af45ff7101b328bb064c6b475f73414a7ed
-CMD: python3 eval.py (cwd=$WORKSPACE/repotrees/QRData_/benchmark, cap=120s, std_path_semantics=on)
---- output ---
-0.75
-
-EXIT=0
-STATUS=COMPLETED
-RUNTIME_S=0.04

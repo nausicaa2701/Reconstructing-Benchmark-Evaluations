@@ -7,7 +7,7 @@ abstract: >-
   laddered as Described, Accessible, Reconstructable, and Smoke-testable, with
   CPU-only evaluator smoke tests.
 version: "1.0.0"
-date-released: "2026-07-13"
+date-released: "2026-07-26"
 license: CC-BY-4.0
 repository-code: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
 url: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"

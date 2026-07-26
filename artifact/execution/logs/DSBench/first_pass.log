@@ -1,7 +1,0 @@
-COMMIT: ba786096137a5108af11c016ad3f09cdb97beefd
-CMD: python3 playground-series-s4e4_eval.py --path $WORKSPACE/repotrees/../e3runs/DSBench --name task --answer_file $WORKSPACE/repotrees/../e3runs/DSBench/answer.csv --predict_file $WORKSPACE/repotrees/../e3runs/DSBench/predict.csv --value Rings (cwd=$WORKSPACE/repotrees/DSBench_/data_modeling/evaluation, cap=60s, std_path_semantics=on)
---- output ---
-
-EXIT=0
-STATUS=COMPLETED
-RUNTIME_S=1.58

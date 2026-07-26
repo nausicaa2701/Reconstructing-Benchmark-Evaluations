@@ -1,5 +1,0 @@
-benchmark,original_status,rescreen_status,official_source,repository_or_artifact,frozen_commit,A1,R2,E3_first_pass,action_status,checked_date
-MMTU,unresolved,official_repository_frozen,https://arxiv.org/abs/2506.05587,https://github.com/MMTU-Benchmark/MMTU,82429014a3153c10bc9a94260cf0a7f52b449611,1,1,1,complete_post_freeze_extension,2026-07-16
-Tapilot-Crossing,unresolved,official_repository_frozen,https://tapilot-crossing.github.io/,https://github.com/tapilot-crossing/tapilot_code,e5827bd6c9cbd25e121b092362920730ef35733f,1,1,1,complete_post_freeze_extension,2026-07-16
-ScienceBenchmark,unresolved,official_dataset_repository_frozen,https://sciencebenchmark.cloudlab.zhaw.ch/,https://github.com/ckosten/sciencebenchmark_dataset,82fca50f7dbe92079e2441b43c1a63459188ec7a,1,0,0,complete_missing_evaluator,2026-07-16
-DataBench,unresolved,official_evaluator_repository_frozen,https://aclanthology.org/2024.lrec-main.1179/,https://github.com/jorses/databench_eval,65f92cfad4f986f5496170f6bbcee48323f56c2f,1,1,1,complete_post_freeze_extension,2026-07-16
