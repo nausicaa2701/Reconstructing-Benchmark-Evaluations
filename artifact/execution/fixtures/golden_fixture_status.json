@@ -1,0 +1,45 @@
+{
+  "spec_version": "golden-fixtures-v1",
+  "n_reachable_evaluators_with_a_pass": 7,
+  "L1_invoked": 7,
+  "L2_fixture_matched": 3,
+  "L3_published_score_reproduced": 0,
+  "all_L2_are_retrospective": false,
+  "per_release": [
+    {
+      "benchmark": "SpreadsheetBench",
+      "status": "L2-retrospective",
+      "retrospective": true
+    },
+    {
+      "benchmark": "QRData",
+      "status": "L2",
+      "retrospective": false
+    },
+    {
+      "benchmark": "InfiAgent-DABench",
+      "status": "L1-only",
+      "retrospective": false
+    },
+    {
+      "benchmark": "ScienceAgentBench",
+      "status": "L1-only",
+      "retrospective": false
+    },
+    {
+      "benchmark": "DSBench",
+      "status": "L2",
+      "retrospective": false
+    },
+    {
+      "benchmark": "DS-1000",
+      "status": "L1-only",
+      "retrospective": false
+    },
+    {
+      "benchmark": "TableBench",
+      "status": "L1-only",
+      "retrospective": false
+    }
+  ]
+}

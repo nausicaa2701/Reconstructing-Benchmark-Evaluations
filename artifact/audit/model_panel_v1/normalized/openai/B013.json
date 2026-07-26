@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:35:09.203045+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B013",
+    "packet_sha256": "54e25e7b38f83e3d8e97e0cffd85dc20944178aa30ba40b78f821f9169b4dfc9",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 6630,
+    "output_tokens": 1209,
+    "cost_usd": 0.0203775,
+    "elapsed_seconds": 14.943,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B013",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 88,
+            "line_end": 96
+          },
+          {
+            "source_id": "E001",
+            "line_start": 114,
+            "line_end": 117
+          },
+          {
+            "source_id": "E003",
+            "line_start": 24,
+            "line_end": 33
+          },
+          {
+            "source_id": "E003",
+            "line_start": 100,
+            "line_end": 108
+          },
+          {
+            "source_id": "E003",
+            "line_start": 125,
+            "line_end": 133
+          }
+        ],
+        "evidence_note": "README specifies eval script interface (log-folder, task, json output). CLRS evaluation defines internal types (DataPoint-based outputs/predictions). Full schema of the JSON outputs and other tasks\u2019 eval inputs is not provided.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 122,
+            "line_end": 131
+          },
+          {
+            "source_id": "E003",
+            "line_start": 125,
+            "line_end": 139
+          },
+          {
+            "source_id": "E003",
+            "line_start": 160,
+            "line_end": 190
+          },
+          {
+            "source_id": "E003",
+            "line_start": 192,
+            "line_end": 201
+          }
+        ],
+        "evidence_note": "CLRS evaluation.py fully defines per-type metrics and a mean \u2018score\u2019. README defines benchmark-level notions (10% improvement over baseline, average improvement) but not precise computation details or formulas across logs/tasks.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 88,
+            "line_end": 96
+          },
+          {
+            "source_id": "E001",
+            "line_start": 114,
+            "line_end": 117
+          },
+          {
+            "source_id": "E003",
+            "line_start": 25,
+            "line_end": 39
+          },
+          {
+            "source_id": "E003",
+            "line_start": 100,
+            "line_end": 139
+          }
+        ],
+        "evidence_note": "CLRS task includes a full evaluation implementation. README references a global MLAgentBench.eval entry point and per-task eval.py scripts, but those implementations are not included in the packet except for CLRS.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 122,
+            "line_end": 131
+          },
+          {
+            "source_id": "E003",
+            "line_start": 133,
+            "line_end": 139
+          }
+        ],
+        "evidence_note": "README defines success rate as runs achieving >10% improvement over baseline and mentions average improvement. CLRS evaluator defines score as mean of per-output metrics. No explicit rules for handling ties, multiple runs per agent, or missing submissions.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 125,
+            "line_end": 139
+          },
+          {
+            "source_id": "E001",
+            "line_start": 122,
+            "line_end": 131
+          }
+        ],
+        "evidence_note": "For CLRS, mapping from predictions to per-output metrics then to a scalar \u2018score\u2019 is implemented. README describes higher-level aggregation into success rate and average improvement, but code mapping individual run scores/logs to these benchmark-level aggregates is not shown.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 71,
+            "line_end": 84
+          },
+          {
+            "source_id": "E001",
+            "line_start": 85,
+            "line_end": 87
+          },
+          {
+            "source_id": "E001",
+            "line_start": 129,
+            "line_end": 133
+          }
+        ],
+        "evidence_note": "README describes log directory structure and links to example logs and all logs in external locations (Google Drive, separate GitHub repo). These artifacts are referenced but not contained or inspectable within the provided packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

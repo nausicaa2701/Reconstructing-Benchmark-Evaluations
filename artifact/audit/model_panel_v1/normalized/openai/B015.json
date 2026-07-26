@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:36:10.648013+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B015",
+    "packet_sha256": "978ed95514f8383b274360f54ed6ecb44378d4324b4a9148287f35e15419c5fb",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 6363,
+    "output_tokens": 1227,
+    "cost_usd": 0.02022375,
+    "elapsed_seconds": 18.349,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B015",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 134,
+            "line_end": 166
+          },
+          {
+            "source_id": "E002",
+            "line_start": 12,
+            "line_end": 21
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 59
+          },
+          {
+            "source_id": "E004",
+            "line_start": 76,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "Task-level scripts show internal data use and printed metrics but there is no explicit schema for how benchmark inputs (agent predictions, files, etc.) are provided or how outputs must be formatted across tasks.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 24,
+            "line_end": 36
+          },
+          {
+            "source_id": "E003",
+            "line_start": 61,
+            "line_end": 75
+          },
+          {
+            "source_id": "E004",
+            "line_start": 52,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "Each evaluate.py defines how metrics are computed (e.g., Time, Correct, Decisions; validation_accuracy; Score) and prints them as JSON. The definitions are fully visible in code.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 12,
+            "line_end": 37
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 75
+          },
+          {
+            "source_id": "E004",
+            "line_start": 61,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "Per-task evaluation functions are implemented and callable, but they import external components (heuristic, DPLL, strategies) and there is no visible top-level benchmark evaluator orchestrating runs over agents/models.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 24,
+            "line_end": 36
+          },
+          {
+            "source_id": "E003",
+            "line_start": 61,
+            "line_end": 75
+          },
+          {
+            "source_id": "E004",
+            "line_start": 72,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "Code computes metrics but there is no description of how models are ranked, how multiple metrics are combined, or how ties between systems are resolved.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 20,
+            "line_end": 37
+          },
+          {
+            "source_id": "E003",
+            "line_start": 61,
+            "line_end": 75
+          },
+          {
+            "source_id": "E004",
+            "line_start": 52,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "Aggregation from internal per-instance outcomes to final metrics is explicit in code. However, there is no interface specifying how external model predictions are ingested to produce those per-instance outcomes.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 171,
+            "line_end": 180
+          },
+          {
+            "source_id": "E002",
+            "line_start": 12,
+            "line_end": 37
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 75
+          },
+          {
+            "source_id": "E004",
+            "line_start": 61,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "README mentions a trajectory visualizer but no sample prediction files or example trajectories for these benchmark tasks are provided in the shown artifacts.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

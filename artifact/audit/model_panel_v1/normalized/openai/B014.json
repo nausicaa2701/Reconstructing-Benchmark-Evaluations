@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:35:38.667011+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B014",
+    "packet_sha256": "2b89b3351ba9f207e17dd94593359f0ae0a6b368d68e36e8717d336c4d7da21a",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 9905,
+    "output_tokens": 1304,
+    "cost_usd": 0.02542125,
+    "elapsed_seconds": 19.641,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B014",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 181
+          },
+          {
+            "source_id": "E002",
+            "line_start": 38,
+            "line_end": 52
+          },
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 10
+          },
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 121
+          }
+        ],
+        "evidence_note": "README specifies JSONL fields `competition_id` and `submission_path` for grading; competition grade.py files check required CSV columns and ID alignment, defining concrete input/output schema for submissions and grading functions.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 9,
+            "line_end": 35
+          },
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 11
+          },
+          {
+            "source_id": "E004",
+            "line_start": 43,
+            "line_end": 99
+          },
+          {
+            "source_id": "E001",
+            "line_start": 67,
+            "line_end": 69
+          }
+        ],
+        "evidence_note": "Per-competition metrics (Kendall tau, ROC AUC, weighted AUC) are fully specified in code. However, the benchmark\u2019s `any_medal_percentage` metric used for leaderboard aggregation is referenced but not defined or implemented in the shown packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 189
+          },
+          {
+            "source_id": "E002",
+            "line_start": 38,
+            "line_end": 70
+          },
+          {
+            "source_id": "E003",
+            "line_start": 4,
+            "line_end": 11
+          },
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 135
+          },
+          {
+            "source_id": "E001",
+            "line_start": 60,
+            "line_end": 69
+          }
+        ],
+        "evidence_note": "Competition-level evaluators (grade functions) are implemented and inspectable. The higher-level evaluator that computes `any_medal_percentage` and aggregates grading reports is referenced (aggregate_grading_reports.py) but its implementation is not included in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 129
+          },
+          {
+            "source_id": "E002",
+            "line_start": 38,
+            "line_end": 61
+          },
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 181
+          }
+        ],
+        "evidence_note": "Competition grading code documents validation rules (length/ID equality, required columns, numeric and non-NaN labels). However, there is no description of how ties, medal thresholds, or cross-competition ranking rules are handled for the benchmark\u2019s overall scoring.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 181
+          },
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 11
+          },
+          {
+            "source_id": "E004",
+            "line_start": 133,
+            "line_end": 135
+          },
+          {
+            "source_id": "E001",
+            "line_start": 60,
+            "line_end": 69
+          }
+        ],
+        "evidence_note": "Mapping from predictions to per-competition scores is fully implemented in grade.py files. README describes running aggregate_grading_reports.py and reporting mean/SEM of `any_medal_percentage`, but does not define how `any_medal_percentage` is computed from competition scores or medals.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 187
+          },
+          {
+            "source_id": "E002",
+            "line_start": 38,
+            "line_end": 45
+          },
+          {
+            "source_id": "E004",
+            "line_start": 102,
+            "line_end": 111
+          }
+        ],
+        "evidence_note": "README mentions that CSV formats are described in each competition\u2019s description or sample submission file, but those files are not included in the provided packet, and no concrete sample prediction files or trajectories are shown.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

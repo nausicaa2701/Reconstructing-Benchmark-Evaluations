@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.env
+artifact/llm_judges/.env
+artifact/llm_judges/work/
+artifact/llm_judges/work/

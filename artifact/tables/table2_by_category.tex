@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Descriptive documentation sufficiency (R2) and evaluator smoke-testability
+by benchmark category. E3 is reported at the two endpoints separately: ``fp''
+is the primary first-pass (as-documented) endpoint and ``rep'' is the
+secondary after-repair endpoint, which includes the first-pass passes plus
+releases that only ran after an auditor repair. The two columns are never
+merged into a single executability count.}
+\label{tab:bycategory}
+\begin{tabular}{lrrrrrr}
+\toprule
+ & & & \multicolumn{2}{c}{E3 first-pass} & \multicolumn{2}{c}{E3 after-repair} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Category & n & R2 & $k$ & \% & $k$ & \% \\
+\midrule
+code-gen & 4 & 3 & 0 & 0\% & 1 & 25\% \\
+e2e-agent & 8 & 4 & 3 & 38\% & 3 & 38\% \\
+ml-eng & 5 & 2 & 1 & 20\% & 1 & 20\% \\
+tabular & 4 & 3 & 1 & 25\% & 2 & 50\% \\
+text2sql & 5 & 1 & 0 & 0\% & 0 & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

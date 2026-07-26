@@ -1,0 +1,6 @@
+framework,n_blocker_instances,in_scope,partial_scope,out_of_scope,out_of_scope_pct
+BetterBench,45,2,28,15,33.3
+BenchmarkCards,45,8,0,37,82.2
+ReproEvalCard,45,3,16,26,57.8
+Rollout Cards,45,30,15,0,0.0
+Auto Benchmark Audit,45,16,10,19,42.2

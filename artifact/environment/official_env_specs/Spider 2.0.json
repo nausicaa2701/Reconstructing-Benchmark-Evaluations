@@ -1,0 +1,16 @@
+{
+  "benchmark": "Spider 2.0",
+  "frozen_commit": "01a4c67c1e3f6ab9032716b050a927abbb245f65",
+  "portable_first_pass_label": "credential-or-service-blocked",
+  "portable_repair_label": null,
+  "authoritative_setup_file": null,
+  "base_image": null,
+  "build_commands": [],
+  "resolved_packages_digest": null,
+  "E3_official_first_pass": null,
+  "E3_official_after_repair": null,
+  "E3_portable_first_pass": false,
+  "under_specified_base": null,
+  "environment_contract_findings": [],
+  "status": "pending-execution"
+}

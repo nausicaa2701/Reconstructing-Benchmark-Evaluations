@@ -1,0 +1,133 @@
+[
+  {
+    "theme": "LLM coders below reliability target (no human ground truth)",
+    "severity": "major",
+    "raised_by": [
+      "benchmark_eval",
+      "repro_stats",
+      "skeptical_kdd"
+    ],
+    "disposition": "acknowledged-limitation",
+    "response": "Replaced the same-vendor adjudication design with independent OpenAI, Anthropic, and Google judges and deterministic aggregation. Nominal alpha=0.471 remains below gate, so R2 is secondary/descriptive. Majority, strict, unanimous, leave-one-out, pairwise, and preselected repeatability results plus all raw evidence-grounded judgments are released. No gold-standard or human-reliability claim is made."
+  },
+  {
+    "theme": "Same-vendor model family -> correlated blind spots",
+    "severity": "major",
+    "raised_by": [
+      "repro_stats"
+    ],
+    "disposition": "acknowledged-limitation",
+    "response": "The final panel uses three independently operated providers. Limitations still acknowledges correlated training-data and convention blind spots; inter-model agreement is not presented as correctness or human reliability."
+  },
+  {
+    "theme": "Minimal-repair discretion shifts primary endpoint (5->7/26)",
+    "severity": "major",
+    "raised_by": [
+      "benchmark_eval",
+      "skeptical_kdd"
+    ],
+    "disposition": "already-mitigated + acknowledged",
+    "response": "First-pass (5/26) and repaired (7/26) endpoints are reported SEPARATELY throughout, never merged; every patch released; Limitations states a different auditor could move at most the two repaired cases. This is the preregistered separation-of-unassisted-and-repaired-execution design, not a post-hoc fix."
+  },
+  {
+    "theme": "Small N=26, sparse category cells, OR=10.3 may be over-read",
+    "severity": "major",
+    "raised_by": [
+      "repro_stats",
+      "skeptical_kdd",
+      "benchmark_eval"
+    ],
+    "disposition": "already-mitigated",
+    "response": "All category comparisons and the R2-E3 association are explicitly labeled exploratory with non-significant p-values reported inline; Limitations warns against generalizing category proportions. New family-lineage paragraph adds a pseudo-replication caveat. We report effect sizes + intervals, not significance claims."
+  },
+  {
+    "theme": "Corpus screening single-pass/subjective -> selection bias, A0=A1 saturation",
+    "severity": "major",
+    "raised_by": [
+      "skeptical_kdd"
+    ],
+    "disposition": "acknowledged-limitation + evidence-released",
+    "response": "Exclusion is framed as inability to resolve the official artifact in this pass, NOT a claim none exists; corpus_excluded.csv (exclusion ledger) and search keywords are released; PRISMA-style counts reported. A0=A1=26/26 is explicitly a property of the INCLUDED corpus, not the candidate pool. Selection effect flagged in Limitations (Scope of resolution)."
+  },
+  {
+    "theme": "Contribution is a checklist/audit, not a new dataset/method (niche vs core)",
+    "severity": "major",
+    "raised_by": [
+      "skeptical_kdd"
+    ],
+    "disposition": "positioning-defended",
+    "response": "Reviewers unanimously judged the survey/checklist objection survivable and novelty clear. Differentiators (frozen-commit repository inspection + controlled zero-inference CPU execution + unassisted/repaired separation) are exactly the two columns no located prior framework fills. This is the Datasets&Benchmarks track's remit (evaluation infrastructure). Recommendations + reusable pipeline are concrete community deliverables."
+  },
+  {
+    "theme": "R2-crit column undefined",
+    "severity": "minor",
+    "raised_by": [
+      "benchmark_eval"
+    ],
+    "disposition": "fixed",
+    "response": "Table 3 caption now defines R2 crit, R2, E3 fp/rep/E3."
+  },
+  {
+    "theme": "Category proportions without CIs (Table 2)",
+    "severity": "minor",
+    "raised_by": [
+      "repro_stats"
+    ],
+    "disposition": "acknowledged",
+    "response": "Category cells (n=4-5) are too small for meaningful CIs; text labels them exploratory. Retained as descriptive, per analysis conventions that discourage over-precise small-cell inference."
+  },
+  {
+    "theme": "Claim-evidence concordance is another small-subgroup inference",
+    "severity": "minor",
+    "raised_by": [
+      "repro_stats"
+    ],
+    "disposition": "acknowledged",
+    "response": "Reported as a descriptive count (2/14) with denominator explicit, not an inferential claim; consistent with exploratory framing."
+  },
+  {
+    "theme": "Nominal vs ordinal alpha reads as metric shopping",
+    "severity": "editorial/minor",
+    "raised_by": [
+      "repro_stats"
+    ],
+    "disposition": "fixed",
+    "response": "Results now states nominal alpha is the preregistered primary metric and ordinal/AC1 are post-hoc characterizations, not a re-choice of endpoint."
+  },
+  {
+    "theme": "Novelty matrix self-scored",
+    "severity": "minor",
+    "raised_by": [
+      "skeptical_kdd"
+    ],
+    "disposition": "acknowledged",
+    "response": "Matrix coded from each framework's own paper/abstract, stated as such; a common positioning device, disclosed."
+  },
+  {
+    "theme": "Artifact release lacks DOI/link in manuscript text",
+    "severity": "minor",
+    "raised_by": [
+      "skeptical_kdd"
+    ],
+    "disposition": "deferred-to-camera-ready",
+    "response": "Persistent identifier/DOI to be inserted at camera-ready once the release is minted; review version keeps single-blind neutrality. Availability statement present."
+  },
+  {
+    "theme": "One-decimal percentages overstate precision at N=26",
+    "severity": "editorial",
+    "raised_by": [
+      "skeptical_kdd"
+    ],
+    "disposition": "wontfix-with-rationale",
+    "response": "Every proportion is paired with a 95% CI showing the true precision; one-decimal reporting kept for table alignment and to match k/n exactly. CIs are the precision signal, not the point estimate."
+  },
+  {
+    "theme": "Missing comparison to ACM/IEEE artifact-evaluation badges",
+    "severity": "editorial",
+    "raised_by": [
+      "benchmark_eval"
+    ],
+    "disposition": "acknowledged",
+    "response": "Artifact-badging does per-paper reviewer-run checks but not systematic cross-benchmark, claim-evidence-concordance auditing of the evaluation specification; a one-line contrast could be added but does not change positioning."
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T18:22:44.195313+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "packet_id": "B008",
+    "packet_sha256": "69f31a3eabe785a74a75e7b2804de69c574449dfc0ce53f5074a342d952554d1",
+    "protocol_sha256": "5fcb639a89d8fe8abc40ba70058138375c487a7d543738ebd59ffa7eb7c40a8c",
+    "attempt": 1,
+    "input_tokens": 4715,
+    "output_tokens": 827,
+    "cost_usd": 0.0177,
+    "elapsed_seconds": 14.612
+  },
+  "response": {
+    "model": "claude-sonnet-5",
+    "id": "msg_011Cd6CfqEwfNZYBH4zimZCp",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"packet_id\":\"B008\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":13,\"line_end\":24},{\"source_id\":\"E001\",\"line_start\":25,\"line_end\":30}],\"evidence_note\":\"Eval scripts show CSV inputs (answer_file, predict_file) with named columns, but no formal schema doc for tasks/instructions/data files beyond brief overview.\",\"confidence\":\"medium\"},{\"criterion\":\"Metric definition\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":7,\"line_end\":11},{\"source_id\":\"E003\",\"line_start\":22,\"line_end\":22},{\"source_id\":\"E004\",\"line_start\":22,\"line_end\":22}],\"evidence_note\":\"Metrics (RMSLE, ROC-AUC) explicitly implemented in evaluation scripts for specific tasks.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":1,\"line_end\":29},{\"source_id\":\"E003\",\"line_start\":1,\"line_end\":25},{\"source_id\":\"E004\",\"line_start\":1,\"line_end\":25}],\"evidence_note\":\"Per-task Python evaluation scripts are provided in repo and runnable via CLI args.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":36,\"line_end\":44}],\"evidence_note\":\"No mention of aggregation rules across multiple tasks, tie-breaking, or partial credit policy anywhere in packet.\",\"confidence\":\"medium\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":46,\"line_end\":54}],\"evidence_note\":\"Results figures referenced but no documented method for combining per-task scores into an overall benchmark score.\",\"confidence\":\"medium\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":39,\"line_end\":44}],\"evidence_note\":\"No sample predictions or trajectories shown in the packet; only pointers to separate readme files not included.\",\"confidence\":\"medium\"}]}"
+      }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "stop_details": null,
+    "usage": {
+      "input_tokens": 4715,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 827,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "service_tier": "standard",
+      "inference_geo": "global"
+    }
+  }
+}

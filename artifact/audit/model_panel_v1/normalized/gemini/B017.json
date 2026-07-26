@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:48.342718+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B017",
+    "packet_sha256": "27be15a4114d74ebc7b611264a1664f5af1f8335c3333286bae315a887a7e711",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 2223,
+    "output_tokens": 805,
+    "cost_usd": 0.0105795,
+    "elapsed_seconds": 8.075,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B017",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 16
+          }
+        ],
+        "evidence_note": "The input/expected schema (keys for benchmark data, and the fields utilized in evaluations like 'pred', 'answer', and 'meta_data') is documented in README.md and implemented in eval.py.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 48
+          }
+        ],
+        "evidence_note": "The accuracy metric is clearly defined in the calc_acc function in benchmark/eval.py, including its error margin handling for numerical questions.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 50
+          }
+        ],
+        "evidence_note": "The complete Python implementation for evaluation is fully present in 'benchmark/eval.py'.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 18,
+            "line_end": 46
+          }
+        ],
+        "evidence_note": "Grading rules are explicitly written: numerical questions allow an error scale of 0.03, and multiple choice questions are evaluated via string prefix matching.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 14,
+            "line_end": 47
+          }
+        ],
+        "evidence_note": "The mapping from individual item predictions to the final accuracy score is defined as 'correct_num / len(pred)'.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 1,
+            "line_end": 43
+          }
+        ],
+        "evidence_note": "No sample predictions or trajectories are provided or referenced in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

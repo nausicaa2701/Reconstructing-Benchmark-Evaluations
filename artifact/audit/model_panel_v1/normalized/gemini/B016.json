@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:40.264673+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B016",
+    "packet_sha256": "518010092eeda3816c5c67712018325e4e2c7d03993e004951ac8441606586ae",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 13420,
+    "output_tokens": 858,
+    "cost_usd": 0.027852,
+    "elapsed_seconds": 6.587,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B016",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 51,
+            "line_end": 63
+          }
+        ],
+        "evidence_note": "The schema of input files is partially visible from functions reading keys like 'task_id', 'prompt', and 'canonical_solution', but a full description of the JSON/JSONL format schema is not documented.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 72
+          }
+        ],
+        "evidence_note": "The README references using standard pass@k metrics (Pass@1, Pass@10, Pass@100) via evaluate_functional_correctness, but the exact mathematical formulation or codebase for calculating these metrics is not included in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 31,
+            "line_end": 36
+          }
+        ],
+        "evidence_note": "The evaluator code itself is external, requiring a git clone of 'openai/human-eval' and running 'evaluate_functional_correctness' (E001, L031-036, L059-064). No local evaluator implementation is provided in this packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 64
+          }
+        ],
+        "evidence_note": "The grading rules and execution/compilation checking logic depend entirely on the external HumanEval package, which is not implemented or documented in the provided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 59,
+            "line_end": 64
+          }
+        ],
+        "evidence_note": "The logic mapping code generations back to aggregate pass@k scores is deferred to the external 'evaluate_functional_correctness' command and is not provided.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 70,
+            "line_end": 103
+          }
+        ],
+        "evidence_note": "Though aggregate benchmark scores are summarized in E001 (L070-103), actual sample predictions, generated code samples, or trajectories are not included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

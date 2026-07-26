@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:14:33.937905+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B005",
+    "packet_sha256": "f517a9edaa45cd9fa950570ab29d6cc6b82de9548a29268a65e2a3abcfd1ee71",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 10994,
+    "output_tokens": 802,
+    "cost_usd": 0.023709,
+    "elapsed_seconds": 6.506
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B005\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 289,\n          \"line_end\": 300\n        }\n      ],\n      \"evidence_note\": \"The input structures for grading are partially defined in python parameters (target, predicted, question, unsure), but the formal JSON/HF dataset schema structure is not explicitly documented in the provided packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 14,\n          \"line_end\": 37\n        }\n      ],\n      \"evidence_note\": \"The metrics are defined under GradeType and GradeResult which output correct, incorrect, or refusal states, map correct to 1 and incorrect/refused to 0.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 55,\n          \"line_end\": 329\n        }\n      ],\n      \"evidence_note\": \"A complete implementation of both MCQ and open-ended evaluators (using string verification, range verification, and LLM-based verification) is fully provided.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 75,\n          \"line_end\": 108\n        }\n      ],\n      \"evidence_note\": \"Exact match, partial string match fallback, and LLM grading rules are explicitly coded in the string verifier implementation.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 156,\n          \"line_end\": 164\n        }\n      ],\n      \"evidence_note\": \"README mentions majority vote analysis and postprocessing steps to create evaluation dataframes and compare performance, but the exact code mapping prediction arrays to final aggregates is missing from the packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"claimed-but-not-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 225,\n          \"line_end\": 230\n        }\n      ],\n      \"evidence_note\": \"The packet references external URLs to download raw trajectory data, but actual samples are not contained within the provided file packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPI5FjnsvR8o/uUYOuIjidLHMr44vUGnexhouIrpBYPWyX3BNFoOtW3APauvt9"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 10994,
+      "candidatesTokenCount": 802,
+      "totalTokenCount": 11796,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 10994
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "U_VYatr9PPrJ1e8Pz4iu4Q8"
+  }
+}

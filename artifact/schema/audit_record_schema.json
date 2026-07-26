@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BenchmarkAuditRecord",
+  "type": "object",
+  "required": [
+    "benchmark",
+    "frozen_commit",
+    "criterion",
+    "source_url_or_path",
+    "access_date",
+    "raw_coder_label",
+    "coder_id"
+  ],
+  "properties": {
+    "benchmark": {
+      "type": "string"
+    },
+    "frozen_commit": {
+      "type": "string"
+    },
+    "criterion": {
+      "type": "string",
+      "enum": [
+        "Canonical benchmark version",
+        "Repository commit / release tag",
+        "Dataset version",
+        "License & access conditions",
+        "Artifact-paper linkage",
+        "Input/expected-output schema",
+        "Task construction procedure",
+        "Dataset source & preprocessing",
+        "Split definition",
+        "Test-set access conditions",
+        "Exact prompts / prompt-gen code",
+        "Agent scaffold & tool permissions",
+        "Model provider & version",
+        "Decoding config & randomness",
+        "Trials / sampling policy",
+        "Metric definition",
+        "Evaluator implementation available",
+        "Grading rules & tie-breaking",
+        "Judge model & judge prompt",
+        "Sample predictions / trajectories",
+        "Predictions->aggregate-score mapping",
+        "Dependency specification",
+        "Container / environment file",
+        "Required services & credentials",
+        "Runtime / token / cost reporting"
+      ]
+    },
+    "criterion_group": {
+      "type": "string"
+    },
+    "source_url_or_path": {
+      "type": "string"
+    },
+    "pointer": {
+      "type": "string",
+      "description": "page/section/file/line"
+    },
+    "access_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "evidence_quote_or_note": {
+      "type": "string"
+    },
+    "raw_coder_label": {
+      "type": "string",
+      "enum": [
+        "documented-and-verifiable",
+        "partially-documented",
+        "claimed-but-not-verifiable",
+        "not-documented",
+        "not-applicable",
+        "access-blocked"
+      ]
+    },
+    "coder_id": {
+      "type": "string",
+      "enum": [
+        "coder_A",
+        "coder_B",
+        "adjudicator"
+      ]
+    },
+    "adjudicated_label": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "documented-and-verifiable",
+        "partially-documented",
+        "claimed-but-not-verifiable",
+        "not-documented",
+        "not-applicable",
+        "access-blocked",
+        null
+      ]
+    },
+    "search_terms_inspected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disagreement_or_repair_note": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

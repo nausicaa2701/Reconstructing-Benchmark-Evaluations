@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:29:34.280399+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "packet_id": "B004",
+    "packet_sha256": "176c11aebb9c46c89d3bd5774bacb7b5486e2855966692015a34b9f121984427",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 16585,
+    "output_tokens": 838,
+    "cost_usd": 0.04155,
+    "elapsed_seconds": 10.485,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B004",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 42,
+            "line_end": 73
+          },
+          {
+            "source_id": "E002",
+            "line_start": 300,
+            "line_end": 318
+          }
+        ],
+        "evidence_note": "Task schema fields like complete_prompt, canonical_solution, test, entry_point, code_prompt are used in code, but no formal schema doc is shown.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 29,
+            "line_end": 34
+          },
+          {
+            "source_id": "E002",
+            "line_start": 257,
+            "line_end": 258
+          }
+        ],
+        "evidence_note": "pass@k via estimate_pass_at_k imported and used; gt_pass_rate computation shown explicitly in code.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 87,
+            "line_end": 330
+          },
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 112
+          }
+        ],
+        "evidence_note": "Full evaluation pipeline (check_correctness, untrusted_check, trusted_check, syntax_check) is present in repo code.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 94,
+            "line_end": 114
+          },
+          {
+            "source_id": "E002",
+            "line_start": 126,
+            "line_end": 136
+          }
+        ],
+        "evidence_note": "Pass/fail determined via untrusted_check with limits/time_limit; no explicit tie-breaking rules for equal scores documented.",
+        "confidence": "low"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 133,
+            "line_end": 136
+          }
+        ],
+        "evidence_note": "README states pass@k results file naming and generation, and evaluate.py computes pass_at_k dict from completion results.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 187,
+            "line_end": 190
+          }
+        ],
+        "evidence_note": "README claims pre-generated LLM code samples are shared via release attachment, but artifact not included in packet for verification.",
+        "confidence": "low"
+      }
+    ]
+  }
+}

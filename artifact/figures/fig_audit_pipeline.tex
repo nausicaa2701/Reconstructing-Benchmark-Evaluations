@@ -1,0 +1,41 @@
+\begin{tikzpicture}[
+  font=\small,
+  stage/.style={draw=black!55, rounded corners=2pt, fill=auditBlue!12,
+    minimum height=7mm, text width=2.6cm, align=center, font=\small},
+  detail/.style={font=\scriptsize, text width=2.6cm, align=center, text=black!70},
+  arr/.style={->, draw=black!55, thick},
+]
+
+\node[stage] (s1) at (0,0) {Screening};
+\node[detail, below=0mm of s1] (d1) {35 candidates\\ PRISMA flow};
+
+\node[stage] (s2) at (3.4,0) {Evidence coding};
+\node[detail, below=0mm of s2] (d2) {A1, R2\\ 3-model panel};
+
+\node[stage] (s3) at (6.8,0) {Execution};
+\node[detail, below=0mm of s3] (d3) {E3 smoke test\\ two-pass};
+
+\node[stage] (s4) at (10.2,0) {Analysis};
+\node[detail, below=0mm of s4] (d4) {Endpoints,\\ failure taxonomy};
+
+% Human validation branch
+\node[stage, fill=auditBlue!6, text width=2.8cm] (hv) at (3.4,-2.0)
+{Human coding};
+
+\node[detail, below=0mm of hv]
+{Instrument released;\\ all 156 cells, 2 blinded raters\\ (not yet executed)};
+
+\draw[arr] (s1) -- (s2);
+\draw[arr] (s2) -- (s3);
+\draw[arr] (s3) -- (s4);
+
+% SỬA LỖI Ở ĐÂY: Nối mũi tên từ mép dưới của d2 và trỏ tới mép dưới của d4
+\draw[arr] (d2.south) -- (hv.north);
+\draw[arr] (hv.east) -| (d4.south);
+
+\node[detail, above=1mm of s1] {26 frozen + 4 expansion};
+\node[detail, above=1mm of s2] {6 criteria $\times$ 26 releases};
+\node[detail, above=1mm of s3] {CPU-only, zero inference};
+\node[detail, above=1mm of s4] {Wilson CIs, robustness};
+
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+benchmark,category,exclusion_reason
+DSP (Data Science Problems),code-gen,official repo not located under microsoft/DataScienceProblems or standard variants; unresolvable at audit date
+ARCADE,code-gen,"no single official public evaluator repository located; released via google-research subdir, deferred"
+Archer,text2sql,official public repository not located at audit date
+ScienceBenchmark,text2sql,official public evaluator repository not located at audit date
+DataBench,tabular,hosted primarily on HuggingFace; no standalone evaluator repo resolved in this pass
+MMTU,tabular,official public repository not resolved at audit date
+TableEval / RealTabBench,tabular,ambiguous naming; official repo not resolved
+Tapilot-Crossing,e2e-agent,official repo not located under InfiAgent/Tapilot-Crossing or variants at audit date
+DA-Bench / Text2Analysis,e2e-agent,evaluator repository not resolved at audit date

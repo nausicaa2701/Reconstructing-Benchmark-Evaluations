@@ -1,0 +1,203 @@
+{
+  "codebook_version": "1.0.0",
+  "audit_date_frozen": "2026-07-13",
+  "label_set": {
+    "documented-and-verifiable": "The detail is stated in an official source AND independently confirmable in a public artifact (repo file, dataset page, doc).",
+    "partially-documented": "Some but not all consequential parts of the detail are present; a reconstructor must fill a non-trivial but bounded gap.",
+    "claimed-but-not-verifiable": "An official source asserts the detail (e.g., 'we release X') but the referenced artifact is not publicly reachable or does not contain it.",
+    "not-documented": "No official source states the detail and it is not present in inspected artifacts; record locations and search terms inspected.",
+    "not-applicable": "The criterion does not apply to this benchmark's task type (e.g., judge model for an exact-match metric).",
+    "access-blocked": "The artifact exists and is referenced but is gated (login/credential/paywall/region) so its content cannot be verified under our public-only protocol."
+  },
+  "criteria": [
+    {
+      "Criterion": "Canonical benchmark version",
+      "Group": "Identity/Provenance",
+      "Status": "Adapted",
+      "Mapping / justification": "Datasheets/Model Cards document provenance; adapted to a frozen benchmark release id"
+    },
+    {
+      "Criterion": "Repository commit / release tag",
+      "Group": "Identity/Provenance",
+      "Status": "New",
+      "Mapping / justification": "No prior framework records a frozen evaluator commit as an audit datum"
+    },
+    {
+      "Criterion": "Dataset version",
+      "Group": "Identity/Provenance",
+      "Status": "Inherited",
+      "Mapping / justification": "Datasheets composition/versioning"
+    },
+    {
+      "Criterion": "License & access conditions",
+      "Group": "Identity/Provenance",
+      "Status": "Inherited",
+      "Mapping / justification": "BetterBench usability; Datasheets distribution"
+    },
+    {
+      "Criterion": "Artifact-paper linkage",
+      "Group": "Identity/Provenance",
+      "Status": "Adapted",
+      "Mapping / justification": "BenchmarkCards documents artifacts; adapted to verifying the link resolves"
+    },
+    {
+      "Criterion": "Input/expected-output schema",
+      "Group": "Task/Data",
+      "Status": "Adapted",
+      "Mapping / justification": "BenchmarkCards methodology; adapted to executable-output schemas"
+    },
+    {
+      "Criterion": "Task construction procedure",
+      "Group": "Task/Data",
+      "Status": "Inherited",
+      "Mapping / justification": "Datasheets collection process"
+    },
+    {
+      "Criterion": "Dataset source & preprocessing",
+      "Group": "Task/Data",
+      "Status": "Inherited",
+      "Mapping / justification": "Datasheets composition/collection"
+    },
+    {
+      "Criterion": "Split definition",
+      "Group": "Task/Data",
+      "Status": "Inherited",
+      "Mapping / justification": "standard ML reporting"
+    },
+    {
+      "Criterion": "Test-set access conditions",
+      "Group": "Task/Data",
+      "Status": "Adapted",
+      "Mapping / justification": "contamination-control literature; adapted to access verification"
+    },
+    {
+      "Criterion": "Exact prompts / prompt-gen code",
+      "Group": "Prompt/Run",
+      "Status": "Adapted",
+      "Mapping / justification": "BetterBench asks for replicability; adapted to prompt-level artifact"
+    },
+    {
+      "Criterion": "Agent scaffold & tool permissions",
+      "Group": "Prompt/Run",
+      "Status": "New",
+      "Mapping / justification": "agentic-workflow-specific; not in doc standards"
+    },
+    {
+      "Criterion": "Model provider & version",
+      "Group": "Prompt/Run",
+      "Status": "Inherited",
+      "Mapping / justification": "Model Cards"
+    },
+    {
+      "Criterion": "Decoding config & randomness",
+      "Group": "Prompt/Run",
+      "Status": "Adapted",
+      "Mapping / justification": "BetterBench statistical-significance concern"
+    },
+    {
+      "Criterion": "Trials / sampling policy",
+      "Group": "Prompt/Run",
+      "Status": "Adapted",
+      "Mapping / justification": "BetterBench replicability"
+    },
+    {
+      "Criterion": "Metric definition",
+      "Group": "Evaluation",
+      "Status": "Inherited",
+      "Mapping / justification": "standard; BenchmarkCards"
+    },
+    {
+      "Criterion": "Evaluator implementation available",
+      "Group": "Evaluation",
+      "Status": "New",
+      "Mapping / justification": "repository-level evaluator presence is not a prior-framework datum"
+    },
+    {
+      "Criterion": "Grading rules & tie-breaking",
+      "Group": "Evaluation",
+      "Status": "Adapted",
+      "Mapping / justification": "evaluation-validity; adapted to executable grading"
+    },
+    {
+      "Criterion": "Judge model & judge prompt",
+      "Group": "Evaluation",
+      "Status": "Adapted",
+      "Mapping / justification": "MEQA judge reliability; adapted to artifact disclosure"
+    },
+    {
+      "Criterion": "Sample predictions / trajectories",
+      "Group": "Evaluation",
+      "Status": "New",
+      "Mapping / justification": "required for smoke testing; not a prior-framework datum"
+    },
+    {
+      "Criterion": "Predictions->aggregate-score mapping",
+      "Group": "Evaluation",
+      "Status": "New",
+      "Mapping / justification": "reconstruction-specific; enables execution"
+    },
+    {
+      "Criterion": "Dependency specification",
+      "Group": "Environment",
+      "Status": "Adapted",
+      "Mapping / justification": "BetterBench usability; adapted to executable env"
+    },
+    {
+      "Criterion": "Container / environment file",
+      "Group": "Environment",
+      "Status": "New",
+      "Mapping / justification": "evaluator-execution-specific"
+    },
+    {
+      "Criterion": "Required services & credentials",
+      "Group": "Environment",
+      "Status": "New",
+      "Mapping / justification": "blocks CPU-only execution; agentic-specific"
+    },
+    {
+      "Criterion": "Runtime / token / cost reporting",
+      "Group": "Environment",
+      "Status": "Inherited",
+      "Mapping / justification": "BetterBench cost; REAL-C C dimension"
+    }
+  ],
+  "outcome_logic": {
+    "A0-Described": "At least one public paper or technical report defines the benchmark (criteria: canonical version, task construction).",
+    "A1-Accessible": "Core referenced artifacts (evaluator repo, dataset, sample data) are publicly reachable under stated conditions \u2014 no 'claimed-but-not-verifiable' or 'access-blocked' on CORE artifact-linkage criteria.",
+    "R2-Reconstructable": "Consequential eval details (metric definition, grading rules, predictions->score mapping, input/output schema, evaluator implementation) are documented-and-verifiable or partially-documented with a bounded gap \u2014 NOT claimed-but-not-verifiable or not-documented.",
+    "E3-Smoke-testable": "Determined by execution protocol (Phase 5), not by coding alone; requires the evaluator to run on supplied or schema-valid synthetic predictions in the CPU sandbox."
+  },
+  "primary_criteria_for_reliability": [
+    "Input/expected-output schema",
+    "Metric definition",
+    "Evaluator implementation available",
+    "Grading rules & tie-breaking",
+    "Predictions->aggregate-score mapping",
+    "Sample predictions / trajectories"
+  ],
+  "reliability_targets": {
+    "primary": 0.8,
+    "exploratory": 0.67,
+    "stat": "Krippendorff alpha (nominal) + Gwet AC1 sensitivity"
+  },
+  "source_priority": [
+    "official paper/appendix",
+    "official supplementary",
+    "official repository",
+    "official dataset/model-hub page",
+    "official docs/site",
+    "official leaderboard docs"
+  ],
+  "evidence_required_fields": [
+    "benchmark",
+    "release_commit",
+    "source_url_or_path",
+    "pointer(page/section/file/line)",
+    "access_date",
+    "evidence_quote_or_note",
+    "raw_coder_label",
+    "adjudicated_label",
+    "disagreement_or_repair_note"
+  ],
+  "frozen_sha256": "aa57e2b30023482c48c2ec4c47526d781d17102c0f360ffe06f9488fccc525ee"
+}

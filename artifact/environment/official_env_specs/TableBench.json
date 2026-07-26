@@ -1,0 +1,16 @@
+{
+  "benchmark": "TableBench",
+  "frozen_commit": "6c61a20340409dea8f96edb8675e66bb4abd7b28",
+  "portable_first_pass_label": "credential-or-service-blocked",
+  "portable_repair_label": "pass-after-minimal-repair",
+  "authoritative_setup_file": null,
+  "base_image": null,
+  "build_commands": [],
+  "resolved_packages_digest": null,
+  "E3_official_first_pass": null,
+  "E3_official_after_repair": null,
+  "E3_portable_first_pass": false,
+  "under_specified_base": null,
+  "environment_contract_findings": [],
+  "status": "pending-execution"
+}

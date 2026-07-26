@@ -1,0 +1,27 @@
+packet_id,benchmark,r2_majority_permissive,r2_majority_strict,r2_unanimous_permissive
+B001,BIRD,0,0,0
+B002,BIRD-CRITIC / SQL-eval,0,0,0
+B003,BLADE,0,0,0
+B004,BigCodeBench,1,0,0
+B005,BixBench,1,0,0
+B006,DA-Code,1,0,1
+B007,DS-1000,1,0,0
+B008,DSBench,0,0,0
+B009,DataSciBench,0,0,0
+B010,DiscoveryBench,0,0,0
+B011,Dr.Spider,0,0,0
+B012,InfiAgent-DABench,1,1,1
+B013,MLAgentBench,1,0,0
+B014,MLE-bench,1,0,1
+B015,MLGym,0,0,0
+B016,PandasEval/NumpyEval (CERT),0,0,0
+B017,QRData,1,0,0
+B018,RE-Bench,0,0,0
+B019,ScienceAgentBench,1,0,1
+B020,Spider,0,0,0
+B021,Spider 2.0,1,0,1
+B022,Spider2-V,0,0,0
+B023,SpreadsheetBench,1,0,1
+B024,TabFact,0,0,0
+B025,TableBench,1,0,0
+B026,WikiTableQuestions,1,0,1

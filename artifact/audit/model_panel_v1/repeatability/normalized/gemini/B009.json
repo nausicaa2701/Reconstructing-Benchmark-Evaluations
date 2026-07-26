@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T18:22:12.935334+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B009",
+    "packet_sha256": "75c4dfec5438c5818675a7953a3180bb423b8768c8714020ae0efca47cc50b69",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 12011,
+    "output_tokens": 1649,
+    "cost_usd": 0.0328575,
+    "elapsed_seconds": 11.266,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B009",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 50,
+            "line_end": 57
+          },
+          {
+            "source_id": "E002",
+            "line_start": 157,
+            "line_end": 164
+          }
+        ],
+        "evidence_note": "The log chunk formats and final dataframe/CSV output schemas are explicitly defined in comments and structured dictionary fields.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 107,
+            "line_end": 115
+          },
+          {
+            "source_id": "E002",
+            "line_start": 129,
+            "line_end": 133
+          }
+        ],
+        "evidence_note": "Metrics such as good_vote_rate and votewolf_difficulty are mathematically defined and implemented in the class functions.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 23,
+            "line_end": 218
+          }
+        ],
+        "evidence_note": "The complete execution flow for parsing logs, extracting votes, and calculating metrics is implemented in Vote class.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-applicable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 7
+          }
+        ],
+        "evidence_note": "The evaluation only calculates descriptive statistics (vote accuracy rates) and does not define pass/fail grades or tie-breaking.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 190
+          }
+        ],
+        "evidence_note": "Average rates per game (avg_rate) and first-round voting rates (vote1_rate) are mapped and calculated using pandas grouping.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 50,
+            "line_end": 57
+          }
+        ],
+        "evidence_note": "Example trajectories/log chunks are documented inline inside python docstrings, but the actual sample files are not provided.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

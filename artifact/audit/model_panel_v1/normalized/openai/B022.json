@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:39:54.274270+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B022",
+    "packet_sha256": "f76313863c55f42e302afaf3077e46b856433f8cd24168c98efab090c5bc3e9c",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 9013,
+    "output_tokens": 1283,
+    "cost_usd": 0.02409625,
+    "elapsed_seconds": 16.768,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B022",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 70,
+            "line_end": 85
+          },
+          {
+            "source_id": "E001",
+            "line_start": 101,
+            "line_end": 109
+          },
+          {
+            "source_id": "E003",
+            "line_start": 34,
+            "line_end": 41
+          },
+          {
+            "source_id": "E004",
+            "line_start": 12,
+            "line_end": 21
+          }
+        ],
+        "evidence_note": "README shows tasks stored as JSON files and refers to a separate Task Format doc not included here. Getter functions document expected config dict fields. However, a full formal schema for model inputs/outputs is not present in this packet.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 80,
+            "line_end": 85
+          },
+          {
+            "source_id": "E001",
+            "line_start": 90,
+            "line_end": 100
+          }
+        ],
+        "evidence_note": "README shows an `env.evaluate()` call producing a numeric score and reports \"success rates\" for models, but does not define what constitutes success or the exact metric formula or thresholds.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 5
+          },
+          {
+            "source_id": "E003",
+            "line_start": 34,
+            "line_end": 84
+          },
+          {
+            "source_id": "E004",
+            "line_start": 12,
+            "line_end": 43
+          }
+        ],
+        "evidence_note": "Some evaluator helper functions (e.g., DBT info getters, VM/local/cloud file retrieval) are implemented, but the core evaluation/metric functions are missing or commented out; `desktop_env/evaluators/__init__.py` contains only commented code.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 90,
+            "line_end": 100
+          },
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 5
+          },
+          {
+            "source_id": "E003",
+            "line_start": 34,
+            "line_end": 84
+          },
+          {
+            "source_id": "E004",
+            "line_start": 96,
+            "line_end": 105
+          }
+        ],
+        "evidence_note": "No description or code specifying pass/fail thresholds, partial credit schemes, or tie-breaking among systems is provided in the visible artifacts.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 90,
+            "line_end": 100
+          },
+          {
+            "source_id": "E001",
+            "line_start": 101,
+            "line_end": 105
+          }
+        ],
+        "evidence_note": "README reports overall and split-wise \"success rates\" but does not explain how per-task scores are aggregated into these rates or any weighting/normalization used.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 124,
+            "line_end": 143
+          }
+        ],
+        "evidence_note": "README states that running the agent will save trajectories (screenshots, actions, videos) to `./results`, but no concrete example prediction files or logs are included in this packet for inspection.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

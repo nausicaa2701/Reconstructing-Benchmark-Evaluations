@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:24.778810+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B014",
+    "packet_sha256": "2b89b3351ba9f207e17dd94593359f0ae0a6b368d68e36e8717d336c4d7da21a",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 12374,
+    "output_tokens": 913,
+    "cost_usd": 0.026778,
+    "elapsed_seconds": 6.27,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B014",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 181
+          },
+          {
+            "source_id": "E002",
+            "line_start": 38,
+            "line_end": 65
+          }
+        ],
+        "evidence_note": "The README describes the grading input CSV format requirement and the JSONL structure. The competition-specific validation code checks specific columns, length equality, identifiers, and types.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 9,
+            "line_end": 36
+          },
+          {
+            "source_id": "E004",
+            "line_start": 43,
+            "line_end": 100
+          }
+        ],
+        "evidence_note": "Detailed code implementations of custom metrics, including Kendall Tau and Alaska weighted AUC, are provided with mathematical comments and explanations.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 190
+          },
+          {
+            "source_id": "E002",
+            "line_start": 68,
+            "line_end": 70
+          }
+        ],
+        "evidence_note": "The command-line tools `mlebench grade` and `mlebench grade-sample` are documented, and the internal grading scripts/modules are fully implemented.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-applicable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 174,
+            "line_end": 181
+          }
+        ],
+        "evidence_note": "Each competition evaluates predictions directly against ground truth to produce numeric scores; no model-versus-model grading rules or tie-breaking logic applies.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 53,
+            "line_end": 70
+          }
+        ],
+        "evidence_note": "The README outlines how to run `aggregate_grading_reports.py` with specific split flags to generate mean and standard error of the mean (SEM) for the leaderboard.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 215,
+            "line_end": 217
+          }
+        ],
+        "evidence_note": "The packet contains references to examples, but no concrete sample predictions, logs, or agent trajectories are provided in the inspected texts.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

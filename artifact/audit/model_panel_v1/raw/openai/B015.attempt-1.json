@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:36:10.648013+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B015",
+    "packet_sha256": "978ed95514f8383b274360f54ed6ecb44378d4324b4a9148287f35e15419c5fb",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 6363,
+    "output_tokens": 1227,
+    "cost_usd": 0.02022375,
+    "elapsed_seconds": 18.349
+  },
+  "response": {
+    "id": "resp_0f89912a548742f7016a58ec48a1e081988296128b89cfec67",
+    "object": "response",
+    "created_at": 1784212552,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212570,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_0f89912a548742f7016a58ec4916948198a2bdbbd245344ebc",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOxa6vKGtlq1y1BinjhOtiiku5qsNaOiA5AHW46CxJ-CIjnLCxOEsvPpfI0bMO3ty300cSNG57eUlB5V0z3PKuwHbnRrIrfAwBezbayqTDeeB6HPog5l03vPaSriHYonODaERxwsVRG7-8DnwgCKz3Ec8pb79QU4sC-xHM93K4p59HTZktahz68DdvFH7AGLKz_42oRUx9ZLgumMyijTjoFK3-pqjYfSyQpflk2OEjDGV9MQ2KxhqSlHE7r81RYKvrvGTZSCADVccqikcENpnh2B3yI8XnEF7f4cQkaYSS8zfYejXK5NSHJvHMODT7ExOVx5zaPl0eytZCdeJi1bC84J0B8-iFzteml_x87UgDQnv7mXhQc6_Z1CTPmYjhLhghFu6Xpn3JRGaazz-uQG_8gC8qbCrHddLWskElM5tWHEVJ_R2kLX2kMQdpLgXby45CCgn_WRmFEP49__guFxkyzJtfACGlaqYHStZrIGZxWTTSMekFOsAilbc03Pq7BZBkI_-02y-hsSl2v2uN6zDjFGi7irlP2-EkeVrqeQ5p9e0G4QB2GR9HYeJVjz69fs91Gl-sDPGmzI2d78mhMg3NDmht7vHy7I_kwbIyV6K6DzyQnlj7ie7YAbNjwO0uy5GzcxEjuZjrTJIRlOJzFyM-qQr3tfVPV2bI0uZfxo012MGll9lS0PmG4mCGgr3fDRLtYhWijcJFxaQDsBCOHQYn9T7O_ixGMPhS07TfNkwHFfxGc5aXxRpUHdH5Bp__k-stlA_vjG4rg2ntVD8rLtMqcb2ic8EGVrmPpGrlVmfvHxDuy9gj7PmbeWEZI93NRqd9gBtA_RXJiaXE3MKz5qXnYZYxe1bFTABMDLooeuVGs5f17mKbu3k63gFGGC3LF8EVvW7aBxYJPNoZXl3ri4IwWj26ZjYafLpbsLxC9hHj9VjT2eNTSmaniM9i317IIvs2poLOdgbGFEt2WHKkPumQ59jsurRZ4AUgkfx4m9OLNNI-JL-RIuPI4ZTZQu-RBFirrBAwZRo65uQbxPAwO7Zd61RPys-UUV2fwWYNGg0UiQioEb6Ayar0pkY5pBRy-D7YrIS3NTltKMdOsn5xu1YiJW5KBpiS34GuIu3pPAhvsUTNzL5Q_xURxESsZKrMkVIu52UD8DVxBHvUYaST5Mp-NeNbJLk4KRcPgsdw9_LXGatvgmPhggT1BIiVtk0CO1EJNyFWYIYUbgbmuz6CH2UnyW44A3XryYICRs9VVIJaJcUN_a-La-9RtqTHRSGsYlw2Sh02X1E1eNQra6zrvPvQ0gSt4radRTSfk6PH6fYQVVmZB-oHTx1e3_3MZmqgWNuXRnotybthCYHAK-phD2DPVNlnAwfzPzY2B0JnN0y6abcMfx1ggtw5bpCqDEIutiPYLTvyoAq2yqwrwTl4s79Masu0OrsPnqYvze8v9KblKyOxwKRxs3xFFfuYx52Xp2Lqza7Nt0I2qWl4CjuFj3kETaK4U7kjF_QFhY48oxnFxtnc4lHsU_m_UAAhbhue3jJi69g57FfoKp9Jla40y_N8fvxLh13NTHv2q2pGkVLY3S6krKedVrJYWXoKtMjmYpjyaB3upSrKjZKbunDM8u7ib5m9oTnqFbQXO3vgv0QLTYc9l32Zgv0Kc85MHOZ6SBsFpY71X0EUtXlmo8F3izeJY7w42esPQJ_4OiJduWyfJiR4VylLXKsnMfo4d1upQBLa05ebNts0ZJgJ0hjFgFw5YLhw20u48HacNM0ICPINCiTRG6lATbLDtypBDj-jzv7VHVk3glkHxC9i0JWV_TxlSI1YP5QkXKYYsyYZp-HboEuzfrP6_qxEChqhtRqxPhGNIdGIaKSd3pdoyHjngww-Mc4g6l7atB_F7S15ySVCojlAHtsrYBHo9KF-GtaGmeyMm8rvT2TWuf_J4IilUcYt4gqOSnNCnybWIDHt866l7WvXcGR_YtqrrLkFhp2-GTo21gXS9wDI6GAeUJVi-OEU8DULHONwIiL_9uMlHxcQcySK2wX101xB2QuWnbo-87odk_Fl6P6KciXijiSTC8ZwxrSiOWkG_YbEtJkzkG4wuXOs-X6KwOA5caH9O5vqjGAQLjMEtvUXSWhLfSZLbOaSeYZRU0vnxi6HTqF63XBJXDC5IJsKY7-tBMXd86hMiEBoRFgVtVSm2HQM2jGrt1Gufzj5hmR06z6mx7EmP4Z307F6stpMk1ZqTqsD3d1wUqCm-c9r9MeU_8EMYH4kkVWzEi4i5rbIExWqH7tedp7HMlLTzK59wucYaT1jjAN19OXmiHZtkXNmOn1VLXUIzTLOVyCXci9RH8jGg-rmayeFv6UG3BE4iMDsRh0ePbfeSIS1oXgUiVWfKsqxqkiSw_0_c1hyQqDLVtmMpAWZj8xbJRNgBQMVljfRMvMPFwCPzw7PQBpRIVQdo8NMgKqyZrEt4rHB6ERyRzTndfAHjLoi5ToF7xNM-c84kgm0ZF63m1VeX9Ktpa2X9XpEDrkLVrX6wsBNyFLxeFVIuEK4tHozKyXKHHJs-IRbOAdd0NDU_SU5mkkHxT4og3TSOA1NZ78dCMx1VRv8IZYXUKDQkUUu1hq9Yyquc-otL84c-HCg16XSRRboqqZrnIuEe9Xnt7gGAQWhAanlI31munQ8K19sqT03iVM-STAt3qj9gKpKeeEwoIJnbhELVUGPe6yqrB0Tepekvgmma1CZ1FdfCb-0yVjerhT2WVCS4fm8jQXmlpMBo_0Ya1uFqix3a0I2P2L-g493iNLIUDfvVyyUychtITxJPDI_6tEf0CR1bm3I2mlw6njFrqlV-Q1lLRvXpQDwI3Qly1oEeUd9ttA00O-_0vJUFkiQDzIiBHvaaSzynH8MrsyPuQypz5JPlpHL0dSigxkjsfaz-mi54ZoOuzTdXNLN_P6VyBrZspNVVdeNZUc5TgFT0MfSox_PYmYw_XLvZC1Gtw8ogaN-smqC6uaRgQhZgn3qePtSVAgOP7WR5E_qm0M-DCeB0qJNwQeGtowrD2WA9fUCiwwvxRwWlI4sTmPHwWYudTP_rBTO0FgIsMAUwaKRaiNYZ1v-vekUM7FYBBpNtqmyLfmNI-Lw9WadW-HThQh5A0SG0FSMri_bPQs5rZxC_PDKhKTmzoXUpAbKVIwV-19V-WfqdiJuDESQKT0bPA40XyKW7PfSKl3i8vPAEK1AmSEViquwYUzzRCHyAVegU2a8nxqaujUTkOEgj9gMlX-H-kzu0xEIAn_04bEh91afeHFa3Hg_FrRwpx36CKHapw7vq3TwaMjPbeeO24qkzX6osOLlMrah57pQdu98Qd6qIYKzQFnUgAPs9E4xDYPD9MV5O127qF7Z8iyfkMpIo8yb-CJtM7J1KtDH6fqm4xFp4QOrcGG-Uv5QsKqaPkfg7UZ5WeheIQK3F9mtt9NsExdFJU4T8ZnChuWerZ1iEn_X_nqVMJOpybV0OGypwDGFjm-I7R0gAX1snqkw_o5iszaraOVIN1nH769tgyI8zahfPzyyWi2-xFj7Ucv-R79hKqTv3sjVzya5J9Gl-BPsjn7A2ZSzef7huOO6mj8ZfoI2Eo6pJ9XJyNcsZAIn7OgBBkFxjcbvUsgo_AYhkNYR-YhZiFJWIEDC9cmVYTctjF7N0HIqfK2-wy2XKrdcgYTwz5RjOQsyWSYbrkVsr_FibSb8ioUPrsyzndCSOS91yfvdS78_sT1H74uvj6-LmTfchLNWa5-KptXbORyfpGqX3YULnNUS6WKmCxp43cpPq542xoHbNgDB7AmmhV2SG9XaG7AtGA3T8w2ucVCSZBgWIkBan6wO8WqlTqf5lD5Rww4B8w0NV8nhJTWlZ_rfyVeEqKV1Jm1yq1RVzb5Yao_IGctbyO0pvf-E_U2LIGFKNjGLpKVz9y1DAxdDs51njl7xlTARk6pne5sIbfuR5a0JLd5XoBUuPlJttQTvcRQOVMN-Zwquh1i05JSWavsfNTF1WvnLFnbbKNFH7l-h7z2RoiUNkL8iFDLJ7LR-cqaJFF3qNrcRo9SeeUuJ0i_kkhPUjKlByjM6ZhWFX-vlFpLjkKqf1zkzeH6DAmEXbYoeLimO8joX4fJH5BiGmVPNdsYvZtp7_UdbvTkGEx63cvemZu4ujaQ0eywifDMov0BFYpQlJ_E03XFinaUL05k6G_oWTMB_0MY7vD6QdZZZYYR1GJggQxbr956dWcEGUqRDJZRdV3FY3Oca0k-xNuEJA3jKpvn68LTNjntBCsdcbktLuInGtMjyp3DoLcbAjymYBVA73Xdz_PxZAHvMNH3CSW_csfpCJBVUujaZGfiapW5jkA7aV3U5nJPhSpkqpMvYiw7pUlX2hzH_XbVunf3cxrNj7mVFAroXfY5DtLWAAPlKwVMPoqaCm_P4rn2IX2XUK5jHrCk8oeFtEgadT9uSYnE6HwTYN4S8e0u445_hvLWe50ioTVPvrZxSPsm7y74kuz9r8vNinSvM1Ff0JAjxZBgDhP2GM5b9cbc0DxM_cdz1nVU8BlqLxlH7GdkkEw2_ot",
+        "summary": []
+      },
+      {
+        "id": "msg_0f89912a548742f7016a58ec52d268819889672e558ab07a5c",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B015\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":134,\"line_end\":166},{\"source_id\":\"E002\",\"line_start\":12,\"line_end\":21},{\"source_id\":\"E003\",\"line_start\":48,\"line_end\":59},{\"source_id\":\"E004\",\"line_start\":76,\"line_end\":79}],\"evidence_note\":\"Task-level scripts show internal data use and printed metrics but there is no explicit schema for how benchmark inputs (agent predictions, files, etc.) are provided or how outputs must be formatted across tasks.\",\"confidence\":\"medium\"},{\"criterion\":\"Metric definition\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":24,\"line_end\":36},{\"source_id\":\"E003\",\"line_start\":61,\"line_end\":75},{\"source_id\":\"E004\",\"line_start\":52,\"line_end\":79}],\"evidence_note\":\"Each evaluate.py defines how metrics are computed (e.g., Time, Correct, Decisions; validation_accuracy; Score) and prints them as JSON. The definitions are fully visible in code.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":12,\"line_end\":37},{\"source_id\":\"E003\",\"line_start\":48,\"line_end\":75},{\"source_id\":\"E004\",\"line_start\":61,\"line_end\":79}],\"evidence_note\":\"Per-task evaluation functions are implemented and callable, but they import external components (heuristic, DPLL, strategies) and there is no visible top-level benchmark evaluator orchestrating runs over agents/models.\",\"confidence\":\"medium\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":24,\"line_end\":36},{\"source_id\":\"E003\",\"line_start\":61,\"line_end\":75},{\"source_id\":\"E004\",\"line_start\":72,\"line_end\":79}],\"evidence_note\":\"Code computes metrics but there is no description of how models are ranked, how multiple metrics are combined, or how ties between systems are resolved.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":20,\"line_end\":37},{\"source_id\":\"E003\",\"line_start\":61,\"line_end\":75},{\"source_id\":\"E004\",\"line_start\":52,\"line_end\":79}],\"evidence_note\":\"Aggregation from internal per-instance outcomes to final metrics is explicit in code. However, there is no interface specifying how external model predictions are ingested to produce those per-instance outcomes.\",\"confidence\":\"medium\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":171,\"line_end\":180},{\"source_id\":\"E002\",\"line_start\":12,\"line_end\":37},{\"source_id\":\"E003\",\"line_start\":48,\"line_end\":75},{\"source_id\":\"E004\",\"line_start\":61,\"line_end\":79}],\"evidence_note\":\"README mentions a trajectory visualizer but no sample prediction files or example trajectories for these benchmark tasks are provided in the shown artifacts.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 6363,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1227,
+      "output_tokens_details": {
+        "reasoning_tokens": 509
+      },
+      "total_tokens": 7590
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

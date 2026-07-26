@@ -1,0 +1,158 @@
+[
+  {
+    "packet_id": "B001",
+    "packet_sha256": "2ae0354b5aa3522772a6df252836198fbe4bd793e4153572b4ef21755bf20b97",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B001.json"
+  },
+  {
+    "packet_id": "B002",
+    "packet_sha256": "ec36f1c0e60e073063443c1f3869805ca6af385d5078f4bd0d71d8c93d16a3b1",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B002.json"
+  },
+  {
+    "packet_id": "B003",
+    "packet_sha256": "661f974d7bae9edb5ae6fc681b4c0571e7059609ce3c37a6a5204007ffb8e4c9",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B003.json"
+  },
+  {
+    "packet_id": "B004",
+    "packet_sha256": "176c11aebb9c46c89d3bd5774bacb7b5486e2855966692015a34b9f121984427",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B004.json"
+  },
+  {
+    "packet_id": "B005",
+    "packet_sha256": "f517a9edaa45cd9fa950570ab29d6cc6b82de9548a29268a65e2a3abcfd1ee71",
+    "source_count": 2,
+    "path": "artifact/llm_judges/work/packets/B005.json"
+  },
+  {
+    "packet_id": "B006",
+    "packet_sha256": "230a9ed85f0d5e2d31d734588b664f82dc04a0599265f4947b5a8bf81a6ec239",
+    "source_count": 3,
+    "path": "artifact/llm_judges/work/packets/B006.json"
+  },
+  {
+    "packet_id": "B007",
+    "packet_sha256": "6163da3f7f1e999db78df98a61418eb68cd526214691a016d60bfe77cfaa0985",
+    "source_count": 2,
+    "path": "artifact/llm_judges/work/packets/B007.json"
+  },
+  {
+    "packet_id": "B008",
+    "packet_sha256": "69f31a3eabe785a74a75e7b2804de69c574449dfc0ce53f5074a342d952554d1",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B008.json"
+  },
+  {
+    "packet_id": "B009",
+    "packet_sha256": "75c4dfec5438c5818675a7953a3180bb423b8768c8714020ae0efca47cc50b69",
+    "source_count": 3,
+    "path": "artifact/llm_judges/work/packets/B009.json"
+  },
+  {
+    "packet_id": "B010",
+    "packet_sha256": "0f855047b47414f1aea9af992ecff1d79149e891c1e7073bd4c0be3f30bb23d3",
+    "source_count": 2,
+    "path": "artifact/llm_judges/work/packets/B010.json"
+  },
+  {
+    "packet_id": "B011",
+    "packet_sha256": "f0126c3db6d21115573d95bece2bd01f1fee4d15d7377b78d94c5cea8eb20a93",
+    "source_count": 3,
+    "path": "artifact/llm_judges/work/packets/B011.json"
+  },
+  {
+    "packet_id": "B012",
+    "packet_sha256": "a613212ba0be787f74b497d10aa0159694d74ef8135d25a442cfac5533141359",
+    "source_count": 3,
+    "path": "artifact/llm_judges/work/packets/B012.json"
+  },
+  {
+    "packet_id": "B013",
+    "packet_sha256": "54e25e7b38f83e3d8e97e0cffd85dc20944178aa30ba40b78f821f9169b4dfc9",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B013.json"
+  },
+  {
+    "packet_id": "B014",
+    "packet_sha256": "2b89b3351ba9f207e17dd94593359f0ae0a6b368d68e36e8717d336c4d7da21a",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B014.json"
+  },
+  {
+    "packet_id": "B015",
+    "packet_sha256": "978ed95514f8383b274360f54ed6ecb44378d4324b4a9148287f35e15419c5fb",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B015.json"
+  },
+  {
+    "packet_id": "B016",
+    "packet_sha256": "518010092eeda3816c5c67712018325e4e2c7d03993e004951ac8441606586ae",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B016.json"
+  },
+  {
+    "packet_id": "B017",
+    "packet_sha256": "27be15a4114d74ebc7b611264a1664f5af1f8335c3333286bae315a887a7e711",
+    "source_count": 2,
+    "path": "artifact/llm_judges/work/packets/B017.json"
+  },
+  {
+    "packet_id": "B018",
+    "packet_sha256": "761e8d4f194fc4fed407d48c4f25f88aefd9cc248eb0a7774e0976222bd81f5e",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B018.json"
+  },
+  {
+    "packet_id": "B019",
+    "packet_sha256": "5294d5064ce830a558839c4f6324d85c340b5cba6390aa23765399ed61a61902",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B019.json"
+  },
+  {
+    "packet_id": "B020",
+    "packet_sha256": "d21844cf75a113aced5aa53b17ef9e86ca67dbec2abb9b96ad29d92f86fd5c7a",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B020.json"
+  },
+  {
+    "packet_id": "B021",
+    "packet_sha256": "3d7daa01f71c96330f3407f28f908d7061f3759b4c5a055d41d1cc164057f355",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B021.json"
+  },
+  {
+    "packet_id": "B022",
+    "packet_sha256": "f76313863c55f42e302afaf3077e46b856433f8cd24168c98efab090c5bc3e9c",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B022.json"
+  },
+  {
+    "packet_id": "B023",
+    "packet_sha256": "ec0ad907ac8d49f5d51ce104ff97a9e9b1bbb11957e24172c10fc2b3bc1cadf8",
+    "source_count": 4,
+    "path": "artifact/llm_judges/work/packets/B023.json"
+  },
+  {
+    "packet_id": "B024",
+    "packet_sha256": "94f83d0bc2f68b32a125e5688c9c1ce7ee7b4bd0787479935a7d62b2430b8a07",
+    "source_count": 3,
+    "path": "artifact/llm_judges/work/packets/B024.json"
+  },
+  {
+    "packet_id": "B025",
+    "packet_sha256": "ab6f33bca908f643fe8e2b674fc0cf7b26c6ffc385f4af32638d7ec98788f8dc",
+    "source_count": 3,
+    "path": "artifact/llm_judges/work/packets/B025.json"
+  },
+  {
+    "packet_id": "B026",
+    "packet_sha256": "b975af24cd07e04fda2d28429ff4f590668aacf172316154596a88ee0310f7a2",
+    "source_count": 2,
+    "path": "artifact/llm_judges/work/packets/B026.json"
+  }
+]

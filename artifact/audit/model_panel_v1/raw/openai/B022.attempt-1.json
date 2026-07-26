@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:39:54.274270+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B022",
+    "packet_sha256": "f76313863c55f42e302afaf3077e46b856433f8cd24168c98efab090c5bc3e9c",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 9013,
+    "output_tokens": 1283,
+    "cost_usd": 0.02409625,
+    "elapsed_seconds": 16.768
+  },
+  "response": {
+    "id": "resp_0b1a2ece1523466f016a58ed29f320819bb25d8f827e3d36a1",
+    "object": "response",
+    "created_at": 1784212778,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212793,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_0b1a2ece1523466f016a58ed2a9594819b819162091ec6d95b",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWO06m93Kb_C7LIj46T5abM7_4vJ9rpsaOMxVwKa4bZ-h-qFN1WTzyO9907sQrrPenBb1HPeQygjDkItbo6VZY45fApsgrZIV9pEKCeLGC9iL7Mqb_lZPHlvLccAyjG8-PiZ4gK1po9gSb7v49HpEmUchcW0qapkE32XnuVtQ18Np-WiHv_pFimctF2koIqtnHPbjge34Z9O_3GNF3_iJvn-4aYQipjh5r02YOL9RPVWLBbborkZfFvmG3BD0hSuIG8Y-YyfDeT-0-WtNJGBvGLPasht-36qVD04jgSx6fYrZadckvRa54HHhW0B4yJdq-M3R4WkleSt8R5LV3u_UP4MSHCGFK6UQ-pZfuAIUHpvR3vmrv5Ple0a6lqJhKDKktV4KH930juiaHhZU328aMdVQVQ1TjnDSYVFscAppfDUTyTz5oVR8xmwtiX_PEFnw44P33v-FzJCQ1BVgpkeXGKjj2pt2ByKlLwJcVMYdryvazvR-Ofu57tDyHKjyoW0lDg6Kca_ZYuv33FOyCJk_ag7Sm8WNbx8kqC5rZtiNL_HyC6_sck_YW4lwiclQcok5DieFgV6rhulAtwShS-mfIFbaKbiHGQvowMEMS-_V2cptPxTk7HsrMd5R4-q2L6vHUgSGStF4zsWZ0Hs41jIsCLOV-RtGnMewawUgLZLLqjk-EZq3YRiSSGzXpG9F2oTJFBxxTm-2omHd3LwiOmCAklmHL__L46at5ilnjfeQyhGnJUm0PDCxI9ekRAdctxYq85r80HURRRJB0eaKxTQYzUB_b3NgHcme8nHVp5YUOLVMXYk8vxPe66UmJGx13heps-6wKxBiuVQM9TGQnbOHMa9v3eJJFyjJybz2Fx23ild3WUFxlMXg9MOfP3nL_Uyrv0QVc5PPWzLkBw62BSpuR1n9A3crKkr5nu6WClLnl2SGHKmC5uy4GXYAMV1lT8QAEWDcPRyaeZ90s2tnFvfa7V1CceTZQbv2ZG0WQTG8HtxWTCD6SYqXDlMZolKsxfgoFY3yy003xcN6LztZGRRnEcsma6HGI7ewEe-PtwU5jS5MrXQ0UHaIOqJJvHT5TJOWZ4LEmQ_z_3Nd3g0VTAI24GBMmFgIiqT4dNtY108WJB_RRlEsMlC3pu7NdYes4Xy-ExYvsjul0IsPEM3uP6NTrGN-g8mFYszlaEaywC6yAGgrOC4bw2q10ftfeYJzIhXNNE8pbidIk03CQl9Fh4RllvItExGg3UKU-MfHgFGfhdflQATtmk2nwo5Hdk7nfRyswyBkQFLsR-ae7zEeJXAE2wJX-lLvpDhpGvr2YjKI4uG0SOQcQKq0JUTVzx2hIragQMklRqCmshLxmydHBifACBbN1ajntNHvllcQmzWjnmflCjkwRArpzd_mamITQg5C77Fe3MhriAD-qIXix4NGVSbvUw-SKrq5nPtFsFyKsetqRIBZRul6VkYsgxi-24CswU6cqwQ2jGN4SbFjUTk31GHNWTvMVbgEGD5d5VxqLFcF9x-jKtmGchix61e7x_dH856OEoTkyPlzQUiQj2nYHzacgoSxhnErxDFN3jDktcq26GrVhsgE6m4VX1PoUBdJSDB2J62CeIiZNOxgHOdLsWYo_BLPuIEP1dCgoOb3WMwHD0z8rWQBr8pCMXNhB3T5dDLfgsW6ekijL0cXukqm8nBpR64Cd20lzbuDKKDc8R95nFvLMNLPMz25PV_Pd-QKpYLtnU_XhT93VedtzaXhe4VrC8v4wODr56aPQygMYEhlSIdkLY5J7ZfPrXsTewDjVHzfYkcOqhoCqwpgGBC0j1x-3TmCxHBYoU_dLDMmnxs3Nes5oxB_xCuHHDMidhaJ5ccTLtOR0N8N7WXTtgGmqrEs16isCmr0WZ3uLNJixy9zxPqvGe23H7yZdVBWhrrPGZRfLvllLBJG35XSom0dPS61BO9kyrGV9Vwq63lmWVp9Fx8R4sIUkumyye9qxnhZxLA-vQkrUWBB_oxQkR2a5r5t2FYlY9p7gbeQzZvmL-uHohFX42U3wpcWOLGVnxCQ_p0paYMt_yuYXdDq8OIYi3iocm-bos9PKo-INeM7AadcJuSp3FOH4miVYlJh378DqgQyVFitaepMyj6PQaQfp_JcTQ4FuSSOBWv5Gxy1V6aRsUiEiJSd73YFukGqj8lL5L_qi2vsRSJ9SdzHwUu3VCnsTNwIOtG87vHEmMpLp37YKbbYXs_R2-Hm3OWnOKQ-EW2MkUPb-LWPgudmeIAdlZhLuuNqTMdBQXWf977TaVX9vQ1h9lHLNJn7dj7jwXcr49pboqiF6_bbgl78pngFQmiqw2MHkNZrtYfkcIeFIN9KQ6YJzY66YlbQX3YLkPlb3-JhNiuRXw0zOxCRNfKBtK_XiVXlC54o2KGuON7CzIFRGqMWSyx19jBLHSf3hAcqG06EA86IIYfO5f5bt0HBF-CxXGjmvfmkZWO2mT3Huk0DlnVuOvYKIgfqrgGKsrbgkqbKgIwjTTJ6zVfk0o5Lf1_jkiv0hcY0FeuXgtG5u97jEUExset5HZqHBp4ZyzMr-SJ6eU-zrZg2iR_dgNxsFeg_wC-eK1PxoF-0aymFfkEFnyhpaz2otd6fIWfuHPGBtf7x4esWtcDn1HQADUwWQhZt-eg1GhKcp3KR7lc2Zl__C-twwsqZ9JYVo64__yZyJV56pIQ52YOY8_OOEDW62LX1ngf7fTRBKwOpGGzUqKASG9LtIDlDe2asrcVxkE73h-5qc7CF2qCAWKhCac2A97O8emjay2deqIo6qQWidKoaDem3yM3qnJmmTVVDL8l5YND5qq-phTa5px07wz5iyVTWF9X3op6qujDMkbkufYHzvBAM7k743Is7oosjarsaNw3ZnRaGP3K_rNuavBZwfi8ee_kL9lFKLTbmuZNVi418_MUd8kqQ3dP5uayRHUHN4HYirtWv_dHKR6-Em25y7uTLCPmPaE0V-mBxtjld-OXXWra0Q-aet7q3dIgxuabQ-kSGUUtBjyxv2Yal6yACVBgQuoKNKXBSaXZ-KCcPYUCIZHW7voxNukg8l-A3W2--TgFDP3fa6WmHGUgbAvz60_VMCtufnABkpKC3hCaUpYDFibTml6FlK9qGBuNVD6cZ8tuOPy7fQFHKZIDNcD-VB0BYv9RorPeI4BiJNh88ZY-EIPjOYha-jHnOSoNnANIop9L9ZUHftOQwBgiDPwmnC7JlsMBpBwYQxN2z0LGXAW2FbFwFcBTu8PcY3k6GWnmNfROjNOc8YqveyHUZutQHeB4uukGjjZFVbIzsD_u--T91sSd7xUK5PvGieu8oawO4Cl4YjFYF9rDNa6iWBO-pQo9jrM3TZv96l3wETb3gfBwWad3D6KwVQatshpPPedK5Y0Rd6YCPd_EgmYw-OHJDEynQjUkwdTvad7mib1ooz1gyHnAQWtNQ6AWyjZGbzP7qANYriNVudFbn6ZzFrMce4tuk2NxzDVzl-URUpQu3W5ATptFg_s50ZkudYUTODo2C8Nnbwj-J1Zt_TYx6G7eM3O26CBqtgCn21FkDqaAl_bONYfGvSUFIHJ-pZlB3wEDbf_Xo0zsrE0yBPkxLou-J7cMXFrkJgu-aCADTRQgSbSZB-6RGm1l5m6Lb5J_oXwMX47qqap4kiky4ZtW6i_KV-v5DEFUDMuQxr1pOLB6raeR3gqdSaJg4scOIPuL_FlRvCUecJAFKUYq19BXgXhuzpy9ei9eEqeRUp7mXXkIxl7iWgVy32xpSgLUDlrMv4QJ8mrQG0xUqFfRBSLu1L1pXtkIj-10PhCIuVojMPRxcEQP3YUfTCnZauh2M57Mq-CFSh6KGum7NzmRcoJEtUyDrcwpYqi2GzJecFfCzoa8zRZUMVqrCiJXAKJ0lyeYMZqoYi4NzekKRQFTQ_Bi8jEBXp0mHNENIWuKnsBSS9XN4Ib0czgIRzgSK_RKuPNjkGE0kTbjcYzTGqnGe_uVXqm0EGvE6qKHaZoh7MYMcSn3brZWiIrHQwNt8AOpFcceaZeeN6ouqz-HDKggIt2tsBJ8E8BS9xmwx4Ycmw1ivsaxdRucj3omUPi6fgCXNHRdd2xhUiMJS10zSD76Z_STG2P1ku4TeaTk2dqREQ7nexbLqaQ5eS-4HuO0DVxt_1-y-tmAX2ervtn154B2o6AR0zZZLGQU9C5hy_iQdhBh3H3s8vkIG6U2i4RZQzJfC3yRnc9UrONa6H3d2IZJ1PpxleHeKQzSIzgk1yLrqmZTToqybLkW2kUD1viyjcS9CKeTixM1e65yb2-9Nvl9YMgsP9_ZA674HTVSW5EvoK7jGPFO1D-T538ykXH4fwCkCSYCpv4YezaiBWAp05lLyJSJqJa4TmTMlrP-V5PF1cXzaUANTxDlK6DEmhmkZ_jKmGmc46ni4zYyi-N_jd1UEnET_FoL8Hn6MI8NLZNPHeY1hjlXbkehqedzVQioIGNN7sokEyBRKTMW2d978yS7DZQckYmL2AAmZdIiXFthjAqhpgb5DRT__3Qqbh9mjXkMJn5ZenjDdyjxG2rOESHHyVAVRF3zKAqYt1YW0iSF7qwIrJ9O4yJiTp7c0ijPQzfSVoLIbGSzQ19IOQhQ_rPahwNY9FmQVgIxBMAhSIReeJpdjaKkjR4yUHiY7pGBKOJjq5vO2k5aMTYlTlmrO34OYkoLOkuEU9x9jS_S30TteVZBJC1C0w-KXpQU_kwHOaJOfFyxPzlavD34w75efq6m0a8_zMvMZqmUfEdrFjoJJtThlsiDLQIOOkruk1WkuLOrGyOpQKGZhpFIr-W2zQArfkExFGdP-WMekykA8B1sA9PwzqTVPq_KiBNQzpoBJ61r5o0H0RW8Lgxb9CkKgT4ZUErV_pAg6ZwluI1V6lRd8hwullVpuLiQe6RJKd9c2sH4CVrE0ZYOz778uYAGsrQ8d_9hG0RRCFe2J8OMaxyxQENuOAazsw6JBsKa6xJ09maJct35XV3PfIK7iB2CL-9wY2POdWvY7yJq779E07sZ2TByBnYV39b-gvA8=",
+        "summary": []
+      },
+      {
+        "id": "msg_0b1a2ece1523466f016a58ed326d8c819b9e69018f385ea0cd",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B022\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":70,\"line_end\":85},{\"source_id\":\"E001\",\"line_start\":101,\"line_end\":109},{\"source_id\":\"E003\",\"line_start\":34,\"line_end\":41},{\"source_id\":\"E004\",\"line_start\":12,\"line_end\":21}],\"evidence_note\":\"README shows tasks stored as JSON files and refers to a separate Task Format doc not included here. Getter functions document expected config dict fields. However, a full formal schema for model inputs/outputs is not present in this packet.\",\"confidence\":\"medium\"},{\"criterion\":\"Metric definition\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":80,\"line_end\":85},{\"source_id\":\"E001\",\"line_start\":90,\"line_end\":100}],\"evidence_note\":\"README shows an `env.evaluate()` call producing a numeric score and reports \\\"success rates\\\" for models, but does not define what constitutes success or the exact metric formula or thresholds.\",\"confidence\":\"medium\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":1,\"line_end\":5},{\"source_id\":\"E003\",\"line_start\":34,\"line_end\":84},{\"source_id\":\"E004\",\"line_start\":12,\"line_end\":43}],\"evidence_note\":\"Some evaluator helper functions (e.g., DBT info getters, VM/local/cloud file retrieval) are implemented, but the core evaluation/metric functions are missing or commented out; `desktop_env/evaluators/__init__.py` contains only commented code.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":90,\"line_end\":100},{\"source_id\":\"E002\",\"line_start\":1,\"line_end\":5},{\"source_id\":\"E003\",\"line_start\":34,\"line_end\":84},{\"source_id\":\"E004\",\"line_start\":96,\"line_end\":105}],\"evidence_note\":\"No description or code specifying pass/fail thresholds, partial credit schemes, or tie-breaking among systems is provided in the visible artifacts.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":90,\"line_end\":100},{\"source_id\":\"E001\",\"line_start\":101,\"line_end\":105}],\"evidence_note\":\"README reports overall and split-wise \\\"success rates\\\" but does not explain how per-task scores are aggregated into these rates or any weighting/normalization used.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":124,\"line_end\":143}],\"evidence_note\":\"README states that running the agent will save trajectories (screenshots, actions, videos) to `./results`, but no concrete example prediction files or logs are included in this packet for inspection.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 9013,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1283,
+      "output_tokens_details": {
+        "reasoning_tokens": 607
+      },
+      "total_tokens": 10296
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

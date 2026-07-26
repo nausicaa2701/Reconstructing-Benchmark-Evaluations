@@ -1,0 +1,50 @@
+[
+ {
+  "pred": "The estimate is 10.1",
+  "answer": "10",
+  "meta_data": {
+   "question_type": "numerical"
+  },
+  "_why": "|10.1/10-1| = 1% < 3% tolerance -> correct"
+ },
+ {
+  "pred": "The estimate is 10.5",
+  "answer": "10",
+  "meta_data": {
+   "question_type": "numerical"
+  },
+  "_why": "5% > 3% tolerance -> incorrect"
+ },
+ {
+  "pred": "About 0.499 of the sample",
+  "answer": "50%",
+  "meta_data": {
+   "question_type": "numerical"
+  },
+  "_why": "gold 50% -> 0.5; 0.499 inside (0.485, 0.515) -> correct"
+ },
+ {
+  "pred": "A because the treated group is higher",
+  "answer": "A",
+  "meta_data": {
+   "question_type": "multiple choice"
+  },
+  "_why": "prefix match on the gold option letter -> correct"
+ },
+ {
+  "pred": "C",
+  "answer": "B",
+  "meta_data": {
+   "question_type": "multiple choice"
+  },
+  "_why": "wrong option -> incorrect"
+ },
+ {
+  "pred": "no number could be determined",
+  "answer": "10",
+  "meta_data": {
+   "question_type": "numerical"
+  },
+  "_why": "no extractable number -> exception path -> incorrect"
+ }
+]

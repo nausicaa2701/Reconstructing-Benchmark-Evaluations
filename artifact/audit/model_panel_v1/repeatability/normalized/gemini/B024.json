@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T18:22:25.604410+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B024",
+    "packet_sha256": "94f83d0bc2f68b32a125e5688c9c1ce7ee7b4bd0787479935a7d62b2430b8a07",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 18338,
+    "output_tokens": 842,
+    "cost_usd": 0.035085,
+    "elapsed_seconds": 6.222,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B024",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 104,
+            "line_end": 119
+          },
+          {
+            "source_id": "E001",
+            "line_start": 128,
+            "line_end": 143
+          },
+          {
+            "source_id": "E001",
+            "line_start": 158,
+            "line_end": 174
+          }
+        ],
+        "evidence_note": "The raw data format, clean entity-linked data format, and preprocessed schema for the LPA model are explicitly diagrammed in the README.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 288,
+            "line_end": 299
+          }
+        ],
+        "evidence_note": "Simple classification accuracy and F1 metrics are explicitly implemented and defined in code/run_BERT.py.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 288,
+            "line_end": 318
+          }
+        ],
+        "evidence_note": "Evaluator code utilizing simple accuracy and f1 score functions is implemented in code/run_BERT.py.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-applicable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 35,
+            "line_end": 38
+          }
+        ],
+        "evidence_note": "The task is standard binary classification fact-checking (entailed/refuted), which does not use grading rubrics, partial credits, or tie-breaking.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 288,
+            "line_end": 299
+          }
+        ],
+        "evidence_note": "The mapping computes standard accuracy and F1 from predictions and ground-truth labels directly.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 1,
+            "line_end": 230
+          }
+        ],
+        "evidence_note": "While dataset formats and statistical aggregates are documented, there are no actual sample predictions or model outputs provided in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

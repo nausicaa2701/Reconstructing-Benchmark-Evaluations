@@ -1,0 +1,26 @@
+{
+  "A": {
+    "n_items": 156,
+    "sha256": "bbd3b629c22f1a1764478cea2189e509e52d71fdffe2f4125fe8cd7ff0f870fe",
+    "label_counts": {
+      "access-blocked": 0,
+      "claimed-but-not-verifiable": 2,
+      "documented-and-verifiable": 49,
+      "not-applicable": 0,
+      "not-documented": 44,
+      "partially-documented": 61
+    }
+  },
+  "B": {
+    "n_items": 156,
+    "sha256": "223a1a11f6073af5450b897731da20246946c401912ff65fabe839de9a768bc0",
+    "label_counts": {
+      "access-blocked": 0,
+      "claimed-but-not-verifiable": 27,
+      "documented-and-verifiable": 39,
+      "not-applicable": 0,
+      "not-documented": 34,
+      "partially-documented": 56
+    }
+  }
+}

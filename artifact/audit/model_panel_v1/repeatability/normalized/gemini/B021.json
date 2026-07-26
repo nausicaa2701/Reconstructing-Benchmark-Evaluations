@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T18:22:19.380560+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B021",
+    "packet_sha256": "3d7daa01f71c96330f3407f28f908d7061f3759b4c5a055d41d1cc164057f355",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 19664,
+    "output_tokens": 901,
+    "cost_usd": 0.037605,
+    "elapsed_seconds": 6.441,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B021",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 21,
+            "line_end": 40
+          }
+        ],
+        "evidence_note": "The evaluate.py script reads 'spider2_eval.jsonl' (gold) and 'results_metadata.jsonl' (predictions), joining them on 'instance_id' and checking fields like 'answer_type', 'answer_or_path', and 'evaluation'.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 109,
+            "line_end": 180
+          },
+          {
+            "source_id": "E003",
+            "line_start": 57,
+            "line_end": 115
+          }
+        ],
+        "evidence_note": "Metrics rely on strict exact or toleranced matches (string, number, table/pandas, or duckdb tables) where a match returns 1 (success) and mismatch returns 0.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 316
+          },
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 140
+          }
+        ],
+        "evidence_note": "Complete evaluation engine scripts (eval_utils.py, evaluate.py) are fully provided in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 60,
+            "line_end": 72
+          }
+        ],
+        "evidence_note": "For multiple evaluation metadata definitions, the maximum score among the evaluation functions is computed (score = max(temp_scores)).",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 118,
+            "line_end": 123
+          }
+        ],
+        "evidence_note": "Aggregate scores are mapped as the total count of success (score == 1) items divided by the total number of evaluated output items.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 96,
+            "line_end": 104
+          }
+        ],
+        "evidence_note": "While README.md mentions the release of partial gold SQLs for self-evaluation, no actual sample model predictions, submission outputs, or trajectories are provided in the packet.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

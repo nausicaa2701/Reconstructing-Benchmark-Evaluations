@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:41:57.339198+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B010",
+    "packet_sha256": "0f855047b47414f1aea9af992ecff1d79149e891c1e7073bd4c0be3f30bb23d3",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 3451,
+    "output_tokens": 775,
+    "cost_usd": 0.0121515,
+    "elapsed_seconds": 3.996
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B010\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 18,\n          \"line_end\": 35\n        }\n      ],\n      \"evidence_note\": \"The CLI options and parameter requirements define the inputs (gold_hypo, gold_workflow, pred_hypo, pred_workflow, metadata_path, metadata_type, and query) and outputs (eval_output_path) for the evaluator.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 40,\n          \"line_end\": 50\n        }\n      ],\n      \"evidence_note\": \"The exact metric definition evaluated by run_eval_gold_vs_gen_NL_hypo_workflow is not documented in the provided packet sources.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 1,\n          \"line_end\": 3\n        }\n      ],\n      \"evidence_note\": \"The wrapper discovery_eval.py is provided, but the core evaluator implementation in `eval.new_eval` is imported and not included in the packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 3\n          ,\"line_end\": 3\n        }\n      ],\n      \"evidence_note\": \"Grading logic, criteria, and any rules/tie-breaking are omitted from the provided packet sources as they reside in eval.new_eval.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 40,\n          \"line_end\": 56\n        }\n      ],\n      \"evidence_note\": \"No mapping of individual predictions to an aggregate score is explained or documented in the provided files.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 25,\n          \"line_end\": 30\n        }\n      ],\n      \"evidence_note\": \"No sample predictions, agent trajectories, or evaluation output files are provided in the current packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPVT1bvKfVdnoWBD3FCAiEFCfbAWaT+BZSpdXNQkZOza7h44rWmWXzPj2gWRFw"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 3451,
+      "candidatesTokenCount": 775,
+      "totalTokenCount": 4226,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3451
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "wvtYarSvAfTLrfcPt_fjyAQ"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:33.673674+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B015",
+    "packet_sha256": "978ed95514f8383b274360f54ed6ecb44378d4324b4a9148287f35e15419c5fb",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 8338,
+    "output_tokens": 1165,
+    "cost_usd": 0.022992,
+    "elapsed_seconds": 8.891,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B015",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 13,
+            "line_end": 28
+          },
+          {
+            "source_id": "E004",
+            "line_start": 29,
+            "line_end": 41
+          }
+        ],
+        "evidence_note": "The input structures for particular tasks (e.g., sat_data schema in 3SATTime or game strategies in blotto) are defined via code variables and helper validation functions, but a comprehensive unified schema for inputs across all 13 benchmarks is not fully documented in the provided files.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 29,
+            "line_end": 37
+          },
+          {
+            "source_id": "E003",
+            "line_start": 70,
+            "line_end": 75
+          },
+          {
+            "source_id": "E004",
+            "line_start": 52,
+            "line_end": 79
+          }
+        ],
+        "evidence_note": "Metrics are explicitly calculated and printed in JSON format inside each task's evaluate.py, such as wall-clock time and decision counts for 3SATTime, validation accuracy for bertMNLI, and Monte-Carlo simulated mean payoffs for Blotto.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 13,
+            "line_end": 40
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 78
+          },
+          {
+            "source_id": "E004",
+            "line_start": 76,
+            "line_end": 81
+          }
+        ],
+        "evidence_note": "Evaluator execution scripts are provided in full for the tasks (e.g., data/3SATTime/evaluate.py, data/bertMNLI/evaluate.py, data/blotto/evaluate.py).",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 23,
+            "line_end": 26
+          },
+          {
+            "source_id": "E004",
+            "line_start": 13,
+            "line_end": 27
+          }
+        ],
+        "evidence_note": "Task-specific grading rules (e.g., penalizing incorrect SAT decisions to 1e8, or payoff rules for wins/losses in Blotto) are hardcoded, but general tie-breaking across agents is not described.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E004",
+            "line_start": 52,
+            "line_end": 74
+          },
+          {
+            "source_id": "E002",
+            "line_start": 29,
+            "line_end": 37
+          }
+        ],
+        "evidence_note": "Individual task aggregations are defined inside the task evaluator scripts (e.g., mean scores over Monte-Carlo trials in Blotto or summing total decisions in 3SAT), but an overall benchmark-wide multi-task aggregation formula is not shown.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 171,
+            "line_end": 180
+          }
+        ],
+        "evidence_note": "The README mentions a trajectory visualizer to inspect trajectories, but no actual sample prediction datasets or trajectory files are included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:09:01.976063+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B002",
+    "packet_sha256": "ec36f1c0e60e073063443c1f3869805ca6af385d5078f4bd0d71d8c93d16a3b1",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 18040,
+    "output_tokens": 3351,
+    "cost_usd": 0.057219,
+    "elapsed_seconds": 30.024,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B002",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E001",
+            "line_start": 133,
+            "line_end": 136
+          }
+        ],
+        "evidence_note": "The evaluation takes question/query pairs from CSV files to generate and compare SQL results, but the exact CSV columns and data schemas are not fully documented in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 10,
+            "line_end": 11
+          },
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 110
+          }
+        ],
+        "evidence_note": "The metrics are defined as 'exact' and 'subset' matching of normalized dataframes. Normalization logic is fully implemented, but the precise dataframe comparison matching code is missing.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 326
+          }
+        ],
+        "evidence_note": "The packet includes database query execution and table normalization helpers in eval/eval.py, but the primary evaluator execution script (main.py) and the core comparison implementation are missing.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          }
+        ],
+        "evidence_note": "The high-level testing procedure compares dataframes using exact/subset matching, but formal grading rules, thresholds, and tie-breaking mechanics are not documented.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 12,
+            "line_end": 12
+          }
+        ],
+        "evidence_note": "While the README notes that the runner aggregates results for reporting, the exact mapping or mathematical formulation of predictions to aggregate scores is not documented.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 1,
+            "line_end": 20
+          }
+        ],
+        "evidence_note": "No sample predictions, completed evaluation outputs, or trajectories are included in the provided packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

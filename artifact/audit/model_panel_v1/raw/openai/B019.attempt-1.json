@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:38:09.953719+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B019",
+    "packet_sha256": "5294d5064ce830a558839c4f6324d85c340b5cba6390aa23765399ed61a61902",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 10439,
+    "output_tokens": 1174,
+    "cost_usd": 0.02478875,
+    "elapsed_seconds": 16.73
+  },
+  "response": {
+    "id": "resp_0e048f6492cbd542016a58ecc21acc8199ad6bc65b13449172",
+    "object": "response",
+    "created_at": 1784212674,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212689,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_0e048f6492cbd542016a58ecc3af0081999e895eb81380d1ae",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOzRjizqArhxoZ7bPW1AJ0c1Z1gZc-XnSf16xwTxmgWT8HmviyaPyu4DB-S6Oev0BsE6F-YZGqrgZEa0lBKDqauSnUXRKM2xfgthDyGE9Qohlbzwq2J6ZX1uc0CnwMuM94Oz8X-2mgNknMb1I0F9NeWxWgiWbsxQKb-4i7pcGnKsX4wR3s0dojoxyfNJLZy1botmYMt7c-BMdZZ2FTWaxzRrakCOb7S73dL90eEpdFlnVbMgF1rvJLDpcolkLDFxU_-0bjgMKgHdGg79chk6tFZgIVM_U3THabM9PMc85tHCc5mWvnqtDTQ-vGQBPbefSJ0zbrKsiJ-auQPBQKb-P_BL94-M-cd3DwNd6U2jf6g7uyYXvUKpmtaL8-dlAa29ZtBrDf5wuVRo9FjqD5-QLRRpN6Wm6TqNeKgQvVd2czPgAumUqACkrgGQfTUGtYjiaZvRL54D00PRkO-NLzz9-yPU-4HpHQHMg86pmoKWhDnxC-dQ3WuT7upEmVkbVxwARiz2ilOuVtsC83nNvyxVLOuikXLH7e4DYHPAabhnGTLE6EAjRekW6QpLqqDM3DYUBBmAx3nHXRO1dqfKpx0x_BId4HijBz_5T1CS7lL2vVIAV_Qr1eKzpRQZyVvdOVVBVSom0Gs_67ApsJXy1vuGPuapPMRinZ7KQG3tJseWXqfKC-wxTMmEuECMVG89fnisUvpVUZEk4JHlkZW1rV-qYn1Jw0Rcnqllh4V1N7bY0gjlmvkqSWTFUWG01M2eXhriU9N9gxTYw97CthN9BHUu7Nv1YEFj-zrJyFudlI9EoFHRGXMKKcFj4uyyC3nzr-bXlKnCBe1dvaezB3PlvgGqnEgqt78i1Ui64lrr9dX5wAhjNmlnHTxbgnHd2mgPWhhjeo3pCkIHiN3yWBiBhsyUKH3KNIUHve8DYCjV0GCLQJ3_cV_OMmI1g7Y3_-k0uj-WJP0KiF1hhRdpyhmZIGMJdEOljoStXP0iOAW5S5IoQLU6luRey8rNmbNeBW13OhVvxyjV-PAorVBTUgXzsg_GI0CotYUo5W1dowU_OYkCr16FkrfbVOKAaLTxe3OgTH8UffXWbPKa9fCP-GFwYSCMF4T6wruXt7marqXET3hCuwmrloKWs8MwF69CxMwrkjyNGDGh3uRnwl1dvVsmgM4RdEGdsDYmz9j0Gf33aTzcLQciJhEjcB_lqK0yC_MvQQOKBheeyFLgikJzpJtL0pfaQgNF08WDbtB3eQHOIYRVn6zYcMHGoZAzXneueekOcU6kdM-pNG-zZVoYjoYHjo942GOZprtS1mjyz6kt8mC6fyJrr6Q1DZ-kg_QaKpuxy33_UNhxGOgSLkXHC-WUorSNx0galHpfxluEp82jO2KSvm2vF0n2iz-buZzwLETUXSwVwjOj7zOO7L2p_Z1a_SnNzub93dBC_h-LLRCNgaiBdNP19IGoCdWa3-fBc7IIVF8KluSowRKcnUTW3cUckVBrHFjuZciRRJvFS9LlIMxAPyaK1lDoVBFVZhtY-4BEl5rDFJDruDTN0qgilo8scslyR3FCUXTkzMce0jtjCSKpZodGos7hc4jr6WapP146KCkaq0Zr8EBy_Ycu64ry8XR1PuR_kgsYGdpO3gFil0feJ-_NVDMgyKXH6ONzTFKSoeJJb72jc_YOgbd-9xWKXgn1SCmukkJ2sF8BOapXp-R6lZzBe0rpLMzLkUUJpqXcjQA26nFGCNYcJoLNZN6VNT6w5spNLbfnrX0DkwkbZ-wza_TiL9mT3xgjDnF0K2qg5pd50s_3x6vPYkcMHoqCnOPB4KZkG_YunMPFagyG8hOaTUkXyivoYd3zCjDRXirndhoSNnp9wXdHgYo0mMoC5Ap8QUBNVOFs-F-T7gDmGv8fN9pmT3BE5E-uKQd9wzl2_L6bGfpWckaANzAK4Y24TjIrl_SudvQy8ijLUT6jEDig32q2hm1HjdYpZV4TLbmrFgGrrtEVWcgcZhEBa7cLl5lSQ9BTo8MBh6CKcmI2BSkMxNQNRer7bZkQJWKXnfrXucOtu5YLNlio-7Dyg7T_O1-p7M_71nBU3GGT7F0QtKNNxJDEaX92acI0maS-XFNyI3s2tI0ekfHsVxCwopt-NCxtBXeDMX3HE5umINmHbNzMGxqVRkF846emYcgwLI_fOkBNGXL03XL424N3DDLc8jvkcQzRQOfHSn37sM1Q43ATE0pKGeC4tf_ZUMhq_WlISvY5H_XEE_OaBC5u9bWSyjbUX5DBD0GjE3YvDy00PcoHTP5hF8od6kJhE1mqC22y1q9ZcLX_yKauKzbsWll1YZGnWd-tj-CnCW-MOmoFw3P5dm6S5vBZY4nicaTdrv1X8XH2iZizP3uot79NufK9MnKHbTUxz3vbC-p29xbCRQPpj2kGrdn-xPN8_eg_4Y0a2-1xtdiiZNvA4_6N7msg8cbV2ZzBichC5YgADhjyYoX2kkZVF3WwjmQw5wTmndjpz_wMbdE2ujFFHZ6MRSZ4OHXUYjbf5y2mHxu0TIiS7hOetw4t0zZuN4TcNvJ0bIsjW7eBr3EiqltWhnf_Dm9icQ4ci6rV3KAGK7AAER6frZEVaU_M244ccA3DA7uV1IA74LhX9EV515XSqVdfZXBlRiZc1BVjq1bOn30GBrYBXMxhxIIlT80rsUnfmVlgtRsAXkHpogo4m-FEiqqXE1f8DIa843_0rYcXtDHzLIkY-fzmHdpTZPjujIR33keictftCoVIEohB6wM_jGl3LmngYMsc2INYfzKlDuqEYHl8wBfuG9rTtZ4EVqca8G_aI3DFk9Lwv3BLVL9P_3X316-uxmc2xz9Y6QJ6OVsSddQHiSvoqA1OUCG9_x2DGRH44tQ4BtrJi8h-gUzurly2Ym1CV41QG0PMTrFfU4jwTYDfuXj9R6nE4ILemrErhPCQQO1xpdo8KP-fDpQJIy7VsfuQ7fvwtd2Nh8aHwALBbzxGuy0swwoJ8XASQrQWDYqAnr-cGvOpWTQ4bAkwSSIYK-qIO8oYy9xHh1KyWLyAxOjHqwgJsf89bcHQDH-gTQ2JrsOOlBmfHT6w5z7hiayE0WUx0W6lRngNYBkN8UeKMR-ND41UMvUlfr_MoCIC6ePF0rKdNK5dKoCmfUyEuDM-6_ut9de4prr1aZpSkl5i1MlZSNfdtKKO6b1LmbKoXfi_y6xiTs0TO1z5E4ap2KyxUt3xiqBEdyq3OLLWBMJkOTt7SojCJtfeT8tGSHX-fB2_lvhmJq23Q6QIg_XH8u3ELTTOpVy0FbFuh-M9AI1aLKrjmz_E-FH4ZGXk6hkQochw_4RiQqcgXUPwVP7T2NZa_NntwMueMtxw1xDYjBLelDh74IWu3oG5kCWqsuWYXtdt89HrfERVabnMxMww5ev44MScIQMT-xmtsrUVPmUH4WhqB_f-_h0OmNKBPfF9HAwxG3P9M0NmJBy3v0PbRg02f4FrGbYWTq3FY8H-TaSLxpBgXIlBvgwIvN0yS9QCr3RS2M0cwrU3yo6yRDx1_eYqd14HtdQ1FgV_Mqu-6TtmoR-M-4lYtzSTtjiv_TDToRS2kAwVIBXyAeiU5ADjjd-2FkQDAzJkpCSxC8MMdTigyEdQSQdOCvvFxcz-HdqFgTeHk4zDjeSPIVD9iosmhquEGpVYwObfvBS55kXvif3msAqX6-DzNaFceZYieIKVvqnBnbOf9np2_jqap__vkppFDyiey6vl2uxXh1H-E8fJyE-4MZmHayHrFXNumjRS3Iqae0QOFw63QCEjgVFmPttz4L9JmRnfGlFaGHsD0d6t2d_3pVoG5h6nbLDmYAeWeEw6XWUZjKZjSkFJ4nlXtm5lfZXZo_7TOxsV3qJag_uzyRxcUrn-1bX1k3R6HrGqCmb8l9oxkBrk_NB3tDFke3okkl5kSy97qSpgNW_6ZOOccNLo_n_cKf7ZH-eJtQrod1sElpLLhTQ6FAhNIsnFva0AC_fLlzfKYj8j5WP5aH3swcokAtnJJf-XcBzqG3-UcH7e0lQK7sBWOE6CVvf45sNOdV6BX0ymD1lc9ZeXYbbNnRLZRC6eeuCq6sLA0RRN3jyuAoo5Ug_j8H1j",
+        "summary": []
+      },
+      {
+        "id": "msg_0e048f6492cbd542016a58ecca8fbc8199ad6d83c2f8d6e978",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B019\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":48,\"line_end\":59},{\"source_id\":\"E003\",\"line_start\":66,\"line_end\":85},{\"source_id\":\"E002\",\"line_start\":76,\"line_end\":86}],\"evidence_note\":\"Benchmark directory layout, instance input/output files, and log JSONL formats (fields like success_rate, valid_program, codebert_score, cost) are explicitly implied by folder structure plus parser code reading input.json and producing result.json and log entries.\",\"confidence\":\"high\"},{\"criterion\":\"Metric definition\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":62,\"line_end\":72},{\"source_id\":\"E001\",\"line_start\":182,\"line_end\":197},{\"source_id\":\"E003\",\"line_start\":28,\"line_end\":63}],\"evidence_note\":\"Aggregate metrics are defined (success_rate, codebert_score, valid_program_rate, cost with explicit averaging). Instance-level components (e.g., precise definition of success_rate, valid_program flag semantics) are only partially inferable from compute_scores\u2019 tuple and not fully specified in this packet.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":140,\"line_end\":181},{\"source_id\":\"E003\",\"line_start\":28,\"line_end\":63},{\"source_id\":\"E002\",\"line_start\":76,\"line_end\":87}],\"evidence_note\":\"Core scoring (CodeBERT-based similarity, program execution, eval script invocation) and metric aggregation are implemented here. However, the main evaluation drivers (e.g., run_evaluation harness, run_eval.py) and benchmark data/eval_programs are referenced but not included in this packet.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":6,\"line_end\":55},{\"source_id\":\"E001\",\"line_start\":196,\"line_end\":197}],\"evidence_note\":\"Selection among multiple runs for each task is fully specified: maximize success_rate, then valid_program, then codebert_score, then minimize cost. README notes best-of-three selection; code gives exact tie-breaking implementation.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E002\",\"line_start\":62,\"line_end\":72},{\"source_id\":\"E001\",\"line_start\":182,\"line_end\":197}],\"evidence_note\":\"Mapping from per-task evaluation logs and run logs to benchmark-level scores is implemented: choose best run per task using defined criteria, then average success_rate, codebert_score, valid_program, and cost over tasks. README describes this best-of-N process conceptually.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":106,\"line_end\":121},{\"source_id\":\"E001\",\"line_start\":128,\"line_end\":137}],\"evidence_note\":\"README describes how logs and predictions are generated and recovered but no concrete example prediction files, trajectories, or log snippets are included in this packet.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 10439,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1174,
+      "output_tokens_details": {
+        "reasoning_tokens": 450
+      },
+      "total_tokens": 11613
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

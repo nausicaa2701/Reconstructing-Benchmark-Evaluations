@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:43:27.447483+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B023",
+    "packet_sha256": "ec0ad907ac8d49f5d51ce104ff97a9e9b1bbb11957e24172c10fc2b3bc1cadf8",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 18446,
+    "output_tokens": 768,
+    "cost_usd": 0.034581,
+    "elapsed_seconds": 6.459
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B023\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 47,\n          \"line_end\": 55\n        }\n      ],\n      \"evidence_note\": \"The JSONL dataset metadata schema attributes and input/answer Excel spreadsheet formats are documented.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 221,\n          \"line_end\": 228\n        }\n      ],\n      \"evidence_note\": \"The soft restriction and hard restriction metrics over 3 OJ-style test cases per question are explicitly defined and implemented.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 123,\n          \"line_end\": 189\n        }\n      ],\n      \"evidence_note\": \"The full cell-level comparison logic, workbook parsing via openpyxl, and evaluation loops are implemented in evaluation.py.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-applicable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 210,\n          \"line_end\": 229\n        }\n      ],\n      \"evidence_note\": \"There are no tie-breaking or complex model ranking rules required; grading is an exact or tolerance-based binary cell comparison.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 220,\n          \"line_end\": 229\n        }\n      ],\n      \"evidence_note\": \"The code details how individual test case results map to soft_restriction (fraction of correct test cases) and hard_restriction (strict logical AND).\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 128,\n          \"line_end\": 129\n        }\n      ],\n      \"evidence_note\": \"Although outputs are stated to be saved in an outputs folder, no actual model predictions, generated trajectories, or sample JSON output logs are provided in the packet.\",\n      \"confidence\": \"medium\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPVhNY0gWWHYSxSfDKe11u/ZTDCwfUruN5uLno66faYYePvdGp8ZWehGxud2zA"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 18446,
+      "candidatesTokenCount": 768,
+      "totalTokenCount": 19214,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 18446
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "GfxYar_WGbid0-kPtpHboAM"
+  }
+}

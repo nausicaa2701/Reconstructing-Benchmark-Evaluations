@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:31:33.340791+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B007",
+    "packet_sha256": "6163da3f7f1e999db78df98a61418eb68cd526214691a016d60bfe77cfaa0985",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 5420,
+    "output_tokens": 1132,
+    "cost_usd": 0.018095,
+    "elapsed_seconds": 16.823,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B007",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 68,
+            "line_end": 73
+          },
+          {
+            "source_id": "E001",
+            "line_start": 19,
+            "line_end": 21
+          },
+          {
+            "source_id": "E002",
+            "line_start": 16,
+            "line_end": 25
+          }
+        ],
+        "evidence_note": "README describes dataset fields (prompt, code_context, metadata) and that code_context defines test_execution/test_string. execution.py shows code strings are executed. Exact schema for predictions beyond being code strings is not fully specified.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 70,
+            "line_end": 73
+          },
+          {
+            "source_id": "E001",
+            "line_start": 48,
+            "line_end": 61
+          },
+          {
+            "source_id": "E002",
+            "line_start": 16,
+            "line_end": 25
+          },
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 77
+          }
+        ],
+        "evidence_note": "Per-problem correctness is defined as passing test_execution and (if present) test_string. execution.py returns a boolean passed flag. Example output shows per-library means and an overall mean, but detailed formal metric/aggregation specification is absent.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 44
+          },
+          {
+            "source_id": "E001",
+            "line_start": 70,
+            "line_end": 73
+          },
+          {
+            "source_id": "E002",
+            "line_start": 16,
+            "line_end": 25
+          },
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 77
+          }
+        ],
+        "evidence_note": "execution.py implements sandboxed execution and pass/fail judgment for a code string. README states test_ds1000.py evaluates a specific answers file, but that script is not included in the packet, so the full evaluator pipeline cannot be reconstructed.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 61
+          },
+          {
+            "source_id": "E001",
+            "line_start": 68,
+            "line_end": 73
+          },
+          {
+            "source_id": "E002",
+            "line_start": 16,
+            "line_end": 25
+          }
+        ],
+        "evidence_note": "No description of how multiple samples, randomness, or ties are handled. Only binary pass conditions are described; there are no explicit grading rules for ties or other edge cases.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 48,
+            "line_end": 61
+          },
+          {
+            "source_id": "E001",
+            "line_start": 70,
+            "line_end": 73
+          },
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 77
+          }
+        ],
+        "evidence_note": "Single prediction mapped to a boolean pass via tests. README shows a table with counts and mean by library and overall mean, implying averages of pass rates, but the exact computation/mapping procedure is not fully specified.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 44
+          },
+          {
+            "source_id": "E001",
+            "line_start": 63,
+            "line_end": 63
+          }
+        ],
+        "evidence_note": "README mentions evaluation of codex002-answers.jsonl and a results folder with new model results, implying example predictions/scores exist, but these files are not present in the provided packet for inspection.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

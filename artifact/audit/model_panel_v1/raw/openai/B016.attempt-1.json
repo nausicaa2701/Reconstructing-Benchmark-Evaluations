@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:36:42.738176+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B016",
+    "packet_sha256": "518010092eeda3816c5c67712018325e4e2c7d03993e004951ac8441606586ae",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 9818,
+    "output_tokens": 1284,
+    "cost_usd": 0.0251125,
+    "elapsed_seconds": 17.834
+  },
+  "response": {
+    "id": "resp_06af1b5e43395c0b016a58ec693c80819898f9b87da6fd2523",
+    "object": "response",
+    "created_at": 1784212585,
+    "status": "completed",
+    "background": false,
+    "billing": {
+      "payer": "developer"
+    },
+    "completed_at": 1784212602,
+    "error": null,
+    "frequency_penalty": 0.0,
+    "incomplete_details": null,
+    "instructions": "You are one member of an independent model-judge panel auditing whether a\nbenchmark evaluator can be reconstructed from public artifacts.\n\nUse only the evidence packet supplied in this request. Do not use prior\nknowledge, browse, infer repository behavior that is not shown, or guess from\nthe benchmark identity. You cannot see other judges, execution outcomes, or\npaper conclusions.\n\nApply these labels literally:\n- documented-and-verifiable: stated and independently confirmable in shown evidence.\n- partially-documented: consequential information is present but a bounded,\n  non-trivial gap remains.\n- claimed-but-not-verifiable: an official claim is shown but its referenced\n  artifact or implementation cannot be confirmed in the packet.\n- not-documented: neither a statement nor implementation is present in the\n  inspected packet. Cite the most relevant inspected source(s).\n- not-applicable: the criterion genuinely does not apply to this task.\n- access-blocked: a referenced artifact exists but requires credentials,\n  login, payment, or another access gate.\n\nCode all six criteria. Every decision must cite at least one packet source and\nvalid inclusive line range. Prefer the more conservative label when evidence\nis incomplete. Keep each evidence note factual and under 60 words. Return only\nthe requested JSON object. Do not assign an overall R2 or quality score.\n\n",
+    "max_output_tokens": 4000,
+    "max_tool_calls": null,
+    "model": "gpt-5.1-2025-11-13",
+    "moderation": null,
+    "output": [
+      {
+        "id": "rs_06af1b5e43395c0b016a58ec69ba58819888e6bc8a34f7fd90",
+        "type": "reasoning",
+        "content": [],
+        "encrypted_content": "gAAAAABqWOx6qk82-6O-o7g3l08yOIdK-6saRjwx6loWbdn2NUDkmZDlW8NUFEhBtJ9m9YOupGt-b1XhNAn-lqX2gqeLcXmo_OsOQZttvmVZpqiTLGwJ_MdM5Qq-McgVauTMGr8GNhQJyVLSPTFBqD9YV584LBqYf2cXAsga6M5IBff5HywBatW0tNh2HnTIgp-brnN4KYuu0Bb_K2wjuiZTEPVW-e9EOjKTBSXrJ8Od4G2lo0OiZDgsbWgIwuzHwkRwFntASXofwchBPFVwFMfVKLkZIKy8-pgu8Ui8ApKMZKkFnKs_tC_t-tuzf0EpstcFDG9s8W_hltoCWCtgrM81vF2ZcPqKnVxIrrb5zn2vB8ZiNvoPyZvC1CeE1M8MHKV_FsV51pJ4KgVAjQqnW_dKGQ3EVL_bhl04NfZW22tk8mFPUaL7qIQgtYW7Mx4ehCc7bIxjVvYjn0fF2cl0BuEDoTxBfgNtzXzr3orNRJcNdNtqIdNS5KgydAn-54vq8543qJ333eAvxErav5U31Cmyku1urFxJQ8K6MM3Ay2tVlLvAuqYv4VorQY0-wCxXPvYqyZnQq0CbQDHVx97fqMmVAXE7s_I5WBFAacxVx56ive5xKcChZV8XCkHnlDKjZ6U-TxQEstHtmq63CUEg25IXAyhcAX-WBByKZvc-tO3i0Tyz4pSZrV16Kplv0SQbxU284WA-NjRCVqcYWHTc2XxQlqcICM6c8sMTcu6pex2XF1YwUradQA9cAS1fd5d7H3Q5ooHE89E9ObYbVfdbEwReA1pFCr20vj1jy5CzHYWvvgJcWpkJWnG4zR0v2ZpkhKkU39wcVPanzwVETxt6D81dbRrpqo5zJDHczpE4MojBmzEEclklT3kPyLHKO1HHL7pOvLyDeQlfDpmKoQiPMyiCsF43t0pdfX89vxpNZnXt27rt4O-ivRFxoa54pas0Me8LMRF68KYNBB1ij4rCVFktseqaEVmtOFdjcXzgKwAEPxtZqP5JH680-PiPCWLWfEh6ajhWgAV6wQRTPTIZGccrBwONy3hRHlB-Fq2zSvAUxrRnMgV-KUyG7Cmcf8W4FEbXWTuDzKwLTLENXje86cPWaRo_l8HkzEfjvWReI08Z3HuXG3b7XOgUidMAKPVUx8CEx9WSoHi6kjz5Ow_ERSmXa6BRmPcOTDwOupK6r2jC3z4AplKdm5LyukiTvPr9YckM0LbAfftAjqWoy5uEwpGTZ9rxGBmXJpNN36xuEd6wSQ1P1Q8iltD41RtfKXI_cU0dXZZcypqPdpB1TAPYd2Uzr8_c1ho4zyC28AB4MZqPsDDjkcjxwcx-HkJvkCTD5y-Jfpqup3-Ag6FYglf-fj4_3tQS4AXYTDL7FpvvSsleWen9mFzQlQS4InilY0AqPy4qVPns060cy6--ZBM1C8LG-Y-Ki9y4qm_EfQc72ShzzufaBVa60CjH5M4-4s7ZE4B24ZBwZFLG1UxKRf7tYp_W2bTg0MzY8Z1vfHoBlFErOVYGKrtESiRL3dTUHkkJPu1commirMU1C32whRKE2LePiyVBXuW-Z8MsYHZEzlVun19pBo7opTc0uuj1W4CYK4KbkekS_D8RSIRmO3ZZMGX0z8JOoM7qe2LE6MTZc1yQCfQ84swsxEtzNzdZKgn_SEINGpkrd6KPruCAG2WvLpiFAYPB1Ynaaaa_7yo3Z75zd59fdb_ST60fScoGMXylBUrbhdU5jvixE73ZxdOC8qBIU9553WxlcHNLegQMFHOJ2gybXTbONCx9uuOousgzaCnb4r83qUv-9A3nQWIpnVloJkm9BpIJ_zGEnKiYPdodm4JeP3C1e2tH86JCnCaXqN9UkYuAagRHb4OX1AT2eZ9tsHgM4LdwEFKu-eqY0CJAhpzN0jAYSUoHKGwv-xZIBRSoAp4iYYyB0q6v993XoSdlsKSYTIWXtVhZdEw_1MqsEj3C45D1nLgZQNqVaKHimxb_BrJKfmS3t3t8OxRM_HA940a3IapHj6LNJW1PoNrPG3wlhE4LCSmMYJWRu9N_OHAWGqBPjNurpapvkrdG7IfYnCnoqc1ndL3WtPLKHtPC25upUgki_m9PjSYpQ5yglqDbO2yU0-7SQ1oBgJZ7OMG8xUy_iBlKaPwOpVeD2FM26dmOfOCuJOFJCPHKnAlwZSIpuEOYCws1Y2QTMLOjzGIh4XiFgrZGmOHiVWaMxStlVkhDyzf5XD8K0lVcezkngaJfsvQ2RqV5fjD9hW2zZh7xS66aBTL0sSFruOtI-99p_10xTvJUvhwbq4m0rRcvDTTP0OCfNNT5OhIFr95VSKwUDMjqyuitVPrclA65ICKZBvlY87BcBpjuVd9PFTNl8_dbmAe4QH7crQrvz8VdgDHqKWK3NNerTDlLAX195TEYFJDIXgaAqLO6K96HHQM9ucuaDI33Q5fEj3HKWLinNAK4q2Vfw8rq-lUUR_iEQSOKtR8Z6lRawW4S0ICjyoX8iSuvy5xGKAzOWCGn2A8NiSZQOBvo0AU69KOWmTgwdQhp9w9emQUaZqKQ5si8etpKekHc9utJWQIVv1XIbpF6VSyHjNtpJ8-Oh2UCVSQ-QlZ58PzCuxcQInHo4KCyM-bryMAZou1CbPvd5cFnMtWAWsT_lajN6RFuFxwojm9S31dn45pkK_-70atrDhdCDAQ6hTJ10UAiMp0JUZCfWjr_g3NwyL5etCZNx8XpNro3ghLyQY2rYCGchhZwK-0HpNjxB8Ny0B_4D1AoRY9PcRmZ-a8WJhZn9DDCemcpm6_AYzDvwiPCF7_ruGhJFWkR9R8_ncjOZ5-CDsE9deblMYlzI0LTKbTAxo3RCgSYsC9DROwRS7E0KXhKIvf9dW1xL3yROzuyBb5HCMnDklFyR_Ibcazsm6E9RaWjrFqYpFH6_IacDZv7HgicU9DEZHzFIhNWbE0_k5B-aiMkzySjqVRVuVx5bth8ytz4H7ExNWJVLXOGNxnSumIpF8pE32NlCDLUKp5USuvUtNMpJpI-AKUBxKcb834Vp5QwYg5iO5SyhuXc7JZOyuzgQG00JyOB_sUtKVzEWhvnlVPDBIRMC9zRUkSw8Fhr3fEWf77oqXHLhD_SE1QbmmEIbeiSgryrFRtJMK38U-UhP21CqeoMG92pvC83iPRl33QXwgeSUSSWAwsBd26aawoy4kK_N6AyLHhAHpCca3UZm4-6YdUTNOXzW-0SOI4P__7z3I11TnpqvAtiGmgGvzAoAPJFsxDU7aVkH_e0WC6_J0yDOsq9pZsz4HRcKdbkl573GKH09joCY1gO7xHFpXGtsi_1BLUY4NJJ9ddC51770MsxKLJwj7ZTAHQrPpJ1Pg7GcWn99d8FE_nnMm0zhvNs5VaAhqp4n8E2P_kDUMcF_1IZiMfa03R-vI8D6iiv1qiC9E7gc70fie1cHNo6A55fV_V8GTvUJJ9L242414ySrt0-0dS-PR_ULGvU2l4OZQMIsxwkZRhSrTMyuZdpXb8fr5BeIq7kYNb8t8laDXKvqrY9rxjk4k9M4N08QUjzLQFhxJznN0nfycSbEKf06mu0knrnODFEBH_T61ub8b5pZdCOWRbOsiKxivfWkOUpDgYay-bx4bpwdzWuUW3DwXhHrWyPb8UK_XPxQgx14KsoPQwvlPAdYFZi4COgT1OKIBgwlnhylV0U5TfY52-XJS0VR8OoXjJUOvkidjJxrbf8o3u-E_DQ9fouP-gTE1XVvOCkPetdIX9rbXzqjSDBpuHJfb3D49YGYosFpO2HBALVESBoLBOXIvC5ST00jUO85X-Tnb5RnT1m2kPeFtosvidNnDEitPFGFUVpYuvxQ7abbNWRjOROHqiCzVzN4sxoiyw2mBC43bFz7ZCGmIl0WyiPU9ju-izQ-s3jEtwqTQU1c9NDpuevJSjXQP3lX_AF6FNka7P3mFKGEd392nHmCWg7ZryWRKaxH6HeMjQZdChRpnYFr3LXajfpPvY5jt5jdJuENJ7qC25FrqHsD_NzOH-zTi-oyO_o7GiRrVrXmthYINay_SaM6zCV4i0acwYi1UfrYxX_lbSiRrDosh0n9HYk0DjivCtMiL12Sj-XArOnbcMMU_DcVOGb2o5glG1l37UeEzWd2hD3TUmjXfJPJcHlQD66vXZblXkAS8E859vXd24NFRZsi8S6LsFxe0dLEhMo5bYOV1n0rNADD04aVFoMI0DzGgURlP6EZF2qcnRSQrUh5bNfrJATYFF_01ooahZmmOv_Yc5Bf4zPD9FNW4yzAMo8NQwR22zKwWPVG7ZNn84MdklT03E0ZtP5l0Zo7nCmNG0KtYimUOm_zzQVMo3Zsv5IhhhGufXq02nUOsKoxC95RPxuxx1Jc7DqB-c0vNwTwAabNpT2mFM19N9fqVgKPoqn-vHvqFZZ8_0pmXhzZpclyYqK6gbhfDQUIxn_GutJxHMpwFS96Nx8rtS6KQqoHHsQqqOd_olK6UdApbxuO0UJD_-UI6FoUGv4T7rKmKN1GA==",
+        "summary": []
+      },
+      {
+        "id": "msg_06af1b5e43395c0b016a58ec7206f08198ba346751982935fe",
+        "type": "message",
+        "status": "completed",
+        "content": [
+          {
+            "type": "output_text",
+            "annotations": [],
+            "logprobs": [],
+            "text": "{\"packet_id\":\"B016\",\"decisions\":[{\"criterion\":\"Input/expected-output schema\",\"label\":\"documented-and-verifiable\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":117,\"line_end\":137},{\"source_id\":\"E004\",\"line_start\":159,\"line_end\":186},{\"source_id\":\"E001\",\"line_start\":59,\"line_end\":64}],\"evidence_note\":\"eval_baseline.py and eval_private.py show that HumanEval problems are read via read_problems() and predictions are written as JSONL with fields {task_id, completion}; README shows evaluate_functional_correctness consuming the resulting *.samples.jsonl file.\",\"confidence\":\"high\"},{\"criterion\":\"Metric definition\",\"label\":\"partially-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":59,\"line_end\":72},{\"source_id\":\"E001\",\"line_start\":70,\"line_end\":72},{\"source_id\":\"E001\",\"line_start\":31,\"line_end\":36}],\"evidence_note\":\"README specifies the command evaluate_functional_correctness <samples_path> and reports Pass@1/10/100, but it does not define how pass@k is computed; details are delegated to the external human-eval repository, not included here.\",\"confidence\":\"high\"},{\"criterion\":\"Evaluator implementation available\",\"label\":\"claimed-but-not-verifiable\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":31,\"line_end\":36},{\"source_id\":\"E001\",\"line_start\":59,\"line_end\":64},{\"source_id\":\"E003\",\"line_start\":117,\"line_end\":137},{\"source_id\":\"E004\",\"line_start\":159,\"line_end\":186}],\"evidence_note\":\"Core evaluation is delegated to the external human-eval package (install and use evaluate_functional_correctness). Only sample-generation code is present; the actual evaluator implementation is not included in this packet.\",\"confidence\":\"high\"},{\"criterion\":\"Grading rules & tie-breaking\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":59,\"line_end\":72},{\"source_id\":\"E004\",\"line_start\":159,\"line_end\":186}],\"evidence_note\":\"There is no description of how individual test outcomes are turned into scores, how multiple samples per task are handled, or any tie-breaking/rounding rules. Only metric names and an external evaluation command are mentioned.\",\"confidence\":\"high\"},{\"criterion\":\"Predictions->aggregate-score mapping\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E001\",\"line_start\":59,\"line_end\":72},{\"source_id\":\"E003\",\"line_start\":117,\"line_end\":137},{\"source_id\":\"E004\",\"line_start\":159,\"line_end\":186}],\"evidence_note\":\"Code shows how to generate per-task samples.jsonl files but not how these are converted into aggregate Pass@k scores; this logic resides in evaluate_functional_correctness in the external human-eval repo, which is not shown here.\",\"confidence\":\"high\"},{\"criterion\":\"Sample predictions / trajectories\",\"label\":\"not-documented\",\"evidence_refs\":[{\"source_id\":\"E003\",\"line_start\":117,\"line_end\":137},{\"source_id\":\"E004\",\"line_start\":159,\"line_end\":186},{\"source_id\":\"E001\",\"line_start\":59,\"line_end\":64}],\"evidence_note\":\"Scripts describe how to generate *.samples.jsonl and the README shows the expected filename, but no actual prediction or trajectory files are included in the packet.\",\"confidence\":\"high\"}]}"
+          }
+        ],
+        "role": "assistant"
+      }
+    ],
+    "parallel_tool_calls": true,
+    "presence_penalty": 0.0,
+    "previous_response_id": null,
+    "prompt_cache_key": null,
+    "prompt_cache_retention": "in_memory",
+    "reasoning": {
+      "context": "current_turn",
+      "effort": "low",
+      "mode": "standard",
+      "summary": null
+    },
+    "safety_identifier": null,
+    "service_tier": "default",
+    "store": false,
+    "temperature": 1.0,
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "description": null,
+        "name": "benchmark_artifact_judgment",
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "packet_id": {
+              "type": "string"
+            },
+            "decisions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "criterion": {
+                    "type": "string",
+                    "enum": [
+                      "Input/expected-output schema",
+                      "Metric definition",
+                      "Evaluator implementation available",
+                      "Grading rules & tie-breaking",
+                      "Predictions->aggregate-score mapping",
+                      "Sample predictions / trajectories"
+                    ]
+                  },
+                  "label": {
+                    "type": "string",
+                    "enum": [
+                      "documented-and-verifiable",
+                      "partially-documented",
+                      "claimed-but-not-verifiable",
+                      "not-documented",
+                      "not-applicable",
+                      "access-blocked"
+                    ]
+                  },
+                  "evidence_refs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "source_id": {
+                          "type": "string"
+                        },
+                        "line_start": {
+                          "type": "integer"
+                        },
+                        "line_end": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "source_id",
+                        "line_start",
+                        "line_end"
+                      ]
+                    }
+                  },
+                  "evidence_note": {
+                    "type": "string"
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high"
+                    ]
+                  }
+                },
+                "required": [
+                  "criterion",
+                  "label",
+                  "evidence_refs",
+                  "evidence_note",
+                  "confidence"
+                ]
+              }
+            }
+          },
+          "required": [
+            "packet_id",
+            "decisions"
+          ]
+        },
+        "strict": true
+      },
+      "verbosity": "medium"
+    },
+    "tool_choice": "auto",
+    "tool_usage": {
+      "image_gen": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "image_tokens": 0,
+          "text_tokens": 0
+        },
+        "total_tokens": 0
+      },
+      "web_search": {
+        "num_requests": 0
+      }
+    },
+    "tools": [],
+    "top_logprobs": 0,
+    "top_p": 1.0,
+    "truncation": "disabled",
+    "usage": {
+      "input_tokens": 9818,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 1284,
+      "output_tokens_details": {
+        "reasoning_tokens": 542
+      },
+      "total_tokens": 11102
+    },
+    "user": null,
+    "metadata": {}
+  }
+}

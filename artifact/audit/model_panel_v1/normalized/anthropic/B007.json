@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:31:16.516837+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "packet_id": "B007",
+    "packet_sha256": "6163da3f7f1e999db78df98a61418eb68cd526214691a016d60bfe77cfaa0985",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 8061,
+    "output_tokens": 744,
+    "cost_usd": 0.023562,
+    "elapsed_seconds": 13.627,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B007",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 68,
+            "line_end": 85
+          }
+        ],
+        "evidence_note": "README documents dataset fields (prompt, code_context, metadata) and format changes from original.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 46,
+            "line_end": 61
+          }
+        ],
+        "evidence_note": "Expected output shows mean pass rate per library and overall, but no explicit formal metric definition (e.g., pass@1) is stated beyond example output.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 17,
+            "line_end": 77
+          },
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 44
+          }
+        ],
+        "evidence_note": "execution.py provides check_correctness function used by test_ds1000.py, confirmed runnable per README instructions.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 72,
+            "line_end": 73
+          }
+        ],
+        "evidence_note": "README explains pass criteria (test_execution and test_string) but no tie-breaking rules for ambiguous or multiple solutions are documented.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 61
+          }
+        ],
+        "evidence_note": "README shows how per-problem pass/fail results are aggregated into per-library and overall mean scores via test_ds1000.py output.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 37
+          }
+        ],
+        "evidence_note": "README references data/codex002-answers.jsonl as sample predictions evaluated by the script.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

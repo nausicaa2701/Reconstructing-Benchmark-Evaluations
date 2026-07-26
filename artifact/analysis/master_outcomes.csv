@@ -1,0 +1,27 @@
+benchmark,category,arxiv_id,frozen_commit,A0_described,A1_accessible,R2_reconstructable,n_ok_of_5,attempted_execution,first_pass_label,E3_first_pass,E3_after_repair,E3_smoke_testable,evaluator,dataset,sample_predictions,env_file,container,license
+BigCodeBench,code-gen,2406.15877,09dd993f46c3fbf3a799465bb96d524edcb0b199,True,True,1,5,False,credential-or-service-blocked,False,False,False,1,1,0,1,1,1
+DA-Code,code-gen,2410.07331,b211daf51fdc9b52d5087c9df28ac50191bcabed,True,True,1,5,True,missing-required-data,False,False,False,1,1,1,1,0,1
+DS-1000,code-gen,2211.11501,b39aab71da6d23ef8d3cac59a7c5f834516ab334,True,True,1,5,True,dependency-or-environment-failure,False,True,True,1,1,0,1,0,1
+PandasEval/NumpyEval (CERT),code-gen,2206.06888,62d8430dfa0e38b5efa66e6736c20942d131e9b7,True,True,0,2,True,dependency-or-environment-failure,False,False,False,1,1,1,1,0,1
+BLADE,e2e-agent,2408.09667,6118fa8d5007b91aa8c91c518182db82446a4547,True,True,0,4,True,credential-or-service-blocked,False,False,False,1,1,1,1,0,1
+BixBench,e2e-agent,2503.00096,49311180bdacb324c596f2e07596c126f2004008,True,True,1,5,True,credential-or-service-blocked,False,False,False,1,1,0,1,0,1
+DataSciBench,e2e-agent,2502.13897,84ef3d4d94d7362a5149cf14a73dc168fc4f2f33,True,True,0,4,False,missing-required-data,False,False,False,1,1,1,1,1,0
+DiscoveryBench,e2e-agent,2407.01725,c31fcf011e070f021a5f5b906896d0821f6880e8,True,True,0,2,True,credential-or-service-blocked,False,False,False,1,1,0,1,0,1
+InfiAgent-DABench,e2e-agent,2401.05507,3d6c4a70198e0a41fadf539f5b43c88b8c1a2d9c,True,True,1,5,True,pass-as-documented,True,False,True,1,1,1,1,0,1
+QRData,e2e-agent,2402.17644,de450af45ff7101b328bb064c6b475f73414a7ed,True,True,1,5,True,pass-as-documented,True,False,True,1,1,0,0,0,1
+ScienceAgentBench,e2e-agent,2410.0508,72220ee8d20a0b8770835e48c22675c65074c364,True,True,1,5,True,pass-as-documented,True,False,True,1,0,0,1,0,1
+Spider2-V,e2e-agent,2407.10956,c2a3a6c2f5d7604464f162c6550b60db3eee04e8,True,True,0,3,False,not-applicable,False,False,False,1,1,1,1,0,1
+DSBench,ml-eng,2409.07703,ba786096137a5108af11c016ad3f09cdb97beefd,True,True,0,3,True,pass-as-documented,True,False,True,1,1,0,0,0,1
+MLAgentBench,ml-eng,2310.03302,5d71205cc20a8e95d43aa7cb7120e89ca3323e31,True,True,1,5,True,credential-or-service-blocked,False,False,False,1,1,1,1,1,1
+MLE-bench,ml-eng,2410.07095,507f92e1138bb6e40dac5c6ee7a6758e6424bf97,True,True,1,5,True,dependency-or-environment-failure,False,False,False,1,1,1,1,0,1
+MLGym,ml-eng,2502.14499,9d40c1b5035202018cd7091fb4e83a9c68b377c0,True,True,0,4,True,dependency-or-environment-failure,False,False,False,1,1,1,1,1,1
+RE-Bench,ml-eng,2411.15114,93b98062e55f6945d4a7e213a3226dd419896170,True,True,0,4,True,dependency-or-environment-failure,False,False,False,1,1,0,1,1,1
+SpreadsheetBench,tabular,2406.14991,49b73a94775fb489063f60ca1865e3a650079a79,True,True,1,5,True,pass-as-documented,True,False,True,1,1,1,1,0,0
+TabFact,tabular,1909.02164,2ab782ba42b5808076ac91fec846473aa5315a79,True,True,0,4,True,dependency-or-environment-failure,False,False,False,1,1,0,0,0,1
+TableBench,tabular,2408.09174,6c61a20340409dea8f96edb8675e66bb4abd7b28,True,True,1,5,True,credential-or-service-blocked,False,True,True,1,1,0,1,0,0
+WikiTableQuestions,tabular,1508.00305,7d455a5a707b96341ef72aff9428749d443d8aa9,True,True,1,5,True,dependency-or-environment-failure,False,False,False,1,1,0,0,0,1
+BIRD,text2sql,2305.03111,483554eae102996f5ec1f4feab4e78ef29c2a394,True,True,0,0,False,missing-required-data,False,False,False,1,1,1,1,1,1
+BIRD-CRITIC / SQL-eval,text2sql,,b83332416ea2d424b0cd12994a0a9ba100f4b4af,True,True,0,4,True,credential-or-service-blocked,False,False,False,1,1,0,1,0,1
+Dr.Spider,text2sql,2301.08881,c64694a4a278ab0faff08ce7a3501d46f458b431,True,True,0,3,False,missing-required-data,False,False,False,1,1,0,0,0,1
+Spider,text2sql,1809.08887,b7b5b8c890cd30e35427348bb9eb8c6d1350ca7c,True,True,0,3,True,missing-required-data,False,False,False,1,1,1,1,0,1
+Spider 2.0,text2sql,2411.07763,01a4c67c1e3f6ab9032716b050a927abbb245f65,True,True,1,5,True,credential-or-service-blocked,False,False,False,1,1,1,1,1,1

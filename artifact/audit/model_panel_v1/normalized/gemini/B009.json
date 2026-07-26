@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:41:53.339417+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B009",
+    "packet_sha256": "75c4dfec5438c5818675a7953a3180bb423b8768c8714020ae0efca47cc50b69",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 12011,
+    "output_tokens": 1852,
+    "cost_usd": 0.0346845,
+    "elapsed_seconds": 12.06,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B009",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 46,
+            "line_end": 57
+          },
+          {
+            "source_id": "E003",
+            "line_start": 74,
+            "line_end": 77
+          }
+        ],
+        "evidence_note": "The log format and expected vote regex schema are clearly documented and structured using string patterns and inline log examples.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 133
+          }
+        ],
+        "evidence_note": "The metrics 'good_vote_rate', 'votewolf_difficulty', and correct vote tracking are explicitly defined mathematically and programmatically.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 23,
+            "line_end": 218
+          }
+        ],
+        "evidence_note": "The complete execution flow for parsing logs, extracting metrics, and saving output dataframes is provided in eval.py.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-applicable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 106,
+            "line_end": 115
+          }
+        ],
+        "evidence_note": "The evaluator calculates purely statistical accuracy percentages of votes, making grading tiers and competitive tie-breaking rules not applicable.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 190
+          }
+        ],
+        "evidence_note": "The programmatic aggregation from individual round votes to average rates (avg_rate and vote1_rate) is clearly implemented.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 50,
+            "line_end": 57
+          },
+          {
+            "source_id": "E002",
+            "line_start": 79,
+            "line_end": 85
+          }
+        ],
+        "evidence_note": "While inline docstring examples of vote log text are provided, actual sample log files from the '01-10', '11-20', or '21-30' folders are not included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

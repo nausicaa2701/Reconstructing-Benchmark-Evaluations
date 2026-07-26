@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:41:41.275097+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B008",
+    "packet_sha256": "69f31a3eabe785a74a75e7b2804de69c574449dfc0ce53f5074a342d952554d1",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 2,
+    "input_tokens": 3686,
+    "output_tokens": 890,
+    "cost_usd": 0.013539,
+    "elapsed_seconds": 4.198
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B008\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 13,\n          \"line_end\": 26\n        }\n      ],\n      \"evidence_note\": \"The evaluation scripts verify that inputs and outputs are CSV files containing specific column names like 'count' or 'target' which are read using pandas.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 7,\n          \"line_end\": 11\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 6,\n          \"line_end\": 6\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 22,\n          \"line_end\": 22\n        }\n      ],\n      \"evidence_note\": \"Metrics like RMSLE are explicitly defined in Python code, and standard ones like ROC AUC are imported from sklearn.metrics.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 1,\n          \"line_end\": 29\n        },\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 1,\n          \"line_end\": 25\n        }\n      ],\n      \"evidence_note\": \"Complete evaluation scripts for individual data modeling tasks are fully implemented and available in the data_modeling/evaluation/ directory.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-applicable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 26,\n          \"line_end\": 29\n        }\n      ],\n      \"evidence_note\": \"Evaluations are purely numerical performance metrics (RMSLE, ROC AUC) written directly to output files, so discrete grading rules or tie-breaking do not apply.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 43,\n          \"line_end\": 44\n        }\n      ],\n      \"evidence_note\": \"The provided code only contains individual evaluation scripts; any master aggregation logic or predictions-to-aggregate mapping across all tasks is not present in the packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 43,\n          \"line_end\": 44\n        }\n      ],\n      \"evidence_note\": \"The packet contains only code for evaluating predictions (e.g. answer_file, predict_file arguments) but does not supply actual sample predictions or model trajectories.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPX7eQYJ54PZMSk9JZpGdIn1AZJfdBX7rWszgX1FwlXjUe3c8TBe8BPcwnlHWD"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 3686,
+      "candidatesTokenCount": 890,
+      "totalTokenCount": 4576,
+      "cachedContentTokenCount": 1765,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 3686
+        }
+      ],
+      "cacheTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 1765
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "sftYatziHMzB0-kPzPrC4Qs"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "spec_version": "golden-fixtures-v1",
+  "created": "2026-07-26",
+  "purpose": "Separate evaluator invocation from evaluator correctness by pairing every reachable scorer with an input whose score is derivable without running that scorer.",
+  "levels": {
+    "L1_invoked": "The official scorer accepted the input, exited 0, and emitted a score or wrote one to its documented output location. This is the endpoint reported as E3 in the frozen audit.",
+    "L2_fixture_matched": "The emitted value equals an expected value derived independently of the scorer (by hand or by a reimplementation of the documented metric) within a stated tolerance.",
+    "L3_published_score_reproduced": "The scorer reproduces a number published by the benchmark authors for a released prediction set, within a stated tolerance."
+  },
+  "rules": [
+    "An expected value must be derivable from the fixture input and the release's own documented metric definition without executing the release's scorer.",
+    "Every fixture records its derivation method in prose so a reader can recompute it.",
+    "Tolerances are absolute unless marked relative; exact-match fixtures use tolerance 0.",
+    "A fixture whose expected value can only be obtained by running the scorer under test is not a golden fixture and is recorded as L1 only.",
+    "L2 and L3 are reported separately from L1 and are never merged into an executability count.",
+    "Fixtures constructed after the frozen audit are marked retrospective and cannot be presented as pre-registered.",
+    "A fixture is retrospective if it was constructed after seeing the scorer's behaviour; DSBench and QRData were derived from the documented metric before the scorer was run and are not."
+  ],
+  "fixtures": [
+    {
+      "benchmark": "SpreadsheetBench",
+      "scorer": "evaluation/evaluation.py",
+      "metric": "soft/hard cell-range equality per task",
+      "input": "two-task synthetic dataset tree: t1 answer and input workbooks identical over the target range, t2 differing in one cell",
+      "expected": {
+        "t1_soft": 1.0,
+        "t1_hard": 1.0,
+        "t2_soft": 0.0,
+        "t2_hard": 0.0
+      },
+      "tolerance": 0.0,
+      "derivation": "Cell-range equality is decidable by inspection of the two workbooks; t1 was constructed identical over the compared range and t2 was constructed to differ, so the documented metric must return 1.0 and 0.0 respectively without reference to the scorer.",
+      "status": "L2-retrospective",
+      "evidence": "artifact/execution/logs/SpreadsheetBench/first_pass.log; artifact/audit/e3/e3_outcomes.csv notes",
+      "note": "Constructed during the audit as a discrimination check, not pre-registered as a fixture; the frozen log records the expected match/mismatch behaviour."
+    },
+    {
+      "benchmark": "QRData",
+      "scorer": "benchmark/eval.py",
+      "metric": "accuracy over prediction/answer pairs, error_scale=0.03",
+      "input": "inputs/qrdata/tmp.json, six items",
+      "expected": 0.5,
+      "tolerance": 1e-09,
+      "derivation": "Each item's correctness follows by hand from the documented 0.03 tolerance band and the multiple-choice prefix rule; the six items deliberately cover the tolerance boundary (1% in, 5% out), a percentage-valued gold, a prefix match, a wrong option, and the unparseable-prediction exception path.",
+      "status": "L2",
+      "evidence": "artifact/execution/fixtures/golden_fixture_results.json",
+      "note": "Executed 2026-07-26 at the frozen commit; emitted 0.5, matching the hand derivation.",
+      "retrospective": false
+    },
+    {
+      "benchmark": "InfiAgent-DABench",
+      "scorer": "examples/DA-Agent/eval_closed_form.py",
+      "metric": "accuracy by question, proportional by sub-question, by sub-question",
+      "input": "ten synthetic @name[value] responses keyed to shipped label IDs, every third corrupted",
+      "expected": null,
+      "tolerance": 0.0,
+      "derivation": "By-question accuracy requires all sub-questions of a question to be correct, so the expected value depends on the shipped label structure; the corrupted-every-third construction alone does not determine it.",
+      "status": "L1-only",
+      "evidence": "artifact/execution/logs/InfiAgent/first_pass.log",
+      "note": "Deriving the expectation requires reading the shipped label file and is tractable on re-clone."
+    },
+    {
+      "benchmark": "ScienceAgentBench",
+      "scorer": "calculate_metrics.py",
+      "metric": "success rate, valid-program rate, CodeBERTScore, cost aggregation",
+      "input": "two synthetic run_log/eval_log pairs over five tasks",
+      "expected": null,
+      "tolerance": 0.0,
+      "derivation": "Valid-program rate is a count of parseable programs over the synthetic logs and is derivable by inspection; success rate and CodeBERTScore depend on the synthetic log contents, which were not retained.",
+      "status": "L1-only",
+      "evidence": "artifact/execution/logs/ScienceAgentBench/first_pass.log",
+      "note": "The emitted valid-program rate of 1.0 is consistent with the construction but the input is not released, so this is not counted as a fixture match."
+    },
+    {
+      "benchmark": "DSBench",
+      "scorer": "data_modeling/evaluation/playground-series-s4e4_eval.py",
+      "metric": "RMSLE",
+      "input": "inputs/dsbench/{answer.csv,predict.csv,predict_identical.csv}, 20 rows on the Rings target",
+      "expected": {
+        "perturbed": 0.07406506055467786,
+        "identical": 0.0
+      },
+      "tolerance": 1e-06,
+      "derivation": "RMSLE is a closed-form function of the two columns; reimplemented in four lines as sqrt(mean((log1p(a)-log1p(p))^2)) without invoking the release's scorer. The identical-prediction pair is a discrimination check: a scorer that emitted a constant would fail it.",
+      "status": "L2",
+      "evidence": "artifact/execution/fixtures/golden_fixture_results.json",
+      "note": "Executed 2026-07-26 at the frozen commit. Both fixtures matched exactly. This closes the cohort's weakest E3 edge: the scorer writes its value to result.txt and emits nothing on stdout, so exit 0 alone had carried the L1 pass.",
+      "retrospective": false
+    },
+    {
+      "benchmark": "DS-1000",
+      "scorer": "test_ds1000.py (in-process repair shim)",
+      "metric": "per-problem pass/fail aggregated to mean accuracy",
+      "input": "official shipped sample predictions, 50-problem slice",
+      "expected": null,
+      "tolerance": 0.0,
+      "derivation": "Per-problem pass/fail is decidable only by executing the problem tests, so no hand derivation exists; the fixture role here is equivalence checking between the shipped scorer and the repair shim on the same slice.",
+      "status": "L1-only",
+      "evidence": "artifact/execution/logs/DS1000/repair_pass.log",
+      "note": "Also the repair-equivalence fixture: the shim must reproduce the unrepaired scorer's per-problem verdicts on a host where the unrepaired scorer runs."
+    },
+    {
+      "benchmark": "TableBench",
+      "scorer": "eval_tablebench_script.py",
+      "metric": "ROUGE-based and rule-based sub-scores",
+      "input": "official shipped o3-mini DP example predictions",
+      "expected": null,
+      "tolerance": 0.01,
+      "derivation": "Rule-based sub-scores are hand-derivable per row; the ROUGE component requires the HuggingFace metric module and is reimplementable but not by inspection.",
+      "status": "L1-only",
+      "evidence": "artifact/execution/logs/TableBench/repair_pass.log",
+      "note": "Because the input is the authors' own shipped example, this is the cohort's only L3 candidate if the authors publish an expected score for that example."
+    }
+  ],
+  "updated": "2026-07-26"
+}

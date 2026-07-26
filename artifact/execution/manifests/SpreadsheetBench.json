@@ -1,0 +1,17 @@
+{
+  "benchmark": "SpreadsheetBench",
+  "category": "tabular",
+  "frozen_commit": "49b73a94775fb489063f60ca1865e3a650079a79",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "schema-valid synthetic dataset.json + answer/input .xlsx pairs (2 tasks, match+mismatch)",
+  "first_pass": {
+    "label": "pass-as-documented",
+    "runtime_s": 0.2,
+    "detail": "Official evaluation/evaluation.py (openpyxl cell-range comparison) ran on synthetic dataset tree matching exact expected layout",
+    "log": "artifact/execution/logs/SpreadsheetBench/"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": true,
+  "notes": "Correctly scored t1 match (soft/hard 1.0) and t2 mismatch (0.0); comparison core verified discriminating"
+}

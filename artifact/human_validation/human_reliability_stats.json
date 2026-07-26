@@ -1,0 +1,15 @@
+{
+  "cells": 156,
+  "agreement": 0.5961538461538461,
+  "krippendorff_alpha_nominal": 0.43197170440379207,
+  "benchmark_bootstrap_ci95": [
+    0.29857472050718936,
+    0.5555569049667868
+  ],
+  "disagreements": 63,
+  "disagreement_rate": 0.40384615384615385,
+  "coder_A_R2_permissive": 13,
+  "coder_B_R2_permissive": 8,
+  "passes_alpha_gate": false,
+  "passes_adjudication_rate_gate": false
+}

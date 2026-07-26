@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:41:41.275097+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B008",
+    "packet_sha256": "69f31a3eabe785a74a75e7b2804de69c574449dfc0ce53f5074a342d952554d1",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 2,
+    "input_tokens": 3686,
+    "output_tokens": 890,
+    "cost_usd": 0.013539,
+    "elapsed_seconds": 4.198,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B008",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 13,
+            "line_end": 26
+          }
+        ],
+        "evidence_note": "The evaluation scripts verify that inputs and outputs are CSV files containing specific column names like 'count' or 'target' which are read using pandas.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 7,
+            "line_end": 11
+          },
+          {
+            "source_id": "E003",
+            "line_start": 6,
+            "line_end": 6
+          },
+          {
+            "source_id": "E003",
+            "line_start": 22,
+            "line_end": 22
+          }
+        ],
+        "evidence_note": "Metrics like RMSLE are explicitly defined in Python code, and standard ones like ROC AUC are imported from sklearn.metrics.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 29
+          },
+          {
+            "source_id": "E003",
+            "line_start": 1,
+            "line_end": 25
+          }
+        ],
+        "evidence_note": "Complete evaluation scripts for individual data modeling tasks are fully implemented and available in the data_modeling/evaluation/ directory.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-applicable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 26,
+            "line_end": 29
+          }
+        ],
+        "evidence_note": "Evaluations are purely numerical performance metrics (RMSLE, ROC AUC) written directly to output files, so discrete grading rules or tie-breaking do not apply.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 43,
+            "line_end": 44
+          }
+        ],
+        "evidence_note": "The provided code only contains individual evaluation scripts; any master aggregation logic or predictions-to-aggregate mapping across all tasks is not present in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 43,
+            "line_end": 44
+          }
+        ],
+        "evidence_note": "The packet contains only code for evaluating predictions (e.g. answer_file, predict_file arguments) but does not supply actual sample predictions or model trajectories.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

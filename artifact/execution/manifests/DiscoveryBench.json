@@ -1,0 +1,17 @@
+{
+  "benchmark": "DiscoveryBench",
+  "category": "e2e-agent",
+  "frozen_commit": "c31fcf011e070f021a5f5b906896d0821f6880e8",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "n/a",
+  "first_pass": {
+    "label": "credential-or-service-blocked",
+    "runtime_s": NaN,
+    "detail": "eval/eval.py imports `from openai import OpenAI` and grades hypotheses via run_chatgpt_query_multi_turn (LLM-based semantic evaluation)",
+    "log": "artifact/execution/logs/<see notes>"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": false,
+  "notes": "LLM-based evaluator; excluded by 0 paid API / no FM inference"
+}

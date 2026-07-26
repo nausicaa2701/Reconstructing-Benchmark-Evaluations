@@ -1,0 +1,5 @@
+label_A,claimed-but-not-verifiable,documented-and-verifiable,not-documented,partially-documented
+claimed-but-not-verifiable,0,0,0,1
+documented-and-verifiable,0,19,3,4
+not-documented,1,1,23,2
+partially-documented,0,8,4,27

@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:06.589680+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B011",
+    "packet_sha256": "f0126c3db6d21115573d95bece2bd01f1fee4d15d7377b78d94c5cea8eb20a93",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 4356,
+    "output_tokens": 826,
+    "cost_usd": 0.013968,
+    "elapsed_seconds": 9.247
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B011\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"partially-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E002\",\n          \"line_start\": 27,\n          \"line_end\": 33\n        }\n      ],\n      \"evidence_note\": \"The schema is partially documented: questions are stored in JSON format containing at least a 'q_id_spider_dev' integer key, and predicted output consists of one SQL query per line. Full schema details for tables.json and databases are omitted.\",\n      \"confidence\": \"high\"\n}\n    ,\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"claimed-but-not-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 45,\n          \"line_end\": 46\n        }\n      ],\n      \"evidence_note\": \"The README mentions pre-perturbation and post-perturbation execution (EX) accuracy, but the exact metric formulation and code implementation are not contained within the provided packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 37,\n          \"line_end\": 37\n        }\n      ],\n      \"evidence_note\": \"The repository does not contain the evaluator code. It delegates evaluation to an external repository (test-suite-sql-eval) as described in the README.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 37,\n          \"line_end\": 37\n        }\n      ],\n      \"evidence_note\": \"Grading rules (e.g., handling ties, semantic equivalence details) are delegated entirely to the external test-suite-sql-eval repository and are not documented in the packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 37,\n          \"line_end\": 46\n        }\n      ],\n      \"evidence_note\": \"There is no code or documentation explaining how individual SQL query execution results are aggregated into category-wise macro averages in the provided packet.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"not-documented\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E001\",\n          \"line_start\": 31,\n          \"line_end\": 32\n        }\n      ],\n      \"evidence_note\": \"The repository describes where to place model predictions (e.g., predictions/[perturbation_namq]/[model_name]/pred.sql) but does not provide sample prediction files or trajectories in the packet.\",\n      \"confidence\": \"high\"\n    }\n  ]\n  }",
+              "thoughtSignature": "EjQKMgERTTIPpZyPV+RwDLIO8ppzMp0DEBKHM6A5hzK62B7e9aCiGjjH4rwAIJfn5ke4MPOX"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 4356,
+      "candidatesTokenCount": 826,
+      "totalTokenCount": 5182,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 4356
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "xvtYaoiuE_-71e8P6aXfiQ4"
+  }
+}

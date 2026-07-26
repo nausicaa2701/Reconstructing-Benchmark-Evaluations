@@ -1,0 +1,8 @@
+Release v1.0.0: sync paper artifact, manifest, human validation.
+
+Bring the public artifact repo in line with the KDD 2027 paper workspace:
+human-validation forms and diagnostics, golden fixtures, framework overlap
+tables, maintenance/correction ledgers, official env specs, and release
+manifest (484 files, SHA-256, paper PDF hash pinned).
+
+Audit evidence frozen 2026-07-13; release packaged 2026-07-26.

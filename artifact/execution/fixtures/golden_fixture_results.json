@@ -1,0 +1,46 @@
+{
+  "fixtures": [
+    {
+      "release": "DSBench",
+      "fixture": "playground-series-s4e4 RMSLE (perturbed predictions)",
+      "exit_code": 0,
+      "stdout_bytes": 0,
+      "emitted": 0.07406506055467786,
+      "expected": 0.07406506055467786,
+      "tolerance": 1e-06,
+      "L2_match": true,
+      "derivation": "RMSLE = sqrt(mean((log1p(answer)-log1p(prediction))^2)), reimplemented from the release's documented metric without invoking the scorer.",
+      "stderr_tail": ""
+    },
+    {
+      "release": "DSBench",
+      "fixture": "playground-series-s4e4 RMSLE (identical predictions)",
+      "exit_code": 0,
+      "stdout_bytes": 0,
+      "emitted": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-06,
+      "L2_match": true,
+      "derivation": "RMSLE = sqrt(mean((log1p(answer)-log1p(prediction))^2)), reimplemented from the release's documented metric without invoking the scorer.",
+      "stderr_tail": ""
+    },
+    {
+      "release": "QRData",
+      "fixture": "six-item accuracy covering the tolerance boundary, percentage gold, multiple-choice prefix match, and the unparseable-prediction exception path",
+      "exit_code": 0,
+      "stdout_bytes": 4,
+      "emitted": 0.5,
+      "expected": 0.5,
+      "tolerance": 1e-09,
+      "L2_match": true,
+      "derivation": "Item-level correctness follows by hand from the documented error_scale=0.03 band and the prefix rule for multiple choice; accuracy is the mean of those six hand-assigned outcomes.",
+      "stderr_tail": ""
+    }
+  ],
+  "n_fixtures": 3,
+  "n_L2_match": 3,
+  "releases_reaching_L2": [
+    "DSBench",
+    "QRData"
+  ]
+}

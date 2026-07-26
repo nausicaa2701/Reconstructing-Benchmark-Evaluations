@@ -1,0 +1,47 @@
+% Shared style for the paper's TikZ/pgfplots figures.
+% Loaded once from main.tex; every fig_*.tex assumes these definitions.
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{patterns, positioning}
+\usepgfplotslibrary{colorbrewer}
+
+% --- palette (matches the audit label semantics; colourblind-safe ordering) ---
+\definecolor{auditBlue}{HTML}{4C72B0}   % endpoints / neutral series
+\definecolor{auditGreen}{HTML}{2A9D8F}  % documented-and-verifiable / pass
+\definecolor{auditAmber}{HTML}{E9C46A}  % partially-documented
+\definecolor{auditOrange}{HTML}{D97941} % claimed-but-not-verifiable
+\definecolor{auditRed}{HTML}{B23A48}    % not-documented / R2 blockers
+\definecolor{auditPurple}{HTML}{7A5195} % access-blocked
+\definecolor{auditGrey}{HTML}{6C757D}   % not-applicable
+\definecolor{auditSlate}{HTML}{457B9D}  % execution blockers
+\definecolor{auditLight}{HTML}{DDDDDD}  % bar remainder
+
+% --- common axis style for the compact single-column bar charts ---
+\pgfplotsset{
+  % width leaves room for y tick labels, which pgfplots does not count
+  auditbase/.style={
+    width=0.88\columnwidth,
+    tick align=outside,
+    tick pos=left,
+    axis line style={draw=black!55},
+    every axis label/.append style={font=\small},
+    tick label style={font=\small},
+    legend style={font=\small, draw=none, fill=none},
+    label style={font=\small},
+  },
+  % Geometry shared by every horizontal bar chart, with no bar type set --
+  % 'xbar' and 'xbar stacked' must not both apply, or segments get bar-shifted.
+  auditbarcommon/.style={
+    auditbase,
+    y dir=reverse,
+    xmajorgrids,
+    grid style={dotted, black!30},
+    axis x line*=bottom,
+    axis y line*=left,
+    bar width=6pt,
+    nodes near coords style={font=\scriptsize, /pgf/number format/precision=0},
+  },
+  auditbar/.style={auditbarcommon, xbar},
+  auditstack/.style={auditbarcommon, xbar stacked},
+}

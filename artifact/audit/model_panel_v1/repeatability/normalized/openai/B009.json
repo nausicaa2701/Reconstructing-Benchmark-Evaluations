@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-17T04:47:43.032369+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B009",
+    "packet_sha256": "75c4dfec5438c5818675a7953a3180bb423b8768c8714020ae0efca47cc50b69",
+    "protocol_sha256": "d72e0019a7979fec0018c784cf0453c20319b3e00339dab1206cbfedec4c14df",
+    "attempt": 1,
+    "input_tokens": 9212,
+    "output_tokens": 1186,
+    "cost_usd": 0.023375,
+    "elapsed_seconds": 29.185,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B009",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 135,
+            "line_end": 167
+          },
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 189
+          },
+          {
+            "source_id": "E003",
+            "line_start": 101,
+            "line_end": 118
+          }
+        ],
+        "evidence_note": "Input is a parent IN_PATH containing subfolders with log .txt files. Output is a CSV with columns (folder, file, vote_round, good_vote_rate, total_votes, votewolf_difficulty, avg_rate, vote1_rate). The schema is explicit in code and docstrings.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 91
+          },
+          {
+            "source_id": "E002",
+            "line_start": 140,
+            "line_end": 143
+          },
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 174
+          },
+          {
+            "source_id": "E003",
+            "line_start": 120,
+            "line_end": 127
+          }
+        ],
+        "evidence_note": "Docstrings and implementation define good_vote_rate as correct_votes/num_non_werewolves, avg_rate as mean good_vote_rate over votes per game, vote1_rate as first-round mean, and presentation as percentage strings.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 22,
+            "line_end": 90
+          },
+          {
+            "source_id": "E002",
+            "line_start": 135,
+            "line_end": 213
+          },
+          {
+            "source_id": "E003",
+            "line_start": 68,
+            "line_end": 100
+          }
+        ],
+        "evidence_note": "Full Python implementation of the Vote evaluator, including log extraction, parsing, metric computation, aggregation, and CSV writing, is present and runnable in eval.py and utils.py.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 201
+          },
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 91
+          }
+        ],
+        "evidence_note": "Grading rules are deterministic: per-vote good_vote_rate, per-game mean over votes, and vote1_rate as groupby-mean on vote_1. No special tie-breaking is needed or used; aggregation behavior is fully explicit in code.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 45,
+            "line_end": 55
+          },
+          {
+            "source_id": "E002",
+            "line_start": 73,
+            "line_end": 91
+          },
+          {
+            "source_id": "E002",
+            "line_start": 169,
+            "line_end": 189
+          }
+        ],
+        "evidence_note": "Individual vote lines in logs are parsed into werewolf/non-werewolf labels and votes, converted to per-vote good_vote_rate, then averaged per file and per first round. Mapping from raw predictions (votes) to aggregated scores is clearly coded.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "documented-and-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 50,
+            "line_end": 56
+          },
+          {
+            "source_id": "E003",
+            "line_start": 70,
+            "line_end": 78
+          }
+        ],
+        "evidence_note": "A concrete example of a vote log chunk with players, roles, and votes is given in the _vote_rate_players docstring, illustrating expected input format. Moderator/vote patterns in utils further exemplify typical log lines.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

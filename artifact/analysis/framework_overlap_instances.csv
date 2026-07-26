@@ -1,0 +1,226 @@
+benchmark,blocker,kind,framework,covered,justification
+BIRD,Input/expected-output schema,R2,BetterBench,partial,Replicability items ask whether an evaluation can be re-run but do not require an executable input/output contract
+BIRD,Input/expected-output schema,R2,BenchmarkCards,yes,Methodology fields document task inputs and expected outputs
+BIRD,Input/expected-output schema,R2,ReproEvalCard,yes,Reporting schema requires prompt and output format disclosure
+BIRD,Input/expected-output schema,R2,Rollout Cards,yes,Rollout records fix the prediction/trajectory format
+BIRD,Input/expected-output schema,R2,Auto Benchmark Audit,no,"Unit of analysis is the task instance, not the evaluator interface"
+BIRD,Metric definition,R2,BetterBench,yes,Explicit best-practice item on metric specification
+BIRD,Metric definition,R2,BenchmarkCards,yes,Documented metric field
+BIRD,Metric definition,R2,ReproEvalCard,yes,Metric and judge-setting reporting requirement
+BIRD,Metric definition,R2,Rollout Cards,yes,Re-grading requires a stated metric
+BIRD,Metric definition,R2,Auto Benchmark Audit,partial,Detects metric misuse at task level but does not audit release-level metric disclosure
+BIRD,Evaluator implementation available,R2,BetterBench,partial,Usability and replicability items reward available code without verifying an evaluator path
+BIRD,Evaluator implementation available,R2,BenchmarkCards,no,Artifact links are documented but not verified
+BIRD,Evaluator implementation available,R2,ReproEvalCard,no,Audits papers rather than release artifacts
+BIRD,Evaluator implementation available,R2,Rollout Cards,yes,Repository inspection identifies scoring code
+BIRD,Evaluator implementation available,R2,Auto Benchmark Audit,yes,Inspects repositories to run task-level checks
+BIRD,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+BIRD,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+BIRD,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+BIRD,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+BIRD,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+BIRD,Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+BIRD,Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+BIRD,Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+BIRD,Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+BIRD,Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+BLADE,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+BLADE,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+BLADE,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+BLADE,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+BLADE,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+DSBench,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+DSBench,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+DSBench,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+DSBench,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+DSBench,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+DSBench,Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+DSBench,Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+DSBench,Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+DSBench,Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+DSBench,Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+DataSciBench,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+DataSciBench,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+DataSciBench,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+DataSciBench,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+DataSciBench,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+DiscoveryBench,Metric definition,R2,BetterBench,yes,Explicit best-practice item on metric specification
+DiscoveryBench,Metric definition,R2,BenchmarkCards,yes,Documented metric field
+DiscoveryBench,Metric definition,R2,ReproEvalCard,yes,Metric and judge-setting reporting requirement
+DiscoveryBench,Metric definition,R2,Rollout Cards,yes,Re-grading requires a stated metric
+DiscoveryBench,Metric definition,R2,Auto Benchmark Audit,partial,Detects metric misuse at task level but does not audit release-level metric disclosure
+DiscoveryBench,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+DiscoveryBench,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+DiscoveryBench,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+DiscoveryBench,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+DiscoveryBench,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+DiscoveryBench,Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+DiscoveryBench,Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+DiscoveryBench,Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+DiscoveryBench,Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+DiscoveryBench,Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+Dr.Spider,Evaluator implementation available,R2,BetterBench,partial,Usability and replicability items reward available code without verifying an evaluator path
+Dr.Spider,Evaluator implementation available,R2,BenchmarkCards,no,Artifact links are documented but not verified
+Dr.Spider,Evaluator implementation available,R2,ReproEvalCard,no,Audits papers rather than release artifacts
+Dr.Spider,Evaluator implementation available,R2,Rollout Cards,yes,Repository inspection identifies scoring code
+Dr.Spider,Evaluator implementation available,R2,Auto Benchmark Audit,yes,Inspects repositories to run task-level checks
+Dr.Spider,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+Dr.Spider,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+Dr.Spider,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+Dr.Spider,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+Dr.Spider,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+MLGym,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+MLGym,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+MLGym,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+MLGym,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+MLGym,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+PandasEval/NumpyEval (CERT),Evaluator implementation available,R2,BetterBench,partial,Usability and replicability items reward available code without verifying an evaluator path
+PandasEval/NumpyEval (CERT),Evaluator implementation available,R2,BenchmarkCards,no,Artifact links are documented but not verified
+PandasEval/NumpyEval (CERT),Evaluator implementation available,R2,ReproEvalCard,no,Audits papers rather than release artifacts
+PandasEval/NumpyEval (CERT),Evaluator implementation available,R2,Rollout Cards,yes,Repository inspection identifies scoring code
+PandasEval/NumpyEval (CERT),Evaluator implementation available,R2,Auto Benchmark Audit,yes,Inspects repositories to run task-level checks
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+RE-Bench,Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+RE-Bench,Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+RE-Bench,Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+RE-Bench,Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+RE-Bench,Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+Spider,Evaluator implementation available,R2,BetterBench,partial,Usability and replicability items reward available code without verifying an evaluator path
+Spider,Evaluator implementation available,R2,BenchmarkCards,no,Artifact links are documented but not verified
+Spider,Evaluator implementation available,R2,ReproEvalCard,no,Audits papers rather than release artifacts
+Spider,Evaluator implementation available,R2,Rollout Cards,yes,Repository inspection identifies scoring code
+Spider,Evaluator implementation available,R2,Auto Benchmark Audit,yes,Inspects repositories to run task-level checks
+Spider,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+Spider,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+Spider,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+Spider,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+Spider,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+Spider2-V,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+Spider2-V,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+Spider2-V,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+Spider2-V,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+Spider2-V,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+Spider2-V,Predictions->aggregate-score mapping,R2,BetterBench,no,Not a checklist item
+Spider2-V,Predictions->aggregate-score mapping,R2,BenchmarkCards,no,Not a documentation field
+Spider2-V,Predictions->aggregate-score mapping,R2,ReproEvalCard,no,Not in the reporting schema
+Spider2-V,Predictions->aggregate-score mapping,R2,Rollout Cards,partial,Aggregation is manipulated but its public documentation is not audited per release
+Spider2-V,Predictions->aggregate-score mapping,R2,Auto Benchmark Audit,no,Out of scope at the task level
+TabFact,Grading rules & tie-breaking,R2,BetterBench,partial,Covered only indirectly through replicability and statistical-reporting items
+TabFact,Grading rules & tie-breaking,R2,BenchmarkCards,no,No field for grading edge cases or tie-breaking policy
+TabFact,Grading rules & tie-breaking,R2,ReproEvalCard,partial,Judge settings are reported; deterministic grading edge cases are not
+TabFact,Grading rules & tie-breaking,R2,Rollout Cards,yes,Central object: re-grading fixed outputs under alternative reporting rules
+TabFact,Grading rules & tie-breaking,R2,Auto Benchmark Audit,no,Task-level auditing does not target the grading policy of the release
+BigCodeBench,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+BigCodeBench,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+BigCodeBench,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+BigCodeBench,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+BigCodeBench,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+DA-Code,missing-required-data,E3,BetterBench,partial,"Data availability is a documentation item, not an execution outcome"
+DA-Code,missing-required-data,E3,BenchmarkCards,yes,Dataset access conditions are a documented field
+DA-Code,missing-required-data,E3,ReproEvalCard,partial,Retrieval-snapshot reporting captures part of this
+DA-Code,missing-required-data,E3,Rollout Cards,yes,Blocks re-grading and is observed
+DA-Code,missing-required-data,E3,Auto Benchmark Audit,yes,Blocks task-level execution and is observed
+DS-1000,dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+DS-1000,dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+DS-1000,dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+DS-1000,dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+DS-1000,dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+PandasEval/NumpyEval (CERT),dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+PandasEval/NumpyEval (CERT),dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+PandasEval/NumpyEval (CERT),dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+PandasEval/NumpyEval (CERT),dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+PandasEval/NumpyEval (CERT),dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+BLADE,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+BLADE,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+BLADE,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+BLADE,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+BLADE,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+BixBench,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+BixBench,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+BixBench,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+BixBench,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+BixBench,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+DataSciBench,missing-required-data,E3,BetterBench,partial,"Data availability is a documentation item, not an execution outcome"
+DataSciBench,missing-required-data,E3,BenchmarkCards,yes,Dataset access conditions are a documented field
+DataSciBench,missing-required-data,E3,ReproEvalCard,partial,Retrieval-snapshot reporting captures part of this
+DataSciBench,missing-required-data,E3,Rollout Cards,yes,Blocks re-grading and is observed
+DataSciBench,missing-required-data,E3,Auto Benchmark Audit,yes,Blocks task-level execution and is observed
+DiscoveryBench,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+DiscoveryBench,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+DiscoveryBench,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+DiscoveryBench,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+DiscoveryBench,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+MLAgentBench,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+MLAgentBench,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+MLAgentBench,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+MLAgentBench,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+MLAgentBench,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+MLE-bench,dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+MLE-bench,dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+MLE-bench,dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+MLE-bench,dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+MLE-bench,dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+MLGym,dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+MLGym,dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+MLGym,dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+MLGym,dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+MLGym,dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+RE-Bench,dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+RE-Bench,dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+RE-Bench,dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+RE-Bench,dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+RE-Bench,dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+TabFact,dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+TabFact,dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+TabFact,dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+TabFact,dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+TabFact,dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+TableBench,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+TableBench,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+TableBench,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+TableBench,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+TableBench,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+WikiTableQuestions,dependency-or-environment-failure,E3,BetterBench,partial,Usability items ask for environment specification without executing it
+WikiTableQuestions,dependency-or-environment-failure,E3,BenchmarkCards,no,Not a documentation field
+WikiTableQuestions,dependency-or-environment-failure,E3,ReproEvalCard,no,No execution attempted
+WikiTableQuestions,dependency-or-environment-failure,E3,Rollout Cards,yes,Observed directly when re-running scoring code
+WikiTableQuestions,dependency-or-environment-failure,E3,Auto Benchmark Audit,yes,Observed directly when executing task-level checks
+BIRD,missing-required-data,E3,BetterBench,partial,"Data availability is a documentation item, not an execution outcome"
+BIRD,missing-required-data,E3,BenchmarkCards,yes,Dataset access conditions are a documented field
+BIRD,missing-required-data,E3,ReproEvalCard,partial,Retrieval-snapshot reporting captures part of this
+BIRD,missing-required-data,E3,Rollout Cards,yes,Blocks re-grading and is observed
+BIRD,missing-required-data,E3,Auto Benchmark Audit,yes,Blocks task-level execution and is observed
+BIRD-CRITIC / SQL-eval,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+BIRD-CRITIC / SQL-eval,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+BIRD-CRITIC / SQL-eval,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+BIRD-CRITIC / SQL-eval,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+BIRD-CRITIC / SQL-eval,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension
+Dr.Spider,missing-required-data,E3,BetterBench,partial,"Data availability is a documentation item, not an execution outcome"
+Dr.Spider,missing-required-data,E3,BenchmarkCards,yes,Dataset access conditions are a documented field
+Dr.Spider,missing-required-data,E3,ReproEvalCard,partial,Retrieval-snapshot reporting captures part of this
+Dr.Spider,missing-required-data,E3,Rollout Cards,yes,Blocks re-grading and is observed
+Dr.Spider,missing-required-data,E3,Auto Benchmark Audit,yes,Blocks task-level execution and is observed
+Spider,missing-required-data,E3,BetterBench,partial,"Data availability is a documentation item, not an execution outcome"
+Spider,missing-required-data,E3,BenchmarkCards,yes,Dataset access conditions are a documented field
+Spider,missing-required-data,E3,ReproEvalCard,partial,Retrieval-snapshot reporting captures part of this
+Spider,missing-required-data,E3,Rollout Cards,yes,Blocks re-grading and is observed
+Spider,missing-required-data,E3,Auto Benchmark Audit,yes,Blocks task-level execution and is observed
+Spider 2.0,credential-or-service-blocked,E3,BetterBench,no,Runtime access dependence is not assessed
+Spider 2.0,credential-or-service-blocked,E3,BenchmarkCards,no,Not a documentation field
+Spider 2.0,credential-or-service-blocked,E3,ReproEvalCard,no,Not observed because no execution is attempted
+Spider 2.0,credential-or-service-blocked,E3,Rollout Cards,partial,Encountered when re-grading but not reported as a release-level endpoint
+Spider 2.0,credential-or-service-blocked,E3,Auto Benchmark Audit,partial,Execution is attempted but blockers are not a reported outcome dimension

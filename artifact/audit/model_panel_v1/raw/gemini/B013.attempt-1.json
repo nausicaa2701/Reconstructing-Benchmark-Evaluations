@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:42:18.504891+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B013",
+    "packet_sha256": "54e25e7b38f83e3d8e97e0cffd85dc20944178aa30ba40b78f821f9169b4dfc9",
+    "protocol_sha256": "e48bcf2f6918d0560f52b07aa3bdb997d0e4bed6c96eb60440a8385136c1b64a",
+    "attempt": 1,
+    "input_tokens": 8678,
+    "output_tokens": 753,
+    "cost_usd": 0.019794,
+    "elapsed_seconds": 5.4
+  },
+  "response": {
+    "candidates": [
+      {
+        "content": {
+          "parts": [
+            {
+              "text": "{\n  \"packet_id\": \"B013\",\n  \"decisions\": [\n    {\n      \"criterion\": \"Input/expected-output schema\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 125,\n          \"line_end\": 140\n        }\n      ],\n      \"evidence_note\": \"The evaluation inputs are structured as a Tuple of probing.DataPoint outputs and a Result dictionary of predictions, processed in evaluate().\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Metric definition\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 192,\n          \"line_end\": 202\n        }\n      ],\n      \"evidence_note\": \"Metrics like F1 score (_mask_fn) and mean-squared error are defined for distinct spec types (SCALAR, MASK, POINTER, etc.).\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Evaluator implementation available\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 125,\n          \"line_end\": 139\n        }\n      ],\n      \"evidence_note\": \"The complete Python evaluation implementation for the CLRS benchmark environment is provided in evaluation.py.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Grading rules & tie-breaking\",\n      \"label\": \"not-applicable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 137,\n          \"line_end\": 139\n        }\n      ],\n      \"evidence_note\": \"The benchmark uses quantitative correctness metrics and does not involve subjective rules, human grading, or tie-breaking.\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Predictions->aggregate-score mapping\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E003\",\n          \"line_start\": 137,\n          \"line_end\": 139\n        }\n      ],\n      \"evidence_note\": \"An aggregate score is mapped by calculating the mean of all output scores in evaluate().\",\n      \"confidence\": \"high\"\n    },\n    {\n      \"criterion\": \"Sample predictions / trajectories\",\n      \"label\": \"documented-and-verifiable\",\n      \"evidence_refs\": [\n        {\n          \"source_id\": \"E004\",\n          \"line_start\": 30,\n          \"line_end\": 51\n        }\n      ],\n      \"evidence_note\": \"Unit tests in evaluation_test.py generate sample predictions and check their parsed values.\",\n      \"confidence\": \"high\"\n    }\n  ]\n}",
+              "thoughtSignature": "EjQKMgERTTIPp5mUx7LY32ZgYNDPEN30f6Q6m/o/mxhmCrVn4A2VzXLTuq5tvNFJFTB+Aywb"
+            }
+          ],
+          "role": "model"
+        },
+        "finishReason": "STOP",
+        "index": 0
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 8678,
+      "candidatesTokenCount": 753,
+      "totalTokenCount": 9431,
+      "promptTokensDetails": [
+        {
+          "modality": "TEXT",
+          "tokenCount": 8678
+        }
+      ],
+      "serviceTier": "standard"
+    },
+    "modelVersion": "gemini-3.5-flash",
+    "responseId": "1ftYauGgHInt2roPmqyRoQI"
+  }
+}

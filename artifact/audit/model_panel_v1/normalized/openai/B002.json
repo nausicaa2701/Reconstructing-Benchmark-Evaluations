@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:28:53.748098+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B002",
+    "packet_sha256": "ec36f1c0e60e073063443c1f3869805ca6af385d5078f4bd0d71d8c93d16a3b1",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 13552,
+    "output_tokens": 1121,
+    "cost_usd": 0.02815,
+    "elapsed_seconds": 14.259,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B002",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E001",
+            "line_start": 130,
+            "line_end": 141
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 67
+          }
+        ],
+        "evidence_note": "README explains that questions and gold SQL are stored in CSV files and that results are logged, and runner scripts show multiple question/output CSVs, but the precise column schemas and expected output columns are not specified.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 40
+          },
+          {
+            "source_id": "E002",
+            "line_start": 103,
+            "line_end": 110
+          }
+        ],
+        "evidence_note": "README names \u201cexact\u201d and \u201csubset\u201d matches but does not define them. eval.py shows normalization of result tables before comparison but the actual exact/subset comparison logic and metric formulas are not visible in the packet excerpt.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E002",
+            "line_start": 16,
+            "line_end": 27
+          },
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 45
+          },
+          {
+            "source_id": "E002",
+            "line_start": 177,
+            "line_end": 191
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 67
+          }
+        ],
+        "evidence_note": "Core helper functions for query execution and table normalization are implemented, and higher-level scripts call main.py for evaluation runs. However, the central evaluation loop and scoring logic (e.g., exact/subset match computation) are not shown in the provided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E002",
+            "line_start": 30,
+            "line_end": 52
+          },
+          {
+            "source_id": "E002",
+            "line_start": 55,
+            "line_end": 105
+          }
+        ],
+        "evidence_note": "README states evaluation compares dataframes via exact and subset match. normalize_table encodes grading rules about deduplication, column sorting, handling ORDER BY, and when row order matters. Still, handling of many edge cases and the subset-matching criteria are not documented.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 7,
+            "line_end": 12
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 67
+          }
+        ],
+        "evidence_note": "README notes that results are logged and \u201caggregate the results for reporting\u201d but does not explain how per-query correctness is combined into overall scores (e.g., accuracy, weighting, per-category aggregation). No implementation of this aggregation is visible in the provided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 130,
+            "line_end": 141
+          },
+          {
+            "source_id": "E003",
+            "line_start": 48,
+            "line_end": 67
+          }
+        ],
+        "evidence_note": "Commands reference question CSVs and output CSV filenames, but no actual example prediction files, result rows, or model output traces are included in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:08:11.944006+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B001",
+    "packet_sha256": "2ae0354b5aa3522772a6df252836198fbe4bd793e4153572b4ef21755bf20b97",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 10059,
+    "output_tokens": 3346,
+    "cost_usd": 0.0452025,
+    "elapsed_seconds": 20.974,
+    "validation_status": "valid",
+    "canonicalized_refs": [
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/__init__.py",
+        "to": "E002"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      },
+      {
+        "from": "EPO/Alfshop/eval_agent/agents/base.py",
+        "to": "E003"
+      }
+    ]
+  },
+  "judgment": {
+    "packet_id": "B001",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "No input or expected-output schema for the evaluation tasks is documented or defined in the provided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "The files contain no information or code describing evaluation metrics or performance measurements.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E002",
+            "line_start": 1,
+            "line_end": 3
+          }
+        ],
+        "evidence_note": "The repository files only contain agent class definitions (e.g., FastChatAgent) and lack any evaluator implementation or task environment.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "Grading rules, rubrics, and tie-breaking procedures are not mentioned anywhere in the provided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "There is no documentation or code mapping agent predictions/actions to an aggregate score.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 7,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "No sample predictions, run outputs, or execution trajectories are provided in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

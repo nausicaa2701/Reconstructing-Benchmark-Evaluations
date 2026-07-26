@@ -1,0 +1,100 @@
+{
+  "cells": 156,
+  "human_binary_agreement": 0.8141025641025641,
+  "human_binary_alpha": 0.5888306359699111,
+  "per_criterion": {
+    "Evaluator implementation available": {
+      "n": 26,
+      "exact_agreement": 0.4230769230769231,
+      "binary_agreement": 0.6538461538461539
+    },
+    "Grading rules & tie-breaking": {
+      "n": 26,
+      "exact_agreement": 0.7692307692307693,
+      "binary_agreement": 0.8846153846153846
+    },
+    "Input/expected-output schema": {
+      "n": 26,
+      "exact_agreement": 0.6153846153846154,
+      "binary_agreement": 0.8461538461538461
+    },
+    "Metric definition": {
+      "n": 26,
+      "exact_agreement": 0.6538461538461539,
+      "binary_agreement": 0.9230769230769231
+    },
+    "Predictions->aggregate-score mapping": {
+      "n": 26,
+      "exact_agreement": 0.5,
+      "binary_agreement": 0.7692307692307693
+    },
+    "Sample predictions / trajectories": {
+      "n": 26,
+      "exact_agreement": 0.6153846153846154,
+      "binary_agreement": 0.8076923076923077
+    }
+  },
+  "disagreement_boundaries": {
+    "documented-and-verifiable | partially-documented": 23,
+    "claimed-but-not-verifiable | not-documented": 11,
+    "claimed-but-not-verifiable | documented-and-verifiable": 9,
+    "not-documented | partially-documented": 9,
+    "claimed-but-not-verifiable | partially-documented": 7,
+    "documented-and-verifiable | not-documented": 4
+  },
+  "disagreements": 63,
+  "share_of_disagreements_touching_partially_documented": 0.6190476190476191,
+  "R2_counts": {
+    "coder_A": {
+      "permissive_R2": 13,
+      "of": 26
+    },
+    "coder_B": {
+      "permissive_R2": 8,
+      "of": 26
+    },
+    "model_panel": {
+      "permissive_R2": 13,
+      "of": 26
+    },
+    "human_both_agree_pass": {
+      "permissive_R2": 7,
+      "of": 26
+    },
+    "human_either_passes": {
+      "permissive_R2": 16,
+      "of": 26
+    }
+  },
+  "model_vs_A": {
+    "exact_agreement": 0.6089743589743589,
+    "binary_agreement": 0.8397435897435898,
+    "alpha_nominal": 0.42987227648384674
+  },
+  "model_vs_B": {
+    "exact_agreement": 0.5833333333333334,
+    "binary_agreement": 0.7692307692307693,
+    "alpha_nominal": 0.4216022889842632
+  },
+  "human_stable_cells": 93,
+  "model_accuracy_on_human_stable_cells": 0.7419354838709677,
+  "model_binary_accuracy_on_human_stable_cells": 0.8817204301075269,
+  "model_recall_on_human_stable_cells_by_label": {
+    "claimed-but-not-verifiable": {
+      "n": 1,
+      "model_recall": 0.0
+    },
+    "documented-and-verifiable": {
+      "n": 26,
+      "model_recall": 0.7307692307692307
+    },
+    "not-documented": {
+      "n": 27,
+      "model_recall": 0.8518518518518519
+    },
+    "partially-documented": {
+      "n": 39,
+      "model_recall": 0.6923076923076923
+    }
+  }
+}

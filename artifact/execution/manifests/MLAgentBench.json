@@ -1,0 +1,17 @@
+{
+  "benchmark": "MLAgentBench",
+  "category": "ml-eng",
+  "frozen_commit": "5d71205cc20a8e95d43aa7cb7120e89ca3323e31",
+  "audit_date": "2026-07-13",
+  "controlled_environment": "conda env 'e3smoke' (python=3.11) \u2014 see artifact/environment/e3smoke_pip_freeze.txt",
+  "prediction_source": "n/a",
+  "first_pass": {
+    "label": "credential-or-service-blocked",
+    "runtime_s": NaN,
+    "detail": "MLAgentBench/eval.py imports `anthropic` (LLM-based evaluation)",
+    "log": "artifact/execution/logs/<see notes>"
+  },
+  "repair_pass": null,
+  "E3_smoke_testable": false,
+  "notes": "LLM-based evaluator; excluded by 0 paid API / no FM inference"
+}

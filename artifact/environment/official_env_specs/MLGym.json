@@ -1,0 +1,16 @@
+{
+  "benchmark": "MLGym",
+  "frozen_commit": "9d40c1b5035202018cd7091fb4e83a9c68b377c0",
+  "portable_first_pass_label": "dependency-or-environment-failure",
+  "portable_repair_label": null,
+  "authoritative_setup_file": null,
+  "base_image": null,
+  "build_commands": [],
+  "resolved_packages_digest": null,
+  "E3_official_first_pass": null,
+  "E3_official_after_repair": null,
+  "E3_portable_first_pass": false,
+  "under_specified_base": null,
+  "environment_contract_findings": [],
+  "status": "pending-execution"
+}

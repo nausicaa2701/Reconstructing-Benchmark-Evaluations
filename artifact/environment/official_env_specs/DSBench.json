@@ -1,0 +1,16 @@
+{
+  "benchmark": "DSBench",
+  "frozen_commit": "ba786096137a5108af11c016ad3f09cdb97beefd",
+  "portable_first_pass_label": "pass-as-documented",
+  "portable_repair_label": null,
+  "authoritative_setup_file": null,
+  "base_image": null,
+  "build_commands": [],
+  "resolved_packages_digest": null,
+  "E3_official_first_pass": null,
+  "E3_official_after_repair": null,
+  "E3_portable_first_pass": true,
+  "under_specified_base": null,
+  "environment_contract_findings": [],
+  "status": "pending-execution"
+}

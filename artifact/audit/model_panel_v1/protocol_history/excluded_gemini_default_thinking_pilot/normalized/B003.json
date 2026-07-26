@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T15:09:25.167984+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash",
+    "packet_id": "B003",
+    "packet_sha256": "661f974d7bae9edb5ae6fc681b4c0571e7059609ce3c37a6a5204007ffb8e4c9",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 17089,
+    "output_tokens": 3757,
+    "cost_usd": 0.0594465,
+    "elapsed_seconds": 23.189,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B003",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 191,
+            "line_end": 198
+          },
+          {
+            "source_id": "E003",
+            "line_start": 10,
+            "line_end": 16
+          }
+        ],
+        "evidence_note": "README refers to a schema file at example/submission_schema.json which is not present, though imports like EntireAnalysis in convert.py indicate the existence of typed models.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E004",
+            "line_start": 28,
+            "line_end": 105
+          },
+          {
+            "source_id": "E004",
+            "line_start": 318,
+            "line_end": 348
+          }
+        ],
+        "evidence_note": "SingleRunMetrics formulas (like hit_rate_vspecs) are defined, but several key properties returned in get_metrics() are missing or defined elsewhere in unprovided files.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 131,
+            "line_end": 164
+          },
+          {
+            "source_id": "E003",
+            "line_start": 50,
+            "line_end": 301
+          }
+        ],
+        "evidence_note": "A partial converter class (convert.py) is shown, but the main runner script (run_get_eval.py) and the core matcher implementation are missing from the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 20,
+            "line_end": 26
+          }
+        ],
+        "evidence_note": "Automatic evaluation against ground truth is mentioned, but specific grading rules, tolerance thresholds, or tie-breaking criteria are not documented in the packet.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E004",
+            "line_start": 106,
+            "line_end": 350
+          }
+        ],
+        "evidence_note": "MetricsAcrossRuns maps individual runs into aggregate metric structures, but the definitions of several aggregated metrics (e.g., coverage_num_models_matched) are missing.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 123,
+            "line_end": 126
+          },
+          {
+            "source_id": "E001",
+            "line_start": 191,
+            "line_end": 198
+          }
+        ],
+        "evidence_note": "README claims sample predictions exist at example/multirun_analyses.json and example/submission_analyses.json, but these files are not in the packet.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

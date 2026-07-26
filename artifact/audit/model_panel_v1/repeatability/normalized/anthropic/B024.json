@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-17T04:49:23.978453+00:00",
+    "provider": "anthropic",
+    "model": "claude-sonnet-5",
+    "packet_id": "B024",
+    "packet_sha256": "94f83d0bc2f68b32a125e5688c9c1ce7ee7b4bd0787479935a7d62b2430b8a07",
+    "protocol_sha256": "d72e0019a7979fec0018c784cf0453c20319b3e00339dab1206cbfedec4c14df",
+    "attempt": 1,
+    "input_tokens": 19613,
+    "output_tokens": 883,
+    "cost_usd": 0.048056,
+    "elapsed_seconds": 10.865,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B024",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 104,
+            "line_end": 143
+          }
+        ],
+        "evidence_note": "README describes raw data format, tokenized data format, and entity-linking annotation format, but full schema of final train/val/test examples used for scoring is only partially specified.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 34,
+            "line_end": 38
+          },
+          {
+            "source_id": "E003",
+            "line_start": 288,
+            "line_end": 299
+          }
+        ],
+        "evidence_note": "README states submission format uses binary labels (entailed/refuted) and CodaLab challenge exists; run_BERT.py includes simple_accuracy function, implying accuracy metric, but no explicit metric formula documented in README.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 68,
+            "line_end": 95
+          },
+          {
+            "source_id": "E003",
+            "line_start": 288,
+            "line_end": 318
+          }
+        ],
+        "evidence_note": "Training/evaluation commands given (model.py, run_BERT.py --do_eval) and accuracy computation code shown, but compute_metrics raises KeyError for non-'qqp' tasks, suggesting incomplete/generic eval wiring for TabFact specifically.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 198,
+            "line_end": 214
+          }
+        ],
+        "evidence_note": "Leaderboard-style results table exists but no documented tie-breaking rules or grading criteria beyond accuracy numbers.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E003",
+            "line_start": 288,
+            "line_end": 299
+          }
+        ],
+        "evidence_note": "simple_accuracy and acc_and_f1 functions show preds vs labels aggregation to accuracy/F1, but not confirmed as the exact aggregation used for official TabFact scoring/leaderboard.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 1,
+            "line_end": 20
+          }
+        ],
+        "evidence_note": "No sample predictions or model output trajectories are shown in the packet; only dataset description and code snippets are provided.",
+        "confidence": "medium"
+      }
+    ]
+  }
+}

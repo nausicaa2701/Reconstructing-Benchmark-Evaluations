@@ -1,0 +1,27 @@
+benchmark,category,Input/expected-output schema,Metric definition,Evaluator implementation available,Grading rules & tie-breaking,Predictions->aggregate-score mapping,Sample predictions / trajectories,R2_reconstructable,n_ok_of_5
+BLADE,e2e-agent,partially-documented,partially-documented,documented-and-verifiable,not-documented,partially-documented,partially-documented,0,4
+DataSciBench,e2e-agent,not-documented,not-documented,not-documented,not-documented,not-documented,not-documented,0,0
+DiscoveryBench,e2e-agent,partially-documented,claimed-but-not-verifiable,partially-documented,not-documented,not-documented,not-documented,0,2
+QRData,e2e-agent,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented,1,5
+DSBench,ml-eng,partially-documented,documented-and-verifiable,documented-and-verifiable,not-documented,partially-documented,not-documented,0,4
+MLGym,ml-eng,partially-documented,documented-and-verifiable,documented-and-verifiable,partially-documented,not-documented,not-documented,0,4
+TabFact,tabular,documented-and-verifiable,not-documented,partially-documented,documented-and-verifiable,partially-documented,not-documented,0,4
+WikiTableQuestions,tabular,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented,not-documented,0,4
+BIRD,text2sql,not-documented,not-documented,not-documented,not-documented,not-documented,not-documented,0,0
+BIRD-CRITIC / SQL-eval,text2sql,partially-documented,partially-documented,documented-and-verifiable,partially-documented,claimed-but-not-verifiable,not-documented,0,4
+Dr.Spider,text2sql,partially-documented,partially-documented,claimed-but-not-verifiable,not-documented,partially-documented,not-documented,0,3
+Spider,text2sql,documented-and-verifiable,partially-documented,claimed-but-not-verifiable,partially-documented,not-documented,not-documented,0,3
+BigCodeBench,code-gen,partially-documented,partially-documented,documented-and-verifiable,partially-documented,partially-documented,claimed-but-not-verifiable,1,5
+DA-Code,code-gen,partially-documented,partially-documented,partially-documented,partially-documented,partially-documented,claimed-but-not-verifiable,1,5
+DS-1000,code-gen,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,1,5
+PandasEval/NumpyEval (CERT),code-gen,partially-documented,not-documented,partially-documented,not-documented,not-documented,partially-documented,0,2
+BixBench,e2e-agent,partially-documented,partially-documented,documented-and-verifiable,partially-documented,partially-documented,claimed-but-not-verifiable,1,5
+InfiAgent-DABench,e2e-agent,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented,1,5
+ScienceAgentBench,e2e-agent,partially-documented,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented,1,5
+Spider2-V,e2e-agent,partially-documented,partially-documented,partially-documented,not-documented,not-documented,claimed-but-not-verifiable,0,3
+MLAgentBench,ml-eng,partially-documented,partially-documented,partially-documented,partially-documented,partially-documented,claimed-but-not-verifiable,1,5
+MLE-bench,ml-eng,partially-documented,documented-and-verifiable,documented-and-verifiable,partially-documented,partially-documented,not-documented,1,5
+RE-Bench,ml-eng,partially-documented,documented-and-verifiable,documented-and-verifiable,partially-documented,partially-documented,not-documented,1,5
+SpreadsheetBench,tabular,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,partially-documented,partially-documented,not-documented,1,5
+TableBench,tabular,partially-documented,documented-and-verifiable,partially-documented,partially-documented,partially-documented,claimed-but-not-verifiable,1,5
+Spider 2.0,text2sql,partially-documented,documented-and-verifiable,documented-and-verifiable,partially-documented,documented-and-verifiable,not-documented,1,5

@@ -1,0 +1,380 @@
+{
+ "ADJ-001": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "BIRD-CRITIC / SQL-eval",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-002": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DSBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-003": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BixBench",
+  "criterion": "Metric definition"
+ },
+ "ADJ-004": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DataSciBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-005": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "RE-Bench",
+  "criterion": "Metric definition"
+ },
+ "ADJ-006": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "MLE-bench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-007": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "ScienceAgentBench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-008": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "MLAgentBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-009": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "TabFact",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-010": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "Spider 2.0",
+  "criterion": "Grading rules & tie-breaking"
+ },
+ "ADJ-011": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DSBench",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-012": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BigCodeBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-013": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BigCodeBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-014": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BIRD-CRITIC / SQL-eval",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-015": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "Spider 2.0",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-016": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "BLADE",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-017": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-018": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "InfiAgent-DABench",
+  "criterion": "Grading rules & tie-breaking"
+ },
+ "ADJ-019": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider",
+  "criterion": "Metric definition"
+ },
+ "ADJ-020": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "Dr.Spider",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-021": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "MLE-bench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-022": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DS-1000",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-023": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "TabFact",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-024": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BLADE",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-025": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "TableBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-026": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BLADE",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-027": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "DiscoveryBench",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-028": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "TabFact",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-029": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "TabFact",
+  "criterion": "Metric definition"
+ },
+ "ADJ-030": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "PandasEval/NumpyEval (CERT)",
+  "criterion": "Metric definition"
+ },
+ "ADJ-031": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "SpreadsheetBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-032": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "TableBench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-033": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "PandasEval/NumpyEval (CERT)",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-034": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BLADE",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-035": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "RE-Bench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-036": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "ScienceAgentBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-037": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "WikiTableQuestions",
+  "criterion": "Grading rules & tie-breaking"
+ },
+ "ADJ-038": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "MLE-bench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-039": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider2-V",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-040": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-041": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "BigCodeBench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-042": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "BixBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-043": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider2-V",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-044": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "BixBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-045": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DiscoveryBench",
+  "criterion": "Metric definition"
+ },
+ "ADJ-046": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "TableBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-047": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "SpreadsheetBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-048": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "TableBench",
+  "criterion": "Metric definition"
+ },
+ "ADJ-049": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "MLAgentBench",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-050": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "SpreadsheetBench",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-051": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "MLAgentBench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-052": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "QRData",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-053": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "BixBench",
+  "criterion": "Input/expected-output schema"
+ },
+ "ADJ-054": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DiscoveryBench",
+  "criterion": "Predictions->aggregate-score mapping"
+ },
+ "ADJ-055": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "PandasEval/NumpyEval (CERT)",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-056": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider",
+  "criterion": "Grading rules & tie-breaking"
+ },
+ "ADJ-057": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "Spider2-V",
+  "criterion": "Metric definition"
+ },
+ "ADJ-058": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "TabFact",
+  "criterion": "Grading rules & tie-breaking"
+ },
+ "ADJ-059": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DataSciBench",
+  "criterion": "Sample predictions / trajectories"
+ },
+ "ADJ-060": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "PandasEval/NumpyEval (CERT)",
+  "criterion": "Grading rules & tie-breaking"
+ },
+ "ADJ-061": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DSBench",
+  "criterion": "Evaluator implementation available"
+ },
+ "ADJ-062": {
+  "option_1_is_rater": "B",
+  "option_2_is_rater": "A",
+  "benchmark": "DSBench",
+  "criterion": "Metric definition"
+ },
+ "ADJ-063": {
+  "option_1_is_rater": "A",
+  "option_2_is_rater": "B",
+  "benchmark": "Spider",
+  "criterion": "Predictions->aggregate-score mapping"
+ }
+}

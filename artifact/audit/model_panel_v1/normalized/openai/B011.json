@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "timestamp_utc": "2026-07-16T14:34:16.871233+00:00",
+    "provider": "openai",
+    "model": "gpt-5.1-2025-11-13",
+    "packet_id": "B011",
+    "packet_sha256": "f0126c3db6d21115573d95bece2bd01f1fee4d15d7377b78d94c5cea8eb20a93",
+    "protocol_sha256": "79dde32c490a71fea32ee0781cc6745de26de29620b66066ecc846f548937d69",
+    "attempt": 1,
+    "input_tokens": 3652,
+    "output_tokens": 924,
+    "cost_usd": 0.013805,
+    "elapsed_seconds": 13.934,
+    "validation_status": "valid"
+  },
+  "judgment": {
+    "packet_id": "B011",
+    "decisions": [
+      {
+        "criterion": "Input/expected-output schema",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 31,
+            "line_end": 33
+          },
+          {
+            "source_id": "E002",
+            "line_start": 19,
+            "line_end": 33
+          },
+          {
+            "source_id": "E003",
+            "line_start": 12,
+            "line_end": 19
+          }
+        ],
+        "evidence_note": "README and scripts specify file locations and some structure (plain-text pred.sql; JSON with q_id_spider_dev; tables/databases copies), but do not fully define the evaluator\u2019s required input/output schema or JSON field specs beyond q_id_spider_dev.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Metric definition",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 38
+          },
+          {
+            "source_id": "E001",
+            "line_start": 45,
+            "line_end": 56
+          }
+        ],
+        "evidence_note": "Metric is described as execution (EX) accuracy with macro averages across perturbation test sets. However, exact execution-match rules, handling of errors/timeouts, and detailed averaging formula are delegated to an external test-suite and not defined here.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Evaluator implementation available",
+        "label": "claimed-but-not-verifiable",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 38
+          }
+        ],
+        "evidence_note": "README instructs using the \u201ctest-suite evaluation\u201d via an external GitHub link, but that code is not included in this packet and cannot be inspected here, so the evaluator implementation cannot be verified from the provided artifacts.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Grading rules & tie-breaking",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 37,
+            "line_end": 38
+          },
+          {
+            "source_id": "E001",
+            "line_start": 45,
+            "line_end": 56
+          }
+        ],
+        "evidence_note": "No description is provided of how ties, multiple valid SQL queries, execution errors, or ambiguous cases are handled beyond generic reference to EX accuracy and an external evaluator.",
+        "confidence": "high"
+      },
+      {
+        "criterion": "Predictions->aggregate-score mapping",
+        "label": "partially-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 45,
+            "line_end": 56
+          },
+          {
+            "source_id": "E001",
+            "line_start": 61,
+            "line_end": 66
+          }
+        ],
+        "evidence_note": "Tables describe pre/post EX accuracy per category and \u201cmacro average results\u201d over DB/NLQ/SQL test sets, implying per-example EX then averaged by test set then macro-averaged. Exact per-example scoring and weighting are not formally specified.",
+        "confidence": "medium"
+      },
+      {
+        "criterion": "Sample predictions / trajectories",
+        "label": "not-documented",
+        "evidence_refs": [
+          {
+            "source_id": "E001",
+            "line_start": 31,
+            "line_end": 33
+          },
+          {
+            "source_id": "E002",
+            "line_start": 19,
+            "line_end": 33
+          }
+        ],
+        "evidence_note": "The location and format of prediction files are specified, but no concrete example pred.sql lines, JSON question entries, or end-to-end example of input-output and resulting score is shown.",
+        "confidence": "high"
+      }
+    ]
+  }
+}

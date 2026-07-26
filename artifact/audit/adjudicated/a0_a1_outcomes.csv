@@ -1,0 +1,27 @@
+benchmark,category,A0_described,A1_accessible,paper_public,repo_reachable,evaluator_detected,dataset_detected
+BigCodeBench,code-gen,True,True,True,True,True,True
+DA-Code,code-gen,True,True,True,True,True,True
+DS-1000,code-gen,True,True,True,True,True,True
+PandasEval/NumpyEval (CERT),code-gen,True,True,True,True,True,True
+BLADE,e2e-agent,True,True,True,True,True,True
+BixBench,e2e-agent,True,True,True,True,True,True
+DataSciBench,e2e-agent,True,True,True,True,True,True
+DiscoveryBench,e2e-agent,True,True,True,True,True,True
+InfiAgent-DABench,e2e-agent,True,True,True,True,True,True
+QRData,e2e-agent,True,True,True,True,True,True
+ScienceAgentBench,e2e-agent,True,True,True,True,True,False
+Spider2-V,e2e-agent,True,True,True,True,True,True
+DSBench,ml-eng,True,True,True,True,True,True
+MLAgentBench,ml-eng,True,True,True,True,True,True
+MLE-bench,ml-eng,True,True,True,True,True,True
+MLGym,ml-eng,True,True,True,True,True,True
+RE-Bench,ml-eng,True,True,True,True,True,True
+SpreadsheetBench,tabular,True,True,True,True,True,True
+TabFact,tabular,True,True,True,True,True,True
+TableBench,tabular,True,True,True,True,True,True
+WikiTableQuestions,tabular,True,True,True,True,True,True
+BIRD,text2sql,True,True,True,True,True,True
+BIRD-CRITIC / SQL-eval,text2sql,True,True,False,True,True,True
+Dr.Spider,text2sql,True,True,True,True,True,True
+Spider,text2sql,True,True,True,True,True,True
+Spider 2.0,text2sql,True,True,True,True,True,True

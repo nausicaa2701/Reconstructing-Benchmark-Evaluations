@@ -1,0 +1,14 @@
+REPAIR: granted huggingface.co (evaluate.load('rouge') fetches metric module at runtime); no code edit
+COMMIT: 6c61a20340409dea8f96edb8675e66bb4abd7b28
+CMD: python3 eval_tablebench_script.py (cwd=$WORKSPACE/repotrees/TableBench_, cap=300s, std_path_semantics=on)
+--- output ---
+Downloading builder script: 0.00B [00:00, ?B/s]Downloading builder script: 6.14kB [00:00, 4.16MB/s]
+Save overall results to $WORKSPACE/repotrees/TableBench_/eval_examples/evaluation_results/overall_sim_inference_results.json
+==== Evaluate by subtype ====
+Processing o3-mini-2025-01-31/DP...
+==== Evaluate by type ====
+Processing o3-mini-2025-01-31/DP...
+
+EXIT=0
+STATUS=COMPLETED
+RUNTIME_S=17.54
