@@ -1,0 +1,8 @@
+benchmark,official_tested,official_pass,corrected_blocker,evidence
+DS-1000,1,1,,artifact/environment/official_runs/DS-1000_official_env_codex002.txt
+PandasEval/NumpyEval (CERT),1,1,,artifact/environment/official_runs/CERT.Dockerfile
+MLE-bench,1,0,missing-required-data (gated),artifact/environment/official_runs/MLE-bench.Dockerfile
+MLGym,1,1,,artifact/environment/official_runs/MLGym.Dockerfile
+RE-Bench,1,0,"privileged runtime, GPU",artifact/environment/official_env_specs/RE-Bench.json
+TabFact,1,0,missing-required-data (dead link),artifact/environment/official_runs/TabFact_official_env.txt
+WikiTableQuestions,1,1,,artifact/environment/official_runs/WikiTableQuestions_official_env.txt

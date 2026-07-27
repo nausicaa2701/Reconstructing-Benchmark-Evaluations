@@ -1,0 +1,27 @@
+benchmark,portable_first_pass,portable_after_repair,portable_any,official_tested,official_pass,L1_any_environment,L2_fixture_matched,L3_published_score_reproduced,highest_level,derivation_timing,evidence
+BigCodeBench,0,0,0,0,0,0,0,0,none,not-applicable,artifact/audit/e3/e3_outcomes.csv
+DA-Code,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/DA-Code.json
+DS-1000,0,1,1,1,1,1,1,1,L3,published-release expected score,artifact/environment/official_runs/DS-1000_published_codex002.txt
+PandasEval/NumpyEval (CERT),0,0,0,1,1,1,0,0,L1,no independently derivable expected value,artifact/environment/official_runs/CERT.Dockerfile
+BLADE,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/BLADE.json
+BixBench,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/BixBench.json
+DataSciBench,0,0,0,0,0,0,0,0,none,not-applicable,artifact/audit/e3/e3_outcomes.csv
+DiscoveryBench,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/DiscoveryBench.json
+InfiAgent-DABench,1,0,1,0,0,1,0,0,L1,input not retained for independent check,artifact/execution/logs/InfiAgent/first_pass.log
+QRData,1,0,1,0,0,1,1,0,L2,post-audit derivation completed before fixture execution,artifact/execution/fixtures/golden_fixture_results.json
+ScienceAgentBench,1,0,1,0,0,1,0,0,L1,input not retained for independent check,artifact/execution/logs/ScienceAgentBench/first_pass.log
+Spider2-V,0,0,0,0,0,0,0,0,none,not-applicable,artifact/audit/e3/e3_outcomes.csv
+DSBench,1,0,1,0,0,1,1,0,L2,post-audit derivation completed before fixture execution,artifact/execution/fixtures/golden_fixture_results.json
+MLAgentBench,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/MLAgentBench.json
+MLE-bench,0,0,0,1,0,0,0,0,none,not-applicable,artifact/environment/official_runs/MLE-bench.Dockerfile
+MLGym,0,0,0,1,1,1,0,0,L1,stochastic scorer has no exact expected value,artifact/environment/official_runs/MLGym.Dockerfile
+RE-Bench,0,0,0,1,0,0,0,0,none,not-applicable,artifact/environment/official_env_specs/RE-Bench.json
+SpreadsheetBench,1,0,1,0,0,1,1,0,L2,retrospective discrimination check,artifact/execution/logs/SpreadsheetBench/first_pass.log
+TabFact,0,0,0,1,0,0,0,0,none,not-applicable,artifact/environment/official_runs/TabFact_official_env.txt
+TableBench,0,1,1,0,0,1,0,0,L1,no independently derived full expected score,artifact/execution/logs/TableBench/repair_pass.log
+WikiTableQuestions,0,0,0,1,1,1,1,0,L2,post-audit derivation completed before fixture execution,artifact/environment/official_runs/WikiTableQuestions_official_env.txt
+BIRD,0,0,0,0,0,0,0,0,none,not-applicable,artifact/audit/e3/e3_outcomes.csv
+BIRD-CRITIC / SQL-eval,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/BIRD-CRITIC___SQL-eval.json
+Dr.Spider,0,0,0,0,0,0,0,0,none,not-applicable,artifact/audit/e3/e3_outcomes.csv
+Spider,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/Spider.json
+Spider 2.0,0,0,0,0,0,0,0,0,none,not-applicable,artifact/execution/manifests/Spider_2.0.json

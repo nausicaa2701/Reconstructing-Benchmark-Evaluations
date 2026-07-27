@@ -5,7 +5,7 @@
 **A public-artifact audit toolkit and evidence dataset for foundation-model benchmarks in data science**
 
 <p>
-  <img src="https://img.shields.io/badge/Status-v1.0.0-ff6b35?style=for-the-badge" alt="Status: v1.0.0" />
+  <img src="https://img.shields.io/badge/Status-v1.1.0-ff6b35?style=for-the-badge" alt="Status: v1.1.0" />
   <img src="https://img.shields.io/badge/Type-Audit%20Dataset%20%2B%20Pipeline-7c3aed?style=for-the-badge" alt="Audit Dataset and Pipeline" />
   <img src="https://img.shields.io/badge/Platform-Python-3776ab?style=for-the-badge&logo=python&logoColor=white" alt="Python Platform" />
   <img src="https://img.shields.io/badge/License-CC--BY--4.0-lightgrey?style=for-the-badge" alt="License: CC-BY-4.0" />
@@ -129,15 +129,26 @@ Against the adjudicated 156-cell gold set the model panel is 60.3% exact (95% CI
 
 ### Evaluator correctness ladder
 
-E3 establishes only that a scorer was invoked. Of the seven releases that ever produced a score:
+E3 establishes only that a scorer was invoked. The frozen portable protocol
+produced a score for seven releases; the union over portable and targeted
+official-environment runs produced a score for ten. Levels below are cumulative:
+L3 implies L2, and L2 implies L1.
 
-| Level | Meaning | Count |
-|---|---|---|
-| L1 | Scorer accepted the input, exited 0, emitted or wrote a score | 7/7 |
-| L2 | Emitted value matches an expected value derived *without* running that scorer | 4/7 |
-| L3 | Scorer reproduces a score the benchmark authors published | 1/7 |
+| Scope | L1 invoked | L2 fixture-matched | L3 published-score reproduced |
+|---|---:|---:|---:|
+| Portable protocol | 7/26 | 4/7 | 1/7 |
+| Any tested environment | 10/26 | 5/10 | 1/10 |
 
-DSBench mattered most here: its scorer writes to `result.txt` and prints nothing to stdout, so exit 0 alone had carried its L1 pass. DS-1000 reaches L3 — run in its own documented environment on the predictions the release ships, it reproduces the shipped score file (mean 0.387 against a published 0.388, exactly one problem of 1000 differing).
+The mutually exclusive highest-level counts among the ten score-producing
+releases are L1-only=5, L2=4, and L3=1. DSBench mattered most here: its scorer
+writes to `result.txt` and prints nothing to stdout, so exit 0 alone had carried
+its L1 pass. DS-1000 reaches L3 — run in its own documented environment on the
+predictions the release ships, it reproduces the shipped score file (mean 0.387
+against a published 0.388, exactly one problem of 1000 differing).
+
+The per-release source of truth is
+[`artifact/execution/fixtures/evaluation_levels.csv`](./artifact/execution/fixtures/evaluation_levels.csv);
+the automated validator prevents denominator or hierarchy drift.
 
 ### E3-portable under-attributes
 

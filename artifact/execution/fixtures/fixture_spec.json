@@ -7,6 +7,7 @@
     "L2_fixture_matched": "The emitted value equals an expected value derived independently of the scorer (by hand or by a reimplementation of the documented metric) within a stated tolerance.",
     "L3_published_score_reproduced": "The scorer reproduces a number published by the benchmark authors for a released prediction set, within a stated tolerance."
   },
+  "hierarchy": "The released summary uses cumulative levels: L3 implies L2 because a published author score supplies an expected value independent of the audit run, and L2 implies L1 because a match requires scorer invocation. The highest_level field remains mutually exclusive.",
   "rules": [
     "An expected value must be derivable from the fixture input and the release's own documented metric definition without executing the release's scorer.",
     "Every fixture records its derivation method in prose so a reader can recompute it.",
@@ -152,6 +153,6 @@
       "note": "Executed 2026-07-27 in a container built from the release's declared dependencies; emitted {\"Score\": -0.2487}."
     }
   ],
-  "updated": "2026-07-26",
-  "note_on_denominator": "The ladder is reported over every release that produced a score in any environment we tested. Three releases entered this set only through the official-environment baseline (CERT, MLGym, WikiTableQuestions); under the shared portable environment the set was seven."
+  "updated": "2026-07-27",
+  "note_on_denominator": "The portable protocol produced a score for 7 releases. The union over portable and tested official environments produced a score for 10 releases. The cumulative correctness ladder over that 10-release union is L1=10, L2=5 (including the L3 release), and L3=1. See evaluation_levels.csv for the authoritative per-release accounting."
 }

@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Reproduction interface for:
-  "Reconstructing Benchmark Evaluations: A Public-Artifact Audit of
-   Foundation-Model Benchmarks for Data Science" (KDD 2027 D&B Track)
+  "Auditing Public Evaluation Specifications and Scorer Smoke-Testability:
+   A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"
+   (KDD 2027 D&B Track)
 
 Usage (from repository root, analysis environment; numpy/scipy/pandas/matplotlib + jsonschema):
     python artifact/reproduce.py --check      # validate schema, recompute stats, verify hashes
@@ -93,6 +94,12 @@ def validate_model_panel():
         assert sha256(os.path.join(panel, rel)) == expected, f"model-panel hash mismatch: {rel}"
     print("[model-panel] OK: 468 raw decisions, 156 cells, R2=13/26 majority, "
           "1/26 strict, 7/26 unanimous; binary repeatability=93.5%")
+
+def validate_evaluation_levels():
+    validator = os.path.join(
+        A, "execution", "fixtures", "validate_evaluation_levels.py"
+    )
+    subprocess.run([sys.executable, validator], check=True)
 
 def compute_stats(df):
     N = 26
@@ -187,6 +194,7 @@ def main():
     if not (args.check or args.regenerate): args.check = True
     df = validate_schema()
     validate_model_panel()
+    validate_evaluation_levels()
     stats = compute_stats(df)
     check_stats(stats)
     if args.regenerate:

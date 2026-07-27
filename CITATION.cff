@@ -14,11 +14,12 @@ abstract: >-
   official-environment build specifications, execution logs, minimal-repair
   patches, and a single-command reproduction pipeline.
 type: dataset
-version: "1.0.0"
+version: "1.1.0"
 date-released: "2026-07-27"
 license: CC-BY-4.0
+doi: 10.5281/zenodo.21617013
 repository-code: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
-url: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
+url: "https://doi.org/10.5281/zenodo.21617013"
 authors:
   - family-names: "Le"
     given-names: "Thi-Hong-Cuc"
@@ -45,15 +46,10 @@ keywords:
   - evaluation protocols
   - inter-rater reliability
   - artifact evaluation
-# After the Zenodo deposition exists, record the DOIs here. Use the VERSION DOI
-# for v1.0.0 in the paper; the concept DOI resolves to the latest version.
-#   identifiers:
-#     - type: doi
-#       value: 10.5281/zenodo.XXXXXXX
-#       description: "Version DOI for v1.0.0"
-#     - type: doi
-#       value: 10.5281/zenodo.YYYYYYY
-#       description: "Concept DOI (all versions)"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21617013
+    description: "Archived artifact release"
 preferred-citation:
   type: conference-paper
   title: "Auditing Public Evaluation Specifications and Scorer Smoke-Testability: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"

@@ -1,7 +1,8 @@
 # Human Validation of R2 Coding
 
-This directory turns the outstanding human-validation requirement into a
-replayable, blinded workflow. It does not contain completed human labels.
+This directory contains the completed, replayable blinded human-validation
+workflow, the two frozen rater submissions, adjudication records, and derived
+reliability analyses.
 
 ## Roles
 
@@ -69,5 +70,22 @@ adjudication.
 - Adjudication is completed without consulting model labels.
 - Human-coded R2 replaces model-coded R2 in the paper and generated artifacts.
 
-If the reliability gate fails, revise the ambiguous codebook boundary, run a
-new independent pilot, and do not present R2 as a validated primary result.
+## Completed outcome
+
+Both raters completed all 156 cells with evidence pointers, but the reliability
+gate failed: exact agreement was 59.6%, nominal Krippendorff alpha was 0.432
+(clustered 95% CI [0.299, 0.556]), and 63/156 cells required adjudication.
+Across the two humans and three model coders, none of the ten coder pairs
+reached alpha 0.80. The six-way R2 instrument is therefore released as a
+negative validation result and is not presented as validated ground truth.
+
+Authoritative outputs:
+
+- `frozen_submissions.json`: hashes of both completed submissions;
+- `human_reliability_stats.json` and `human_diagnostics.json`: two-rater result;
+- `five_coder_reliability.json`: all ten coder pairs;
+- `human_gold_set.csv` and `gold_set_stats.json`: adjudicated descriptive set;
+- `human_disagreements_for_adjudication.csv`: all 63 uncollapsed disagreements.
+
+The proposed binary artifact-anchored replacement has not been prospectively
+validated and is described as a proposed remedy, not as a measured result.

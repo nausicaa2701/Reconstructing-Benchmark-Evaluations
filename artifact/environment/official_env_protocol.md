@@ -9,7 +9,7 @@ evaluator is runnable under its own documented environment but not under ours.
 Two of the seven first-pass dependency-or-environment failures (DS-1000,
 MLE-bench) are known to be of the second kind or plausibly so.
 
-This protocol adds a second, primary-facing endpoint:
+This protocol adds a second endpoint:
 
 - **E3-official** — the evaluator is invoked in a clean environment built
   *only* from the release's own documented setup instructions at the frozen
@@ -17,9 +17,9 @@ This protocol adds a second, primary-facing endpoint:
 - **E3-portable** — the evaluator is invoked in the shared `e3smoke`
   environment. This is what the frozen audit reports.
 
-E3-official measures the release. E3-portable measures the release *and* our
-provisioning, and becomes an explicitly labelled portability endpoint rather
-than the headline.
+E3-official measures compatibility with the release's documented environment.
+E3-portable measures compatibility with the shared environment. Neither is a
+general verdict on benchmark quality, and the endpoints are never merged.
 
 ## Environment construction rules
 
@@ -61,21 +61,24 @@ DS-1000 and MLE-bench are the two releases we expect to land there.
 
 ## Scope of the baseline
 
-All 21 releases that reached an executable command are in scope. The five that
-never presented an invocable interface are out of scope: no documented
-environment can be built for an evaluator that does not exist in the artifacts.
+The released follow-up executes the official-environment baseline for the seven
+releases whose portable first-pass label was
+`dependency-or-environment-failure`. This is a failure-label diagnostic, not an
+estimate over all 21 releases that reached a command. The remaining releases
+were not silently assigned an E3-official outcome.
 
 ## Reporting rule
 
 E3-official and E3-portable are reported as separate columns and never merged.
-Until the per-release runs are complete, the paper reports E3-portable only and
-labels it as such; no release is claimed to pass or fail E3-official on the
-basis of the shared-environment result.
+The released results contain an explicit `official_tested` field. Untested
+releases remain missing rather than being treated as official-environment
+failures.
 
 ## Status
 
-Environment specifications are generated from the frozen manifests by
-`build_official_env_specs.py`. The execution of these environments requires
-re-cloning each release at its frozen commit and is not yet complete; the
-paper states this explicitly rather than reporting the shared-environment
-result as an as-documented outcome.
+The seven selected official-environment runs are complete: four evaluators ran
+and three stopped on a corrected non-environment blocker. None of the seven
+original environment attributions survived. The machine-readable outcomes and
+evidence pointers are in `official_environment_results.csv`; build files and
+logs are in `official_runs/`. This result does not imply that the other 14
+command-reachable releases were tested in their official environments.

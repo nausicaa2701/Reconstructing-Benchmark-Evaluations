@@ -1,16 +1,17 @@
 cff-version: 1.2.0
 message: "If you use this artifact, please cite the paper below."
-title: "Reconstructing Benchmark Evaluations: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"
+title: "Auditing Public Evaluation Specifications and Scorer Smoke-Testability: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"
 abstract: >-
   An evidence dataset and analysis pipeline auditing the public evaluation
   reproducibility of 26 foundation-model benchmark releases for data-science tasks,
   laddered as Described, Accessible, Reconstructable, and Smoke-testable, with
   CPU-only evaluator smoke tests.
-version: "1.0.0"
-date-released: "2026-07-13"
+version: "1.1.0"
+date-released: "2026-07-27"
 license: CC-BY-4.0
+doi: 10.5281/zenodo.21617013
 repository-code: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
-url: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
+url: "https://doi.org/10.5281/zenodo.21617013"
 keywords:
   - benchmark auditing
   - reproducibility

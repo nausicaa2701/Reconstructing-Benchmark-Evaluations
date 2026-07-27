@@ -1,8 +1,11 @@
 # Public-Artifact Audit of Foundation-Model Benchmarks for Data Science
 
 Evidence dataset and analysis pipeline for the paper
-*"Reconstructing Benchmark Evaluations: A Public-Artifact Audit of Foundation-Model
-Benchmarks for Data Science"* (KDD 2027 Datasets and Benchmarks Track).
+*"Auditing Public Evaluation Specifications and Scorer Smoke-Testability:
+A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"*
+(KDD 2027 Datasets and Benchmarks Track).
+
+**Archived release:** [DOI 10.5281/zenodo.21617013](https://doi.org/10.5281/zenodo.21617013)
 
 **Primary audit date:** 2026-07-13 · **Expansion audit:** 2026-07-16 ·
 **Screening frame:** 35 candidates · **Primary cohort:** 26 frozen releases ·
@@ -28,6 +31,30 @@ screening frame. R2 and E3 are conditional on the repository-resolved cohort.
 | R2 Reconstructable (permissive) | 13/26 (50%) | [32.1%, 67.9%] |
 | **E3 as documented** | **5/26 (19.2%)** | **[8.5%, 37.9%]** |
 | E3 after documented repair | 7/26 (26.9%) | [13.7%, 46.1%] |
+
+E3 above is the frozen **portable-environment** endpoint. A targeted
+official-environment diagnostic subsequently rebuilt all seven releases whose
+portable failure had been labelled dependency/environment: 4 ran, while 3
+stopped on corrected data-access or privileged-runtime blockers. None of the
+seven original environment attributions survived. This was a selected
+failure-label diagnostic, not an official-environment audit of the full cohort.
+
+### Authoritative evaluator-correctness ladder
+
+`execution/fixtures/evaluation_levels.csv` is the source of truth for all
+L1/L2/L3 counts. It distinguishes the seven releases producing a score in the
+portable protocol from the ten producing a score in any tested environment.
+Levels are cumulative: L3 implies L2, and L2 implies L1.
+
+| Scope | L1 invoked | L2 fixture-matched | L3 published-score reproduced |
+|---|---:|---:|---:|
+| Portable protocol | 7/26 | 4/7 | 1/7 |
+| Any tested environment | 10/26 | 5/10 | 1/10 |
+
+The mutually exclusive highest-level counts over the ten releases are
+L1-only=5, L2=4, and L3=1. `validate_evaluation_levels.py` cross-checks the
+table against frozen E3 outcomes, official-environment results, fixture status,
+the cumulative hierarchy, and every evidence path.
 
 The declared 30-release expansion sensitivity gives R2 16/30, first-pass E3
 8/30, and repaired E3 10/30. Primary outcomes remain tied to the frozen
@@ -63,7 +90,7 @@ artifact/
   docs/                  research contract, novelty positioning,
                          maintainer verification + corpus maintenance policy
   human_validation/      blinded two-rater R2 coding instrument (not yet executed)
-  execution/fixtures/    golden-fixture spec: L1 invoked / L2 matched / L3 published
+  execution/fixtures/    authoritative L1/L2/L3 table, fixtures, and validator
   environment/           frozen envs + per-release official-environment specs
   MANIFEST.sha256        sha256 of every released file
   MANIFEST.json          release version, paper PDF hash, frozen vs living layer
@@ -74,12 +101,13 @@ artifact/
 | Layer | Status |
 |---|---|
 | A1 accessibility | measured |
-| R2 model-panel coding | measured; **no human-coded cell**, reliability gate missed |
-| R2 human criterion validation | instrument released, **not executed** |
+| R2 model-panel coding | measured; reliability gate missed |
+| R2 human criterion validation | completed; two raters, all 156 cells; reliability gate missed |
 | E3 L1 invocation (portable env) | measured: 5/26 first-pass, 7/26 after repair |
-| E3 L2 golden-fixture match | 1/7; the one case is retrospective |
-| E3 L3 published-score reproduction | 0/7 |
-| E3-official (per-release env) | protocol + 21 specs released, **not executed** |
+| E3 L1 invocation (any tested env) | measured: 10/26 |
+| E3 L2 golden-fixture match | measured: 5/10 cumulatively; 4 have L2 as highest level |
+| E3 L3 published-score reproduction | measured: 1/10 (DS-1000) |
+| E3-official diagnostic | completed for all 7 portable environment-labelled failures; 4 pass |
 | Maintainer confirmation / dispute | protocol released, **no release contacted** |
 
 Anything marked *not executed* is released as a runnable instrument with a
@@ -105,7 +133,8 @@ python artifact/reproduce.py --regenerate  # regenerate headline outputs and has
 
 `--check` validates the master dataset, recomputes conditional R2/E3 statistics,
 checks the 30/35 completed screening yield, validates both the primary and
-expanded datasets, and verifies released output hashes.
+expanded datasets, verifies released output hashes, and validates the
+authoritative L1/L2/L3 table.
 
 To regenerate the data-driven figures from the frozen dataset:
 
@@ -137,13 +166,15 @@ are kept separate.
 
 ## Reliability
 
-R2 was coded independently by three providers and aggregated without model
-adjudication. Nominal inter-model alpha is 0.471 (95% CI [0.373, 0.548]); at the
-binary R2 boundary, alpha is 0.622, AC1 is 0.806, and pairwise agreement is
-86.2%--88.5%. Preselected-sample binary repeatability is 93.5%. The nominal
-0.80 gate was missed, so R2 remains descriptive rather than validated ground
-truth. Prompts, packets, raw responses, line-level evidence, run history, and
-aggregation code are released in `audit/model_panel_v1/`.
+R2 was coded independently by three model providers and two blinded human
+raters, none of whom saw another coder's work. Model-panel nominal alpha is
+0.471 (95% CI [0.373, 0.548]); human-human alpha is 0.432 (clustered 95% CI
+[0.299, 0.556]). Across all five coders, none of the ten pairs reaches the
+pre-specified 0.80 gate (pairwise alpha 0.371--0.503), and 63/156 human-coded
+cells required adjudication. R2 therefore remains descriptive rather than
+validated ground truth. The two completed rater files, their uncollapsed
+disagreements, adjudication, five-coder statistics, model prompts, packets, raw
+responses, and line-level evidence are released.
 
 ## Redistribution and licenses
 

@@ -1,9 +1,18 @@
 {
   "spec_version": "golden-fixtures-v1",
   "n_reachable_evaluators_with_a_pass": 10,
+  "portable_releases_with_a_pass": 7,
+  "official_environment_releases_tested": 7,
+  "official_environment_releases_with_a_pass": 4,
   "L1_invoked": 10,
   "L2_fixture_matched": 5,
   "L3_published_score_reproduced": 1,
+  "levels_are_cumulative": true,
+  "highest_level_counts": {
+    "L1": 5,
+    "L2": 4,
+    "L3": 1
+  },
   "all_L2_are_retrospective": false,
   "per_release": [
     {
@@ -34,7 +43,8 @@
     {
       "benchmark": "DS-1000",
       "status": "L3",
-      "retrospective": false
+      "retrospective": false,
+      "also_counts_toward_cumulative_L2": true
     },
     {
       "benchmark": "TableBench",
