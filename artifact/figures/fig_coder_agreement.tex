@@ -1,0 +1,65 @@
+% Pairwise nominal Krippendorff's alpha for all ten coder pairs, against the
+% pre-registered gate. Regenerated from
+%   artifact/human_validation/five_coder_reliability.json
+% by artifact/make_tex_figures.py.
+\begin{tikzpicture}[font=\small]
+
+\def\xa{0.0}      % axis origin (alpha = 0.30)
+\def\xscale{13.0} % cm per unit alpha
+\def\amin{0.30}
+\def\amax{0.85}
+\def\rowsep{0.42}
+
+% ---- helper: x position for a given alpha
+\newcommand{\ax}[1]{{(#1-\amin)*\xscale}}
+
+% ---- gate band
+\fill[auditGreen!8]
+  (\ax{0.80},-0.35) rectangle (\ax{\amax},{10*\rowsep+0.25});
+\draw[auditGreen!70, thick, dashed]
+  (\ax{0.80},-0.35) -- (\ax{0.80},{10*\rowsep+0.25});
+\node[auditGreen!80!black, font=\scriptsize, anchor=south, align=center]
+  at (\ax{0.825},{10*\rowsep+0.28}) {pre-registered\\gate $\alpha\!\geq\!0.80$};
+
+% ---- axis
+\draw[black!45] (\ax{\amin},-0.35) -- (\ax{\amax},-0.35);
+\foreach \t in {0.3,0.4,0.5,0.6,0.7,0.8} {
+  \draw[black!45] (\ax{\t},-0.35) -- (\ax{\t},-0.48);
+  \node[font=\scriptsize, black!65, anchor=north] at (\ax{\t},-0.5) {\t};
+}
+\node[font=\scriptsize, black!65, anchor=north]
+  at (\ax{0.575},-0.92) {nominal Krippendorff's $\alpha$};
+
+% ---- ten pairs, sorted ascending
+% #1 row  #2 alpha  #3 colour  #4 label
+\newcommand{\pairrow}[4]{%
+  \node[font=\scriptsize, black!75, anchor=east] at (-0.15,{#1*\rowsep}) {#4};
+  \draw[black!12] (\ax{\amin},{#1*\rowsep}) -- (\ax{\amax},{#1*\rowsep});
+  \fill[#3] (\ax{#2},{#1*\rowsep}) circle (2.3pt);
+}
+
+\pairrow{0}{0.371}{auditSlate}{rater B\,--\,Claude}
+\pairrow{1}{0.378}{auditSlate}{rater A\,--\,Claude}
+\pairrow{2}{0.392}{auditSlate}{rater B\,--\,Gemini}
+\pairrow{3}{0.414}{auditSlate}{rater A\,--\,Gemini}
+\pairrow{4}{0.424}{auditSlate}{rater A\,--\,GPT}
+\pairrow{5}{0.432}{auditRed}{rater A\,--\,rater B}
+\pairrow{6}{0.438}{auditBlue}{Gemini\,--\,GPT}
+\pairrow{7}{0.469}{auditBlue}{Claude\,--\,Gemini}
+\pairrow{8}{0.501}{auditBlue}{Claude\,--\,GPT}
+\pairrow{9}{0.503}{auditSlate}{rater B\,--\,GPT}
+
+% ---- five-coder alpha marker
+\draw[auditGrey, thick, dotted] (\ax{0.435},-0.30) -- (\ax{0.435},{10*\rowsep+0.15});
+\node[font=\scriptsize, auditGrey, anchor=south] at (\ax{0.435},{10*\rowsep+0.16})
+  {five-coder $\alpha$};
+
+% ---- legend
+\node[font=\scriptsize, anchor=west] at (\ax{0.575},{9.2*\rowsep})
+  {\tikz\fill[auditRed] (0,0) circle (2.1pt); human--human};
+\node[font=\scriptsize, anchor=west] at (\ax{0.575},{8.2*\rowsep})
+  {\tikz\fill[auditBlue] (0,0) circle (2.1pt); model--model};
+\node[font=\scriptsize, anchor=west] at (\ax{0.575},{7.2*\rowsep})
+  {\tikz\fill[auditSlate] (0,0) circle (2.1pt); human--model};
+
+\end{tikzpicture}

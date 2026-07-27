@@ -1,9 +1,9 @@
 {
-  "release_version": "v1.1.1",
+  "release_version": "v1.1.2",
   "built": "2026-07-27",
-  "paper_pdf_sha256": "23a13dd786f2b7602587058e232adddf1e84392634b7c8a3a62dfc97aa4fdb3e",
-  "n_files": 507,
-  "total_bytes": 6193408,
+  "paper_pdf_sha256": "a57c9e4c87da76617ec523493c1babb5449d288840eb437436493bc2a6ec6600",
+  "n_files": 509,
+  "total_bytes": 6196700,
   "license": "CC-BY-4.0 for original contributions; see artifact/LICENSE",
   "regeneration": "python artifact/reproduce.py",
   "frozen_layer": "corpus/, audit/, execution/logs/, execution/manifests/",
@@ -12,7 +12,7 @@
     {
       "path": "artifact/CITATION.cff",
       "bytes": 882,
-      "sha256": "155cc578580abdb861fe166382ff8a880dbbbf55ceb8c4a2db1d8a027534cec9"
+      "sha256": "e64b0b813e9a6237e2b75f02c6e536471e4feb653b86dda2ef079b2570800a08"
     },
     {
       "path": "artifact/LICENSE",
@@ -38,6 +38,11 @@
       "path": "artifact/RELEASE_NOTES_v1.1.1.md",
       "bytes": 741,
       "sha256": "0a2765dc9f8f0ada3985c409c4b3f334b993af6b35894addd4b9c33713708839"
+    },
+    {
+      "path": "artifact/RELEASE_NOTES_v1.1.2.md",
+      "bytes": 603,
+      "sha256": "baffc9a5e81943aa4c69233b9533dd5743d1dc3338805a029cb0a9c81df7e439"
     },
     {
       "path": "artifact/analysis/apply_model_panel.py",
@@ -2120,6 +2125,11 @@
       "sha256": "e1415d194586ca077027abbefd38f0661ddebe514ae0aeef64676e958c563c24"
     },
     {
+      "path": "artifact/figures/fig_coder_agreement.tex",
+      "bytes": 2619,
+      "sha256": "f465827796fa266fade9ef50d41f16a68d0934724a571d6db87bdecdf9aa0009"
+    },
+    {
       "path": "artifact/figures/fig_corpus_composition.pdf",
       "bytes": 36644,
       "sha256": "56678772e4685e52fb63d4fd6a53bd59d8ac66b7a73a56f9a85116a81d34f3ca"
@@ -2541,8 +2551,8 @@
     },
     {
       "path": "artifact/tables/table5_official_env.tex",
-      "bytes": 856,
-      "sha256": "0a5c565e84b4b1bc7c73ac1966858ac943c743c0c8da7dd8e6977d1691444e4e"
+      "bytes": 926,
+      "sha256": "91938871e6d78452c27d762512266cb43d4d702d082c1c774999364111238339"
     }
   ]
 }

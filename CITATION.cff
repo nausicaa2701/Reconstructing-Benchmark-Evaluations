@@ -14,7 +14,7 @@ abstract: >-
   official-environment build specifications, execution logs, minimal-repair
   patches, and a single-command reproduction pipeline.
 type: dataset
-version: "1.1.0"
+version: "1.1.2"
 date-released: "2026-07-27"
 license: CC-BY-4.0
 doi: 10.5281/zenodo.21617013
