@@ -3,14 +3,29 @@
   "frozen_commit": "b39aab71da6d23ef8d3cac59a7c5f834516ab334",
   "portable_first_pass_label": "dependency-or-environment-failure",
   "portable_repair_label": "pass-after-minimal-repair",
-  "authoritative_setup_file": null,
-  "base_image": null,
-  "build_commands": [],
-  "resolved_packages_digest": null,
-  "E3_official_first_pass": null,
+  "authoritative_setup_file": "README.md + environment.yml",
+  "base_image": "continuumio/miniconda3:25.1.1-2 (release pins no OS or base image)",
+  "build_commands": [
+    "conda env create -f environment.yml",
+    "conda activate ds1000-3.10",
+    "pip install datasets tqdm",
+    "python test_ds1000.py --model codex002"
+  ],
+  "resolved_packages_digest": "environment.yml as shipped: python 3.10, pandas 1.5.3, numpy 1.26.4, scikit-learn 1.4.0, torch 2.2.0, tensorflow-cpu 2.16.1",
+  "E3_official_first_pass": true,
   "E3_official_after_repair": null,
   "E3_portable_first_pass": false,
-  "under_specified_base": null,
-  "environment_contract_findings": [],
-  "status": "pending-execution"
+  "under_specified_base": true,
+  "environment_contract_findings": [
+    "E3-official is a first-pass PASS where E3-portable failed. The portable failure was a sandbox PermissionError on a POSIX semaphore query inside ProcessPoolExecutor, i.e. our provisioning, not the release.",
+    "Running the documented command on the release's own shipped codex002 predictions reproduces the shipped result file: mean 0.387 against a published 0.388. Six of seven per-library means match exactly; Sklearn differs by 0.009 on n=115, i.e. exactly one problem of 1000. This is the cohort's first L3 published-score reproduction.",
+    "environment.yml pins Python and library versions but no OS or base image. On continuumio/miniconda3:24.1.2-0 the same build fails at import with GLIBCXX_3.4.29 not found; on 25.1.1-2 it runs. The documented environment is therefore reproducible only up to an unstated base-image choice."
+  ],
+  "status": "executed",
+  "E3_official_first_pass_label": "pass-as-documented",
+  "L3_published_score_reproduced": true,
+  "published_score_mean": 0.388,
+  "official_env_score_mean": 0.387,
+  "score_delta": 0.001,
+  "executed": "2026-07-26"
 }

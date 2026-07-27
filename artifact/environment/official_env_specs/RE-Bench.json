@@ -3,14 +3,23 @@
   "frozen_commit": "93b98062e55f6945d4a7e213a3226dd419896170",
   "portable_first_pass_label": "dependency-or-environment-failure",
   "portable_repair_label": null,
-  "authoritative_setup_file": null,
-  "base_image": null,
-  "build_commands": [],
-  "resolved_packages_digest": null,
-  "E3_official_first_pass": null,
+  "authoritative_setup_file": "ai_rd_*/requirements.txt; ai_rd_*/assets/score.py",
+  "base_image": "not buildable for CPU-only scoring (see findings)",
+  "build_commands": [
+    "pip install -r ai_rd_triton_cumsum/requirements.txt",
+    "python assets/score.py"
+  ],
+  "resolved_packages_digest": "torch==2.3.1, triton==2.3.1, numpy<2.0, git+https://github.com/METR/task-protected-scoring.git@v0.2.1",
+  "E3_official_first_pass": false,
   "E3_official_after_repair": null,
   "E3_portable_first_pass": false,
-  "under_specified_base": null,
-  "environment_contract_findings": [],
-  "status": "pending-execution"
+  "under_specified_base": false,
+  "environment_contract_findings": [
+    "score.py refuses to run outside METR's privileged scoring group: its __main__ calls scoring.check_scoring_group(), which we executed directly in a clean container and which raises AssertionError, re-raised by score.py as PermissionError('Must use the `score` action to register an offical score').",
+    "The scorer also builds its input with device='cuda' and reads the solution from the fixed agent path /home/agent/solution/solution.py, so it is bound to a GPU task environment rather than to a package set.",
+    "This is therefore not a dependency-or-environment failure. The gate was executed; the CUDA path was determined by code inspection, not run."
+  ],
+  "status": "executed",
+  "E3_official_first_pass_label": "privileged-runtime-or-hardware-required",
+  "executed": "2026-07-27"
 }

@@ -1,0 +1,5 @@
+gold,claimed-but-not-verifiable,documented-and-verifiable,not-documented,partially-documented
+claimed-but-not-verifiable,5,0,3,7
+documented-and-verifiable,1,25,6,9
+not-documented,1,1,24,3
+partially-documented,3,20,8,40

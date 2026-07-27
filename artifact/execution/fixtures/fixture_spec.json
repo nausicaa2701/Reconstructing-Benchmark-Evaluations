@@ -89,15 +89,16 @@
     },
     {
       "benchmark": "DS-1000",
-      "scorer": "test_ds1000.py (in-process repair shim)",
-      "metric": "per-problem pass/fail aggregated to mean accuracy",
-      "input": "official shipped sample predictions, 50-problem slice",
-      "expected": null,
-      "tolerance": 0.0,
-      "derivation": "Per-problem pass/fail is decidable only by executing the problem tests, so no hand derivation exists; the fixture role here is equivalence checking between the shipped scorer and the repair shim on the same slice.",
-      "status": "L1-only",
-      "evidence": "artifact/execution/logs/DS1000/repair_pass.log",
-      "note": "Also the repair-equivalence fixture: the shim must reproduce the unrepaired scorer's per-problem verdicts on a host where the unrepaired scorer runs."
+      "scorer": "test_ds1000.py",
+      "metric": "pass rate over 1000 problems",
+      "input": "data/codex002-answers.jsonl (shipped by the release)",
+      "expected": 0.388,
+      "tolerance": 0.002,
+      "derivation": "The release ships both the codex002 prediction set and the score file it produced (results/codex002-result.txt, mean 0.388). Running the documented command in the release's own environment reproduces 0.387.",
+      "status": "L3",
+      "evidence": "artifact/environment/official_runs/",
+      "note": "Executed 2026-07-26 in a container built only from the release's documented setup. Exactly one problem of 1000 differs.",
+      "retrospective": false
     },
     {
       "benchmark": "TableBench",
@@ -110,7 +111,47 @@
       "status": "L1-only",
       "evidence": "artifact/execution/logs/TableBench/repair_pass.log",
       "note": "Because the input is the authors' own shipped example, this is the cohort's only L3 candidate if the authors publish an expected score for that example."
+    },
+    {
+      "benchmark": "WikiTableQuestions",
+      "scorer": "evaluator.py",
+      "metric": "denotation accuracy",
+      "input": "inputs/wtq/pred_fixture.tsv over the first 20 rows of the shipped pristine-unseen-tables tagged split",
+      "expected": 0.5,
+      "tolerance": 0.0,
+      "derivation": "Ten of the twenty predictions echo the shipped targetValue (split on the '|' item separator into the tab-separated item format the evaluator documents) and ten are a fixed wrong string, so accuracy is 10/20 by construction, derived without running the scorer.",
+      "status": "L2",
+      "retrospective": false,
+      "evidence": "artifact/environment/official_runs/WikiTableQuestions_official_env.txt",
+      "note": "Executed 2026-07-27 in a python:2.7 container built from the release's own documented setup; emitted 0.5. An earlier fixture that echoed the raw targetValue scored 0.45 because one target is a multi-item list; the mismatch was the fixture's, not the scorer's."
+    },
+    {
+      "benchmark": "PandasEval/NumpyEval (CERT)",
+      "scorer": "cert/pandas-numpy-eval evaluate_functional_correctness",
+      "metric": "pass@1 over functional-correctness execution",
+      "input": "data/Example_Pandas_PYCODEGPT_samples.jsonl (shipped by the release)",
+      "expected": null,
+      "tolerance": null,
+      "derivation": "No expected value is derivable without executing the 101 shipped completions against the shipped unit tests, which is what the scorer itself does; the release publishes no pass@1 for this example file (its README table reports HumanEval, a different benchmark). L3 would need an authors' PandasEval number.",
+      "status": "L1-only",
+      "retrospective": false,
+      "evidence": "artifact/environment/official_runs/CERT.Dockerfile",
+      "note": "Executed 2026-07-27 in the release's own documented environment; emitted pass@1 = 0.0693."
+    },
+    {
+      "benchmark": "MLGym",
+      "scorer": "data/blotto/evaluate.py",
+      "metric": "mean Monte-Carlo payoff over 10000 simulated games",
+      "input": "the task's own shipped strategy.py and target.py",
+      "expected": null,
+      "tolerance": null,
+      "derivation": "The scorer is a stochastic Monte-Carlo simulation seeded from the system RNG, so no exact expected value is derivable; a fixture would need a seeded variant, which the release does not expose.",
+      "status": "L1-only",
+      "retrospective": false,
+      "evidence": "artifact/environment/official_runs/MLGym.Dockerfile",
+      "note": "Executed 2026-07-27 in a container built from the release's declared dependencies; emitted {\"Score\": -0.2487}."
     }
   ],
-  "updated": "2026-07-26"
+  "updated": "2026-07-26",
+  "note_on_denominator": "The ladder is reported over every release that produced a score in any environment we tested. Three releases entered this set only through the official-environment baseline (CERT, MLGym, WikiTableQuestions); under the shared portable environment the set was seven."
 }

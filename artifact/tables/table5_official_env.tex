@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Official-environment baseline for every release whose portable
+first-pass failure we had labelled \emph{dependency-or-environment}. Each
+environment was built only from that release's own documented setup at the
+frozen commit, with no auditor-added package. None of the seven labels survived.}
+\label{tab:official}
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Release & E3-official & Corrected blocker \\
+\midrule
+DS-1000            & pass & --- (also reproduces published score) \\
+CERT               & pass & --- \\
+MLGym              & pass & --- \\
+WikiTableQuestions & pass & --- \\
+\addlinespace
+MLE-bench          & fail & missing required data (gated) \\
+TabFact            & fail & missing required data (dead link) \\
+RE-Bench           & fail & privileged runtime, GPU \\
+\bottomrule
+\end{tabular}
+\end{table}

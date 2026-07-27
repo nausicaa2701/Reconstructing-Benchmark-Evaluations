@@ -3,14 +3,25 @@
   "frozen_commit": "7d455a5a707b96341ef72aff9428749d443d8aa9",
   "portable_first_pass_label": "dependency-or-environment-failure",
   "portable_repair_label": null,
-  "authoritative_setup_file": null,
-  "base_image": null,
-  "build_commands": [],
-  "resolved_packages_digest": null,
-  "E3_official_first_pass": null,
+  "authoritative_setup_file": "README.md 'Evaluator' section; evaluator.py shebang",
+  "base_image": "python:2.7-slim (release pins no interpreter version or base image)",
+  "build_commands": [
+    "python evaluator.py -t <tagged_dir> <prediction_file>"
+  ],
+  "resolved_packages_digest": "stdlib only; the release declares no dependency",
+  "E3_official_first_pass": true,
   "E3_official_after_repair": null,
   "E3_portable_first_pass": false,
-  "under_specified_base": null,
-  "environment_contract_findings": [],
-  "status": "pending-execution"
+  "under_specified_base": true,
+  "environment_contract_findings": [
+    "The portable failure was a SyntaxError on Python-2 `ur\"\"` literals: our fixed Python 3.11 environment, not the release. Under python:2.7 the evaluator runs unmodified.",
+    "A 20-row fixture built from the shipped tagged split, half echoing the target and half deliberately wrong, yields the hand-derived 0.5 exactly.",
+    "The README's documented usage string (`evaluator.py <tagged> <pred>`) does not match the argparse interface (`-t <tagged_dir> <pred>`), and -t takes a directory rather than the .tagged file the text implies."
+  ],
+  "status": "executed",
+  "E3_official_first_pass_label": "pass-as-documented",
+  "L2_fixture_matched": true,
+  "expected": 0.5,
+  "emitted": 0.5,
+  "executed": "2026-07-27"
 }

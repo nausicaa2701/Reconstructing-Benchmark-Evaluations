@@ -1,0 +1,157 @@
+benchmark,criterion,label_A,label_B,gold,label_M
+BIRD-CRITIC / SQL-eval,Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,documented-and-verifiable
+DSBench,Predictions->aggregate-score mapping,partially-documented,documented-and-verifiable,partially-documented,partially-documented
+BixBench,Metric definition,documented-and-verifiable,partially-documented,partially-documented,partially-documented
+BixBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+QRData,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+DataSciBench,Predictions->aggregate-score mapping,documented-and-verifiable,partially-documented,documented-and-verifiable,not-documented
+DataSciBench,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented
+WikiTableQuestions,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+DS-1000,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+RE-Bench,Metric definition,documented-and-verifiable,partially-documented,partially-documented,documented-and-verifiable
+MLGym,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+MLE-bench,Sample predictions / trajectories,partially-documented,not-documented,partially-documented,not-documented
+QRData,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+ScienceAgentBench,Evaluator implementation available,documented-and-verifiable,partially-documented,partially-documented,documented-and-verifiable
+MLGym,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+DA-Code,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,partially-documented
+MLGym,Predictions->aggregate-score mapping,partially-documented,partially-documented,partially-documented,not-documented
+ScienceAgentBench,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+MLAgentBench,Sample predictions / trajectories,partially-documented,documented-and-verifiable,partially-documented,claimed-but-not-verifiable
+ScienceAgentBench,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+TabFact,Input/expected-output schema,partially-documented,not-documented,partially-documented,documented-and-verifiable
+BIRD-CRITIC / SQL-eval,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+Spider 2.0,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,documented-and-verifiable,partially-documented
+InfiAgent-DABench,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+DSBench,Input/expected-output schema,documented-and-verifiable,partially-documented,partially-documented,partially-documented
+BigCodeBench,Predictions->aggregate-score mapping,partially-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+BigCodeBench,Sample predictions / trajectories,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,claimed-but-not-verifiable
+BIRD-CRITIC / SQL-eval,Predictions->aggregate-score mapping,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,claimed-but-not-verifiable
+BIRD,Predictions->aggregate-score mapping,not-documented,not-documented,not-documented,not-documented
+BixBench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+Spider 2.0,Input/expected-output schema,documented-and-verifiable,partially-documented,documented-and-verifiable,partially-documented
+Spider2-V,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+ScienceAgentBench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+Spider2-V,Predictions->aggregate-score mapping,not-documented,not-documented,not-documented,not-documented
+DA-Code,Metric definition,partially-documented,partially-documented,partially-documented,partially-documented
+DataSciBench,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented
+SpreadsheetBench,Grading rules & tie-breaking,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,partially-documented
+BLADE,Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,documented-and-verifiable
+DA-Code,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+Spider,Input/expected-output schema,documented-and-verifiable,partially-documented,partially-documented,documented-and-verifiable
+InfiAgent-DABench,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+BigCodeBench,Metric definition,partially-documented,partially-documented,partially-documented,partially-documented
+BIRD,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+Dr.Spider,Predictions->aggregate-score mapping,partially-documented,partially-documented,partially-documented,partially-documented
+RE-Bench,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+Spider,Metric definition,partially-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+Dr.Spider,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+Dr.Spider,Evaluator implementation available,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,claimed-but-not-verifiable
+TabFact,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+WikiTableQuestions,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+BIRD,Grading rules & tie-breaking,not-documented,not-documented,not-documented,not-documented
+MLE-bench,Predictions->aggregate-score mapping,partially-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+QRData,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+MLE-bench,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+DS-1000,Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,documented-and-verifiable
+TabFact,Evaluator implementation available,documented-and-verifiable,partially-documented,partially-documented,partially-documented
+WikiTableQuestions,Predictions->aggregate-score mapping,partially-documented,partially-documented,partially-documented,not-documented
+BLADE,Sample predictions / trajectories,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+RE-Bench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+TableBench,Sample predictions / trajectories,not-documented,partially-documented,partially-documented,claimed-but-not-verifiable
+DA-Code,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+MLGym,Metric definition,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+BIRD,Evaluator implementation available,not-documented,not-documented,not-documented,not-documented
+BLADE,Input/expected-output schema,partially-documented,claimed-but-not-verifiable,partially-documented,partially-documented
+DiscoveryBench,Input/expected-output schema,documented-and-verifiable,partially-documented,partially-documented,partially-documented
+TabFact,Predictions->aggregate-score mapping,not-documented,documented-and-verifiable,documented-and-verifiable,partially-documented
+MLGym,Evaluator implementation available,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+InfiAgent-DABench,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+TabFact,Metric definition,partially-documented,documented-and-verifiable,documented-and-verifiable,not-documented
+Dr.Spider,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+DA-Code,Predictions->aggregate-score mapping,not-documented,not-documented,not-documented,partially-documented
+InfiAgent-DABench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+TableBench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+MLE-bench,Metric definition,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+PandasEval/NumpyEval (CERT),Metric definition,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,not-documented
+SpreadsheetBench,Sample predictions / trajectories,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,not-documented
+Spider 2.0,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+BigCodeBench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+TableBench,Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,partially-documented
+Spider,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+TableBench,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+PandasEval/NumpyEval (CERT),Sample predictions / trajectories,not-documented,not-documented,not-documented,partially-documented
+DS-1000,Input/expected-output schema,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+BIRD-CRITIC / SQL-eval,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+Dr.Spider,Grading rules & tie-breaking,not-documented,not-documented,not-documented,not-documented
+MLE-bench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+PandasEval/NumpyEval (CERT),Predictions->aggregate-score mapping,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,not-documented
+BIRD-CRITIC / SQL-eval,Metric definition,partially-documented,partially-documented,partially-documented,partially-documented
+BLADE,Predictions->aggregate-score mapping,not-documented,partially-documented,partially-documented,partially-documented
+DS-1000,Sample predictions / trajectories,not-documented,not-documented,not-documented,documented-and-verifiable
+RE-Bench,Evaluator implementation available,documented-and-verifiable,partially-documented,partially-documented,documented-and-verifiable
+ScienceAgentBench,Sample predictions / trajectories,partially-documented,not-documented,partially-documented,not-documented
+QRData,Grading rules & tie-breaking,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+InfiAgent-DABench,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+WikiTableQuestions,Grading rules & tie-breaking,partially-documented,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+DSBench,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+MLE-bench,Evaluator implementation available,documented-and-verifiable,partially-documented,partially-documented,documented-and-verifiable
+BigCodeBench,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+DiscoveryBench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,not-documented
+MLGym,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+Spider2-V,Evaluator implementation available,partially-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+DiscoveryBench,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+InfiAgent-DABench,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+Spider 2.0,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+Spider,Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,claimed-but-not-verifiable
+BigCodeBench,Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,documented-and-verifiable
+BixBench,Predictions->aggregate-score mapping,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+Spider2-V,Sample predictions / trajectories,not-documented,documented-and-verifiable,documented-and-verifiable,claimed-but-not-verifiable
+DataSciBench,Grading rules & tie-breaking,not-documented,not-documented,not-documented,not-documented
+DA-Code,Sample predictions / trajectories,not-documented,not-documented,not-documented,claimed-but-not-verifiable
+Spider 2.0,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+BixBench,Sample predictions / trajectories,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,claimed-but-not-verifiable
+DiscoveryBench,Metric definition,not-documented,claimed-but-not-verifiable,claimed-but-not-verifiable,claimed-but-not-verifiable
+TableBench,Predictions->aggregate-score mapping,documented-and-verifiable,partially-documented,documented-and-verifiable,partially-documented
+DataSciBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,not-documented
+Dr.Spider,Metric definition,partially-documented,partially-documented,partially-documented,partially-documented
+MLAgentBench,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,partially-documented
+ScienceAgentBench,Metric definition,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+DiscoveryBench,Evaluator implementation available,claimed-but-not-verifiable,claimed-but-not-verifiable,claimed-but-not-verifiable,partially-documented
+SpreadsheetBench,Predictions->aggregate-score mapping,documented-and-verifiable,not-documented,partially-documented,partially-documented
+TableBench,Metric definition,documented-and-verifiable,partially-documented,documented-and-verifiable,documented-and-verifiable
+DS-1000,Metric definition,partially-documented,partially-documented,partially-documented,documented-and-verifiable
+MLAgentBench,Input/expected-output schema,not-documented,partially-documented,partially-documented,partially-documented
+BIRD,Input/expected-output schema,not-documented,not-documented,not-documented,not-documented
+Spider 2.0,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+SpreadsheetBench,Input/expected-output schema,documented-and-verifiable,partially-documented,partially-documented,documented-and-verifiable
+DSBench,Grading rules & tie-breaking,not-documented,not-documented,not-documented,not-documented
+MLAgentBench,Evaluator implementation available,claimed-but-not-verifiable,documented-and-verifiable,documented-and-verifiable,partially-documented
+QRData,Input/expected-output schema,partially-documented,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+BixBench,Input/expected-output schema,partially-documented,claimed-but-not-verifiable,partially-documented,partially-documented
+BLADE,Metric definition,partially-documented,partially-documented,partially-documented,partially-documented
+WikiTableQuestions,Input/expected-output schema,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+RE-Bench,Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+DiscoveryBench,Predictions->aggregate-score mapping,not-documented,claimed-but-not-verifiable,not-documented,not-documented
+SpreadsheetBench,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+WikiTableQuestions,Evaluator implementation available,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+PandasEval/NumpyEval (CERT),Input/expected-output schema,partially-documented,partially-documented,partially-documented,partially-documented
+QRData,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented
+PandasEval/NumpyEval (CERT),Evaluator implementation available,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,partially-documented
+Spider,Grading rules & tie-breaking,partially-documented,not-documented,not-documented,partially-documented
+BIRD,Metric definition,not-documented,not-documented,not-documented,not-documented
+Spider2-V,Metric definition,partially-documented,claimed-but-not-verifiable,partially-documented,partially-documented
+TabFact,Grading rules & tie-breaking,partially-documented,not-documented,partially-documented,documented-and-verifiable
+DS-1000,Predictions->aggregate-score mapping,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+DataSciBench,Sample predictions / trajectories,not-documented,documented-and-verifiable,documented-and-verifiable,not-documented
+MLAgentBench,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,partially-documented
+PandasEval/NumpyEval (CERT),Grading rules & tie-breaking,partially-documented,not-documented,partially-documented,not-documented
+SpreadsheetBench,Metric definition,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+MLAgentBench,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,partially-documented
+DSBench,Evaluator implementation available,partially-documented,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+BLADE,Grading rules & tie-breaking,partially-documented,partially-documented,partially-documented,not-documented
+DSBench,Metric definition,partially-documented,documented-and-verifiable,documented-and-verifiable,documented-and-verifiable
+Spider,Predictions->aggregate-score mapping,documented-and-verifiable,claimed-but-not-verifiable,partially-documented,not-documented
+Spider2-V,Grading rules & tie-breaking,not-documented,not-documented,not-documented,not-documented
+RE-Bench,Predictions->aggregate-score mapping,partially-documented,partially-documented,partially-documented,partially-documented
+BIRD-CRITIC / SQL-eval,Sample predictions / trajectories,not-documented,not-documented,not-documented,not-documented

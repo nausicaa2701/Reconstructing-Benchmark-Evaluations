@@ -1,0 +1,92 @@
+{
+  "cells": 156,
+  "coders": [
+    "human_A",
+    "human_B",
+    "model_anthropic",
+    "model_gemini",
+    "model_openai"
+  ],
+  "pairwise": {
+    "human_A vs human_B": {
+      "exact_agreement": 0.5961538461538461,
+      "alpha": 0.43197170440379207,
+      "binary_agreement": 0.8141025641025641
+    },
+    "human_A vs model_anthropic": {
+      "exact_agreement": 0.5705128205128205,
+      "alpha": 0.37760984497744865,
+      "binary_agreement": 0.8141025641025641
+    },
+    "human_A vs model_gemini": {
+      "exact_agreement": 0.5897435897435898,
+      "alpha": 0.41382966191542003,
+      "binary_agreement": 0.8269230769230769
+    },
+    "human_A vs model_openai": {
+      "exact_agreement": 0.6025641025641025,
+      "alpha": 0.42359201243572886,
+      "binary_agreement": 0.8461538461538461
+    },
+    "human_B vs model_anthropic": {
+      "exact_agreement": 0.5448717948717948,
+      "alpha": 0.3710729442593067,
+      "binary_agreement": 0.782051282051282
+    },
+    "human_B vs model_gemini": {
+      "exact_agreement": 0.5512820512820513,
+      "alpha": 0.3915765350325592,
+      "binary_agreement": 0.8205128205128205
+    },
+    "human_B vs model_openai": {
+      "exact_agreement": 0.6410256410256411,
+      "alpha": 0.5032090595316199,
+      "binary_agreement": 0.8141025641025641
+    },
+    "model_anthropic vs model_gemini": {
+      "exact_agreement": 0.6217948717948718,
+      "alpha": 0.4689453577216949,
+      "binary_agreement": 0.8589743589743589
+    },
+    "model_anthropic vs model_openai": {
+      "exact_agreement": 0.6474358974358975,
+      "alpha": 0.5013264919390105,
+      "binary_agreement": 0.8782051282051282
+    },
+    "model_gemini vs model_openai": {
+      "exact_agreement": 0.5961538461538461,
+      "alpha": 0.4384028892455859,
+      "binary_agreement": 0.8525641025641025
+    }
+  },
+  "n_pairs": 10,
+  "pairs_reaching_gate": 0,
+  "alpha_range": [
+    0.3710729442593067,
+    0.5032090595316199
+  ],
+  "best_pair": "human_B vs model_openai",
+  "five_coder_alpha": 0.43481815878572905,
+  "five_coder_alpha_binary": 0.6204460390228778,
+  "five_coder_alpha_by_criterion": {
+    "Evaluator implementation available": 0.2723205602022952,
+    "Grading rules & tie-breaking": 0.33752434921197094,
+    "Input/expected-output schema": 0.3781390134529148,
+    "Metric definition": 0.3031063090874011,
+    "Predictions->aggregate-score mapping": 0.3603126575895109,
+    "Sample predictions / trajectories": 0.2829446854663774
+  },
+  "mean_alpha_human_human": 0.43197170440379207,
+  "mean_alpha_model_model": 0.4695582463020971,
+  "mean_alpha_cross": 0.4134816763586806,
+  "adjudicator": {
+    "n_adjudicated": 63,
+    "chose_option_shown_first": 25,
+    "chose_option_shown_second": 29,
+    "positional_binomial_p": 0.6834892282353375,
+    "chose_a_third_label_neither_rater_gave": 9,
+    "third_label_rate": 0.14285714285714285,
+    "sided_with_rater_A": 15,
+    "sided_with_rater_B": 39
+  }
+}

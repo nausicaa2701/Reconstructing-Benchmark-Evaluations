@@ -3,14 +3,24 @@
   "frozen_commit": "2ab782ba42b5808076ac91fec846473aa5315a79",
   "portable_first_pass_label": "dependency-or-environment-failure",
   "portable_repair_label": null,
-  "authoritative_setup_file": null,
-  "base_image": null,
-  "build_commands": [],
-  "resolved_packages_digest": null,
-  "E3_official_first_pass": null,
+  "authoritative_setup_file": "README.md 'Requirements' and 'Direct Running'",
+  "base_image": "python:3.6-slim (release documents Python 3.5, pins no base image; 3.6 is the oldest base with torch 1.2.0 wheels)",
+  "build_commands": [
+    "pip install torch==1.2.0 ujson pandas tqdm tensorboardX unidecode nltk",
+    "sh get_data.sh",
+    "cd code && python model.py --do_test --resume"
+  ],
+  "resolved_packages_digest": "torch 1.2.0 and the README's declared list",
+  "E3_official_first_pass": false,
   "E3_official_after_repair": null,
   "E3_portable_first_pass": false,
-  "under_specified_base": null,
-  "environment_contract_findings": [],
-  "status": "pending-execution"
+  "under_specified_base": true,
+  "environment_contract_findings": [
+    "In the documented environment the code imports, torch loads and the shipped checkpoints are in place; execution stops at FileNotFoundError on preprocessed_data_program/test.tsv. This is missing required data, not a dependency or environment failure.",
+    "The documented source for that data, the get_data.sh URL https://tablefact.s3-us-west-2.amazonaws.com/preprocessed_data_program.zip, returned HTTP 404 when checked on 2026-07-27. The repository ships preprocessed.json and vocab.json but not the .tsv splits the scorer reads.",
+    "This is a candidate A1 correction under the maintenance policy: the link was not re-checked at the 2026-07-13 audit date, so we cannot say whether it was already dead then or rotted afterwards."
+  ],
+  "status": "executed",
+  "E3_official_first_pass_label": "missing-required-data",
+  "executed": "2026-07-27"
 }

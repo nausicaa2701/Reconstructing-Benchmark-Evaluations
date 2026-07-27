@@ -1,0 +1,6 @@
+Reading dataset from fixture_tagged/pristine-unseen-tables.tagged
+Read 4344 examples
+Reading predictions from pred_fixture.tsv
+Examples: 20
+Correct: 10
+Accuracy: 0.5

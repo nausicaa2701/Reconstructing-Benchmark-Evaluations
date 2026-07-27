@@ -1,0 +1,47 @@
+{
+  "cells": 156,
+  "gold_from_rater_agreement": 93,
+  "gold_from_adjudication": 63,
+  "model_exact_accuracy": 0.6025641025641025,
+  "model_exact_accuracy_ci95": [
+    0.5241932113729152,
+    0.6760049848413369
+  ],
+  "model_binary_accuracy": 0.8141025641025641,
+  "model_binary_accuracy_ci95": [
+    0.7457731232007083,
+    0.8673338527054386
+  ],
+  "per_label": {
+    "claimed-but-not-verifiable": {
+      "gold_n": 15,
+      "recall": 0.3333333333333333,
+      "predicted_n": 10,
+      "precision": 0.5
+    },
+    "documented-and-verifiable": {
+      "gold_n": 41,
+      "recall": 0.6097560975609756,
+      "predicted_n": 46,
+      "precision": 0.5434782608695652
+    },
+    "not-documented": {
+      "gold_n": 29,
+      "recall": 0.8275862068965517,
+      "predicted_n": 41,
+      "precision": 0.5853658536585366
+    },
+    "partially-documented": {
+      "gold_n": 71,
+      "recall": 0.5633802816901409,
+      "predicted_n": 59,
+      "precision": 0.6779661016949152
+    }
+  },
+  "model_exact_accuracy_on_agreed_cells_only": 0.7419354838709677,
+  "model_exact_accuracy_on_adjudicated_cells_only": 0.3968253968253968,
+  "R2_under_human_gold": 13,
+  "R2_under_model_panel": 13,
+  "R2_benchmark_level_agreement": 0.6923076923076923,
+  "benchmarks": 26
+}

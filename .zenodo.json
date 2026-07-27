@@ -1,0 +1,48 @@
+{
+  "title": "Auditing Public Evaluation Specifications and Scorer Smoke-Testability: audit corpus, coding instrument, and execution record",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Le, Thi-Hong-Cuc",
+      "orcid": "0009-0003-4251-4106",
+      "affiliation": "Ho Chi Minh City University of Technology (HCMUT), Vietnam National University Ho Chi Minh City"
+    },
+    {
+      "name": "Le, Xuan-Bach",
+      "orcid": "0009-0003-6848-5403",
+      "affiliation": "Ho Chi Minh City University of Technology (HCMUT), Vietnam National University Ho Chi Minh City"
+    },
+    {
+      "name": "Nguyen, Tran-Lan-Chau",
+      "orcid": "0009-0003-2262-5837",
+      "affiliation": "Ho Chi Minh City University of Technology (HCMUT), Vietnam National University Ho Chi Minh City"
+    },
+    {
+      "name": "Nguyen, Thai-Hoai-Nam",
+      "orcid": "0009-0000-7564-874X",
+      "affiliation": "Ho Chi Minh City University of Technology (HCMUT), Vietnam National University Ho Chi Minh City"
+    }
+  ],
+  "description": "<p>Evidence dataset and analysis pipeline auditing the public evaluation artifacts of 26 frozen foundation-model benchmark releases for data-science tasks. Releases are laddered as Described (A0), Accessible (A1), Sufficiently documented (R2) and Smoke-testable (E3), the last established by CPU-only, zero-inference evaluator runs.</p><p>The release contains: the 35-candidate screening frame and frozen corpus registry; line-addressable evidence packets; raw and aggregated judgments from three independently operated model judges; both completed human rater files with their 63 uncollapsed disagreements and the adjudicated 156-cell gold set; golden-fixture inputs with independently derived expected values; official-environment build specifications and captured output; CPU-only execution logs; minimal-repair patches; and a single-command reproduction pipeline with a SHA-256 manifest over every released file.</p><p>Headline reliability result: the pre-registered inter-coder gate was missed by both the model panel and the human panel on identical evidence, so the documentation-sufficiency endpoint is released as descriptive rather than validated, with all disagreements preserved.</p>",
+  "keywords": [
+    "benchmark auditing",
+    "evaluation reproducibility",
+    "foundation models",
+    "data science",
+    "evaluation protocols",
+    "inter-rater reliability",
+    "artifact evaluation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ]
+}

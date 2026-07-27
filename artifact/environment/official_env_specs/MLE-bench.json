@@ -3,14 +3,22 @@
   "frozen_commit": "507f92e1138bb6e40dac5c6ee7a6758e6424bf97",
   "portable_first_pass_label": "dependency-or-environment-failure",
   "portable_repair_label": null,
-  "authoritative_setup_file": null,
-  "base_image": null,
-  "build_commands": [],
-  "resolved_packages_digest": null,
-  "E3_official_first_pass": null,
+  "authoritative_setup_file": "README.md 'Setup' + pyproject.toml",
+  "base_image": "python:3.11-slim (release pins requires-python>=3.11 but no OS or base image)",
+  "build_commands": [
+    "pip install -e ."
+  ],
+  "resolved_packages_digest": "py7zr 1.1.3 among 30 declared dependencies",
+  "E3_official_first_pass": false,
   "E3_official_after_repair": null,
   "E3_portable_first_pass": false,
-  "under_specified_base": null,
-  "environment_contract_findings": [],
-  "status": "pending-execution"
+  "under_specified_base": true,
+  "environment_contract_findings": [
+    "py7zr>=0.21 is a declared dependency in pyproject.toml, so the documented `pip install -e .` installs it. The portable-environment ModuleNotFoundError we recorded was an artefact of our fixed dependency set, not a property of the release: this corrects our own first-pass failure attribution.",
+    "In the official environment the grading CLI loads and dispatches correctly; it stops at `ValueError: Dataset for competition ... is not prepared`, i.e. the real blocker is Kaggle-gated competition data, not a software defect.",
+    "requires-python is pinned but no OS or base image is specified, so the environment is reproducible only up to the auditor's base choice."
+  ],
+  "status": "executed",
+  "E3_official_first_pass_label": "missing-required-data",
+  "executed": "2026-07-26"
 }

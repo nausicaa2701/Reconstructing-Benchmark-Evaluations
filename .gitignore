@@ -4,4 +4,6 @@ __pycache__/
 .env
 artifact/llm_judges/.env
 artifact/llm_judges/work/
-artifact/llm_judges/work/
+
+# Local release helper — draft message only, not part of the archived artifact
+COMMIT_MESSAGE.txt

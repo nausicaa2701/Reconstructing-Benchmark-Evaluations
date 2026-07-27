@@ -1,20 +1,76 @@
 cff-version: 1.2.0
-message: "If you use this artifact, please cite it using the information below."
-title: "Reconstructing Benchmark Evaluations: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"
+message: "If you use this artifact, please cite the paper (preferred-citation); cite this record when referring to the dataset itself."
+title: "Auditing Public Evaluation Specifications and Scorer Smoke-Testability: audit corpus, coding instrument, and execution record"
 abstract: >-
   An evidence dataset and analysis pipeline auditing the public evaluation
-  reproducibility of 26 foundation-model benchmark releases for data-science tasks,
-  laddered as Described, Accessible, Reconstructable, and Smoke-testable, with
-  CPU-only evaluator smoke tests.
+  artifacts of 26 frozen foundation-model benchmark releases for data-science
+  tasks. Releases are laddered as Described (A0), Accessible (A1), Sufficiently
+  documented (R2), and Smoke-testable (E3), the last established by CPU-only,
+  zero-inference evaluator runs. The release contains the screening frame, the
+  frozen corpus registry, line-addressable evidence packets, raw and aggregated
+  judgments from three independently operated model judges, both completed human
+  rater files with their 63 uncollapsed disagreements and the adjudicated gold
+  set, golden-fixture inputs with independently derived expected values,
+  official-environment build specifications, execution logs, minimal-repair
+  patches, and a single-command reproduction pipeline.
+type: dataset
 version: "1.0.0"
-date-released: "2026-07-26"
+date-released: "2026-07-27"
 license: CC-BY-4.0
 repository-code: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
 url: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
+authors:
+  - family-names: "Le"
+    given-names: "Thi-Hong-Cuc"
+    orcid: "https://orcid.org/0009-0003-4251-4106"
+    affiliation: "Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT); Vietnam National University Ho Chi Minh City"
+  - family-names: "Le"
+    given-names: "Xuan-Bach"
+    orcid: "https://orcid.org/0009-0003-6848-5403"
+    email: "lexuanbach@hcmut.edu.vn"
+    affiliation: "Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT); Vietnam National University Ho Chi Minh City"
+  - family-names: "Nguyen"
+    given-names: "Tran-Lan-Chau"
+    orcid: "https://orcid.org/0009-0003-2262-5837"
+    affiliation: "Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT); Vietnam National University Ho Chi Minh City"
+  - family-names: "Nguyen"
+    given-names: "Thai-Hoai-Nam"
+    orcid: "https://orcid.org/0009-0000-7564-874X"
+    affiliation: "Faculty of Computer Science and Engineering, Ho Chi Minh City University of Technology (HCMUT); Vietnam National University Ho Chi Minh City"
 keywords:
   - benchmark auditing
-  - reproducibility
+  - evaluation reproducibility
   - foundation models
   - data science
   - evaluation protocols
-type: dataset
+  - inter-rater reliability
+  - artifact evaluation
+# After the Zenodo deposition exists, record the DOIs here. Use the VERSION DOI
+# for v1.0.0 in the paper; the concept DOI resolves to the latest version.
+#   identifiers:
+#     - type: doi
+#       value: 10.5281/zenodo.XXXXXXX
+#       description: "Version DOI for v1.0.0"
+#     - type: doi
+#       value: 10.5281/zenodo.YYYYYYY
+#       description: "Concept DOI (all versions)"
+preferred-citation:
+  type: conference-paper
+  title: "Auditing Public Evaluation Specifications and Scorer Smoke-Testability: A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"
+  year: 2027
+  collection-title: "Proceedings of the 33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2027)"
+  publisher:
+    name: "Association for Computing Machinery"
+  authors:
+    - family-names: "Le"
+      given-names: "Thi-Hong-Cuc"
+      orcid: "https://orcid.org/0009-0003-4251-4106"
+    - family-names: "Le"
+      given-names: "Xuan-Bach"
+      orcid: "https://orcid.org/0009-0003-6848-5403"
+    - family-names: "Nguyen"
+      given-names: "Tran-Lan-Chau"
+      orcid: "https://orcid.org/0009-0003-2262-5837"
+    - family-names: "Nguyen"
+      given-names: "Thai-Hoai-Nam"
+      orcid: "https://orcid.org/0009-0000-7564-874X"

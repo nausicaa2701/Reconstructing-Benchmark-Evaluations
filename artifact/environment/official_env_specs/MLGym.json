@@ -3,14 +3,25 @@
   "frozen_commit": "9d40c1b5035202018cd7091fb4e83a9c68b377c0",
   "portable_first_pass_label": "dependency-or-environment-failure",
   "portable_repair_label": null,
-  "authoritative_setup_file": null,
-  "base_image": null,
-  "build_commands": [],
-  "resolved_packages_digest": null,
-  "E3_official_first_pass": null,
+  "authoritative_setup_file": "pyproject.toml; data/<task>/evaluate.py",
+  "base_image": "python:3.11-slim (release pins no base image)",
+  "build_commands": [
+    "pip install numpy  # declared in pyproject dependencies",
+    "cd data/blotto && python evaluate.py"
+  ],
+  "resolved_packages_digest": "numpy (declared); the blotto scorer imports only json, random, numpy",
+  "E3_official_first_pass": true,
   "E3_official_after_repair": null,
   "E3_portable_first_pass": false,
-  "under_specified_base": null,
-  "environment_contract_findings": [],
-  "status": "pending-execution"
+  "under_specified_base": true,
+  "environment_contract_findings": [
+    "Not every MLGym task scorer needs a model. data/blotto/evaluate.py is pure CPU Python over the task's own shipped strategy.py and target.py and emits a JSON score. Our original label generalised from the model-bearing tasks.",
+    "No auditor-added package: numpy is declared in pyproject.toml."
+  ],
+  "status": "executed",
+  "E3_official_first_pass_label": "pass-as-documented",
+  "emitted": {
+    "Score": -0.24866001307964325
+  },
+  "executed": "2026-07-27"
 }

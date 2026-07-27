@@ -1,9 +1,9 @@
 {
   "spec_version": "golden-fixtures-v1",
-  "n_reachable_evaluators_with_a_pass": 7,
-  "L1_invoked": 7,
-  "L2_fixture_matched": 3,
-  "L3_published_score_reproduced": 0,
+  "n_reachable_evaluators_with_a_pass": 10,
+  "L1_invoked": 10,
+  "L2_fixture_matched": 5,
+  "L3_published_score_reproduced": 1,
   "all_L2_are_retrospective": false,
   "per_release": [
     {
@@ -33,11 +33,26 @@
     },
     {
       "benchmark": "DS-1000",
-      "status": "L1-only",
+      "status": "L3",
       "retrospective": false
     },
     {
       "benchmark": "TableBench",
+      "status": "L1-only",
+      "retrospective": false
+    },
+    {
+      "benchmark": "WikiTableQuestions",
+      "status": "L2",
+      "retrospective": false
+    },
+    {
+      "benchmark": "PandasEval/NumpyEval (CERT)",
+      "status": "L1-only",
+      "retrospective": false
+    },
+    {
+      "benchmark": "MLGym",
       "status": "L1-only",
       "retrospective": false
     }

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "model.py", line 78, in <module>
+    val_examples = get_batch(option='test', data_dir=args.data_dir, vocab=vocab,  max_seq_length=args.max_seq_length)
+  File "/tabfact/code/PRA_data.py", line 28, in get_batch
+    f = open('{}/test.tsv'.format(data_dir))
+FileNotFoundError: [Errno 2] No such file or directory: '../preprocessed_data_program//test.tsv'
+# documented data source check, 2026-07-27T03:13:38Z
+HTTP/1.1 404 Not Found
