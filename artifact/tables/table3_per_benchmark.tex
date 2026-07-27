@@ -5,36 +5,180 @@ number of five consequential criteria passing the permissive model-panel rule;
 ``R2'' requires all five. ``E3 fp'' and ``E3 rep'' are first-pass and
 after-repair smoke-test outcomes; ``E3'' is their disjunction.}
 \label{tab:perbench}
-\begin{tabular}{llcccp{3.2cm}ccc}
+
+\scriptsize
+\setlength{\tabcolsep}{1.25pt}
+\renewcommand{\arraystretch}{1.08}
+
+\begin{tabular}{@{}p{2.0cm}p{0.95cm}cccp{1.70cm}ccc@{}}
 \toprule
-Benchmark & Category & A1 & R2 & R2 crit & First-pass label & E3 fp & E3 rep & E3 \\
+Benchmark &
+Category &
+A1 &
+R2 &
+R2 crit &
+First-pass label &
+E3 fp &
+E3 rep &
+E3 \\
 \midrule
-BigCodeBench & code-gen & True & 1 & 5 & credential-or-service-blocked & False & False & False \\
-DA-Code & code-gen & True & 1 & 5 & missing-required-data & False & False & False \\
-DS-1000 & code-gen & True & 1 & 5 & dependency-or-environment-failure & False & True & True \\
-PandasEval/NumpyEval (CERT) & code-gen & True & 0 & 2 & dependency-or-environment-failure & False & False & False \\
-BLADE & e2e-agent & True & 0 & 4 & credential-or-service-blocked & False & False & False \\
-BixBench & e2e-agent & True & 1 & 5 & credential-or-service-blocked & False & False & False \\
-DataSciBench & e2e-agent & True & 0 & 4 & missing-required-data & False & False & False \\
-DiscoveryBench & e2e-agent & True & 0 & 2 & credential-or-service-blocked & False & False & False \\
-InfiAgent-DABench & e2e-agent & True & 1 & 5 & pass-as-documented & True & False & True \\
-QRData & e2e-agent & True & 1 & 5 & pass-as-documented & True & False & True \\
-ScienceAgentBench & e2e-agent & True & 1 & 5 & pass-as-documented & True & False & True \\
-Spider2-V & e2e-agent & True & 0 & 3 & not-applicable & False & False & False \\
-DSBench & ml-eng & True & 0 & 3 & pass-as-documented & True & False & True \\
-MLAgentBench & ml-eng & True & 1 & 5 & credential-or-service-blocked & False & False & False \\
-MLE-bench & ml-eng & True & 1 & 5 & dependency-or-environment-failure & False & False & False \\
-MLGym & ml-eng & True & 0 & 4 & dependency-or-environment-failure & False & False & False \\
-RE-Bench & ml-eng & True & 0 & 4 & dependency-or-environment-failure & False & False & False \\
-SpreadsheetBench & tabular & True & 1 & 5 & pass-as-documented & True & False & True \\
-TabFact & tabular & True & 0 & 4 & dependency-or-environment-failure & False & False & False \\
-TableBench & tabular & True & 1 & 5 & credential-or-service-blocked & False & True & True \\
-WikiTableQuestions & tabular & True & 1 & 5 & dependency-or-environment-failure & False & False & False \\
-BIRD & text2sql & True & 0 & 0 & missing-required-data & False & False & False \\
-BIRD-CRITIC / SQL-eval & text2sql & True & 0 & 4 & credential-or-service-blocked & False & False & False \\
-Dr.Spider & text2sql & True & 0 & 3 & missing-required-data & False & False & False \\
-Spider & text2sql & True & 0 & 3 & missing-required-data & False & False & False \\
-Spider 2.0 & text2sql & True & 1 & 5 & credential-or-service-blocked & False & False & False \\
+
+BigCodeBench
+& code-gen
+& True & 1 & 5
+& credential-or-service-blocked
+& False & False & False \\
+
+DA-Code
+& code-gen
+& True & 1 & 5
+& missing-required-data
+& False & False & False \\
+
+DS-1000
+& code-gen
+& True & 1 & 5
+& dependency-or-environment-failure
+& False & True & True \\
+
+PandasEval/Numpy\newline Eval (CERT)
+& code-gen
+& True & 0 & 2
+& dependency-or-environment-failure
+& False & False & False \\
+
+BLADE
+& e2e-agent
+& True & 0 & 4
+& credential-or-service-blocked
+& False & False & False \\
+
+BixBench
+& e2e-agent
+& True & 1 & 5
+& credential-or-service-blocked
+& False & False & False \\
+
+DataSciBench
+& e2e-agent
+& True & 0 & 4
+& missing-required-data
+& False & False & False \\
+
+DiscoveryBench
+& e2e-agent
+& True & 0 & 2
+& credential-or-service-blocked
+& False & False & False \\
+
+InfiAgent-DABench
+& e2e-agent
+& True & 1 & 5
+& pass-as-documented
+& True & False & True \\
+
+QRData
+& e2e-agent
+& True & 1 & 5
+& pass-as-documented
+& True & False & True \\
+
+ScienceAgentBench
+& e2e-agent
+& True & 1 & 5
+& pass-as-documented
+& True & False & True \\
+
+Spider2-V
+& e2e-agent
+& True & 0 & 3
+& not-applicable
+& False & False & False \\
+
+DSBench
+& ml-eng
+& True & 0 & 3
+& pass-as-documented
+& True & False & True \\
+
+MLAgentBench
+& ml-eng
+& True & 1 & 5
+& credential-or-service-blocked
+& False & False & False \\
+
+MLE-bench
+& ml-eng
+& True & 1 & 5
+& dependency-or-environment-failure
+& False & False & False \\
+
+MLGym
+& ml-eng
+& True & 0 & 4
+& dependency-or-environment-failure
+& False & False & False \\
+
+RE-Bench
+& ml-eng
+& True & 0 & 4
+& dependency-or-environment-failure
+& False & False & False \\
+
+SpreadsheetBench
+& tabular
+& True & 1 & 5
+& pass-as-documented
+& True & False & True \\
+
+TabFact
+& tabular
+& True & 0 & 4
+& dependency-or-environment-failure
+& False & False & False \\
+
+TableBench
+& tabular
+& True & 1 & 5
+& credential-or-service-blocked
+& False & True & True \\
+
+WikiTableQuestions
+& tabular
+& True & 1 & 5
+& dependency-or-environment-failure
+& False & False & False \\
+
+BIRD
+& text2sql
+& True & 0 & 0
+& missing-required-data
+& False & False & False \\
+
+BIRD-CRITIC / \newline SQL-eval
+& text2sql
+& True & 0 & 4
+& credential-or-service-blocked
+& False & False & False \\
+
+Dr.Spider
+& text2sql
+& True & 0 & 3
+& missing-required-data
+& False & False & False \\
+
+Spider
+& text2sql
+& True & 0 & 3
+& missing-required-data
+& False & False & False \\
+
+Spider 2.0
+& text2sql
+& True & 1 & 5
+& credential-or-service-blocked
+& False & False & False \\
+
 \bottomrule
 \end{tabular}
 \end{table}

@@ -4,16 +4,26 @@
     minimum height=6mm, align=center, font=\scriptsize},
   side/.style={draw=black!40, rounded corners=2pt, fill=black!5, minimum width=2.0cm,
     minimum height=5mm, align=center, font=\tiny, text=black!70},
-  arr/.style={->, draw=black!55, thick},
+  arr/.style={->, draw=black!55, thick, shorten >=1mm, shorten <=1mm},
 ]
 
-\node[box=auditBlue!10] (id) at (0, 0) {Candidates identified\\{\scriptsize ($n = 42$)}};
-\node[box=auditBlue!10] (scr) at (0, -1.35) {Screened for eligibility\\{\scriptsize ($n = 35$)}};
-\node[box=auditBlue!10] (elig) at (0, -2.70) {Repository frozen\\{\scriptsize ($n = 26$)}};
-\node[box=auditGreen!20, draw=auditGreen!70] (inc) at (0, -4.05) {Primary cohort + 4 expansion\\{\scriptsize (sensitivity)}};
+\node[box=auditBlue!10] (id) at (0, 0)
+{Candidates identified\\{\scriptsize ($n = 42$)}};
 
-\node[side] (exc1) at (3.15, 0) {Duplicates, off-topic\\{\tiny ($n = 7$)}};
-\node[side] (exc2) at (3.15, -1.35) {No repository\\{\tiny ($n = 5$)}};
+\node[box=auditBlue!10] (scr) at (0, -1.50)
+{Screened for eligibility\\{\scriptsize ($n = 35$)}};
+
+\node[box=auditBlue!10] (elig) at (0, -3.00)
+{Repository frozen\\{\scriptsize ($n = 26$)}};
+
+\node[box=auditGreen!20, draw=auditGreen!70] (inc) at (0, -4.50)
+{Primary cohort + 4 expansion\\{\scriptsize (sensitivity)}};
+
+\node[side] (exc1) at (3.45, 0)
+{Duplicates, off-topic\\{\tiny ($n = 7$)}};
+
+\node[side] (exc2) at (3.45, -1.50)
+{No repository\\{\tiny ($n = 5$)}};
 
 \draw[arr] (id) -- (scr);
 \draw[arr] (scr) -- (elig);

@@ -1,9 +1,9 @@
 {
-  "release_version": "v1.1.0",
+  "release_version": "v1.1.1",
   "built": "2026-07-27",
-  "paper_pdf_sha256": null,
-  "n_files": 506,
-  "total_bytes": 6191459,
+  "paper_pdf_sha256": "23a13dd786f2b7602587058e232adddf1e84392634b7c8a3a62dfc97aa4fdb3e",
+  "n_files": 507,
+  "total_bytes": 6193408,
   "license": "CC-BY-4.0 for original contributions; see artifact/LICENSE",
   "regeneration": "python artifact/reproduce.py",
   "frozen_layer": "corpus/, audit/, execution/logs/, execution/manifests/",
@@ -21,8 +21,8 @@
     },
     {
       "path": "artifact/OUTPUT_HASHES.json",
-      "bytes": 2834,
-      "sha256": "7d8a50415684017c4ddf9d9d1b110aef3295925b0682960831c5bcaddc7d6607"
+      "bytes": 2833,
+      "sha256": "72c2463d1199302a538ba97f5319450259a5858473324091554328ca2ce3a6a0"
     },
     {
       "path": "artifact/README.md",
@@ -31,8 +31,13 @@
     },
     {
       "path": "artifact/RELEASE_NOTES_v1.1.0.md",
-      "bytes": 1842,
-      "sha256": "6b10a079616e3230c72af715be4e6f164b3c1195474cdfde21ee5485f3c652b6"
+      "bytes": 1844,
+      "sha256": "8d30e1e458d18481c5f79a8fbd3bfad4cd2303981ebb766303e8a9b8d62a526b"
+    },
+    {
+      "path": "artifact/RELEASE_NOTES_v1.1.1.md",
+      "bytes": 741,
+      "sha256": "0a2765dc9f8f0ada3985c409c4b3f334b993af6b35894addd4b9c33713708839"
     },
     {
       "path": "artifact/analysis/apply_model_panel.py",
@@ -2111,8 +2116,8 @@
     },
     {
       "path": "artifact/figures/fig_audit_pipeline.tex",
-      "bytes": 1478,
-      "sha256": "c1a99ac79c72dd0c88da92fb961cb8214663147da1018d0d4ec7b0617e8a8518"
+      "bytes": 1429,
+      "sha256": "e1415d194586ca077027abbefd38f0661ddebe514ae0aeef64676e958c563c24"
     },
     {
       "path": "artifact/figures/fig_corpus_composition.pdf",
@@ -2167,7 +2172,7 @@
     {
       "path": "artifact/figures/fig_failure_patterns.pdf",
       "bytes": 19154,
-      "sha256": "07fb8f7f23b64ed5cd760568be86f76c982d2be1e669126db7ab31e126c39e7b"
+      "sha256": "d4761929591c035ab2cd1759d68fe5b7dd9902a4a3cf7a50575bc240baad23a7"
     },
     {
       "path": "artifact/figures/fig_failure_patterns.png",
@@ -2206,13 +2211,13 @@
     },
     {
       "path": "artifact/figures/fig_prisma_flow.tex",
-      "bytes": 1105,
-      "sha256": "234e37d80fe07625a726e4af9d84a7a88b3b8f2a4c53c547fdf60cdca791338d"
+      "bytes": 1139,
+      "sha256": "e08b9fa2d46105885a69b1c9434e2f9b806536c47c637d39c32f991c5d22570a"
     },
     {
       "path": "artifact/figures/fig_r2_labels.pdf",
       "bytes": 21447,
-      "sha256": "2a51c8d74af65b9a15fb81c66923376edf4e25f23d005ad7bde7c4e8cabcd7ad"
+      "sha256": "3d40934fe6cd591a3415fcde767fe4b2f07e491fe68644056ab3f506b623894c"
     },
     {
       "path": "artifact/figures/fig_r2_labels.png",
@@ -2476,8 +2481,8 @@
     },
     {
       "path": "artifact/reproduce.py",
-      "bytes": 12088,
-      "sha256": "83bdbd8e722af76a93ca93c84b608ccdd47fc1052fc971157a3704b114439cae"
+      "bytes": 13164,
+      "sha256": "eb7b2b8bdc4ab547d7d08e7054d50ac114e2fb99cd7c108646ecd99c43f2756f"
     },
     {
       "path": "artifact/schema/audit_record_schema.json",
@@ -2526,8 +2531,8 @@
     },
     {
       "path": "artifact/tables/table3_per_benchmark.tex",
-      "bytes": 2931,
-      "sha256": "67d439b43a1b1247891af2069a4e5ae3aa40153fdf22aba425516f440315d439"
+      "bytes": 3077,
+      "sha256": "ee984a64efa7d910893e8738e10d6a144a7fc1af896d436a56dc509f501f52f0"
     },
     {
       "path": "artifact/tables/table4_framework_overlap.tex",

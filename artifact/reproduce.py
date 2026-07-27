@@ -174,14 +174,35 @@ def check_hashes():
         print(f"[hashes] OK: all {ok} released outputs match recorded hashes")
 
 def write_hashes():
-    targets = ["artifact/tables/table1_endpoints.csv","artifact/tables/table2_by_category.csv",
-               "artifact/tables/table3_per_benchmark.csv","artifact/analysis/master_outcomes.csv",
-               "artifact/analysis/phase6_stats.json",
-               "artifact/analysis/expanded_sensitivity_outcomes.csv",
-               "artifact/analysis/expanded_sensitivity_stats.json",
-               "artifact/audit/model_panel_v1/analysis/model_panel_stats.json",
-               "artifact/audit/model_panel_v1/analysis/model_panel_repeatability.json",
-               "artifact/audit/model_panel_v1/RELEASE_PROTOCOL.json"]
+    # Pin every released derived result used by the paper, including the
+    # robustness, human-validation, fixture, and official-environment outputs.
+    # Keeping this list here prevents --regenerate from silently narrowing a
+    # previously broader integrity manifest.
+    targets = [
+        "artifact/analysis/cluster_bootstrap_ci.json",
+        "artifact/analysis/expanded_sensitivity_outcomes.csv",
+        "artifact/analysis/expanded_sensitivity_stats.json",
+        "artifact/analysis/master_outcomes.csv",
+        "artifact/analysis/phase6_stats.json",
+        "artifact/audit/model_panel_v1/RELEASE_PROTOCOL.json",
+        "artifact/audit/model_panel_v1/analysis/model_panel_repeatability.json",
+        "artifact/audit/model_panel_v1/analysis/model_panel_stats.json",
+        "artifact/execution/fixtures/evaluation_levels.csv",
+        "artifact/execution/fixtures/golden_fixture_results.json",
+        "artifact/execution/fixtures/golden_fixture_status.json",
+        "artifact/execution/fixtures/validate_evaluation_levels.py",
+        "artifact/environment/official_environment_results.csv",
+        "artifact/human_validation/five_coder_reliability.json",
+        "artifact/human_validation/gold_set_stats.json",
+        "artifact/human_validation/human_diagnostics.json",
+        "artifact/human_validation/human_gold_set.csv",
+        "artifact/human_validation/human_reliability_stats.json",
+        "artifact/human_validation/model_vs_gold_confusion.csv",
+        "artifact/human_validation/model_vs_human_confusion.csv",
+        "artifact/tables/table1_endpoints.csv",
+        "artifact/tables/table2_by_category.csv",
+        "artifact/tables/table3_per_benchmark.csv",
+    ]
     ref = {t: sha256(os.path.join(ROOT,t)) for t in targets if os.path.exists(os.path.join(ROOT,t))}
     json.dump(ref, open(os.path.join(A,"OUTPUT_HASHES.json"),"w"), indent=2)
     print(f"[hashes] wrote OUTPUT_HASHES.json for {len(ref)} released outputs")

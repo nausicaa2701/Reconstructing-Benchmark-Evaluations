@@ -1,6 +1,6 @@
 # Artifact v1.1.0 Release Notes
 
-Release date: 2026-07-27
+Release date: 2026-07-27  
 DOI: [10.5281/zenodo.21617013](https://doi.org/10.5281/zenodo.21617013)
 
 ## What changed
