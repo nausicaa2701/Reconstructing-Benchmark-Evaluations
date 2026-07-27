@@ -20,7 +20,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACT = ROOT / "artifact"
 SKIP_DIRS = {"__pycache__", "work", ".git"}
-SKIP_NAMES = {"MANIFEST.sha256", "MANIFEST.json", ".DS_Store", ".env"}
+SKIP_NAMES = {
+    "MANIFEST.sha256",
+    "MANIFEST.json",
+    ".DS_Store",
+    ".env",
+    "_merged_rater_a_labels.json",  # local merge scratch; never release
+}
 
 
 def digest(path: Path) -> str:

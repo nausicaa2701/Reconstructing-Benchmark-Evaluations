@@ -5,7 +5,7 @@ Evidence dataset and analysis pipeline for the paper
 A Public-Artifact Audit of Foundation-Model Benchmarks for Data Science"*
 (KDD 2027 Datasets and Benchmarks Track).
 
-**Archived release:** [DOI 10.5281/zenodo.21617013](https://doi.org/10.5281/zenodo.21617013)
+**Archived release (v1.1.2):** [DOI 10.5281/zenodo.21621609](https://doi.org/10.5281/zenodo.21621609)
 
 **Primary audit date:** 2026-07-13 · **Expansion audit:** 2026-07-16 ·
 **Screening frame:** 35 candidates · **Primary cohort:** 26 frozen releases ·

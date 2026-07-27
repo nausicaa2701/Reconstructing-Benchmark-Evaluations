@@ -17,9 +17,9 @@ type: dataset
 version: "1.1.2"
 date-released: "2026-07-27"
 license: CC-BY-4.0
-doi: 10.5281/zenodo.21617013
+doi: 10.5281/zenodo.21621609
 repository-code: "https://github.com/nausicaa2701/reconstructing-benchmark-evaluations"
-url: "https://doi.org/10.5281/zenodo.21617013"
+url: "https://doi.org/10.5281/zenodo.21621609"
 authors:
   - family-names: "Le"
     given-names: "Thi-Hong-Cuc"
@@ -48,7 +48,7 @@ keywords:
   - artifact evaluation
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.21617013
+    value: 10.5281/zenodo.21621609
     description: "Archived artifact release"
 preferred-citation:
   type: conference-paper
